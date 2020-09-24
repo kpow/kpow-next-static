@@ -17,16 +17,14 @@ export default function Layout({ children, pageTitle, description, ...props }) {
       </Head>
       <React.Fragment>
         <CssBaseline />
+        <Header />
         <Container maxWidth="lg">
-          <Header />
           <Typography component="div">
             {children}
           </Typography>
           <Footer />  
         </Container>
-      </React.Fragment>
- 
-      
+      </React.Fragment>      
     </>
   )
 }

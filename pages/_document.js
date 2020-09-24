@@ -8,12 +8,12 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          />
+            <meta name="theme-color" content={theme.palette.primary.main} />
+            <link
+               rel="stylesheet"
+               href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            />
+            <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet"></link>
         </Head>
         <body>
           <Main />

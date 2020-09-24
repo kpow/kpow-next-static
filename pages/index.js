@@ -7,8 +7,6 @@ const Index = ({ posts, title, description, ...props }) => {
   return (
     <>
       <Layout pageTitle={title} description={description}>
-        <h1 className="title">kpow-next</h1>
-
         <main>
           <PostList posts={posts} />
         </main>
