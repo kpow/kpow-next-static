@@ -1,27 +1,27 @@
 import Link from 'next/link'
+import clsx from 'clsx';
+import React from 'react';
+
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import { ButtonGroup, Container, Box } from '@material-ui/core';
-import clsx from 'clsx';
-
-
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Container, Box } from '@material-ui/core';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+
+import MenuIcon from '@material-ui/icons/Menu';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import FaceIcon from '@material-ui/icons/Face';
+import StarsIcon from '@material-ui/icons/Stars';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 
 const drawerWidth = 300;
 
@@ -32,18 +32,11 @@ const useStyles = makeStyles((theme) => ({
   pageHeader: {
     backgroundColor: '#000',
   },
-  menuButton: {
-    margin: theme.spacing(2),
-  },
   title: {
     flexGrow: 1,
     fontFamily: 'Slackey',
     lineHeight: 1,
     paddingRight: '10px',
-  },
-  navLink: {
-    textDecoration: 'none',
-    color: '#000',
   },
   appBar: {
     transition: theme.transitions.create(['margin', 'width'], {
@@ -81,12 +74,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
-
 export default function Header() {
   const classes = useStyles();
   const theme = useTheme();
-
 
   const [open, setOpen] = React.useState(false);
 
@@ -101,7 +91,7 @@ export default function Header() {
   return (
     <div className={classes.root}>
       
-      <AppBar position="static" className={classes.pageHeader}>
+      <AppBar position="fixed" className={classes.pageHeader}>
       <Container maxWidth="lg">
         <Toolbar>
             <Link href="/">
@@ -144,37 +134,39 @@ export default function Header() {
             {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </div>
-        <Divider />
-        
-            <Button variant="contained" className={classes.menuButton}>
-              <Link href="/album">
-                <a className={classes.navLink}>album</a>
-              </Link>
-            </Button>  
-            <Button variant="contained" className={classes.menuButton}>
-              <Link href="/about">
-                <a className={classes.navLink}>about</a>
-              </Link>
-            </Button>
         
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+           <Link href="/about">
+              <ListItem button key="about">
+                <ListItemIcon>
+                  <FaceIcon />
+                </ListItemIcon>
+                <ListItemText primary="about kpow" />
+              </ListItem>
+            </Link>
+
+            <Link href="/album">
+              <ListItem button key="stars">
+                <ListItemIcon>
+                  <StarsIcon />
+                </ListItemIcon>
+                <ListItemText primary="star feed" />
+              </ListItem>
+            </Link>
+
+            <Link href="/album">
+              <ListItem button key="books">
+                <ListItemIcon>
+                  <MenuBookIcon />
+                </ListItemIcon>
+                <ListItemText primary="book feed" />
+              </ListItem>
+            </Link>
+            
         </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+
+       
       </Drawer>
 
     </div>
