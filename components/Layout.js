@@ -5,9 +5,20 @@ import Typography from '@material-ui/core/Typography';
 import BigFooter from '@components/BigFooter';
 
 import Header from './Header'
-import Footer from './Footer'
+
+import React from 'react';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+  },
+}));
 
 export default function Layout({ children, pageTitle, description, ...props }) {
+  const classes = useStyles();
+  const theme = useTheme();
+
   return (
     <>
       <Head>
@@ -20,12 +31,14 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <CssBaseline />
         <Header />
         <Container maxWidth="lg">
+    
           <Typography component="div">
             {children}
           </Typography>
          
         </Container>
-        <BigFooter />  
+        <BigFooter /> 
+
       </React.Fragment>      
     </>
   )
