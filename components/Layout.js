@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Container } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
+import BigFooter from '@components/BigFooter';
 
 import Header from './Header'
 import Footer from './Footer'
@@ -22,8 +23,9 @@ export default function Layout({ children, pageTitle, description, ...props }) {
           <Typography component="div">
             {children}
           </Typography>
-          <Footer />  
+         
         </Container>
+        <BigFooter />  
       </React.Fragment>      
     </>
   )
