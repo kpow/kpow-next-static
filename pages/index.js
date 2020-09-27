@@ -5,7 +5,7 @@ import getPosts from '@utils/getPosts'
 
 const Index = ({ posts, title, description, ...props }) => {
   return (
-    <>
+    
       <Layout pageTitle={title} description={description}>
         <main>
           <PostList posts={posts} />
@@ -17,13 +17,7 @@ const Index = ({ posts, title, description, ...props }) => {
           </a>
         </p>
       </Layout>
-      <style jsx>{`
-        .title {
-          margin: 1rem auto;
-          font-size: 3rem;
-        }
-      `}</style>
-    </>
+    
   )
 }
 
