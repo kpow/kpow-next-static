@@ -12,13 +12,6 @@ const Index = ({ posts, title, description, ...props }) => {
           k-projects
         </Title>
         <PostList posts={posts} />
-       
-        <p>
-          You can look at the repository for this project{' '}
-          <a href="https://github.com/kpow/kpow-next-static">
-            here
-          </a>
-        </p>
       </Layout>
     
   )

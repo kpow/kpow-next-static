@@ -58,21 +58,7 @@ export default function Album({ title, description, ...props }) {
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
               I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :) 
             </Typography>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
-                </Grid>
-              </Grid>
-            </div>
-            </Paper>
+          </Paper>
           </Container>
         </div>
         <Container className={classes.cardGrid} maxWidth="md">

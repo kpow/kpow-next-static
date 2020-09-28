@@ -25,10 +25,10 @@ const About = ({ title, description, ...props }) => {
             <div className={classes.heroContent}>
               <Container maxWidth="md">
                 <Paper elevation={3} className={classes.paperPadding}>
-                <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+                <Typography component="h1" variant="h3" align="center" color="textPrimary" gutterBottom>
                   Hi, I'm Kevin
                 </Typography>
-                <Typography variant="h5" align="center" color="textSecondary" paragraph>
+                <Typography variant="h6" align="center" color="textSecondary" paragraph>
                     Digital Architect - Leader - Developer - Pixel Farmer.
                     <br></br>
                     Director of E-Commerce at Barefoot Spas
