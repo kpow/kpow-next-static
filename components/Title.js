@@ -1,0 +1,27 @@
+import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+    },
+    title: {
+      flexGrow: 1,
+      fontFamily: 'Slackey',
+      fontWeight: 'bold',
+      lineHeight: 1,
+      paddingRight: '10px',
+    }
+  
+  }));
+
+export default function Title(props) {
+  const classes = useStyles();
+  return (
+    <Typography component="h2" variant="h4" className={classes.title} gutterBottom>
+      {props.children}
+    </Typography>
+  );
+}

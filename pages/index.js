@@ -1,5 +1,6 @@
-import Layout from '@components/Layout'
-import PostList from '@components/PostList'
+import Layout from '@components/Layout';
+import PostList from '@components/PostList';
+import Title from '@components/Title';
 
 import getPosts from '@utils/getPosts'
 
@@ -7,9 +8,11 @@ const Index = ({ posts, title, description, ...props }) => {
   return (
     
       <Layout pageTitle={title} description={description}>
-        <main>
-          <PostList posts={posts} />
-        </main>
+        <Title>
+          k-projects
+        </Title>
+        <PostList posts={posts} />
+       
         <p>
           You can look at the repository for this project{' '}
           <a href="https://github.com/kpow/kpow-next-static">

@@ -1,12 +1,15 @@
 import Layout from '@components/Layout'
-import { Container, Grid, Button } from '@material-ui/core';
+import { Container, Grid, Button, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
-    padding: theme.spacing(8, 0, 6),
+    padding: theme.spacing(0, 0, 6),
+  },
+  paperPadding: { 
+    padding: theme.spacing(4) 
   },
   heroButtons: { 
     marginTop: theme.spacing(4),
@@ -19,11 +22,11 @@ const About = ({ title, description, ...props }) => {
 
   return (
       <Layout pageTitle={`${title} | About`} description={description}>
-          <main>
             <div className={classes.heroContent}>
-              <Container maxWidth="sm">
+              <Container maxWidth="md">
+                <Paper elevation={3} className={classes.paperPadding}>
                 <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                Hi, I'm Kevin
+                  Hi, I'm Kevin
                 </Typography>
                 <Typography variant="h5" align="center" color="textSecondary" paragraph>
                     Digital Architect - Leader - Developer - Pixel Farmer.
@@ -55,10 +58,9 @@ const About = ({ title, description, ...props }) => {
                     </Grid>
                   </Grid>
                 </div>
+                </Paper>
               </Container>
             </div>
-
-          </main>
       </Layout>
   )
 }

@@ -1,8 +1,10 @@
 import Head from 'next/head'
-import { Container } from '@material-ui/core';
+import { Box, Container } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import BigFooter from '@components/BigFooter';
+
 
 import Header from './Header'
 
@@ -13,11 +15,29 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
+  mainFeaturedPost: {
+    position: 'relative',
+    marginBottom: theme.spacing(4),
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    height: '150px',
+  },
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    backgroundColor: 'rgba(0,0,0,.3)',
+  }
 }));
 
 export default function Layout({ children, pageTitle, description, ...props }) {
   const classes = useStyles();
   const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const paperPadding = matches ? 4 : 0;
 
   return (
     <>
@@ -30,11 +50,14 @@ export default function Layout({ children, pageTitle, description, ...props }) {
       <React.Fragment>
         <CssBaseline />
         <Header />
-        <Container maxWidth="lg" style={{paddingTop:60}}>
-    
-          <Typography component="div">
+        <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(https://source.unsplash.com/1200x300/?space,nasa)` }}>
+          <div className={classes.overlay} />
+        </Paper>
+        <Container maxWidth="lg">
+          
+          <Box component="main" mx={paperPadding}>
             {children}
-          </Typography>
+          </Box>
          
         </Container>
         <BigFooter /> 
