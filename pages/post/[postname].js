@@ -10,17 +10,12 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
 
   return (
       <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
-        <div className="back">
-          ←{' '}
-          <Link href="/">
-            <a>Back to post list</a>
-          </Link>
-        </div>
         <article>
           <h1>{frontmatter.title}</h1>
           {frontmatter.hero_image && (
             <img
               src={frontmatter.hero_image}
+              width="100%"
               className="hero"
               alt={frontmatter.title}
             />
@@ -29,6 +24,12 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
             <ReactMarkdown source={markdownBody} />
           </div>
         </article>
+        <div className="back">
+          ←{' '}
+          <Link href="/">
+            <a>Back to post list</a>
+          </Link>
+        </div>
       </Layout>
   )
 }

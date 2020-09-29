@@ -2,11 +2,11 @@
 title: 'Saint Pauls Cathedral Trust in America'
 author: 'kpow'
 date: '2020-04-27'
-hero_image: '../static/ng.png'
-thumb_image: '../static/ng.png'
+hero_image: '../static/stpaul.png'
+thumb_image: '../static/stpaul-thumb.png'
 hero_color: '#51443b'
-excerpt: 'Developed this speedy site from ground up while working with video production team to insure an integrated product.'
+excerpt: 'Developed this speedy site from ground up while working with video production team.'
 
 ---
 
-Developed site from ground up while working with the video production team to insure an integrated product. This speedy site was created with Gatsby.js/React.js soon after I started at Mobelux.
+Developed site from ground up while working with the video production team to insure an integrated product. This speedy site was created with Gatsby.js/React.js soon after I started at Mobelux. it was great to be able get some code committed right away :)

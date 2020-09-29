@@ -56,7 +56,7 @@ export default function PostList({ posts }) {
                   
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
+                    image={post?.frontmatter?.thumb_image}
                     title={post?.frontmatter?.title}
                   />
 
