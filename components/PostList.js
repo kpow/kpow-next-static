@@ -29,55 +29,52 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     flexGrow: 1,
   },
+  cardDescription: {
+    fontSize:'.9rem',
+  }
 }));
 
 const cards = [1, 2, 3, 4];
 
 export default function PostList({ posts }) {
   const classes = useStyles();
+  const displayPost = posts.slice(0, 4)
   
   if (posts === 'undefined') return null
 
   return (
     <div>
-      {!posts && <div>No posts!</div>}
+      {!displayPost && <div>No posts!</div>}
+
       <Grid container spacing={4}>
-        {cards.map((card) => (
-          <Grid container item key={card} xs={12} sm={6} md={3}>
-            <Card className={classes.card}>
-              <CardMedia
-                className={classes.cardMedia}
-                image="https://source.unsplash.com/random"
-                title="Image title"
-              />
-              <CardContent className={classes.cardContent}>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Heading
-                </Typography>
-                <Typography>
-                  This is a media card. You can use this section to describe the content.
-                </Typography>
-              </CardContent>
-          
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-
-
-      <ul>
-        {posts &&
-          posts.map((post) => {
+        {displayPost &&
+          displayPost.map((post) => {
             return (
-              <li key={post.slug}>
-                {post.frontmatter.date}: {` `}
-                <Link href={{ pathname: `/post/${post.slug}` }}>
-                  <a>{post?.frontmatter?.title}</a>
-                </Link>
-              </li>
+            <Link href={{ pathname: `/post/${post.slug}` }}>  
+              <Grid container item key={post.slug} xs={12} sm={6} md={3}>
+                <Card className={classes.card}>
+                  
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image="https://source.unsplash.com/random"
+                    title={post?.frontmatter?.title}
+                  />
+
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {post?.frontmatter?.title}
+                    </Typography>
+                    <Typography component="p" className={classes.cardDescription}>
+                      {post?.frontmatter?.excerpt}
+                    </Typography>
+                  </CardContent>
+              
+                </Card>
+              </Grid>
+            </Link>
             )
           })}
-      </ul>
+      </Grid>
     </div>
   )
 }

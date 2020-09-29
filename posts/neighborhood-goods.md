@@ -5,7 +5,7 @@ date: '2020-04-27'
 hero_image: '../static/ng.png'
 thumb_image: '../static/ng.png'
 hero_color: '#cd7f33'
-exceprt: 'Managed the team that designed and developed Neighborhood Goods entire technology stack which included a GraphQL Shopify API/CMS driven site, native consumer and associate applications, and Bluetooth micro-location.'
+excerpt: 'Managed the team that designed and developed Neighborhood Goods entire technology stack which included a GraphQL Shopify API/CMS driven site, native consumer and associate applications, and Bluetooth micro-location.'
 
 ---
 

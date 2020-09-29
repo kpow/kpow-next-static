@@ -6,7 +6,7 @@ hero_image: '../static/ng.png'
 thumb_image: '../static/ng.png'
 hero_color: '#a7787d'
 url: 'https://vimeo.com/361193962'
-exceprt: 'Established the technology and UX initiatives that resulted in the first touchscreen endcaps in Walmart for Starbucks.'
+excerpt: 'Established the technology and UX initiatives that resulted in the first touchscreen endcaps in Walmart for Starbucks.'
 
 ---
 

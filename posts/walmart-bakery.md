@@ -5,7 +5,7 @@ date: '2020-04-27'
 hero_image: '../static/ng.png'
 thumb_image: '../static/ng.png'
 hero_color: '#f3ec9e'
-exceprt: 'Designed a hybrid production approach for this menu board system with broadcast fidelity and dynamic content at every Walmart location.'
+excerpt: 'Designed a hybrid production approach for this menu board system with broadcast fidelity and dynamic content at every Walmart location.'
 
 ---
 

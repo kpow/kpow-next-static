@@ -5,7 +5,7 @@ date: '2020-04-27'
 hero_image: '../static/ng.png'
 thumb_image: '../static/ng.png'
 hero_color: '#040909'
-exceprt: 'Responsible for a portion of this fun project that implemented a campaign site where users took a quiz that resulted in generating a room of their dreams. '
+excerpt: 'Responsible for a portion of this fun project that implemented a campaign site where users took a quiz that resulted in generating a room of their dreams. '
 
 ---
 

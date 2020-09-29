@@ -5,7 +5,7 @@ date: '2020-04-27'
 hero_image: '../static/ng.png'
 thumb_image: '../static/ng.png'
 hero_color: '#51443b'
-exceprt: 'Developed this speedy site from ground up while working with video production team to insure an integrated product.'
+excerpt: 'Developed this speedy site from ground up while working with video production team to insure an integrated product.'
 
 ---
 

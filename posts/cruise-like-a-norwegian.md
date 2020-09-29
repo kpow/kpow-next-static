@@ -5,7 +5,7 @@ date: '2020-04-27'
 hero_image: '../static/ng.png'
 thumb_image: '../static/ng.png'
 hero_color: '#826c61'
-exceprt: 'Teach Lead for this cinemagraph driven landing page for a Norwegian Cruise Line campaign that integrated multiple videos into a single scrolling interface.'
+excerpt: 'Teach Lead for this cinemagraph driven landing page for a Norwegian Cruise Line campaign that integrated multiple videos into a single scrolling interface.'
 
 ---
 

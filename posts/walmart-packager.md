@@ -5,7 +5,7 @@ date: '2020-04-27'
 hero_image: '../static/ng.png'
 thumb_image: '../static/ng.png'
 hero_color: '#343f42'
-exceprt: 'Designed the architecture and led the build of a static site generator coupled with a headless CMS for delivery of digital signage content.'
+excerpt: 'Designed the architecture and led the build of a static site generator coupled with a headless CMS for delivery of digital signage content.'
 
 ---
 
