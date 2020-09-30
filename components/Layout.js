@@ -5,7 +5,6 @@ import Paper from '@material-ui/core/Paper';
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import BigFooter from '@components/BigFooter';
 
-
 import Header from './Header'
 
 import React from 'react';

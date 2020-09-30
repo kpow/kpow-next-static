@@ -50,6 +50,8 @@ export async function getStaticProps({ ...ctx }) {
   }
 }
 
+
+// used by next for static render
 export async function getStaticPaths() {
   const blogSlugs = ((context) => {
     return getSlugs(context)
