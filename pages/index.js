@@ -1,8 +1,7 @@
 import Layout from '@components/Layout';
-import PostList from '@components/PostList';
+import ProjectList from '@components/ProjectList';
 import Title from '@components/Title';
 import {
-  useQuery,
   useQueryCache,
   QueryCache,
   ReactQueryCacheProvider,
@@ -13,7 +12,7 @@ import getPosts from '@utils/getPosts'
 
 const queryCache = new QueryCache()
 
-const Index = ({ posts, title, description, ...props }) => {
+const Index = ({ projects, title, description, ...props }) => {
 
   const cache = useQueryCache();
   const { status, data, error, isFetching } = getStars(3);
@@ -21,13 +20,15 @@ const Index = ({ posts, title, description, ...props }) => {
   return (
     
       <Layout pageTitle={title} description={description}>
+        
         <Title>
           k-projects
         </Title>
-        <PostList posts={posts} />
+        <ProjectList projects={projects} />
         <Title>
           stars
         </Title>
+
         <ReactQueryCacheProvider queryCache={queryCache}>
           <div>
               {status === "loading" ? (
@@ -39,8 +40,13 @@ const Index = ({ posts, title, description, ...props }) => {
                   <div>
                     {data.map((post) => (
                       <p key={post.id}>
+                        <img
+                    src={post.lead_image_url}
+                    />
                         <span>
-                        {post.id} - {post.title}
+                        {post.title}
+                        <br/>
+                        {post.summary}
                         </span>
                       </p>
                     ))}
@@ -50,6 +56,7 @@ const Index = ({ posts, title, description, ...props }) => {
               )}
           </div>
         </ReactQueryCacheProvider>
+      
       </Layout>
     
   )
@@ -60,13 +67,13 @@ export default Index
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`)
 
-  const posts = ((context) => {
+  const projects = ((context) => {
     return getPosts(context)
-  })(require.context('../posts', true, /\.md$/))
+  })(require.context('../projects', true, /\.md$/))
 
   return {
     props: {
-      posts,
+      projects,
       title: configData.default.title,
       description: configData.default.description,
     },

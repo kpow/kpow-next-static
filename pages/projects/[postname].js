@@ -27,7 +27,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
         <div className="back">
           ←{' '}
           <Link href="/">
-            <a>Back to post list</a>
+            <a>Back to home</a>
           </Link>
         </div>
       </Layout>
@@ -37,7 +37,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
 export async function getStaticProps({ ...ctx }) {
   const { postname } = ctx.params
 
-  const content = await import(`../../posts/${postname}.md`)
+  const content = await import(`../../projects/${postname}.md`)
   const config = await import(`../../siteconfig.json`)
   const data = matter(content.default)
 
@@ -55,9 +55,9 @@ export async function getStaticProps({ ...ctx }) {
 export async function getStaticPaths() {
   const blogSlugs = ((context) => {
     return getSlugs(context)
-  })(require.context('../../posts', true, /\.md$/))
+  })(require.context('../../projects', true, /\.md$/))
 
-  const paths = blogSlugs.map((slug) => `/post/${slug}`)
+  const paths = blogSlugs.map((slug) => `/projects/${slug}`)
 
   return {
     paths, // An array of path names, and any params

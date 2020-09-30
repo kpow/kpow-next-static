@@ -3,13 +3,12 @@ import {
   QueryCache,
   ReactQueryCacheProvider,
 } from "react-query";
-
 import getStars from '../api/getStars.js'
 
 const queryCache = new QueryCache()
 
 function Posts() {
-  const { status, data, error, isFetching } = getStars(30);
+  const { status, data, error, isFetching } = getStars(10);
   return (
     <div>
         {status === "loading" ? (
@@ -24,6 +23,9 @@ function Posts() {
                   <span>
                   {post.id} - {post.title}
                   </span>
+                  <img
+                    src={post.lead_image_url}
+                    />
                 </p>
               ))}
             </div>
@@ -42,7 +44,6 @@ const Stars = ({title, description, ...props }) => {
             <Posts />
         </ReactQueryCacheProvider>
       </Layout>
-    
   )
 }
 
