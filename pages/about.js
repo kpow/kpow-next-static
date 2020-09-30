@@ -6,8 +6,9 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   heroContent: {
     padding: theme.spacing(0, 0, 6),
+    marginTop: '30px;'
   },
-  paperPadding: { 
+  paperPadding: {
     padding: theme.spacing(4) 
   },
   heroButtons: { 

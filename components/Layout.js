@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mainFeaturedPost: {
     position: 'relative',
-    marginBottom: theme.spacing(4),
+    marginBottom: 0,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -53,7 +53,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
           <div className={classes.overlay} />
         </Paper>
         <Container maxWidth="lg">
-          
+
           <Box component="main" mx={paperPadding}>
             {children}
           </Box>

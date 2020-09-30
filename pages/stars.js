@@ -4,6 +4,7 @@ import {
   ReactQueryCacheProvider,
 } from "react-query";
 import StarList from 'components/StarList'
+import Title from '@components/Title'
 import getStars from '../api/getStars.js'
 
 const queryCache = new QueryCache()
@@ -13,6 +14,9 @@ const Stars = ({title, description, ...props }) => {
 
   return (
       <Layout pageTitle={title} description={description}>
+         <Title>
+          star feed
+        </Title>
         <ReactQueryCacheProvider queryCache={queryCache}>
           <div>
               {status === "loading" ? ( "Loading...") : status === "error" ? ( <span>Error: {error.message}</span> ) : (
