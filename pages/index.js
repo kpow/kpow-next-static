@@ -1,5 +1,6 @@
 import Layout from '@components/Layout';
 import ProjectList from '@components/ProjectList';
+import StarList from '@components/StarList';
 import Title from '@components/Title';
 import {
   useQueryCache,
@@ -15,7 +16,7 @@ const queryCache = new QueryCache()
 const Index = ({ projects, title, description, ...props }) => {
 
   const cache = useQueryCache();
-  const { status, data, error, isFetching } = getStars(3);
+  const { status, data, error, isFetching } = getStars(4);
 
   return (
     
@@ -31,34 +32,21 @@ const Index = ({ projects, title, description, ...props }) => {
 
         <ReactQueryCacheProvider queryCache={queryCache}>
           <div>
-              {status === "loading" ? (
-                "Loading..."
-              ) : status === "error" ? (
-                <span>Error: {error.message}</span>
-              ) : (
+              {status === "loading" ? ( "Loading...") : status === "error" ? ( <span>Error: {error.message}</span> ) : (
                 <>
                   <div>
-                    {data.map((post) => (
-                      <p key={post.id}>
-                        <img
-                    src={post.lead_image_url}
-                    />
-                        <span>
-                        {post.title}
-                        <br/>
-                        {post.summary}
-                        </span>
-                      </p>
-                    ))}
+                    <StarList stars={data} />
                   </div>
                   <div>{isFetching ? "Background Updating..." : " "}</div>
                 </>
               )}
           </div>
         </ReactQueryCacheProvider>
-      
+        <Title>
+          books
+        </Title>
+  
       </Layout>
-    
   )
 }
 

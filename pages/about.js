@@ -3,7 +3,6 @@ import { Container, Grid, Button, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-
 const useStyles = makeStyles((theme) => ({
   heroContent: {
     padding: theme.spacing(0, 0, 6),
@@ -15,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
   }
 }));
-
 
 const About = ({ title, description, ...props }) => {
   const classes = useStyles();

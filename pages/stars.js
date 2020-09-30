@@ -3,45 +3,27 @@ import {
   QueryCache,
   ReactQueryCacheProvider,
 } from "react-query";
+import StarList from 'components/StarList'
 import getStars from '../api/getStars.js'
 
 const queryCache = new QueryCache()
 
-function Posts() {
-  const { status, data, error, isFetching } = getStars(10);
-  return (
-    <div>
-        {status === "loading" ? (
-          "Loading..."
-        ) : status === "error" ? (
-          <span>Error: {error.message}</span>
-        ) : (
-          <>
-            <div>
-              {data.map((post) => (
-                <p key={post.id}>
-                  <span>
-                  {post.id} - {post.title}
-                  </span>
-                  <img
-                    src={post.lead_image_url}
-                    />
-                </p>
-              ))}
-            </div>
-            <div>{isFetching ? "Background Updating..." : " "}</div>
-          </>
-        )}
-    </div>
-  );
-}
-
 const Stars = ({title, description, ...props }) => {
+  const { status, data, error, isFetching } = getStars(12);
 
   return (
       <Layout pageTitle={title} description={description}>
         <ReactQueryCacheProvider queryCache={queryCache}>
-            <Posts />
+          <div>
+              {status === "loading" ? ( "Loading...") : status === "error" ? ( <span>Error: {error.message}</span> ) : (
+                <>
+                  <div>
+                    <StarList stars={data} />
+                  </div>
+                  <div>{isFetching ? "Background Updating..." : " "}</div>
+                </>
+              )}
+          </div>
         </ReactQueryCacheProvider>
       </Layout>
   )
