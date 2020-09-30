@@ -1,8 +1,11 @@
 import React from 'react';
+import axios from "axios";
+
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
 import StarCard from 'components/StarCard'
+import StarCardBig from 'components/StarCardBig'
 
 const useStyles = makeStyles((theme) => ({ }));
 
@@ -20,7 +23,7 @@ export default function ProjectList({ stars }) {
         {displayStars &&
           displayStars.map((item) => {
             return (
-            <StarCard article={item} />
+            <StarCardBig article={item} />
             )
           })}
       </Grid>

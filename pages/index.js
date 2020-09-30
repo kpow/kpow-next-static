@@ -16,7 +16,7 @@ const queryCache = new QueryCache()
 const Index = ({ projects, title, description, ...props }) => {
 
   const cache = useQueryCache();
-  const { status, data, error, isFetching } = getStars(4);
+  const { status, data, error, isFetching } = getStars(3);
 
   return (
     

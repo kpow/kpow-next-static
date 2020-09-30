@@ -19,7 +19,7 @@ export default function ProjectList({ projects }) {
       <Grid container spacing={4}>
         {displayProjects &&
           displayProjects.map((item) => {
-            return ( <ProjectCard project={item} /> )
+            return ( <ProjectCard project={item} key={item.frontmatter.title}/> )
           })}
       </Grid>
     </div>

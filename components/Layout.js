@@ -52,7 +52,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
       <React.Fragment>
         <CssBaseline />
         <Header />
-        <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(https://source.unsplash.com/1200x300/?space,nasa)` }}>
+        <Paper className={classes.mainFeaturedPost} style={{ marginTop:'40px', backgroundImage: `url(https://source.unsplash.com/1200x300/?space,nasa)` }}>
           <div className={classes.overlay} />
         </Paper>
         <Container maxWidth="lg" className={classes.mainContent}>

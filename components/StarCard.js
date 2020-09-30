@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { format, parseISO, formatDistance, formatRelative, subDays } from 'date-fns'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -31,14 +31,18 @@ const useStyles = makeStyles((theme) => ({
   },
   siteUrl: {
     fontSize: 14,
+    lineHeight:1.25
   },
 }));
 
 const StarCard = React.memo(function StarCard(props) {
 
+  const publishedDate = parseISO(props.article?.published)
+  const formatDate = format(publishedDate, "M.d.yyyy" )
+
   const classes = useStyles();
   return (
-      <Grid container item key={props.article.published} xs={12} sm={6} md={3}>
+      <Grid container item key={props.article.title} xs={12} sm={6} md={4}>
         <Card className={classes.card}>
           <a href={props.article.url} target="_blank"> 
             <CardMedia
@@ -49,8 +53,12 @@ const StarCard = React.memo(function StarCard(props) {
           </a>  
 
           <CardContent className={classes.cardContent}>
+
             <Typography className={classes.siteUrl} color="textSecondary" gutterBottom>
-            {props.article?.site_url}
+              {props.article?.site_url}
+            </Typography>
+            <Typography className={classes.siteUrl} color="textSecondary" gutterBottom>
+              {formatDate}
             </Typography>
 
             <Typography gutterBottom variant="h5">
@@ -62,11 +70,12 @@ const StarCard = React.memo(function StarCard(props) {
             
           </CardContent>
           <CardActions className={classes.cardCta}>
-            <Button size="small" 
-                    variant="contained" 
-                    target="_blank" 
-                    href={props.article.url}
-                    endIcon={<OpenInNewIcon />}
+            <Button 
+              size="small" 
+              variant="contained" 
+              target="_blank" 
+              href={props.article.url}
+              endIcon={<OpenInNewIcon />}
             >
               go to article
             </Button>
