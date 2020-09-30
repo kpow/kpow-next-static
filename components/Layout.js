@@ -20,7 +20,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    height: '150px',
+    height: '100px',
+  },
+  mainContent: {
+    // padding: theme.spacing(3)
   },
   overlay: {
     position: 'absolute',
@@ -52,13 +55,16 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(https://source.unsplash.com/1200x300/?space,nasa)` }}>
           <div className={classes.overlay} />
         </Paper>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" className={classes.mainContent}>
 
           <Box component="main" mx={paperPadding}>
             {children}
           </Box>
          
         </Container>
+        <Paper className={classes.mainFeaturedPost} style={{ marginTop:'40px', backgroundImage: `url(https://source.unsplash.com/1200x300/?space,nasa)` }}>
+          <div className={classes.overlay} />
+        </Paper>
         <BigFooter /> 
 
       </React.Fragment>      

@@ -2,6 +2,7 @@ import Layout from '@components/Layout'
 import { Container, Grid, Button, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Title from '@components/Title';
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
@@ -9,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '30px;'
   },
   paperPadding: {
-    padding: theme.spacing(4) 
+    padding: theme.spacing(3),
+    marginBottom: theme.spacing(0) 
   },
   heroButtons: { 
     marginTop: theme.spacing(4),
@@ -24,9 +26,9 @@ const About = ({ title, description, ...props }) => {
         <div className={classes.heroContent}>
           <Container maxWidth="md">
             <Paper elevation={3} className={classes.paperPadding}>
-            <Typography component="h1" variant="h3" align="center" color="textPrimary" gutterBottom>
+            <Title>
               Hi, I'm Kevin
-            </Typography>
+            </Title>
             <Typography variant="h6" align="center" color="textSecondary" paragraph>
                 Digital Architect - Leader - Developer - Pixel Farmer.
                 <br></br>
@@ -36,6 +38,10 @@ const About = ({ title, description, ...props }) => {
                 <br></br>
                 I'm into travel, ukes, pugs, live music, and pixels.
             </Typography>
+            </Paper>
+            <Title>
+              what's up?
+            </Title>
             <Typography component="p" gutterBottom>
               A digital Swiss Army knife with 20+ years of web development and creative services experience. I am well versed in interfacing with stakeholders and UX/design teams, managing development resources and product development, maintaining partner relationships and requirements, and providing documentation while also evaluating and elevating platforms, tools, and environments.
             </Typography>
@@ -46,19 +52,19 @@ const About = ({ title, description, ...props }) => {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
+                  <Button variant="contained">
                     Site Repo
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary">
+                  <Button variant="contained">
                     My Resume
                   </Button>
                 </Grid>
               </Grid>
             </div>
             
-            </Paper>
+            
           </Container>
         </div>
       </Layout>

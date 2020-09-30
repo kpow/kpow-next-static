@@ -8,6 +8,7 @@ import CardActions from '@material-ui/core/CardActions'
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -21,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     flexGrow: 1,
+  },
+  cardCta: {
+    padding:theme.spacing(2)
   },
   cardDescription: {
     fontSize:'.9rem',
@@ -57,8 +61,15 @@ const StarCard = React.memo(function StarCard(props) {
             </Typography>
             
           </CardContent>
-          <CardActions>
-            <Button size="small" variant="contained" target="_blank" href={props.article.url}>Learn More</Button>
+          <CardActions className={classes.cardCta}>
+            <Button size="small" 
+                    variant="contained" 
+                    target="_blank" 
+                    href={props.article.url}
+                    endIcon={<OpenInNewIcon />}
+            >
+              go to article
+            </Button>
           </CardActions>
 
         </Card>
