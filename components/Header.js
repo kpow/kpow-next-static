@@ -145,7 +145,7 @@ export default function Header() {
               </ListItem>
             </Link>
 
-            <Link href="/stars">
+            <Link href="/starfeed">
               <ListItem button key="stars">
                 <ListItemIcon>
                   <StarsIcon />

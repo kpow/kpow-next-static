@@ -6,20 +6,51 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
   usePaginatedQuery,
   useQueryCache,
-  QueryCache,
-  ReactQueryCacheProvider,
 } from 'react-query'
 import fetchStars from '../api/fetchStars.js';
 import Button from '@material-ui/core/Button';
+import Chip from '@material-ui/core/Chip'
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import { ReactQueryDevtools } from 'react-query-devtools'
-
-import StarCard from 'components/StarCard'
 import StarCardBig from 'components/StarCardBig'
 
-const useStyles = makeStyles((theme) => ({ }));
 
-function StarList() {
+const Pager = ({page, latestData, isFetching, howMany, setPage}) =>{
+  if(howMany > 8){
+    return(
+        <div style={{textAlign:'right', margin:'20px 0 20px'}}>
+          {isFetching ? <Chip size="small" label='loading . . .'/>: null}{' '}
+          <Button
+            size="small" 
+            variant="outlined" 
+            startIcon={<NavigateBeforeIcon />}
+            onClick={() => setPage(old => Math.max(old - 1, 0))}
+            disabled={page === 0}
+          >
+            Prev
+          </Button>
+          <span style={{margin:'10px'}}>
+            <Chip size="large" label={page + 1}/>
+          </span>
+          <Button
+            size="small" 
+            variant="outlined" 
+            endIcon={<NavigateNextIcon />}
+            onClick={() => setPage(old => (!latestData || !latestData.hasMore ? old : old + 1)) }
+            disabled={!latestData || !latestData.hasMore}
+          >
+            Next
+          </Button>
+          
+        </div>
+    )
+  }else{
+    return <div></div>
+  }
+}
 
+function StarList({howMany}) {
   const cache = useQueryCache()
   const [page, setPage] = React.useState(0)
   
@@ -29,34 +60,27 @@ function StarList() {
     latestData,
     error,
     isFetching,
-  } = usePaginatedQuery(['stars', page], fetchStars, {})
+  } = usePaginatedQuery(['stars', page, howMany], fetchStars, {})
 
   // Prefetch the next page!
   React.useEffect(() => {
     window.scrollTo(0, 0)
     if (latestData?.hasMore) {
-      cache.prefetchQuery(['stars', page + 1], fetchStars)
+      cache.prefetchQuery(['stars', (Number(page) + 1)], fetchStars)
     }
   }, [latestData, fetchStars, page])
 
   return (
     <div>
-      <div>
-        <span>Current Page: {page + 1}</span>
-        <Button
-          onClick={() => setPage(old => Math.max(old - 1, 0))}
-          disabled={page === 0}
-        >
-          Previous Page
-        </Button>{' '}
-        <Button
-          onClick={() => setPage(old => (!latestData || !latestData.hasMore ? old : old + 1)) }
-          disabled={!latestData || !latestData.hasMore}
-        >
-          Next Page
-        </Button>
-        {isFetching ? <span> Loading...</span> : null}{' '}
-      </div>
+
+     <Pager 
+        howMany={howMany} 
+        page={page} 
+        latestData={latestData} 
+        isFetching={isFetching}
+        setPage={setPage}
+      /> 
+
       {status === 'loading' ? (
         <div>Loading...</div>
       ) : status === 'error' ? (
@@ -70,22 +94,15 @@ function StarList() {
         </Grid>
 
       )}
-      <div>
-        <span>Current Page: {page + 1}</span>
-        <Button
-          onClick={() => setPage(old => Math.max(old - 1, 0))}
-          disabled={page === 0}
-        >
-          Previous Page
-        </Button>{' '}
-        <Button
-          onClick={() => setPage(old => (!latestData || !latestData.hasMore ? old : old + 1)) }
-          disabled={!latestData || !latestData.hasMore}
-        >
-          Next Page
-        </Button>
-        {isFetching ? <span> Loading...</span> : null}{' '}
-      </div>
+
+      <Pager 
+        howMany={howMany} 
+        page={page} 
+        latestData={latestData} 
+        isFetching={isFetching}
+        setPage={setPage}
+      /> 
+      
       <ReactQueryDevtools />
     </div>
   )

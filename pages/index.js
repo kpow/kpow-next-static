@@ -1,5 +1,8 @@
+import Link from 'next/link'
 import Layout from '@components/Layout';
+import Button from '@material-ui/core/Button';
 import ProjectList from '@components/ProjectList';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import StarList from '@components/StarList';
 import Title from '@components/Title';
 import {
@@ -26,22 +29,33 @@ const Index = ({ projects, title, description, ...props }) => {
           k-projects
         </Title>
         <ProjectList projects={projects} />
+
         <Title>
           stars
-        </Title>
-
-        <ReactQueryCacheProvider queryCache={queryCache}>
-          <div>
-              {status === "loading" ? ( "Loading...") : status === "error" ? ( <span>Error: {error.message}</span> ) : (
-                <>
-                  <div>
-                    <StarList stars={data} />
-                  </div>
-                  <div>{isFetching ? "Background Updating..." : " "}</div>
-                </>
-              )}
+          <div style={{display:'inline-block', textAlign:'right', margin:'20px 20px 20px'}}>
+            <Link href="/starfeed">
+              <Button
+                size="small" 
+                variant="outlined" 
+                endIcon={<NavigateNextIcon />}
+              >
+                see more
+              </Button>
+            </Link>
           </div>
+        </Title>
+        
+        <ReactQueryCacheProvider queryCache={queryCache}>
+          {status === "loading" ? ( "Loading...") : status === "error" ? ( <span>Error: {error.message}</span> ) : (
+            <>
+              <div>
+                <StarList howMany={3}/>
+              </div>
+              <div>{isFetching ? "Background Updating..." : " "}</div>
+            </>
+          )}
         </ReactQueryCacheProvider>
+
         <Title>
           books
         </Title>

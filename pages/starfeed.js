@@ -60,7 +60,7 @@ export default function Starfeed({title, description, ...props }) {
           </Container>
       </div>
       <ReactQueryCacheProvider queryCache={queryCache}>
-        <StarList />
+        <StarList howMany={9}/>
       </ReactQueryCacheProvider>
     </Layout>
   )

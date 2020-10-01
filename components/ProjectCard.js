@@ -36,15 +36,18 @@ const ProjectCard = React.memo(function ProjectCard(props) {
             className={classes.cardMedia}
             image={props.project?.frontmatter?.thumb_image}
             title={props.project?.frontmatter?.title}
-          />
+          >
+            
+            </CardMedia>
+
 
           <CardContent className={classes.cardContent}>
             <Typography gutterBottom variant="h5" component="h2">
               {props.project?.frontmatter?.title}
             </Typography>
-            <Typography component="p" className={classes.cardDescription}>
+            {/* <Typography component="p" className={classes.cardDescription}>
               {props.project?.frontmatter?.excerpt}
-            </Typography>
+            </Typography> */}
           </CardContent>
       
         </Card>

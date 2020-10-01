@@ -1,10 +1,10 @@
-import React from 'react'
 import axios from 'axios'
 import extractHostname from '@utils/extractHostname';
 
 
-const fetchStars = async (key, page = 0) => {
-    const { data } = await axios.get("https://services.kpow.com/stars.php?page="+(page+1)+"&perPage=9")
+const fetchStars = async (key, page = 0, howMany = 3) => {
+  
+    const { data } = await axios.get("https://services.kpow.com/stars.php?page="+(page+1)+"&perPage="+howMany)
 
     for(let i=0;i<data.length;i++ ){
       const siteUrl = extractHostname(data[i].url);
@@ -15,7 +15,8 @@ const fetchStars = async (key, page = 0) => {
       } catch (error) {
         console.error(error);
       }
-    }  
+    } 
+ 
     const fullData = {data, hasMore: true }
     return fullData
   }
