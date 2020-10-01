@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({ }));
 
 export default function ProjectList({ projects }) {
   const classes = useStyles();
-  const displayProjects = projects.slice(0, 4)
+  const displayProjects = projects.slice(2, 6)
   
   if (projects === 'undefined') return null
 

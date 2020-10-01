@@ -2,8 +2,8 @@
 title: 'Walmart Packager'
 author: 'kpow'
 date: '2020-04-27'
-hero_image: '../static/ng.png'
-thumb_image: '../static/ng.png'
+hero_image: '../static/wm-packager.png'
+thumb_image: '../static/wm-packager-thumb.png'
 hero_color: '#343f42'
 excerpt: 'Designed the architecture and led the build of a static site generator coupled with a headless CMS for delivery of digital signage content.'
 

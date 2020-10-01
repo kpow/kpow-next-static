@@ -2,8 +2,8 @@
 title: 'Walmart Bakery'
 author: 'kpow'
 date: '2020-04-27'
-hero_image: '../static/ng.png'
-thumb_image: '../static/ng.png'
+hero_image: '../static/wm-bakery.png'
+thumb_image: '../static/wm-bakery-thumb.png'
 hero_color: '#f3ec9e'
 excerpt: 'Designed a hybrid production approach for this menu board system with broadcast fidelity and dynamic content at every Walmart location.'
 
