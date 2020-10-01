@@ -3,6 +3,14 @@ import { Container, Grid, Button, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box'
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import ListItemText from '@material-ui/core/ListItemText';
+import FolderIcon from '@material-ui/icons/Folder';
+
 import Title from '@components/Title';
 
 const useStyles = makeStyles((theme) => ({
@@ -37,11 +45,17 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     marginTop:'30px;'
-  }
+  },
+  demo: {
+    backgroundColor: theme.palette.background.paper,
+    fontWeight: 'bold'
+  },
 }));
 
 const About = ({ title, description, ...props }) => {
   const classes = useStyles();
+  const [dense, setDense] = React.useState(false);
+  const [secondary, setSecondary] = React.useState(false);
 
   return (
       <Layout pageTitle={`${title} | About`} description={description}>
@@ -66,9 +80,78 @@ const About = ({ title, description, ...props }) => {
               <Title>
                 what's up?
               </Title>
-              <Typography component="p" gutterBottom>
+
+          <div className={classes.demo}>
+            <List dense={false}>
+                <ListItem>
+                  <ListItemIcon>
+                    <FolderIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary=" A digital Swiss Army knife with 20+ years of experience"
+                    // secondary="Secondary textl"
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <FolderIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Interfacing with stakeholders and UX/design teams"
+                    // secondary="Secondary textl"
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <FolderIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Managing development resources and product development"
+                    // secondary="Secondary textl"
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <FolderIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Maintaining partner relationships"
+                    // secondary="Secondary textl"
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <FolderIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Defining requirements and providing documentation"
+                    // secondary="Secondary textl"
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <FolderIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Defining requirements and providing documentation"
+                    // secondary="Secondary textl"
+                  />
+                </ListItem> <ListItem>
+                  <ListItemIcon>
+                    <FolderIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="evaluating and elevating platforms, tools, and environments"
+                    // secondary="Secondary textl"
+                  />
+                </ListItem>
+            </List>
+          </div>
+          
+          
+              {/* <Typography component="p" gutterBottom>
                 A digital Swiss Army knife with 20+ years of web development and creative services experience. I am well versed in interfacing with stakeholders and UX/design teams, managing development resources and product development, maintaining partner relationships and requirements, and providing documentation while also evaluating and elevating platforms, tools, and environments.
-              </Typography>
+              </Typography> */}
               <Typography component="p" style={{marginTop:'20px'}} gutterBottom>
                 I am a technologist with a relentless passion for designing solutions that overcome technical obstacles. Pushing for innovation, I continually challenge myself and my teams to make technology work harder and smarter for clients. Crafting dynamic experiences, robust design systems, efficient development practices, and continuous learning are among my core principles. Also, I am a donut connoisseur.
               </Typography>
