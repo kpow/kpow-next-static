@@ -57,12 +57,11 @@ const Hero = () =>{
       </Container>
     </div>
   )
-
 }
 
 export default function Starfeed({title, description, ...props }) {
   const classes = useStyles();
-  
+
   return (
     <Layout pageTitle={title} description={description}>
       <Hero />

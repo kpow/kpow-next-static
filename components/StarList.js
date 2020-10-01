@@ -14,13 +14,14 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import { ReactQueryDevtools } from 'react-query-devtools'
 import StarCardBig from 'components/StarCardBig'
+import StarCardBigSkeleton from 'components/StarCardBigSkeleton'
 
 
 const Pager = ({page, latestData, isFetching, howMany, setPage}) =>{
   if(howMany > 8){
     return(
         <div style={{textAlign:'right', margin:'20px 0 20px'}}>
-          {/* {isFetching ? <Chip size="small" label='loading . . .'/>: null}{' '} */}
+          {isFetching ? <Chip size="small" label='loading . . .'/>: null}{' '}
           <Button
             size="small" 
             variant="outlined" 
@@ -42,11 +43,10 @@ const Pager = ({page, latestData, isFetching, howMany, setPage}) =>{
           >
             Next
           </Button>
-          
         </div>
     )
   }else{
-    return <div></div>
+    return null
   }
 }
 
@@ -82,7 +82,11 @@ function StarList({howMany}) {
       /> 
 
       {status === 'loading' ? (
-        <div>Loading...</div>
+        <Grid container spacing={4}>
+          <StarCardBigSkeleton />
+          <StarCardBigSkeleton />
+          <StarCardBigSkeleton />
+        </Grid>
       ) : status === 'error' ? (
         <div>Error: {error.message}</div>
       ) : (

@@ -2,8 +2,11 @@ import Link from 'next/link'
 import Layout from '@components/Layout';
 import Button from '@material-ui/core/Button';
 import ProjectList from '@components/ProjectList';
+import Grid from '@material-ui/core/Grid'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import StarList from '@components/StarList';
+import StarCardBigSkeleton from 'components/StarCardBigSkeleton'
+
 import Title from '@components/Title';
 import {
   useQueryCache,
@@ -46,7 +49,15 @@ const Index = ({ projects, title, description, ...props }) => {
         </Title>
         
         <ReactQueryCacheProvider queryCache={queryCache}>
-          {status === "loading" ? ( "Loading...") : status === "error" ? ( <span>Error: {error.message}</span> ) : (
+          {status === "loading" ? ( 
+
+              <Grid container spacing={4}>
+              <StarCardBigSkeleton />
+              <StarCardBigSkeleton />
+              <StarCardBigSkeleton />
+              </Grid>
+
+          ) : status === "error" ? ( <span>Error: {error.message}</span> ) : (
             <>
               <div>
                 <StarList howMany={3}/>
