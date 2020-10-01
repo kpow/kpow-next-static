@@ -1,17 +1,12 @@
+import React from 'react'
+import {  QueryCache, ReactQueryCacheProvider } from 'react-query'
 import Layout from '@components/Layout';
-import {
-  QueryCache,
-  ReactQueryCacheProvider,
-} from "react-query";
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
-import StarList from 'components/StarList'
-import Title from '@components/Title'
-import getStars from '../api/getStars.js'
+import StarList from 'components/StarList';
+import Title from '@components/Title';
 
 const queryCache = new QueryCache()
 
@@ -46,22 +41,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-const Stars = ({title, description, ...props }) => {
-  const { status, data, error, isFetching } = getStars(1,12);
-  let screenData = data
+export default function Starfeed({title, description, ...props }) {
   const classes = useStyles();
 
-  const getMore = ()=>{
-    console.log('noo')
-    // let { data } = getStars(2,2);
-    // screenData = data;
-  }
-
   return (
-      <Layout pageTitle={title} description={description}>
-         {/* Hero unit */}
-        <div className={classes.heroContent}>
+    <Layout pageTitle={title} description={description}>
+      {/* Hero unit */}
+      <div className={classes.heroContent}>
           <Container maxWidth="sm">
           <Paper elevation={3} className={classes.paperPadding}>
             <Title>
@@ -71,26 +57,14 @@ const Stars = ({title, description, ...props }) => {
               I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :) 
             </Typography>
           </Paper>
-          </Container> 
-        </div>
-        <ReactQueryCacheProvider queryCache={queryCache}>
-          <div>
-              {status === "loading" ? ( "Loading...") : status === "error" ? ( <span>Error: {error.message}</span> ) : (
-                <>
-                  <div>
-                    <StarList stars={screenData} />
-                  </div>
-                  <div>{isFetching ? "Background Updating..." : " "}</div>
-                </>
-              )}
-          </div>
-        </ReactQueryCacheProvider>
-             
-      </Layout>
+          </Container>
+      </div>
+      <ReactQueryCacheProvider queryCache={queryCache}>
+        <StarList />
+      </ReactQueryCacheProvider>
+    </Layout>
   )
 }
-
-export default Stars
 
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`)

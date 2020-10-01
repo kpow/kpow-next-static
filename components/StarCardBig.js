@@ -56,16 +56,15 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const getFavicon = (siteUrl)=>{
+// const getFavicon = (siteUrl)=>{
   
-  return useQuery("stars", async () => {
-    const { data } = await axios.get(
-      'https://favicongrabber.com/api/grab/'+siteUrl
-    );
-    console.log(data.icons[0].src)
-  
-  });
-}
+//   return useQuery("stars", async () => {
+//     const { data } = await axios.get(
+//       'https://favicongrabber.com/api/grab/'+siteUrl
+//     );
+//     console.log(data.icons[0].src)
+//   });
+// }
 
 
 
@@ -79,7 +78,7 @@ export default function StarCardBig(props) {
     setExpanded(!expanded);
   };
 
-  getFavicon(props.article?.site_url)
+  // getFavicon(props.article?.site_url)
 
   return (
     <Grid container item xs={12} sm={6} md={4}>
