@@ -16,6 +16,7 @@ import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import Button from '@material-ui/core/Button';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
+import Skeleton from '@material-ui/lab/Skeleton';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -75,22 +76,19 @@ export default function StarCardBigSkeleton() {
         <div>
           <CardHeader
             avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                <img src="https://www.producthunt.com/favicon.ico" />
-              </Avatar>
+              <Skeleton variant="circle" width={40} height={40} />
             }
-            // action={}
-            title=""
-           
+            title={<Skeleton variant="text" />}
           />
-          <CardMedia
-            className={classes.media}
-            image=""
-            title=""
-          />
+          <Skeleton variant="rect" width={350} height={200} animation="wave" />
+          
+
+
           <CardContent>
-            <Typography gutterBottom variant="h5"></Typography>
-            <Typography variant="body2" color="textSecondary" component="p"></Typography>
+            <Typography gutterBottom variant="h5">
+              <Skeleton variant="text" width={300}/>
+            </Typography>
+            <Skeleton variant="text" width={300} height={200}/>
           </CardContent>
         </div> 
         <CardActions disableSpacing>
@@ -99,7 +97,9 @@ export default function StarCardBigSkeleton() {
             variant="contained" 
             target="_blank" 
             endIcon={<OpenInNewIcon />}
-          > </Button>
+          > 
+            <Skeleton variant="text" width={120}/>
+          </Button>
         
           <IconButton
             className={classes.expand}

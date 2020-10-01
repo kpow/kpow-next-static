@@ -86,6 +86,9 @@ function StarList({howMany}) {
           <StarCardBigSkeleton />
           <StarCardBigSkeleton />
           <StarCardBigSkeleton />
+          <StarCardBigSkeleton />
+          <StarCardBigSkeleton />
+          <StarCardBigSkeleton />
         </Grid>
       ) : status === 'error' ? (
         <div>Error: {error.message}</div>

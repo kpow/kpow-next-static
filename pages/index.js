@@ -52,9 +52,9 @@ const Index = ({ projects, title, description, ...props }) => {
           {status === "loading" ? ( 
 
               <Grid container spacing={4}>
-              <StarCardBigSkeleton />
-              <StarCardBigSkeleton />
-              <StarCardBigSkeleton />
+                <StarCardBigSkeleton />
+                <StarCardBigSkeleton />
+                <StarCardBigSkeleton />
               </Grid>
 
           ) : status === "error" ? ( <span>Error: {error.message}</span> ) : (
