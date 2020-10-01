@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   bioImage:{
     margin: '0 auto',
     maxWidth: '600px',
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
