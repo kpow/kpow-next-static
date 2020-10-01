@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
   },
   cardDescription: {
     fontSize:'.9rem',
+  },
+  cardTitle: {
+    fontSize:'1.5rem',
   }
 }));
 
@@ -41,12 +44,12 @@ const ProjectCard = React.memo(function ProjectCard(props) {
 
 
           <CardContent className={classes.cardContent}>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" className={classes.cardTitle} component="h2">
               {props.project?.frontmatter?.title}
             </Typography>
-            {/* <Typography component="p" className={classes.cardDescription}>
+            <Typography component="p" className={classes.cardDescription}>
               {props.project?.frontmatter?.excerpt}
-            </Typography> */}
+            </Typography>
           </CardContent>
       
         </Card>

@@ -74,7 +74,7 @@ const About = ({ title, description, ...props }) => {
               </Typography>
             </Box>
 
-            <Box className={classes.bioImage} component='img' src='../static/kpow.jpg' />
+            <img className={classes.bioImage} src='../static/kpow.jpg' />
 
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">

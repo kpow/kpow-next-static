@@ -41,24 +41,31 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const Hero = () =>{
+  const classes = useStyles();
+  return(
+    <div className={classes.heroContent}>
+      <Container maxWidth="sm">
+        <Paper elevation={3} className={classes.paperPadding}>
+          <Title>
+            star feed
+          </Title>
+          <Typography variant="h5" align="center" color="textSecondary" paragraph>
+            I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :) 
+          </Typography>
+        </Paper>
+      </Container>
+    </div>
+  )
+
+}
+
 export default function Starfeed({title, description, ...props }) {
   const classes = useStyles();
-
+  
   return (
     <Layout pageTitle={title} description={description}>
-      {/* Hero unit */}
-      <div className={classes.heroContent}>
-          <Container maxWidth="sm">
-          <Paper elevation={3} className={classes.paperPadding}>
-            <Title>
-              star feed
-            </Title>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :) 
-            </Typography>
-          </Paper>
-          </Container>
-      </div>
+      <Hero />
       <ReactQueryCacheProvider queryCache={queryCache}>
         <StarList howMany={9}/>
       </ReactQueryCacheProvider>

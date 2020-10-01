@@ -20,7 +20,7 @@ const Pager = ({page, latestData, isFetching, howMany, setPage}) =>{
   if(howMany > 8){
     return(
         <div style={{textAlign:'right', margin:'20px 0 20px'}}>
-          {isFetching ? <Chip size="small" label='loading . . .'/>: null}{' '}
+          {/* {isFetching ? <Chip size="small" label='loading . . .'/>: null}{' '} */}
           <Button
             size="small" 
             variant="outlined" 
@@ -31,7 +31,7 @@ const Pager = ({page, latestData, isFetching, howMany, setPage}) =>{
             Prev
           </Button>
           <span style={{margin:'10px'}}>
-            <Chip size="large" label={page + 1}/>
+            <Chip size="medium" label={page + 1}/>
           </span>
           <Button
             size="small" 
