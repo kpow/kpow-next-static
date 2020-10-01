@@ -36,9 +36,8 @@ const ProjectCard = React.memo(function ProjectCard(props) {
             className={classes.cardMedia}
             image={props.project?.frontmatter?.thumb_image}
             title={props.project?.frontmatter?.title}
-          >
-            
-            </CardMedia>
+          />
+      
 
 
           <CardContent className={classes.cardContent}>

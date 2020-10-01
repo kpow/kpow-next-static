@@ -28,6 +28,14 @@ const useStyles = makeStyles((theme) => ({
   bioText: {
     maxWidth: '600px',
     margin: '0 auto'
+  },
+  bioImage:{
+    margin: '0 auto',
+    maxWidth: '600px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop:'30px;'
   }
 }));
 
@@ -65,16 +73,18 @@ const About = ({ title, description, ...props }) => {
               </Typography>
             </Box>
 
+            <Box className={classes.bioImage} component='img' src='../static/kpow.jpg' />
+
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained">
+                  <Button  href="https://github.com/kpow/kpow-next-static" target="_blank" variant="contained">
                     Site Repo
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button variant="contained">
-                    My Resume
+                  <Button  href="https://www.visualcv.com/kevin-power/" target="_blank"  variant="contained">
+                    CV
                   </Button>
                 </Grid>
               </Grid>
