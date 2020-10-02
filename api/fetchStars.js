@@ -15,7 +15,8 @@ const fetchStars = async (key, page = 0, howMany = 3) => {
       console.error(error);
     }
   } 
-
+  const sorted = data.reverse()
+  console.log(sorted)
   const fullData = {data, hasMore: true}
   return fullData
 }

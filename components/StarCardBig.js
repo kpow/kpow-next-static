@@ -18,6 +18,7 @@ import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import Button from '@material-ui/core/Button';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import StarsIcon from '@material-ui/icons/Stars';
 import Grid from '@material-ui/core/Grid';
 import { useQuery } from "react-query";
 
@@ -29,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'space-between'
   },
-
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
@@ -46,7 +46,8 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(180deg)',
   },
   avatar: {
-    backgroundColor: red[500],
+    backgroundColor: '#999',
+    border: '3px solid #666',
   },
   fullContent:{
     '& img':{
@@ -56,15 +57,16 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-// const getFavicon = (siteUrl)=>{
-  
-//   return useQuery("stars", async () => {
-//     const { data } = await axios.get(
-//       'https://favicongrabber.com/api/grab/'+siteUrl
-//     );
-//     console.log(data.icons[0].src)
-//   });
-// }
+const getFavicon = (siteUrl) =>{
+
+    const { data } = axios.get(
+      'https://favicongrabber.com/api/grab/'+siteUrl
+    ).then(
+      console.log(data)
+    )
+   
+
+}
 
 
 
@@ -73,6 +75,8 @@ export default function StarCardBig(props) {
   const [expanded, setExpanded] = React.useState(false);
   const publishedDate = parseISO(props.article?.published)
   const formatDate = format(publishedDate, "M.d.yyyy" )
+  
+  getFavicon(props.article?.site_url);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -86,8 +90,9 @@ export default function StarCardBig(props) {
       <div>
         <CardHeader
           avatar={
-            <Avatar aria-label="recipe" className={classes.avatar}>
-              <img src="https://www.producthunt.com/favicon.ico" />
+            <Avatar className={classes.avatar}>
+              {/* <StarsIcon /> */}
+              <img src={`https://api.faviconkit.com/${props.article?.site_url}/35`} />
             </Avatar>
           }
           // action={}

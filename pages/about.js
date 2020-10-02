@@ -10,6 +10,12 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import FolderIcon from '@material-ui/icons/Folder';
+import BathtubIcon from '@material-ui/icons/Bathtub';
+import BubbleChartIcon from '@material-ui/icons/BubbleChart';
+import CodeIcon from '@material-ui/icons/Code';
+import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
+import LocalFloristIcon from '@material-ui/icons/LocalFlorist';
+import PolymerIcon from '@material-ui/icons/Polymer';
 
 import Title from '@components/Title';
 
@@ -54,8 +60,6 @@ const useStyles = makeStyles((theme) => ({
 
 const About = ({ title, description, ...props }) => {
   const classes = useStyles();
-  const [dense, setDense] = React.useState(false);
-  const [secondary, setSecondary] = React.useState(false);
 
   return (
       <Layout pageTitle={`${title} | About`} description={description}>
@@ -67,8 +71,6 @@ const About = ({ title, description, ...props }) => {
             </Title>
             <Typography className={classes.heroText} variant="h5" align="center" color="textSecondary" paragraph>
                 Digital Architect - Leader - Developer - Pixel Farmer.
-                <br></br>
-                Director of E-Commerce at Barefoot Spas
                 <br></br>
                 Voracious Reader and Dad. 
                 <br></br>
@@ -85,7 +87,7 @@ const About = ({ title, description, ...props }) => {
             <List dense={false}>
                 <ListItem>
                   <ListItemIcon>
-                    <FolderIcon />
+                    <BathtubIcon />
                   </ListItemIcon>
                   <ListItemText
                     primary=" A digital Swiss Army knife with 20+ years of experience"
@@ -94,7 +96,7 @@ const About = ({ title, description, ...props }) => {
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <FolderIcon />
+                    <BubbleChartIcon />
                   </ListItemIcon>
                   <ListItemText
                     primary="Interfacing with stakeholders and UX/design teams"
@@ -103,7 +105,7 @@ const About = ({ title, description, ...props }) => {
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <FolderIcon />
+                    <CodeIcon />
                   </ListItemIcon>
                   <ListItemText
                     primary="Managing development resources and product development"
@@ -112,7 +114,7 @@ const About = ({ title, description, ...props }) => {
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <FolderIcon />
+                    <EmojiFoodBeverageIcon />
                   </ListItemIcon>
                   <ListItemText
                     primary="Maintaining partner relationships"
@@ -121,7 +123,7 @@ const About = ({ title, description, ...props }) => {
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <FolderIcon />
+                    <LocalFloristIcon />
                   </ListItemIcon>
                   <ListItemText
                     primary="Defining requirements and providing documentation"
@@ -130,15 +132,7 @@ const About = ({ title, description, ...props }) => {
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <FolderIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary="Defining requirements and providing documentation"
-                    // secondary="Secondary textl"
-                  />
-                </ListItem> <ListItem>
-                  <ListItemIcon>
-                    <FolderIcon />
+                    <PolymerIcon />
                   </ListItemIcon>
                   <ListItemText
                     primary="evaluating and elevating platforms, tools, and environments"
