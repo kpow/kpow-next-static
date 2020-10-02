@@ -15,40 +15,42 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import { ReactQueryDevtools } from 'react-query-devtools'
 import StarCardBig from 'components/StarCardBig'
 import StarCardBigSkeleton from 'components/StarCardBigSkeleton'
+import Modal from '@material-ui/core/Modal';
 
 
 const Pager = ({page, latestData, isFetching, howMany, setPage}) =>{
   if(howMany > 8){
     return(
         <div style={{textAlign:'right', margin:'20px 0 20px'}}>
-          {isFetching ? <Chip size="small" label='loading . . .'/>: null}{' '}
+          {isFetching ? 
+            <Chip size="small" label='loading . . .'/>
+          : null}{' '}
           <Button
-            size="small" 
+            size="small"
+            children="Prev" 
             variant="outlined" 
             startIcon={<NavigateBeforeIcon />}
             onClick={() => setPage(old => Math.max(old - 1, 0))}
             disabled={page === 0}
-          >
-            Prev
-          </Button>
+          />
           <span style={{margin:'10px'}}>
             <Chip size="medium" label={page + 1}/>
           </span>
           <Button
             size="small" 
+            children="Next"
             variant="outlined" 
             endIcon={<NavigateNextIcon />}
             onClick={() => setPage(old => (!latestData || !latestData.hasMore ? old : old + 1)) }
             disabled={!latestData || !latestData.hasMore}
-          >
-            Next
-          </Button>
+          />
         </div>
     )
   }else{
     return null
   }
 }
+
 
 function StarList({howMany}) {
   const cache = useQueryCache()
@@ -94,10 +96,23 @@ function StarList({howMany}) {
         <div>Error: {error.message}</div>
       ) : (
        
+
         <Grid container spacing={4}>
-          {resolvedData.data.map(project => (       
-            <StarCardBig key={project.id} article={project} />
-          ))} 
+          {isFetching ? 
+            <>
+              <StarCardBigSkeleton />
+              <StarCardBigSkeleton />
+              <StarCardBigSkeleton />
+              <StarCardBigSkeleton />
+              <StarCardBigSkeleton />
+              <StarCardBigSkeleton />
+            </>
+          : <>
+            {resolvedData.data.map(project => (       
+              <StarCardBig key={project.id} article={project} />
+            ))} 
+            </>
+          }{' '} 
         </Grid>
 
       )}

@@ -64,8 +64,6 @@ const useStyles = makeStyles((theme) => ({
 //   });
 // }
 
-
-
 export default function StarCardBigSkeleton() {
   const classes = useStyles();
 
@@ -73,41 +71,32 @@ export default function StarCardBigSkeleton() {
   return (
     <Grid container item xs={12} sm={6} md={4}>
       <Card className={classes.root}>
+
         <div>
           <CardHeader
             avatar={
-              <Skeleton variant="circle" width={40} height={40} />
+              <Skeleton variant="circle" width={40} height={40} animation="wave"/>
             }
-            title={<Skeleton variant="text" />}
+            title={<Skeleton variant="text" animation="wave"/>}
           />
           <Skeleton variant="rect" width={350} height={200} animation="wave" />
           
-
-
           <CardContent>
-            <Typography gutterBottom variant="h5">
-              <Skeleton variant="text" width={300}/>
-            </Typography>
-            <Skeleton variant="text" width={300} height={200}/>
+            <Skeleton variant="text" width={300} height={50} />
+            <Skeleton variant="text" width={300} height={150}/>
           </CardContent>
         </div> 
+
         <CardActions disableSpacing>
-          <Button 
-            size="small" 
-            variant="contained" 
-            target="_blank" 
-            endIcon={<OpenInNewIcon />}
-          > 
+          <Button size="small" variant="contained"> 
             <Skeleton variant="text" width={120}/>
           </Button>
         
-          <IconButton
-            className={classes.expand}
-            aria-label="show more"
-          >
+          <IconButton className={classes.expand}>
             <ExpandMoreIcon />
           </IconButton>
         </CardActions>
+
       </Card>
     </Grid>
   );
