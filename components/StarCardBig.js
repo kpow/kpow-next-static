@@ -23,7 +23,7 @@ import { useQuery } from "react-query";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 400,
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
