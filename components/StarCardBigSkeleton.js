@@ -53,16 +53,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-// const getFavicon = (siteUrl)=>{
-  
-//   return useQuery("stars", async () => {
-//     const { data } = await axios.get(
-//       'https://favicongrabber.com/api/grab/'+siteUrl
-//     );
-//     console.log(data.icons[0].src)
-//   });
-// }
-
 export default function StarCardBigSkeleton() {
   const classes = useStyles();
 

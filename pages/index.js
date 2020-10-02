@@ -31,40 +31,26 @@ const Index = ({ projects, title, description, ...props }) => {
           k-projects
         </Title>
         <ProjectList projects={projects} />
-
-        <Title>
-          stars
-          <div style={{display:'inline-block', textAlign:'right', margin:'20px 20px 20px'}}>
-            <Link href="/starfeed">
-              <Button
-                size="small" 
-                variant="outlined" 
-                endIcon={<NavigateNextIcon />}
-                children="see more"
-              />
-            </Link>
-          </div>
-        </Title>
         
-          {status === "loading" ? ( 
+        {status === "loading" ? ( 
 
-              <Grid container spacing={4}>
-                <StarCardBigSkeleton />
-                <StarCardBigSkeleton />
-                <StarCardBigSkeleton />
-              </Grid>
+            <Grid container spacing={4}>
+              <StarCardBigSkeleton />
+              <StarCardBigSkeleton />
+              <StarCardBigSkeleton />
+            </Grid>
 
-          ) : status === "error" ? ( <span>Error: {error.message}</span> ) : (
-            <>
-              <div>
-              <ReactQueryCacheProvider queryCache={queryCache}>
-                <StarList howMany={3}/>
-              </ReactQueryCacheProvider>  
-              </div>
-              <div>{isFetching ? "Background Updating..." : " "}</div>
-            </>
-          )}
-      
+        ) : status === "error" ? ( <span>Error: {error.message}</span> ) : (
+          <>
+            <div>
+            <ReactQueryCacheProvider queryCache={queryCache}>
+              <StarList howMany={3}/>
+            </ReactQueryCacheProvider>  
+            </div>
+            <div>{isFetching ? "Background Updating..." : " "}</div>
+          </>
+        )}
+    
         <Title>
           books
         </Title>

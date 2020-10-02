@@ -1,5 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+
 import {
   usePaginatedQuery,
   useQueryCache,
@@ -12,6 +17,7 @@ import StarCardBig from 'components/StarCardBig';
 import StarCardBigSkeleton from 'components/StarCardBigSkeleton';
 import StarPaginate from 'components/StarPaginate';
 import StarHero from 'components/StarHero';
+import Title from 'components/Title'
 
 const queryCache = new QueryCache()
 
@@ -37,15 +43,37 @@ function StarList({howMany}) {
 
   return (
     <>
-      {page >= 1 || howMany == 3 ? null : <StarHero />} 
-      
-      <StarPaginate 
-        howMany={howMany} 
-        page={page} 
-        latestData={latestData} 
-        isFetching={isFetching}
-        setPage={setPage}
-      /> 
+      <Box style={{display:'flex'}} justifyContent="space-between" flexDirection={ page >= 1 ? "row" : "column" }>
+        {page >= 1 || howMany == 3 ? 
+
+          <Box style={{display:'flex'}} flexDirection="row">
+            <Title> star feed </Title> 
+
+            {page > 0 ? null : 
+              <div style={{display:'inline-block', textAlign:'right', margin:'20px 20px 20px'}}>
+                <Link href="/starfeed">
+                  <Button
+                    size="small" 
+                    variant="outlined" 
+                    endIcon={<NavigateNextIcon />}
+                    children="see more"
+                  />
+                </Link>
+              </div>
+            }  
+
+          </Box>
+          : <StarHero />} 
+        
+        <StarPaginate 
+          howMany={howMany} 
+          page={page} 
+          latestData={latestData} 
+          isFetching={isFetching}
+          setPage={setPage}
+        /> 
+        
+      </Box>
       <ReactQueryCacheProvider queryCache={queryCache}>
         {status === 'loading' ? (
           <Grid container spacing={4}>

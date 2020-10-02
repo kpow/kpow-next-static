@@ -1,5 +1,5 @@
 import React from 'react';
-import { format, parseISO, formatDistance, formatRelative, subDays } from 'date-fns'
+import { format, parseISO} from 'date-fns'
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -15,7 +15,6 @@ import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import Button from '@material-ui/core/Button';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
-import { useQuery } from "react-query";
 
 const useStyles = makeStyles((theme) => ({
   root: {

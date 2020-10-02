@@ -4,7 +4,6 @@ import Chip from '@material-ui/core/Chip'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
-
 const StarPaginate = ({page, latestData, isFetching, howMany, setPage}) =>{
   if(howMany > 3){
     return(
