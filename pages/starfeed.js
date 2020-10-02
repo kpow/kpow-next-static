@@ -1,5 +1,4 @@
 import React from 'react'
-import {  QueryCache, ReactQueryCacheProvider } from 'react-query'
 import Layout from '@components/Layout';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -7,8 +6,6 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import StarList from 'components/StarList';
 import Title from '@components/Title';
-
-const queryCache = new QueryCache()
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -65,9 +62,7 @@ export default function Starfeed({title, description, ...props }) {
   return (
     <Layout pageTitle={title} description={description}>
       <Hero />
-      <ReactQueryCacheProvider queryCache={queryCache}>
-        <StarList howMany={9}/>
-      </ReactQueryCacheProvider>
+      <StarList howMany={9}/>
     </Layout>
   )
 }

@@ -1,7 +1,5 @@
 import React from 'react';
 import { format, parseISO, formatDistance, formatRelative, subDays } from 'date-fns'
-import axios from "axios";
-
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -13,12 +11,9 @@ import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import Button from '@material-ui/core/Button';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import StarsIcon from '@material-ui/icons/Stars';
 import Grid from '@material-ui/core/Grid';
 import { useQuery } from "react-query";
 
@@ -57,32 +52,15 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const getFavicon = (siteUrl) =>{
-
-    const { data } = axios.get(
-      'https://favicongrabber.com/api/grab/'+siteUrl
-    ).then(
-      console.log(data)
-    )
-   
-
-}
-
-
-
 export default function StarCardBig(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
   const publishedDate = parseISO(props.article?.published)
   const formatDate = format(publishedDate, "M.d.yyyy" )
-  
-  getFavicon(props.article?.site_url);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
-  // getFavicon(props.article?.site_url)
 
   return (
     <Grid container item xs={12} sm={6} md={4}>
@@ -91,11 +69,9 @@ export default function StarCardBig(props) {
         <CardHeader
           avatar={
             <Avatar className={classes.avatar}>
-              {/* <StarsIcon /> */}
               <img src={`https://api.faviconkit.com/${props.article?.site_url}/35`} />
             </Avatar>
           }
-          // action={}
           title={props.article?.site_url}
           subheader={formatDate}
         />
@@ -121,10 +97,8 @@ export default function StarCardBig(props) {
           target="_blank" 
           href={props.article.url}
           endIcon={<OpenInNewIcon />}
-        >
-          go to article
-        </Button>
-      
+          children="go to article"
+        />
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
@@ -132,9 +106,8 @@ export default function StarCardBig(props) {
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
+          children={<ExpandMoreIcon />}
+        />
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
@@ -144,9 +117,7 @@ export default function StarCardBig(props) {
             className={classes.fullContent} 
             color="textSecondary" 
             dangerouslySetInnerHTML={{ __html: props.article.content }}
-          >
-       
-          </Typography>
+          />
         </CardContent>
       </Collapse>
     </Card>

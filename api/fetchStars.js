@@ -1,7 +1,7 @@
 import axios from 'axios'
 import extractHostname from '@utils/extractHostname';
 
-const fetchStars = async (key, page = 0, howMany = 3) => {
+const fetchStars = async (key, page = 0, howMany = 9) => {
   
   const { data } = await axios.get("https://services.kpow.com/stars.php?page="+(page+1)+"&perPage="+howMany)
 
@@ -16,7 +16,7 @@ const fetchStars = async (key, page = 0, howMany = 3) => {
     }
   } 
   const sorted = data.reverse()
-  console.log(sorted)
+  // console.log(sorted)
   const fullData = {data, hasMore: true}
   return fullData
 }

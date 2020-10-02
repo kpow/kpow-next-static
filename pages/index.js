@@ -4,8 +4,6 @@ import Button from '@material-ui/core/Button';
 import ProjectList from '@components/ProjectList';
 import Grid from '@material-ui/core/Grid'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import StarList from '@components/StarList';
-import StarCardBigSkeleton from 'components/StarCardBigSkeleton'
 
 import Title from '@components/Title';
 import {
@@ -14,15 +12,16 @@ import {
   ReactQueryCacheProvider,
 } from "react-query";
 
-import getStars from '../api/getStars.js'
-import getPosts from '@utils/getPosts'
+import StarList from 'components/StarList';
+import fetchStars from '../api/fetchStars.js';
+import getPosts from '@utils/getPosts';
 
 const queryCache = new QueryCache()
 
 const Index = ({ projects, title, description, ...props }) => {
 
-  const cache = useQueryCache();
-  const { status, data, error, isFetching } = getStars(1,3);
+  // const cache = useQueryCache();
+  const { status, data, error, isFetching } = fetchStars(1,3);
 
   return (
     
@@ -41,14 +40,12 @@ const Index = ({ projects, title, description, ...props }) => {
                 size="small" 
                 variant="outlined" 
                 endIcon={<NavigateNextIcon />}
-              >
-                see more
-              </Button>
+                children="see more"
+              />
             </Link>
           </div>
         </Title>
         
-        <ReactQueryCacheProvider queryCache={queryCache}>
           {status === "loading" ? ( 
 
               <Grid container spacing={4}>
@@ -60,13 +57,14 @@ const Index = ({ projects, title, description, ...props }) => {
           ) : status === "error" ? ( <span>Error: {error.message}</span> ) : (
             <>
               <div>
+              <ReactQueryCacheProvider queryCache={queryCache}>
                 <StarList howMany={3}/>
+              </ReactQueryCacheProvider>  
               </div>
               <div>{isFetching ? "Background Updating..." : " "}</div>
             </>
           )}
-        </ReactQueryCacheProvider>
-
+      
         <Title>
           books
         </Title>
