@@ -7,10 +7,10 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 const StarPaginate = ({page, latestData, isFetching, howMany, setPage}) =>{
   if(howMany > 3){
     return(
-        <div style={{textAlign:'right', margin:'20px 0 20px'}}>
-          {isFetching ? 
-            <Chip size="small" label='loading . . .'/>
-          : null}{' '}
+        // {isFetching ? 
+        //   <Chip size="small" label='loading . . .'/>
+        // : null}{' '}
+        <div style={{textAlign:'right', margin:'20px 0 20px', minWidth:'225px'}}>
           <Button
             size="small"
             children="Prev" 

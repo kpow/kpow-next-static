@@ -45,7 +45,6 @@ function StarList({howMany}) {
     <>
       <Box style={{display:'flex'}} justifyContent="space-between" flexDirection={ page >= 1 ? "row" : "column" }>
         {page >= 1 || howMany == 3 ? 
-
           <Box style={{display:'flex'}} flexDirection="row">
             <Title> star feed </Title> 
 
@@ -72,8 +71,8 @@ function StarList({howMany}) {
           isFetching={isFetching}
           setPage={setPage}
         /> 
-        
       </Box>
+      
       <ReactQueryCacheProvider queryCache={queryCache}>
         {status === 'loading' ? (
           <Grid container spacing={4}>
