@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
 import {
   usePaginatedQuery,
   useQueryCache,
@@ -12,6 +11,7 @@ import { ReactQueryDevtools } from 'react-query-devtools';
 import StarCardBig from 'components/StarCardBig';
 import StarCardBigSkeleton from 'components/StarCardBigSkeleton';
 import StarPaginate from 'components/StarPaginate';
+import StarHero from 'components/StarHero';
 
 const queryCache = new QueryCache()
 
@@ -36,9 +36,10 @@ function StarList({howMany}) {
   }, [latestData, fetchStars, page])
 
   return (
-    <div>
-    
-     <StarPaginate 
+    <>
+      {page >= 1 || howMany == 3 ? null : <StarHero />} 
+      
+      <StarPaginate 
         howMany={howMany} 
         page={page} 
         latestData={latestData} 
@@ -86,10 +87,8 @@ function StarList({howMany}) {
         isFetching={isFetching}
         setPage={setPage}
       /> 
-      
-      
       <ReactQueryDevtools />
-    </div>
+    </>
   )
 }
 

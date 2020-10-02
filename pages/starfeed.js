@@ -1,11 +1,7 @@
 import React from 'react'
 import Layout from '@components/Layout';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import StarList from 'components/StarList';
-import Title from '@components/Title';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -38,30 +34,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Hero = () =>{
-  const classes = useStyles();
-  return(
-    <div className={classes.heroContent}>
-      <Container maxWidth="sm">
-        <Paper elevation={3} className={classes.paperPadding}>
-          <Title>
-            star feed
-          </Title>
-          <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :) 
-          </Typography>
-        </Paper>
-      </Container>
-    </div>
-  )
-}
-
 export default function Starfeed({title, description, ...props }) {
   const classes = useStyles();
 
   return (
     <Layout pageTitle={title} description={description}>
-      <Hero />
       <StarList howMany={9}/>
     </Layout>
   )
