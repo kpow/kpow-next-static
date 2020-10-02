@@ -21,7 +21,7 @@ import Skeleton from '@material-ui/lab/Skeleton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 400,
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
@@ -50,7 +50,6 @@ const useStyles = makeStyles((theme) => ({
     '& img':{
       maxWidth:'100%'
     }
-
   }
 }));
 
@@ -67,7 +66,6 @@ const useStyles = makeStyles((theme) => ({
 export default function StarCardBigSkeleton() {
   const classes = useStyles();
 
-
   return (
     <Grid container item xs={12} sm={6} md={4}>
       <Card className={classes.root}>
@@ -79,7 +77,7 @@ export default function StarCardBigSkeleton() {
             }
             title={<Skeleton variant="text" animation="wave"/>}
           />
-          <Skeleton variant="rect" width={350} height={200} animation="wave" />
+          <Skeleton variant="rect" width={400} height={200} animation="wave" />
           
           <CardContent>
             <Skeleton variant="text" width={300} height={50} />
