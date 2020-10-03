@@ -13,15 +13,19 @@ import {
 } from "react-query";
 
 import StarList from 'components/StarList';
+import BookList from 'components/BookList';
 import fetchStars from '../api/fetchStars.js';
+import fetchBooks from '../api/fetchBooks.js';
 import getPosts from '@utils/getPosts';
 
 const queryCache = new QueryCache()
+const bookQueryCache = new QueryCache()
 
 const Index = ({ projects, title, description, ...props }) => {
 
   // const cache = useQueryCache();
   const { status, data, error, isFetching } = fetchStars(1,3);
+  const { status:bookStatus, data:bookData, error:bookError, isFetching:bookIsFetching,} = fetchBooks(1,6);
 
   return (
     
@@ -50,10 +54,26 @@ const Index = ({ projects, title, description, ...props }) => {
             <div>{isFetching ? "Background Updating..." : " "}</div>
           </>
         )}
+
+        {bookStatus === "loading" ? ( 
+
+          <Grid container spacing={4}>
+            <StarCardBigSkeleton />
+            <StarCardBigSkeleton />
+            <StarCardBigSkeleton />
+          </Grid>
+
+        ) : bookStatus === "error" ? ( <span>Error: {bookError.message}</span> ) : (
+          <>
+          <div>
+          <ReactQueryCacheProvider queryCache={bookQueryCache}>
+            <BookList howMany={6}/>
+          </ReactQueryCacheProvider>  
+          </div>
+          <div>{bookIsFetching ? "Background Updating..." : " "}</div>
+          </>
+        )}
     
-        <Title>
-          books
-        </Title>
   
       </Layout>
   )

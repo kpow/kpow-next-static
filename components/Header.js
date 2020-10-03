@@ -154,7 +154,7 @@ export default function Header() {
               </ListItem>
             </Link>
 
-            <Link href="/album">
+            <Link href="/bookfeed">
               <ListItem button key="books">
                 <ListItemIcon>
                   <MenuBookIcon />
