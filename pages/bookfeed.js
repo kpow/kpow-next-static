@@ -5,7 +5,7 @@ import BookList from 'components/BookList';
 export default function Bookfeed({title, description, ...props }) {
   return (
     <Layout pageTitle={title} description={description}>
-      <BookList howMany={9}/>
+      <BookList howMany={12}/>
     </Layout>
   )
 }

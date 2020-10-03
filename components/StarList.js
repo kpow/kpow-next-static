@@ -15,7 +15,7 @@ import fetchStars from '../api/fetchStars.js';
 import { ReactQueryDevtools } from 'react-query-devtools';
 import StarCardBig from 'components/StarCardBig';
 import StarCardBigSkeleton from 'components/StarCardBigSkeleton';
-import StarPaginate from 'components/StarPaginate';
+import StarPaginate from '@components/Paginate';
 import StarHero from 'components/StarHero';
 import Title from 'components/Title'
 

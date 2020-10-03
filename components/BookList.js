@@ -15,7 +15,7 @@ import fetchBooks from '../api/fetchBooks.js';
 import { ReactQueryDevtools } from 'react-query-devtools';
 import BookCard from 'components/BookCard';
 import BookCardSkeleton from 'components/BookCardSkeleton';
-import BookPaginate from 'components/BookPaginate';
+import Paginate from 'components/Paginate';
 import BookHero from 'components/BookHero';
 import Title from 'components/Title'
 
@@ -23,7 +23,7 @@ const queryCache = new QueryCache()
 
 function BookList({howMany}) {
   const cache = useQueryCache()
-  const [page, setPage] = React.useState(0)
+  const [page, setPage] = React.useState(1)
   
   const {
     status,
@@ -31,13 +31,13 @@ function BookList({howMany}) {
     latestData,
     error,
     isFetching,
-  } = usePaginatedQuery(['projects', page, howMany], fetchBooks, {})
+  } = usePaginatedQuery(['books', page, howMany], fetchBooks, {})
 
   // Prefetch the next page!
   React.useEffect(() => {
     window.scrollTo(0, 0)
     if (latestData?.hasMore) {
-      cache.prefetchQuery(['projects', (Number(page) + 1)], fetchBooks)
+      cache.prefetchQuery(['books', (Number(page) + 1)], fetchBooks)
     }
   }, [latestData, fetchBooks, page])
 
@@ -64,7 +64,7 @@ function BookList({howMany}) {
           </Box>
           : <BookHero />} 
         
-        <BookPaginate 
+        <Paginate 
           howMany={howMany} 
           page={page} 
           latestData={latestData} 
@@ -107,7 +107,7 @@ function BookList({howMany}) {
         )}
       </ReactQueryCacheProvider>
 
-      <BookPaginate 
+      <Paginate 
         howMany={howMany} 
         page={page} 
         latestData={latestData} 
