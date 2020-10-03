@@ -5,7 +5,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
 const StarPaginate = ({page, latestData, isFetching, howMany, setPage}) =>{
-  if(howMany > 3){
+  if(howMany > 7){
     return(
         // {isFetching ? 
         //   <Chip size="small" label='loading . . .'/>

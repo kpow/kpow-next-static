@@ -35,6 +35,25 @@ const Index = ({ projects, title, description, ...props }) => {
           k-projects
         </Title>
         <ProjectList projects={projects} />
+
+        {bookStatus === "loading" ? ( 
+
+          <Grid container spacing={4}>
+            <StarCardBigSkeleton />
+            <StarCardBigSkeleton />
+            <StarCardBigSkeleton />
+          </Grid>
+
+        ) : bookStatus === "error" ? ( <span>Error: {bookError.message}</span> ) : (
+          <>
+            <div>
+              <ReactQueryCacheProvider queryCache={bookQueryCache}>
+                <BookList howMany={6}/>
+              </ReactQueryCacheProvider>  
+            </div>
+            <div>{bookIsFetching ? "Background Updating..." : " "}</div>
+          </>
+        )}
         
         {status === "loading" ? ( 
 
@@ -55,26 +74,6 @@ const Index = ({ projects, title, description, ...props }) => {
           </>
         )}
 
-        {bookStatus === "loading" ? ( 
-
-          <Grid container spacing={4}>
-            <StarCardBigSkeleton />
-            <StarCardBigSkeleton />
-            <StarCardBigSkeleton />
-          </Grid>
-
-        ) : bookStatus === "error" ? ( <span>Error: {bookError.message}</span> ) : (
-          <>
-          <div>
-          <ReactQueryCacheProvider queryCache={bookQueryCache}>
-            <BookList howMany={6}/>
-          </ReactQueryCacheProvider>  
-          </div>
-          <div>{bookIsFetching ? "Background Updating..." : " "}</div>
-          </>
-        )}
-    
-  
       </Layout>
   )
 }

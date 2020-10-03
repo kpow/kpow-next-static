@@ -16,14 +16,14 @@ import { ReactQueryDevtools } from 'react-query-devtools';
 import BookCard from 'components/BookCard';
 import BookCardSkeleton from 'components/BookCardSkeleton';
 import Paginate from 'components/Paginate';
-import BookHero from 'components/BookHero';
+import Hero from 'components/Hero';
 import Title from 'components/Title'
 
 const queryCache = new QueryCache()
 
 function BookList({howMany}) {
   const cache = useQueryCache()
-  const [page, setPage] = React.useState(1)
+  const [page, setPage] = React.useState(0)
   
   const {
     status,
@@ -44,13 +44,13 @@ function BookList({howMany}) {
   return (
     <>
       <Box style={{display:'flex'}} justifyContent="space-between" flexDirection={ page >= 1 ? "row" : "column" }>
-        {page >= 1 || howMany == 3 ? 
+        {page >= 1 || howMany == 6 ? 
           <Box style={{display:'flex'}} flexDirection="row">
             <Title> Book feed </Title> 
 
             {page > 0 ? null : 
               <div style={{display:'inline-block', textAlign:'right', margin:'20px 20px 20px'}}>
-                <Link href="/Bookfeed">
+                <Link href="/bookfeed">
                   <Button
                     size="small" 
                     variant="outlined" 
@@ -62,7 +62,7 @@ function BookList({howMany}) {
             }  
 
           </Box>
-          : <BookHero />} 
+          : <Hero />} 
         
         <Paginate 
           howMany={howMany} 

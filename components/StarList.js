@@ -13,10 +13,10 @@ import {
 } from 'react-query';
 import fetchStars from '../api/fetchStars.js';
 import { ReactQueryDevtools } from 'react-query-devtools';
-import StarCardBig from 'components/StarCardBig';
-import StarCardBigSkeleton from 'components/StarCardBigSkeleton';
+import StarCardBig from '@components/StarCard';
+import StarCardBigSkeleton from '@components/StarCardSkeleton';
 import StarPaginate from '@components/Paginate';
-import StarHero from 'components/StarHero';
+import StarHero from '@components/Hero';
 import Title from 'components/Title'
 
 const queryCache = new QueryCache()
