@@ -25,7 +25,7 @@ const Index = ({ projects, title, description, ...props }) => {
 
   // const cache = useQueryCache();
   const { status, data, error, isFetching } = fetchStars(1,3);
-  const { status:bookStatus, data:bookData, error:bookError, isFetching:bookIsFetching,} = fetchBooks(1,6);
+  const { status:bookStatus, data:bookData, error:bookError, isFetching:bookIsFetching,} = fetchBooks(1,4);
 
   return (
     
@@ -48,7 +48,7 @@ const Index = ({ projects, title, description, ...props }) => {
           <>
             <div>
               <ReactQueryCacheProvider queryCache={bookQueryCache}>
-                <BookList howMany={6}/>
+                <BookList howMany={4}/>
               </ReactQueryCacheProvider>  
             </div>
             <div>{bookIsFetching ? "Background Updating..." : " "}</div>

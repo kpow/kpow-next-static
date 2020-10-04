@@ -7,7 +7,6 @@ const fetchBooks = async (key, page = 0, howMany = 9) => {
   const json = JSON.parse(convert.xml2json(data, { compact: true, spaces: 4 }))
   const bookData = json.GoodreadsResponse.reviews.review
 
-  console.log(bookData)
   const fullData = {data:bookData, hasMore: true}
   return fullData
 }

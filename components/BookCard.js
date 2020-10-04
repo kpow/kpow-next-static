@@ -66,7 +66,7 @@ export default function BookCard(props) {
   };
 
   return (
-    <Grid container item xs={12} sm={6} md={2}>
+    <Grid container item xs={6} sm={6} md={2}>
     <Card className={classes.root} style={{backgroundImage: "url(" + props.article.book.image_url._text + ")"}}>
       <div>
        

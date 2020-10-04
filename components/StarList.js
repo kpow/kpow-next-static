@@ -31,13 +31,14 @@ function StarList({howMany}) {
     latestData,
     error,
     isFetching,
-  } = usePaginatedQuery(['projects', page, howMany], fetchStars, {})
+  } = usePaginatedQuery(['stars', page, howMany], fetchStars, {})
 
   // Prefetch the next page!
   React.useEffect(() => {
     window.scrollTo(0, 0)
-    if (latestData?.hasMore) {
-      cache.prefetchQuery(['projects', (Number(page) + 1)], fetchStars)
+    // this howmany stops the home page from prefetching
+    if (latestData?.hasMore && howMany>4) {
+      cache.prefetchQuery(['stars', (Number(page) + 1)], fetchStars)
     }
   }, [latestData, fetchStars, page])
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-import Skeleton from '@material-ui/lab/Skeleton';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -12,7 +11,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Chip from '@material-ui/core/Chip';
-
 
 import { format, parseISO} from 'date-fns'
 import { withStyles } from '@material-ui/core/styles';
@@ -50,8 +48,7 @@ const useStyles = makeStyles((theme) => ({
     display:'flex',
     justifyContent:"flex-end",
     alignItems: "flex-end",
-    padding: '5px',
-    backgroundColor: '#fafafa'
+    padding: '5px'
   },
   controls: {
     display: 'flex',
@@ -106,29 +103,61 @@ export default function BookCardFull({article}) {
         <div className={classes.details}>
           <CardContent className={classes.content}>
             <Typography component="h5" className={classes.bookTitle} variant="h5">
-              <Skeleton variant="text" width={300} height={50} />
+              {article.book.title_without_series._text}
             </Typography>
             <Typography variant="subtitle1" color="textSecondary">
-              <Skeleton variant="text" width={300} height={50} />
+              {article.book.authors.author.name._text} - {article.book.publication_year._text}
             </Typography>
             <Box className={classes.bookRatingHolder}>
-        
+              <Box mr={3}>
+                <Typography variant="span" className={classes.bookRating} color="textSecondary">my rating: </Typography>
+                <StyledRating
+                  name="customized-color"
+                  defaultValue={article.rating._text}
+                  getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
+                  precision={0.5}
+                  readOnly
+                  size="small" 
+                  icon={<FavoriteIcon fontSize="inherit" />}
+                />
+              </Box>
+              <Box>
+                <Typography variant="span" className={classes.bookRating} color="textSecondary">avg. rating: </Typography>
+                <StyledRating
+                  name="customized-color"
+                  defaultValue={article.book.average_rating._text}
+                  getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
+                  precision={0.1}
+                  readOnly
+                  size="small" 
+                  icon={<FavoriteIcon fontSize="inherit" />}
+                />
+              </Box>
             </Box>
          
           </CardContent>
           <div className={classes.controls}>
             <IconButton
-              children={<Skeleton variant="circle" width={40} height={40} animation="wave"/>}
+              className={clsx(classes.expand, {
+                [classes.expandOpen]: expanded,
+              })}
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label="show more"
+              children={<ExpandMoreIcon />}
             />
 
             <Chip
               icon={<FaceIcon />}
+              label={article.shelves?.shelf._attributes?.name == 'currently-reading' ? 'reading' : article.shelves?.shelf._attributes?.name}
+              color={article.shelves?.shelf._attributes?.name == 'read' ? 'primary' : 'secondary'}
             />
           </div>
         </div>
         <CardMedia
           className={classes.cover}
-          children= { <Skeleton variant="rect" width={150} height="100%" animation="wave" />}
+          image={article.book.image_url._text}
+          title="Live from space album cover"
         />
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>

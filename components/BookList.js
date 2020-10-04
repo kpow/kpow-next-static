@@ -14,6 +14,7 @@ import {
 import fetchBooks from '../api/fetchBooks.js';
 import { ReactQueryDevtools } from 'react-query-devtools';
 import BookCard from 'components/BookCard';
+import BookCardFull from 'components/BookCardFull';
 import BookCardSkeleton from 'components/BookCardSkeleton';
 import Paginate from 'components/Paginate';
 import Hero from 'components/Hero';
@@ -36,7 +37,7 @@ function BookList({howMany}) {
   // Prefetch the next page!
   React.useEffect(() => {
     window.scrollTo(0, 0)
-    if (latestData?.hasMore) {
+    if (latestData?.hasMore && howMany>7) {
       cache.prefetchQuery(['books', (Number(page) + 1)], fetchBooks)
     }
   }, [latestData, fetchBooks, page])
@@ -44,7 +45,7 @@ function BookList({howMany}) {
   return (
     <>
       <Box style={{display:'flex'}} justifyContent="space-between" flexDirection={ page >= 1 ? "row" : "column" }>
-        {page >= 1 || howMany == 6 ? 
+        {page >= 1 || howMany == 4 ? 
           <Box style={{display:'flex'}} flexDirection="row">
             <Title> Book feed </Title> 
 
@@ -82,6 +83,8 @@ function BookList({howMany}) {
             <BookCardSkeleton />
             <BookCardSkeleton />
             <BookCardSkeleton />
+            <BookCardSkeleton />
+            <BookCardSkeleton />
           </Grid>
         ) : status === 'error' ? (
           <div>Error: {error.message}</div>
@@ -96,10 +99,12 @@ function BookList({howMany}) {
                 <BookCardSkeleton />
                 <BookCardSkeleton />
                 <BookCardSkeleton />
+                <BookCardSkeleton />
+                <BookCardSkeleton />
               </>
             : <>
               {resolvedData.data.map(project => (       
-                <BookCard key={project.id._text} article={project} />
+                <BookCardFull key={project.id._text} article={project} />
               ))} 
               </>
             } 
