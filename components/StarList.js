@@ -37,8 +37,9 @@ function StarList({howMany}) {
   React.useEffect(() => {
     window.scrollTo(0, 0)
     // this howmany stops the home page from prefetching
-    if (latestData?.hasMore && howMany>4) {
-      cache.prefetchQuery(['stars', (Number(page) + 1)], fetchStars)
+    if (latestData?.hasMore) {
+      const nextPage = page+1
+      cache.prefetchQuery(['stars', nextPage], fetchStars)
     }
   }, [latestData, fetchStars, page])
 
@@ -46,11 +47,11 @@ function StarList({howMany}) {
     <>
       <Box style={{display:'flex'}} justifyContent="space-between" flexDirection={ page >= 1 ? "row" : "column" }>
         {page >= 1 || howMany == 3 ? 
-          <Box style={{display:'flex'}} flexDirection="row">
+          <Box style={{display:'flex',alignItems:'flex-end'}} flexDirection="row">
             <Title> star feed </Title> 
 
             {page > 0 ? null : 
-              <div style={{display:'inline-block', textAlign:'right', margin:'20px 20px 20px'}}>
+              <div style={{display:'inline-block', minWidth:'110px',textAlign:'right', margin:'20px 20px 20px'}}>
                 <Link href="/starfeed">
                   <Button
                     size="small" 

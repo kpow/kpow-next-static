@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
   cover: {
     minWidth:150,
     height:'100%',
+    maxHeight: '225px',
     display:'flex',
     justifyContent:"flex-end",
     alignItems: "flex-end",
@@ -57,6 +58,8 @@ const useStyles = makeStyles((theme) => ({
   },
   coverImage:{
     height:'100%',
+    width: '100%',
+    maxWidth: 150,
     margin: '0 auto',
     backgroundColor: '#333'
   },
@@ -129,12 +132,12 @@ export default function BookCardFull({article}) {
               {article.book.title_without_series._text}
             </Typography>
             <Typography variant="subtitle1" color="textSecondary">
+              
               {article.book.authors.author.name._text} 
             
               {article.book.publication_year._text ? 
-                <> - published: {article.book.publication_year._text}</>
-              : <></>
-              } 
+                <> - published: {article.book.publication_year._text}</> : <></> } 
+
             </Typography>
             <Box className={classes.bookRatingHolder}>
               <Box mr={3}>

@@ -11,6 +11,7 @@ import {
   ReactQueryCacheProvider,
   QueryCache
 } from 'react-query';
+
 import fetchBooks from '../api/fetchBooks.js';
 import { ReactQueryDevtools } from 'react-query-devtools';
 import BookCard from '@components/BookCardCover';
@@ -24,7 +25,7 @@ const queryCache = new QueryCache()
 
 function BookList({howMany}) {
   const cache = useQueryCache()
-  const [page, setPage] = React.useState(0)
+  const [page, setpage] = React.useState(0)
   
   const {
     status,
@@ -37,8 +38,9 @@ function BookList({howMany}) {
   // Prefetch the next page!
   React.useEffect(() => {
     window.scrollTo(0, 0)
-    if (latestData?.hasMore && howMany>7) {
-      cache.prefetchQuery(['books', (Number(page) + 1)], fetchBooks)
+    if (latestData?.hasMore) {
+      const nextPage = page+1
+      cache.prefetchQuery(['books', nextPage], fetchBooks)
     }
   }, [latestData, fetchBooks, page])
 
@@ -46,11 +48,11 @@ function BookList({howMany}) {
     <>
       <Box style={{display:'flex'}} justifyContent="space-between" flexDirection={ page >= 1 ? "row" : "column" }>
         {page >= 1 || howMany == 4 ? 
-          <Box style={{display:'flex'}} flexDirection="row">
+          <Box style={{display:'flex', alignItems:'flex-end'}} flexDirection="row">
             <Title> Book feed </Title> 
 
             {page > 0 ? null : 
-              <div style={{display:'inline-block', textAlign:'right', margin:'20px 20px 20px'}}>
+              <div style={{display:'inline-block', minWidth:'110px',textAlign:'right', margin:'20px 20px 20px'}}>
                 <Link href="/bookfeed">
                   <Button
                     size="small" 
@@ -60,7 +62,7 @@ function BookList({howMany}) {
                   />
                 </Link>
               </div>
-            }  
+            }
 
           </Box>
           : <Hero />} 
@@ -70,7 +72,7 @@ function BookList({howMany}) {
           page={page} 
           latestData={latestData} 
           isFetching={isFetching}
-          setPage={setPage}
+          setPage={setpage}
         /> 
       </Box>
       
@@ -83,18 +85,15 @@ function BookList({howMany}) {
             <BookCardSkeleton />
             <BookCardSkeleton />
             <BookCardSkeleton />
-            <BookCardSkeleton />
-            <BookCardSkeleton />
+         
           </Grid>
         ) : status === 'error' ? (
           <div>Error: {error.message}</div>
         ) : (
 
-          <Grid container spacing={3}>
+          <Grid container style={{maxWidth:1000, margin:'0 auto'}} spacing={3}>
             {isFetching ? 
               <>
-                <BookCardSkeleton />
-                <BookCardSkeleton />
                 <BookCardSkeleton />
                 <BookCardSkeleton />
                 <BookCardSkeleton />
@@ -117,7 +116,7 @@ function BookList({howMany}) {
         page={page} 
         latestData={latestData} 
         isFetching={isFetching}
-        setPage={setPage}
+        setPage={setpage}
       /> 
       <ReactQueryDevtools />
     </>
