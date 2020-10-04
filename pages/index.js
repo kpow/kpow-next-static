@@ -3,8 +3,7 @@ import Layout from '@components/Layout';
 import Button from '@material-ui/core/Button';
 import ProjectList from '@components/ProjectList';
 import Grid from '@material-ui/core/Grid'
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-
+import Divider from '@material-ui/core/Divider'
 import Title from '@components/Title';
 import {
   useQueryCache,
@@ -36,6 +35,8 @@ const Index = ({ projects, title, description, ...props }) => {
         </Title>
         <ProjectList projects={projects} />
 
+        <Divider style={{marginTop:'40px'}} />
+        
         {bookStatus === "loading" ? ( 
 
           <Grid container spacing={4}>
@@ -55,6 +56,8 @@ const Index = ({ projects, title, description, ...props }) => {
           </>
         )}
         
+        <Divider style={{marginTop:'40px'}}/>
+
         {status === "loading" ? ( 
 
             <Grid container spacing={4}>

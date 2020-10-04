@@ -103,6 +103,10 @@ export default function BookCardFull({article}) {
   return (
     <Grid container item xs={12} sm={6} md={6}>
       <Card className={classes.root}>
+      <CardMedia
+          className={classes.cover}
+          children= { <Skeleton variant="rect" width={150} height="100%" animation="wave" />}
+        />
         <div className={classes.details}>
           <CardContent className={classes.content}>
             <Typography component="h5" className={classes.bookTitle} variant="h5">
@@ -126,21 +130,7 @@ export default function BookCardFull({article}) {
             />
           </div>
         </div>
-        <CardMedia
-          className={classes.cover}
-          children= { <Skeleton variant="rect" width={150} height="100%" animation="wave" />}
-        />
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            <Typography paragraph>Full Text:</Typography>
-            <Typography 
-              paragraph 
-              className={classes.fullContent} 
-              color="textSecondary" 
-              // dangerouslySetInnerHTML={{ __html: props.article.book.description._text }}
-            />
-          </CardContent>
-        </Collapse>
+        
       </Card>
      
     </Grid>

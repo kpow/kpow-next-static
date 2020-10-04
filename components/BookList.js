@@ -13,7 +13,7 @@ import {
 } from 'react-query';
 import fetchBooks from '../api/fetchBooks.js';
 import { ReactQueryDevtools } from 'react-query-devtools';
-import BookCard from 'components/BookCard';
+import BookCard from '@components/BookCardCover';
 import BookCardFull from 'components/BookCardFull';
 import BookCardSkeleton from 'components/BookCardSkeleton';
 import Paginate from 'components/Paginate';

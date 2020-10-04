@@ -19,7 +19,7 @@ import Rating from '@material-ui/lab/Rating';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
 import FaceIcon from '@material-ui/icons/Face';
-import DoneIcon from '@material-ui/icons/Done';
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,10 +45,20 @@ const useStyles = makeStyles((theme) => ({
   },
   cover: {
     minWidth:150,
+    height:'100%',
     display:'flex',
     justifyContent:"flex-end",
     alignItems: "flex-end",
-    padding: '5px'
+    padding: '5px',
+    backgroundSize: '100%',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundColor:'#666'
+  },
+  coverImage:{
+    height:'100%',
+    margin: '0 auto',
+    backgroundColor: '#333'
   },
   controls: {
     display: 'flex',
@@ -89,6 +99,10 @@ export default function BookCardFull({article}) {
   const classes = useStyles();
   const theme = useTheme();
 
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const flexDirect = matches ? 'row' : 'column';
+  const coverHeight = matches ? '100%' : '250px';
+
   const [expanded, setExpanded] = React.useState(false);
   // const publishedDate = parseISO(props.article?.published)
   // const formatDate = format(publishedDate, "M.d.yyyy" )
@@ -99,14 +113,28 @@ export default function BookCardFull({article}) {
 
   return (
     <Grid container item xs={12} sm={6} md={6}>
-      <Card className={classes.root}>
+      <Card className={classes.root} style={{flexDirection:flexDirect}}>
+      <CardMedia
+          className={classes.cover}
+          style={{height:coverHeight}}
+          // image={article.book.image_url._text}
+          title={article.book.title_without_series._text}
+        >
+         <img src={article.book.image_url._text} className={classes.coverImage} />
+        </CardMedia>
+
         <div className={classes.details}>
           <CardContent className={classes.content}>
             <Typography component="h5" className={classes.bookTitle} variant="h5">
               {article.book.title_without_series._text}
             </Typography>
             <Typography variant="subtitle1" color="textSecondary">
-              {article.book.authors.author.name._text} - {article.book.publication_year._text}
+              {article.book.authors.author.name._text} 
+            
+              {article.book.publication_year._text ? 
+                <> - published: {article.book.publication_year._text}</>
+              : <></>
+              } 
             </Typography>
             <Box className={classes.bookRatingHolder}>
               <Box mr={3}>
@@ -134,7 +162,17 @@ export default function BookCardFull({article}) {
                 />
               </Box>
             </Box>
-         
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography paragraph>Full Text:</Typography>
+            <Typography 
+              paragraph 
+              className={classes.fullContent} 
+              color="textSecondary" 
+              // dangerouslySetInnerHTML={{ __html: props.article.book.description._text }}
+            />
+          </CardContent>
+        </Collapse>
           </CardContent>
           <div className={classes.controls}>
             <IconButton
@@ -154,22 +192,7 @@ export default function BookCardFull({article}) {
             />
           </div>
         </div>
-        <CardMedia
-          className={classes.cover}
-          image={article.book.image_url._text}
-          title="Live from space album cover"
-        />
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            <Typography paragraph>Full Text:</Typography>
-            <Typography 
-              paragraph 
-              className={classes.fullContent} 
-              color="textSecondary" 
-              // dangerouslySetInnerHTML={{ __html: props.article.book.description._text }}
-            />
-          </CardContent>
-        </Collapse>
+
       </Card>
      
     </Grid>
