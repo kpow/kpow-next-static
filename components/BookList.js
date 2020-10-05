@@ -91,7 +91,7 @@ function BookList({howMany}) {
           <div>Error: {error.message}</div>
         ) : (
 
-          <Grid container style={{ margin:'0 auto'}} spacing={3}>
+          <Grid container spacing={3}>
             {isFetching ? 
               <>
                 <BookCardSkeleton />

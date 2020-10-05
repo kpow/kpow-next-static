@@ -24,7 +24,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    width:'97%',
+    width:'100%',
     justifyContent:'space-between',
     minHeight: 220
   },
