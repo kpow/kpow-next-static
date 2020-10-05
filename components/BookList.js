@@ -91,9 +91,11 @@ function BookList({howMany}) {
           <div>Error: {error.message}</div>
         ) : (
 
-          <Grid container style={{maxWidth:1000, margin:'0 auto'}} spacing={3}>
+          <Grid container style={{ margin:'0 auto'}} spacing={3}>
             {isFetching ? 
               <>
+                <BookCardSkeleton />
+                <BookCardSkeleton />
                 <BookCardSkeleton />
                 <BookCardSkeleton />
                 <BookCardSkeleton />

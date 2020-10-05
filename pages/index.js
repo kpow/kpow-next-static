@@ -1,9 +1,12 @@
-import Link from 'next/link'
 import Layout from '@components/Layout';
-import Button from '@material-ui/core/Button';
 import ProjectList from '@components/ProjectList';
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
+import MuiAlert from '@material-ui/lab/Alert';
+import Snackbar from '@material-ui/core/Snackbar';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+
+
 import Title from '@components/Title';
 import {
   useQueryCache,
@@ -20,31 +23,50 @@ import getPosts from '@utils/getPosts';
 const queryCache = new QueryCache()
 const bookQueryCache = new QueryCache()
 
-const Index = ({ projects, title, description, ...props }) => {
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
-  // const cache = useQueryCache();
+const Index = ({ projects, title, description, ...props }) => {
+  const theme = useTheme();
   const { status, data, error, isFetching } = fetchStars(1,3);
   const { status:bookStatus, data:bookData, error:bookError, isFetching:bookIsFetching,} = fetchBooks(1,4);
+
+  const [open, setOpen] = React.useState(true);
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
 
   return (
     
       <Layout pageTitle={title} description={description}>
-        
+        <Snackbar 
+          anchorOrigin={{ vertical: 'top', horizontal: 'center' }} 
+          open={open} autoHideDuration={8000} 
+          onClose={handleClose}
+        >
+          <Alert 
+            onClose={handleClose} 
+            severity="info" 
+            style={{textAlign:'center', marginTop: theme.spacing(7) }}
+          >
+            Hi! this is my web technologies sandbox. Hopefully, it's working :) It has my resume and that kind of fun stuff also. Have fun poking around.
+          </Alert>
+        </Snackbar>
+
         <Title>
-          k-projects
+          projects
         </Title>
         <ProjectList projects={projects} />
 
         <Divider style={{marginTop:'40px'}} />
         
         {bookStatus === "loading" ? ( 
-
-          <Grid container spacing={4}>
-            <StarCardBigSkeleton />
-            <StarCardBigSkeleton />
-            <StarCardBigSkeleton />
-          </Grid>
-
+          <></>
         ) : bookStatus === "error" ? ( <span>Error: {bookError.message}</span> ) : (
           <>
             <div>
@@ -59,13 +81,7 @@ const Index = ({ projects, title, description, ...props }) => {
         <Divider style={{marginTop:'40px'}}/>
 
         {status === "loading" ? ( 
-
-            <Grid container spacing={4}>
-              <StarCardBigSkeleton />
-              <StarCardBigSkeleton />
-              <StarCardBigSkeleton />
-            </Grid>
-
+          <></>
         ) : status === "error" ? ( <span>Error: {error.message}</span> ) : (
           <>
             <div>

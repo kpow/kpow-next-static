@@ -22,9 +22,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center',
     height: '100px',
   },
-  mainContent: {
-    // padding: theme.spacing(3)
-  },
   overlay: {
     position: 'absolute',
     top: 0,

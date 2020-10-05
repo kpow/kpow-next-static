@@ -105,6 +105,8 @@ export default function BookCardFull({article}) {
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const flexDirect = matches ? 'row' : 'column';
   const coverHeight = matches ? '100%' : '250px';
+  const coverOrder = matches ? 2 : 1;
+  const detailsOrder = matches ? 1 : 2;
 
   const [expanded, setExpanded] = React.useState(false);
   // const publishedDate = parseISO(props.article?.published)
@@ -117,16 +119,9 @@ export default function BookCardFull({article}) {
   return (
     <Grid container item xs={12} sm={6} md={6}>
       <Card className={classes.root} style={{flexDirection:flexDirect}}>
-      <CardMedia
-          className={classes.cover}
-          style={{height:coverHeight}}
-          // image={article.book.image_url._text}
-          title={article.book.title_without_series._text}
-        >
-         <img src={article.book.image_url._text} className={classes.coverImage} />
-        </CardMedia>
+        
 
-        <div className={classes.details}>
+        <div style={{order:detailsOrder}} className={classes.details}>
           <CardContent className={classes.content}>
             <Typography component="h5" className={classes.bookTitle} variant="h5">
               {article.book.title_without_series._text}
@@ -195,7 +190,14 @@ export default function BookCardFull({article}) {
             />
           </div>
         </div>
-
+        <CardMedia
+          className={classes.cover}
+          style={{height:coverHeight, order:coverOrder}}
+          // image={article.book.image_url._text}
+          title={article.book.title_without_series._text}
+        >
+         <img src={article.book.image_url._text} className={classes.coverImage} />
+        </CardMedia>      
       </Card>
      
     </Grid>
