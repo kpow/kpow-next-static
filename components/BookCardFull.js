@@ -24,7 +24,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    width: '100%',
+    width:'97%',
     justifyContent:'space-between',
     minHeight: 220
   },
@@ -71,10 +71,6 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(1),
     paddingBottom: theme.spacing(1),
   },
-  playIcon: {
-    height: 38,
-    width: 38,
-  }, 
   bookRating:{
     display: 'flex',
     alignItems: 'center',
