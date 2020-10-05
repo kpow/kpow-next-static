@@ -16,7 +16,7 @@ import { format, parseISO} from 'date-fns'
 import { withStyles } from '@material-ui/core/styles';
 
 import Rating from '@material-ui/lab/Rating';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteIcon from '@material-ui/icons/FlashOn';
 
 import FaceIcon from '@material-ui/icons/Face';
 import useMediaQuery from '@material-ui/core/useMediaQuery'
@@ -85,9 +85,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const StyledRating = withStyles({
-  iconFilled: {
-    color: '#ff6d75',
-  },
+  
   iconHover: {
     color: '#ff3d47',
   },
@@ -103,6 +101,7 @@ export default function BookCardFull({article}) {
   const coverHeight = matches ? '100%' : '250px';
   const coverOrder = matches ? 2 : 1;
   const detailsOrder = matches ? 1 : 2;
+  const ratingExist = article.rating._text == 0 ? 'none' : 'block' ;
 
   const [expanded, setExpanded] = React.useState(false);
   // const publishedDate = parseISO(props.article?.published)
@@ -131,7 +130,7 @@ export default function BookCardFull({article}) {
 
             </Typography>
             <Box className={classes.bookRatingHolder}>
-              <Box mr={3}>
+              <Box mr={3} style={{display:ratingExist}}>
                 <Typography variant="span" className={classes.bookRating} color="textSecondary">my rating: </Typography>
                 <StyledRating
                   name="customized-color"
@@ -139,7 +138,7 @@ export default function BookCardFull({article}) {
                   getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                   precision={0.5}
                   readOnly
-                  size="small" 
+                 
                   icon={<FavoriteIcon fontSize="inherit" />}
                 />
               </Box>
@@ -151,7 +150,7 @@ export default function BookCardFull({article}) {
                   getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                   precision={0.1}
                   readOnly
-                  size="small" 
+                   
                   icon={<FavoriteIcon fontSize="inherit" />}
                 />
               </Box>
