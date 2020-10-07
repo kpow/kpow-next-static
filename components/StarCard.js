@@ -51,10 +51,10 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function StarCardBig(props) {
+export default function StarCardBig({article}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-  const publishedDate = parseISO(props.article?.published)
+  const publishedDate = parseISO(article?.published)
   const formatDate = format(publishedDate, "M.d.yyyy" )
 
   const handleExpandClick = () => {
@@ -68,24 +68,24 @@ export default function StarCardBig(props) {
         <CardHeader
           avatar={
             <Avatar className={classes.avatar}>
-              <img src={`https://api.faviconkit.com/${props.article?.site_url}/35`} />
+              <img src={`https://api.faviconkit.com/${article?.site_url}/35`} />
             </Avatar>
           }
-          title={props.article?.site_url}
+          title={article?.site_url}
           subheader={formatDate}
         />
         <CardMedia
           className={classes.media}
-          image={props.article?.lead_image_url}
-          title={props.article?.title}
+          image={article?.lead_image_url}
+          title={article?.title}
         />
         <CardContent>
           <Typography gutterBottom variant="h5">
-            {props.article?.title}
+            {article?.title}
           </Typography>
           
           <Typography variant="body2" color="textSecondary" component="p">
-            {props.article?.summary}
+            {article?.summary}
           </Typography>
         </CardContent>
       </div> 
@@ -94,7 +94,7 @@ export default function StarCardBig(props) {
           size="small" 
           variant="contained" 
           target="_blank" 
-          href={props.article.url}
+          href={article.url}
           endIcon={<OpenInNewIcon />}
           children="go to article"
         />
@@ -115,7 +115,7 @@ export default function StarCardBig(props) {
             paragraph 
             className={classes.fullContent} 
             color="textSecondary" 
-            dangerouslySetInnerHTML={{ __html: props.article.content }}
+            dangerouslySetInnerHTML={{ __html: article.content }}
           />
         </CardContent>
       </Collapse>
