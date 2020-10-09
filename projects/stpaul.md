@@ -5,6 +5,8 @@ date: '2020-04-27'
 hero_image: '../static/stpaul.png'
 thumb_image: '../static/stpaul-thumb.png'
 hero_color: '#51443b'
+col: 1
+row: 1
 excerpt: 'Developed this speedy site from ground up while working with video production team.'
 
 ---

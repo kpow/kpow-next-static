@@ -4,6 +4,8 @@ author: 'kpow'
 date: '2020-04-27'
 hero_image: '../static/starbucks.png'
 thumb_image: '../static/starbucks-thumb.png'
+col: 1
+row: 1
 hero_color: '#a7787d'
 url: 'https://vimeo.com/361193962'
 excerpt: 'Established the technology and UX initiatives that resulted in the first touchscreen endcaps in Walmart for Starbucks.'

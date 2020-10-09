@@ -4,6 +4,8 @@ author: 'kpow'
 date: '2020-04-27'
 hero_image: '../static/wm-packager.png'
 thumb_image: '../static/wm-packager-thumb.png'
+col: 1
+row: 1
 hero_color: '#343f42'
 excerpt: 'Designed the architecture and led the build of a static site generator coupled with a headless CMS for delivery of digital signage content.'
 

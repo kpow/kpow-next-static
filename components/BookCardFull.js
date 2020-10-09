@@ -5,9 +5,12 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import Collapse from '@material-ui/core/Collapse';
 import Box from '@material-ui/core/Box'
 import IconButton from '@material-ui/core/IconButton';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Chip from '@material-ui/core/Chip';
@@ -121,6 +124,8 @@ export default function BookCardFull({article}) {
             <Typography component="h5" className={classes.bookTitle} variant="h5">
               {article.book.title_without_series._text}
             </Typography>
+       
+            
             <Typography variant="subtitle1" color="textSecondary">
               
               {article.book.authors.author.name._text} 
@@ -131,59 +136,61 @@ export default function BookCardFull({article}) {
             </Typography>
             <Box className={classes.bookRatingHolder}>
               <Box mr={3} style={{display:ratingExist}}>
-                <Typography variant="span" className={classes.bookRating} color="textSecondary">my rating: </Typography>
+                <Typography className={classes.bookRating} color="textSecondary">my rating: </Typography>
                 <StyledRating
                   name="customized-color"
                   defaultValue={article.rating._text}
                   getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                   precision={0.5}
                   readOnly
-                 
                   icon={<FavoriteIcon fontSize="inherit" />}
                 />
               </Box>
               <Box>
-                <Typography variant="span" className={classes.bookRating} color="textSecondary">avg. rating: </Typography>
+                <Typography className={classes.bookRating} color="textSecondary">avg. rating: </Typography>
                 <StyledRating
                   name="customized-color"
                   defaultValue={article.book.average_rating._text}
                   getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                   precision={0.1}
                   readOnly
-                   
                   icon={<FavoriteIcon fontSize="inherit" />}
                 />
               </Box>
+              
             </Box>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            <Typography paragraph>Full Text:</Typography>
-            <Typography 
-              paragraph 
-              className={classes.fullContent} 
-              color="textSecondary" 
-              // dangerouslySetInnerHTML={{ __html: props.article.book.description._text }}
-            />
-          </CardContent>
-        </Collapse>
+           
           </CardContent>
           <div className={classes.controls}>
-            <IconButton
-              className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-              })}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-              children={<ExpandMoreIcon />}
+            <Button 
+              size="small" 
+              variant="contained" 
+              target="_blank" 
+              href={article.book.link._text}
+              endIcon={<OpenInNewIcon />}
+              children="go to article"
             />
-
-            <Chip
-              icon={<FaceIcon />}
-              label={article.shelves?.shelf._attributes?.name == 'currently-reading' ? 'reading' : article.shelves?.shelf._attributes?.name}
-              color={article.shelves?.shelf._attributes?.name == 'read' ? 'primary' : 'secondary'}
+            <IconButton
+                className={clsx(classes.expand, {
+                  [classes.expandOpen]: expanded,
+                })}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+                children={<ExpandMoreIcon />}
             />
           </div>
+          <Collapse in={expanded} timeout="auto" unmountOnExit>
+              <CardContent>
+                <Typography paragraph>Full Text:</Typography>
+                <Typography 
+                  paragraph 
+                  className={classes.fullContent} 
+                  color="textSecondary" 
+                  dangerouslySetInnerHTML={{ __html: article.book.description._text }}
+                />
+              </CardContent>
+            </Collapse>
         </div>
         <CardMedia
           className={classes.cover}
@@ -191,6 +198,12 @@ export default function BookCardFull({article}) {
           // image={article.book.image_url._text}
           title={article.book.title_without_series._text}
         >
+          <Chip
+              icon={<FaceIcon />}
+              style={{position:'absolute', marginBottom:10, marginRight:5}}
+              label={article.shelves?.shelf._attributes?.name == 'currently-reading' ? 'reading' : article.shelves?.shelf._attributes?.name}
+              color={article.shelves?.shelf._attributes?.name == 'read' ? 'primary' : 'secondary'}
+            />
          <img src={article.book.image_url._text} className={classes.coverImage} />
         </CardMedia>      
       </Card>

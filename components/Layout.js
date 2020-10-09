@@ -46,6 +46,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <meta name="Description" content={description}></meta>
         <link rel="icon" href="../static/icon.png"></link>
         <title>{pageTitle}</title>
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
       </Head>
       <React.Fragment>
         <CssBaseline />

@@ -4,6 +4,8 @@ author: 'kpow'
 date: '2020-04-27'
 hero_image: '../static/ncl.png'
 thumb_image: '../static/ncl-thumb.png'
+col: 1
+row: 1
 hero_color: '#826c61'
 excerpt: 'Teach Lead for this cinemagraph driven landing page for a Norwegian Cruise Line campaign.'
 

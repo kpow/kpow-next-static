@@ -4,6 +4,8 @@ author: 'kpow'
 date: '2020-04-27'
 hero_image: '../static/ng.png'
 thumb_image: '../static/ng-thumb.png'
+col: 2
+row: 1
 hero_color: '#cd7f33'
 excerpt: 'Managed the team that designed and developed Neighborhood Goods entire technology stack.'
 

@@ -1,5 +1,5 @@
 import Layout from '@components/Layout';
-import ProjectList from '@components/ProjectList';
+
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
 import MuiAlert from '@material-ui/lab/Alert';
@@ -16,6 +16,8 @@ import {
 
 import StarList from 'components/StarList';
 import BookList from 'components/BookList';
+import ProjectListImages from '@components/ProjectListImages';
+import ProjectList from '@components/ProjectList';
 import fetchStars from '../api/fetchStars.js';
 import fetchBooks from '../api/fetchBooks.js';
 import getPosts from '@utils/getPosts';
@@ -54,14 +56,14 @@ const Index = ({ projects, title, description, ...props }) => {
             severity="info" 
             style={{textAlign:'center', marginTop: theme.spacing(7) }}
           >
-            Hi! this is my web technologies sandbox. Hopefully, it's working :) It has my resume and that kind of fun stuff also. Have fun poking around.
+            Hi! this my site :) You'll find my digital collections and coding experiments. Hopefully, it's working have fun poking around.
           </Alert>
         </Snackbar>
 
         <Title>
           projects
         </Title>
-        <ProjectList projects={projects} />
+        <ProjectListImages projects={projects} />
 
         <Divider style={{marginTop:'40px'}} />
         
@@ -93,6 +95,10 @@ const Index = ({ projects, title, description, ...props }) => {
           </>
         )}
 
+        <Title>
+          instagram
+        </Title>
+        <div className="elfsight-app-aa9b91b7-7757-4793-aae3-67df059446a2"></div>
       </Layout>
   )
 }
