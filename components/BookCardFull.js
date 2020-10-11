@@ -29,27 +29,34 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     width:'100%',
     justifyContent:'space-between',
-    minHeight: 220
+    minHeight: 250
   },
   details: {
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
-    paddingRight:20
   },
   content: {
     flex: '1 0 auto',
+  },
+  articleContent:{
+    display:'flex', 
+    maxHeight:100, 
+    overflow:'hidden',
   },
   read:{
     backgroundColor: '#00b5ad'
   },
   bookTitle:{
-    fontSize:'1.50rem'
+    fontSize:'1.50rem',
+    display:'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   cover: {
-    minWidth:150,
+    minWidth:180,
     height:'100%',
-    maxHeight: '225px',
+    maxHeight: '260px',
     display:'flex',
     justifyContent:"flex-end",
     alignItems: "flex-end",
@@ -62,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
   coverImage:{
     height:'100%',
     width: '100%',
-    maxWidth: 150,
+    maxWidth: '175px',
     margin: '0 auto',
     backgroundColor: '#333'
   },
@@ -122,7 +129,16 @@ export default function BookCardFull({article}) {
         <div style={{order:detailsOrder}} className={classes.details}>
           <CardContent className={classes.content}>
             <Typography component="h5" className={classes.bookTitle} variant="h5">
+              <span>
               {article.book.title_without_series._text}
+              </span>
+              <IconButton
+                target="_blank"
+                style={{padding:0}} 
+                href={article.book.link._text}
+                aria-label="GoodReads Link"
+                children={<OpenInNewIcon />}
+               />
             </Typography>
        
             
@@ -157,40 +173,37 @@ export default function BookCardFull({article}) {
                   icon={<FavoriteIcon fontSize="inherit" />}
                 />
               </Box>
-              
             </Box>
+            <Box className={classes.articleContent}>
+              
+              <Typography variant="body2" color="textSecondary" component="p"
+                dangerouslySetInnerHTML={{ __html: article.book.description._text }}
+              />
            
+              {/*<IconButton
+                  className={clsx(classes.expand, {
+                    [classes.expandOpen]: expanded,
+                  })}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                  children={<ExpandMoreIcon />}
+              />
+              <Collapse in={expanded} timeout="auto" unmountOnExit>
+                  <CardContent>
+                    <Typography paragraph>Full Text:</Typography>
+                    <Typography 
+                      paragraph 
+                      className={classes.fullContent} 
+                      color="textSecondary" 
+                      dangerouslySetInnerHTML={{ __html: article.book.description._text }}
+                    />
+                  </CardContent>
+              </Collapse>*/}
+            </Box>
           </CardContent>
-          <div className={classes.controls}>
-            <Button 
-              size="small" 
-              variant="contained" 
-              target="_blank" 
-              href={article.book.link._text}
-              endIcon={<OpenInNewIcon />}
-              children="go to article"
-            />
-            <IconButton
-                className={clsx(classes.expand, {
-                  [classes.expandOpen]: expanded,
-                })}
-                onClick={handleExpandClick}
-                aria-expanded={expanded}
-                aria-label="show more"
-                children={<ExpandMoreIcon />}
-            />
-          </div>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
-              <CardContent>
-                <Typography paragraph>Full Text:</Typography>
-                <Typography 
-                  paragraph 
-                  className={classes.fullContent} 
-                  color="textSecondary" 
-                  dangerouslySetInnerHTML={{ __html: article.book.description._text }}
-                />
-              </CardContent>
-            </Collapse>
+          
+          
         </div>
         <CardMedia
           className={classes.cover}

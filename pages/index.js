@@ -56,7 +56,7 @@ const Index = ({ projects, title, description, ...props }) => {
             severity="info" 
             style={{textAlign:'center', marginTop: theme.spacing(7) }}
           >
-            Hi! this my site :) You'll find my digital collections and coding experiments. Hopefully, it's working have fun poking around.
+            Hi! this my site :) You'll find my digital collections, coding experiments and my public info. Hopefully, it's working and have fun poking around.
           </Alert>
         </Snackbar>
 
