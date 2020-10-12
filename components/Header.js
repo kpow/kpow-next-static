@@ -22,6 +22,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import FaceIcon from '@material-ui/icons/Face';
 import StarsIcon from '@material-ui/icons/Stars';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
+import WebIcon from '@material-ui/icons/Web';
 
 const drawerWidth = 300;
 
@@ -162,6 +163,15 @@ export default function Header() {
                 <ListItemText primary="book feed" />
               </ListItem>
             </Link>
+
+            <a target="_blank" href="https://gatsby.kpow-wow.com">
+              <ListItem button key="gatsby">
+                <ListItemIcon>
+                  <WebIcon />
+                </ListItemIcon>
+                <ListItemText primary="gatsby version"  />
+              </ListItem>
+            </a>
             
         </List>
 
