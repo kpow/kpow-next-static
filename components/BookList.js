@@ -65,7 +65,11 @@ function BookList({howMany}) {
             }
 
           </Box>
-          : <Hero />} 
+          : <Hero 
+              title="book feed"
+              content={`Here is my list of books - I have a "thing" for science fiction.`}
+            />
+          } 
         
         <Paginate 
           howMany={howMany} 

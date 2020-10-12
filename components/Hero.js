@@ -36,17 +36,17 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-const StarHero = () =>{
+const StarHero = ({title, content}) =>{
     const classes = useStyles();
     return(
       <div className={classes.heroContent}>
         <Container maxWidth="sm">
           <Paper elevation={3} className={classes.paperPadding}>
             <Title>
-              star feed
+              {title}
             </Title>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :) 
+              {content} 
             </Typography>
           </Paper>
         </Container>

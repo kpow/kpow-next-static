@@ -16,7 +16,7 @@ import { ReactQueryDevtools } from 'react-query-devtools';
 import StarCardBig from '@components/StarCard';
 import StarCardBigSkeleton from '@components/StarCardSkeleton';
 import StarPaginate from '@components/Paginate';
-import StarHero from '@components/Hero';
+import Hero from '@components/Hero';
 import Title from 'components/Title'
 
 const queryCache = new QueryCache()
@@ -64,7 +64,11 @@ function StarList({howMany}) {
             }  
 
           </Box>
-          : <StarHero />} 
+          : <Hero 
+          title="star feed"
+          content={`I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :)`}
+        />
+      }  
         
         <StarPaginate 
           howMany={howMany} 

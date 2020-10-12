@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,25 +26,27 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ImageGridList({ projects }) {
   const classes = useStyles();
+  const theme = useTheme();
+
+  const matchesSmall = useMediaQuery(theme.breakpoints.up('sm'));
+  const colCount = matchesSmall ? 4 : 1;
+  const cellHeight = matchesSmall ? 150 : 225;
+  const displayProjects = matchesSmall ? projects : projects.slice(0, 5)
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={150} className={classes.gridList} cols={4}>
-        {projects.map((item) => (
+      <GridList cellHeight={cellHeight} className={classes.gridList} cols={colCount}>
+        {displayProjects.map((item) => (
              
           <GridListTile key={item.frontmatter.title} cols={item.frontmatter.col || 1} rows={item.frontmatter.row || 1}>
             <img src={item.frontmatter.thumb_image} alt={item.frontmatter.title} />
+            <Link href={{ pathname: `/projects/${item.slug}` }}>    
             <GridListTileBar
               title={item.frontmatter.title}
-              actionIcon={
-                <Link href={{ pathname: `/projects/${item.slug}` }}>    
-                    <IconButton aria-label={`info about ${item.frontmatter.title}`} className={classes.icon}>
-                        <InfoIcon />
-                    </IconButton>
-                </Link>
-              }
             />
+            </Link>
           </GridListTile>
+          
           
         ))}
       </GridList>
