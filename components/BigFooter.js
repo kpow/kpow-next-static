@@ -53,11 +53,7 @@ const BigFooter = React.memo(function BigFooter() {
                       About Kpow
                     </Typography>
                     <Typography paragraph className={classes.text}>
-                        Digital Architect - Leader - Developer - Pixel Farmer.
-                        <br></br>
-                        Voracious Reader and Dad. 
-                        <br></br>
-                        I'm into travel, ukes, pugs, live music, and pixels
+                        Digital Architect - Leader - Developer - Pixel Farmer - Voracious Reader and Dad. I'm into travel, ukes, pugs, live music, and pixels
                     </Typography>
                   </div>
                 </Paper>
