@@ -23,6 +23,7 @@ import FaceIcon from '@material-ui/icons/Face';
 import StarsIcon from '@material-ui/icons/Stars';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import WebIcon from '@material-ui/icons/Web';
+import HomeIcon from '@material-ui/icons/Home';
 
 const drawerWidth = 300;
 
@@ -137,6 +138,14 @@ export default function Header() {
         
         <Divider />
         <List>
+            <Link href="/">
+              <ListItem button key="about">
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                <ListItemText primary="home" />
+              </ListItem>
+            </Link>
            <Link href="/about">
               <ListItem button key="about">
                 <ListItemIcon>
