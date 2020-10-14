@@ -53,7 +53,14 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
             <Typography variant="body2" color="textSecondary" component="span">
               <ReactMarkdown source={markdownBody} />
             </Typography> 
-        
+            <List dense>
+            <ListItem>
+              <ListItemText inset primary="Inbox" />
+            </ListItem>
+            <ListItem>
+              <ListItemText inset primary="Drafts" />
+            </ListItem>
+          </List>
           </Box>
         
         <div className="back">
