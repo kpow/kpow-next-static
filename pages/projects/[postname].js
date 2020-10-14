@@ -1,17 +1,46 @@
 import Link from 'next/link'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-
+import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemText from '@material-ui/core/ListItemText'
 import Layout from '@components/Layout'
+import Title from '@components/Title'
 import getSlugs from '@utils/getSlugs'
+import getPosts from '@utils/getPosts';
+import { Paper } from '@material-ui/core'
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  projectContent: {
+    display:'flex',
+    maxWidth: '700px',
+    margin: '0 auto',
+  }
+
+}));
+
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
+  const classes = useStyles();
+  const context = require.context('../../projects', true, /\.md$/)
+  const projectSlugs = getSlugs(context)
+
   if (!frontmatter) return <></>
 
   return (
       <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
-        <article>
-          <h1>{frontmatter.title}</h1>
+        <Paper style={{marginTop:30}}>
+          <Box marginX={3}>
+            <Title>
+              {frontmatter.title}
+            </Title>
+          </Box>
           {frontmatter.hero_image && (
             <img
               src={frontmatter.hero_image}
@@ -20,16 +49,20 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
               alt={frontmatter.title}
             />
           )}
-          <div>
-            <ReactMarkdown source={markdownBody} />
-          </div>
-        </article>
+          <Box marginX={3} className={classes.projectContent}>
+            <Typography variant="body2" color="textSecondary" component="span">
+              <ReactMarkdown source={markdownBody} />
+            </Typography> 
+        
+          </Box>
+        
         <div className="back">
           ←{' '}
           <Link href="/">
             <a>Back to home</a>
           </Link>
         </div>
+        </Paper>
       </Layout>
   )
 }

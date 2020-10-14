@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 'bold',
       lineHeight: 1,
       paddingRight: '10px',
-      paddingTop: '30px'
+      paddingTop: '15px'
     }
   
   }));
