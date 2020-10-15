@@ -173,6 +173,15 @@ export default function Header() {
               </ListItem>
             </Link>
 
+            <Link href="/youtube">
+              <ListItem button key="live">
+                <ListItemIcon>
+                  <MenuBookIcon />
+                </ListItemIcon>
+                <ListItemText primary="youtube exp" />
+              </ListItem>
+            </Link>
+
             <a target="_blank" href="https://gatsby.kpow-wow.com">
               <ListItem button key="gatsby">
                 <ListItemIcon>
