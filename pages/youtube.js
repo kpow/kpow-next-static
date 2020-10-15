@@ -3,22 +3,21 @@ import Layout from '@components/Layout';
 
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
-const API_KEY = process.env.YOUTUBE_API_KEY
+//const API_KEY = process.env.YOUTUBE_API_KEY
 
 export async function getServerSideProps() {
-  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&maxResults=50&playlistId=PLLnMxi7_aEL6HF2dfo7L8lZVrOvintxRM&key=${API_KEY}`)
-  const data = await res.json();
-  return {
-    props: {
-      data
-    }
-  }
+  // const data = await res.json();
+  // return {
+  //   props: {
+  //     data
+  //   }
+  // }
 }
 
 export default function Home({ data }) {
   return (
     <Layout pageTitle="youtube" description="youtube">
-    <div>
+    {/* <div>
       <main>
         <ul>
           {data.items.map(({ id, snippet = {} }) => {
@@ -37,7 +36,7 @@ export default function Home({ data }) {
           })}
         </ul>
       </main>
-    </div>
+    </div> */}
     </Layout>
   )
 }
