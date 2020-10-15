@@ -5,14 +5,15 @@ import Layout from '@components/Layout';
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 //const API_KEY = process.env.YOUTUBE_API_KEY
 
-export async function getServerSideProps() {
-  // const data = await res.json();
-  // return {
-  //   props: {
-  //     data
-  //   }
-  // }
-}
+// export async function getServerSideProps() {
+//   const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&maxResults=50&playlistId=PLLnMxi7_aEL6HF2dfo7L8lZVrOvintxRM&key=AIzaSyAvhagGMKskIEByvxTGZ-khshIKyo6UGtk`)
+//   const data = await res.json();
+//   return {
+//     props: {
+//       data
+//     }
+//   }
+// }
 
 export default function Home({ data }) {
   return (
