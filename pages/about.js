@@ -19,6 +19,7 @@ import PolymerIcon from '@material-ui/icons/Polymer';
 
 import Title from '@components/Title';
 
+
 const useStyles = makeStyles((theme) => ({
   heroContent: {
     padding: theme.spacing(0, 0, 6),
