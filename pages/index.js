@@ -95,6 +95,8 @@ const Index = ({ projects, title, description, ...props }) => {
           </>
         )}
 
+        <Divider style={{marginTop:'40px'}}/>
+        
         <Title>
           instagram
         </Title>

@@ -69,8 +69,6 @@ const Pmonk = ({ title, description, ...props }) => {
 
 export default Pmonk
 
-       
-     
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`)
 
