@@ -20,8 +20,7 @@ const shuffle = array =>
     .map((...args) => Math.floor(Math.random() * (args[1] + 1)))
     .reduce( (a, rv, i) => ([a[i], a[rv]] = [a[rv], a[i]]) && a, array);
 
-const shuffled = shuffle(photos)
-console.log(shuffled)    
+shuffle(photos)
 
 const Pmonk = ({ title, description, ...props }) => {
   const [currentImage, setCurrentImage] = useState(0);
