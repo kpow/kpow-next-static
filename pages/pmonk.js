@@ -11,11 +11,17 @@ import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from "../src/photos";
 
-
-
 const useStyles = makeStyles((theme) => ({
 
 }));
+
+const shuffle = array => 
+  [...Array(array.length)]
+    .map((...args) => Math.floor(Math.random() * (args[1] + 1)))
+    .reduce( (a, rv, i) => ([a[i], a[rv]] = [a[rv], a[i]]) && a, array);
+
+const shuffled = shuffle(photos)
+console.log(shuffled)    
 
 const Pmonk = ({ title, description, ...props }) => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -33,30 +39,30 @@ const Pmonk = ({ title, description, ...props }) => {
 
   return (
     <Layout pageTitle={`${title} | About`} description={description}>
-    <Container maxWidth="md">
-    <Title>
-      pmonk artifacts
-    </Title>
-    <Paper>
-      <Box component="div" style={{maxHeight:'370px', overflow:'hidden'}}>
-        <img src="../static/pheader.jpg" style={{width:'100%'}} />
-      </Box>
-      <Gallery photos={photos} onClick={openLightbox} />
-      <ModalGateway>
-        {viewerIsOpen ? (
-          <Modal onClose={closeLightbox}>
-            <Carousel
-              currentIndex={currentImage}
-              views={photos.map(x => ({
-                ...x,
-                srcset: x.srcSet,
-                caption: x.title
-              }))}
-            />
-          </Modal>
-        ) : null}
-      </ModalGateway>
-      </Paper>
+      <Container maxWidth="md">
+      <Title>
+        pmonk artifacts
+      </Title>
+        <Paper>
+          <Box component="div" style={{maxHeight:'370px', overflow:'hidden'}}>
+            <img src="../static/pmonk/pheader.jpg" style={{width:'100%'}} />
+          </Box>
+          <Gallery photos={photos} onClick={openLightbox} />
+          <ModalGateway>
+            {viewerIsOpen ? (
+              <Modal onClose={closeLightbox}>
+                <Carousel
+                  currentIndex={currentImage}
+                  views={photos.map(x => ({
+                    ...x,
+                    srcset: x.srcSet,
+                    caption: x.title
+                  }))}
+                />
+              </Modal>
+            ) : null}
+          </ModalGateway>
+        </Paper>
       </Container>
     </Layout> 
   );
