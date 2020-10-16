@@ -47,7 +47,6 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <link rel="icon" href="../static/icon.png"></link>
         <title>{pageTitle}</title>
         <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -60,7 +59,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         />
       </Head>
       <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8FH7QS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8FH7QS" height="0" width="0" style={{display:'none', visibility:'hidden'}}></iframe>
       </noscript>
       <React.Fragment>
         <CssBaseline />
