@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     width:'100%',
     justifyContent:'space-between',
-    minHeight: 250
+    minHeight: 250,
   },
   details: {
     display: 'flex',
@@ -122,7 +122,7 @@ export default function BookCardFull({article}) {
   };
 
   return (
-    <Grid container item xs={12} sm={6} md={6}>
+    <Grid container item xs={12} sm={10} md={6} style={{margin:'0 auto'}}>
       <Card className={classes.root} style={{flexDirection:flexDirect}}>
         
 

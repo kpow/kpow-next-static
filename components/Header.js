@@ -25,6 +25,7 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import WebIcon from '@material-ui/icons/Web';
 import CameraRollIcon from '@material-ui/icons/CameraRoll';
 import HomeIcon from '@material-ui/icons/Home';
+import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 
 const drawerWidth = 300;
 
@@ -171,6 +172,15 @@ export default function Header() {
                   <MenuBookIcon />
                 </ListItemIcon>
                 <ListItemText primary="book feed" />
+              </ListItem>
+            </Link>
+
+            <Link href="/youtube">
+              <ListItem button key="live">
+                <ListItemIcon>
+                  <VideoLibraryIcon />
+                </ListItemIcon>
+                <ListItemText primary="youtube live gems" />
               </ListItem>
             </Link>
 
