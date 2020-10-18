@@ -89,8 +89,11 @@ export default function VideoPage({ data }) {
     <Layout pageTitle="youtube" description="youtube">
       <Container maxWidth="lg">
         <Title>
-          youtube
+          live youtube
         </Title>
+        <p>
+          youtube is full of great live music. Some of my favorites I've run into.
+        </p>
 
         <Grid container spacing={2}>
           {data.items.map(({ id, snippet = {} }) => {
