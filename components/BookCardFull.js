@@ -1,27 +1,17 @@
 import React from 'react';
-import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import Collapse from '@material-ui/core/Collapse';
-import Box from '@material-ui/core/Box'
-import IconButton from '@material-ui/core/IconButton';
-import OpenInNewIcon from '@material-ui/icons/OpenInNew';
-
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Chip from '@material-ui/core/Chip';
-
-import { format, parseISO} from 'date-fns'
-import { withStyles } from '@material-ui/core/styles';
-
+import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography';
 import Rating from '@material-ui/lab/Rating';
 import FavoriteIcon from '@material-ui/icons/FlashOn';
-
 import FaceIcon from '@material-ui/icons/Face';
+import IconButton from '@material-ui/core/IconButton';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const useStyles = makeStyles((theme) => ({
@@ -95,7 +85,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const StyledRating = withStyles({
-  
   iconHover: {
     color: '#ff3d47',
   },
@@ -113,18 +102,14 @@ export default function BookCardFull({article}) {
   const detailsOrder = matches ? 1 : 2;
   const ratingExist = article.rating._text == 0 ? 'none' : 'block' ;
 
-  const [expanded, setExpanded] = React.useState(false);
-  // const publishedDate = parseISO(props.article?.published)
-  // const formatDate = format(publishedDate, "M.d.yyyy" )
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  // const [expanded, setExpanded] = React.useState(false);
+  // const handleExpandClick = () => {
+  //   setExpanded(!expanded);
+  // };
 
   return (
     <Grid container item xs={12} sm={10} md={6} style={{margin:'0 auto'}}>
       <Card className={classes.root} style={{flexDirection:flexDirect}}>
-        
 
         <div style={{order:detailsOrder}} className={classes.details}>
           <CardContent className={classes.content}>
@@ -217,7 +202,7 @@ export default function BookCardFull({article}) {
               label={article.shelves?.shelf._attributes?.name == 'currently-reading' ? 'reading' : article.shelves?.shelf._attributes?.name}
               color={article.shelves?.shelf._attributes?.name == 'read' ? 'primary' : 'secondary'}
             />
-         <img src={article.book.image_url._text} className={classes.coverImage} />
+          <img src={article.book.image_url._text} className={classes.coverImage} />
         </CardMedia>      
       </Card>
      

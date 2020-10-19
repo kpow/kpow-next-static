@@ -1,21 +1,15 @@
 import React, { useState, useCallback } from "react";
-import Head from 'next/head'
 import { Box, Container, Grid } from '@material-ui/core';
 import Title from '@components/Title';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import Layout from '@components/Layout';
 import { makeStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
-
-const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
-const API_KEY = process.env.YOUTUBE_API_KEY
 
 const useStyles = makeStyles({
   root: {
@@ -101,25 +95,24 @@ export default function VideoPage({ data }) {
             const { medium } = thumbnails;
             return (
               <Grid key={id} container item xs={12} sm={6} md={4} style={{margin:'0 auto'}}>
-              <Card className={classes.root} onClick={ ( ) => { handleClickOpen({id:resourceId.videoId}) } }>
-                <CardActionArea>
-                  <CardMedia
-                    className={classes.media}
-                    image={medium.url}
-                    title={ title }
-                  />
-                  <CardContent className={classes.content}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      { title }
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                      {description}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-
-            </Grid>
+                <Card className={classes.root} onClick={ ( ) => { handleClickOpen({id:resourceId.videoId}) } }>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.media}
+                      image={medium.url}
+                      title={ title }
+                    />
+                    <CardContent className={classes.content}>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        { title }
+                      </Typography>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                        {description}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
             )
           })}
         </Grid>
@@ -130,6 +123,8 @@ export default function VideoPage({ data }) {
 }
 
 export async function getStaticProps() {
+  const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
+  const API_KEY = process.env.YOUTUBE_API_KEY;
   const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&maxResults=50&playlistId=PLLnMxi7_aEL7eyC1HiZ2d1d4ce5irHaTQ&key=${API_KEY}`)
   const data = await res.json();
   return {

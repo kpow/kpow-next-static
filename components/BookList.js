@@ -14,9 +14,8 @@ import {
 
 import fetchBooks from '../api/fetchBooks.js';
 import { ReactQueryDevtools } from 'react-query-devtools';
-import BookCard from '@components/BookCardCover';
 import BookCardFull from 'components/BookCardFull';
-import BookCardSkeleton from 'components/BookCardSkeleton';
+import BookCardSkeleton from 'components/BookSkeleton';
 import Paginate from 'components/Paginate';
 import Hero from 'components/Hero';
 import Title from 'components/Title'
@@ -71,20 +70,19 @@ function BookList({howMany}) {
             />
           } 
         
-        <Paginate 
-          howMany={howMany} 
-          page={page} 
-          latestData={latestData} 
-          isFetching={isFetching}
-          setPage={setpage}
-        /> 
+        {howMany > 4 ? 
+          <Paginate 
+            page={page} 
+            latestData={latestData} 
+            isFetching={isFetching}
+            setPage={setpage}
+          /> 
+        : <></> }  
       </Box>
       
       <ReactQueryCacheProvider queryCache={queryCache}>
-        {status === 'loading' ? (
+        {status === '!loading' ? (
           <Grid container spacing={2}>
-            <BookCardSkeleton />
-            <BookCardSkeleton />
             <BookCardSkeleton />
             <BookCardSkeleton />
             <BookCardSkeleton />
@@ -102,10 +100,6 @@ function BookList({howMany}) {
                 <BookCardSkeleton />
                 <BookCardSkeleton />
                 <BookCardSkeleton />
-                <BookCardSkeleton />
-                <BookCardSkeleton />
-                <BookCardSkeleton />
-                <BookCardSkeleton />
               </>
             : <>
               {resolvedData.data.map(project => (       
@@ -117,13 +111,15 @@ function BookList({howMany}) {
         )}
       </ReactQueryCacheProvider>
 
-      <Paginate 
-        howMany={howMany} 
-        page={page} 
-        latestData={latestData} 
-        isFetching={isFetching}
-        setPage={setpage}
-      /> 
+      {howMany > 4 ? 
+        <Paginate 
+          page={page} 
+          latestData={latestData} 
+          isFetching={isFetching}
+          setPage={setpage}
+        /> 
+      : <></> }           
+     
       <ReactQueryDevtools />
     </>
   )

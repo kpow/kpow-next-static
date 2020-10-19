@@ -4,12 +4,16 @@ import Chip from '@material-ui/core/Chip'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
-const StarPaginate = ({page, latestData, isFetching, howMany, setPage}) =>{
-  if(howMany > 7){
+const StarPaginate = ({page, latestData, isFetching, howMany, setPage, total}) =>{
+
+    const totalPages = Math.round(total/howMany);
+    let paginateLabel = `${page+1} of ${totalPages}`
+
+    if(!totalPages){
+      paginateLabel = `${page+1}`
+    }
+
     return(
-        // {isFetching ? 
-        //   <Chip size="small" label='loading . . .'/>
-        // : null}{' '}
         <div style={{textAlign:'right', margin:'20px 0 20px', minWidth:'225px'}}>
           <Button
             size="small"
@@ -20,7 +24,7 @@ const StarPaginate = ({page, latestData, isFetching, howMany, setPage}) =>{
             disabled={page === 0}
           />
           <span style={{margin:'10px'}}>
-            <Chip size="medium" label={page + 1}/>
+            <Chip size="medium" label={paginateLabel}/>
           </span>
           <Button
             size="small" 
@@ -32,9 +36,6 @@ const StarPaginate = ({page, latestData, isFetching, howMany, setPage}) =>{
           />
         </div>
     )
-  }else{
-    return null
-  }
 }
 
 export default StarPaginate

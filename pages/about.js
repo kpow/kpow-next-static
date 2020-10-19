@@ -5,11 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box'
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
-import FolderIcon from '@material-ui/icons/Folder';
 import BathtubIcon from '@material-ui/icons/Bathtub';
 import BubbleChartIcon from '@material-ui/icons/BubbleChart';
 import CodeIcon from '@material-ui/icons/Code';
@@ -18,7 +15,6 @@ import LocalFloristIcon from '@material-ui/icons/LocalFlorist';
 import PolymerIcon from '@material-ui/icons/Polymer';
 
 import Title from '@components/Title';
-
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
@@ -143,10 +139,6 @@ const About = ({ title, description, ...props }) => {
             </List>
           </div>
           
-          
-              {/* <Typography component="p" gutterBottom>
-                A digital Swiss Army knife with 20+ years of web development and creative services experience. I am well versed in interfacing with stakeholders and UX/design teams, managing development resources and product development, maintaining partner relationships and requirements, and providing documentation while also evaluating and elevating platforms, tools, and environments.
-              </Typography> */}
               <Typography component="p" style={{marginTop:'20px'}} gutterBottom>
                 I am a technologist with a relentless passion for designing solutions that overcome technical obstacles. Pushing for innovation, I continually challenge myself and my teams to make technology work harder and smarter for clients. Crafting dynamic experiences, robust design systems, efficient development practices, and continuous learning are among my core principles. Also, I am a donut connoisseur.
               </Typography>

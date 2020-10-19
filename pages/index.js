@@ -1,15 +1,10 @@
 import Layout from '@components/Layout';
-
-import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
 import MuiAlert from '@material-ui/lab/Alert';
 import Snackbar from '@material-ui/core/Snackbar';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-
-
+import { useTheme } from '@material-ui/core/styles';
 import Title from '@components/Title';
 import {
-  useQueryCache,
   QueryCache,
   ReactQueryCacheProvider,
 } from "react-query";
@@ -17,7 +12,6 @@ import {
 import StarList from 'components/StarList';
 import BookList from 'components/BookList';
 import ProjectListImages from '@components/ProjectListImages';
-import ProjectList from '@components/ProjectList';
 import fetchStars from '../api/fetchStars.js';
 import fetchBooks from '../api/fetchBooks.js';
 import getPosts from '@utils/getPosts';
@@ -54,15 +48,18 @@ const Index = ({ projects, title, description, ...props }) => {
           <Alert 
             onClose={handleClose} 
             severity="info" 
-            style={{textAlign:'center', marginTop: theme.spacing(7) }}
+            style={{textAlign:'left', marginTop: theme.spacing(7) }}
           >
             Hi! this my site :) You'll find my digital collections, coding experiments and my public info. Hopefully, it's working and have fun poking around.
           </Alert>
         </Snackbar>
 
+        <Divider style={{marginTop:'40px'}} />
+        
         <Title>
           projects
         </Title>
+
         <ProjectListImages projects={projects} />
 
         <Divider style={{marginTop:'40px'}} />
@@ -101,6 +98,8 @@ const Index = ({ projects, title, description, ...props }) => {
           instagram
         </Title>
         <div className="elfsight-app-aa9b91b7-7757-4793-aae3-67df059446a2"></div>
+
+        <Divider style={{marginTop:'40px'}} />
       </Layout>
   )
 }

@@ -14,6 +14,8 @@ import {
 import fetchStars from '../api/fetchStars.js';
 import { ReactQueryDevtools } from 'react-query-devtools';
 import StarCardBig from '@components/StarCard';
+import Typography from '@material-ui/core/Typography';
+
 import StarCardBigSkeleton from '@components/StarCardSkeleton';
 import StarPaginate from '@components/Paginate';
 import Hero from '@components/Hero';
@@ -47,36 +49,56 @@ function StarList({howMany}) {
     <>
       <Box style={{display:'flex'}} justifyContent="space-between" flexDirection={ page >= 1 ? "row" : "column" }>
         {page >= 1 || howMany == 3 ? 
-          <Box style={{display:'flex',alignItems:'flex-end'}} flexDirection="row">
-            <Title> star feed </Title> 
+            <Box style={{display:'flex',alignItems:'center'}} flexDirection="row">
+              <Title> star feed </Title> 
 
-            {page > 0 ? null : 
-              <div style={{display:'inline-block', minWidth:'110px',textAlign:'right', margin:'20px 20px 20px'}}>
-                <Link href="/starfeed">
-                  <Button
-                    size="small" 
-                    variant="outlined" 
-                    endIcon={<NavigateNextIcon />}
-                    children="see more"
-                  />
-                </Link>
-              </div>
-            }  
+            
+              {page > 0 ? null : 
+                <div style={{display:'flex', minWidth:'110px',textAlign:'right', margin:'20px 20px 20px'}}>
+                  
+                  {isFetching ? <></> : 
+                    <Typography variant="subtitle1" color="textSecondary">
+                      {resolvedData.totalStars} starred articles :) 
+                    </Typography>
+                  }
+                  <Link href="/starfeed">
+                    <Button
+                      size="small" 
+                      variant="outlined" 
+                      endIcon={<NavigateNextIcon />}
+                      children="see more"
+                    />
+                  </Link>
+                </div>
+              }  
 
-          </Box>
+            </Box>
           : <Hero 
-          title="star feed"
-          content={`I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :)`}
-        />
-      }  
+              title="star feed"
+              content={`I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :)`}
+            />
+          }  
         
-        <StarPaginate 
-          howMany={howMany} 
-          page={page} 
-          latestData={latestData} 
-          isFetching={isFetching}
-          setPage={setPage}
-        /> 
+        {howMany>4 ?
+          <Box style={{display:'flex',alignItems:'center', justifyContent:'flex-end'}} flexDirection="row"> 
+            {isFetching ? <></> : 
+              <>
+              <Typography variant="subtitle1" color="textSecondary">
+                {resolvedData.totalStars} starred articles :)&nbsp;&nbsp;
+              </Typography>
+              
+              <StarPaginate 
+                page={page}
+                howMany={howMany}
+                total={resolvedData.totalStars} 
+                latestData={latestData} 
+                isFetching={isFetching}
+                setPage={setPage}
+              /> 
+            </>
+            }  
+          </Box>
+          :<></> }
       </Box>
       
       <ReactQueryCacheProvider queryCache={queryCache}>
@@ -112,14 +134,20 @@ function StarList({howMany}) {
           </Grid>
         )}
       </ReactQueryCacheProvider>
-
-      <StarPaginate 
-        howMany={howMany} 
-        page={page} 
-        latestData={latestData} 
-        isFetching={isFetching}
-        setPage={setPage}
-      /> 
+      {howMany>4 ?
+        <>
+        {isFetching ?  <></> : 
+          <>
+            <StarPaginate 
+              page={page}
+              howMany={howMany}
+              total={resolvedData.totalStars}  
+              latestData={latestData} 
+              isFetching={isFetching}
+              setPage={setPage}
+            /> 
+          </>
+        }</> :<></> }
       <ReactQueryDevtools />
     </>
   )
