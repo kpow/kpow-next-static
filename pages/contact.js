@@ -57,18 +57,6 @@ function Contact(props) {
                 initialValues={{ email: '', name: '', comment: '' }}
                 onSubmit={(values, { setSubmitting }) => {
                    setSubmitting(true);
-                  axios.post('/?success=true',
-                    values,
-                    {
-                      headers: {
-                        'Access-Control-Allow-Origin': '*',
-                        'Content-Type': 'application/json',
-                      }
-                    },
-                  ).then((resp) => {
-                    setSubmitionCompleted(true);
-                  }
-                  );
                 }}
 
                 validationSchema={Yup.object().shape({
@@ -97,6 +85,7 @@ function Contact(props) {
                     <form   
                       netlify-honeypot="bot-field" 
                       data-netlify="true"
+                      action="/?success=true"
                       onSubmit={handleSubmit}
                     >
                       <TextField
