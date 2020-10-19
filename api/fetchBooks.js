@@ -4,23 +4,18 @@ import convert from 'xml-js'
 const totalBooks = async () =>{
   const { data } = await axios.get("http://services.kpow.com/total_books.php")
   const shelfJson = JSON.parse(convert.xml2json(data, { compact: true, spaces: 4 }))
-
   const shelves = shelfJson.GoodreadsResponse.shelves.user_shelf
   const totals = shelves.map((shelf)=> Number(shelf.book_count._text) )
   const total = totals.reduce(function(a, b){return a + b;}, 0);
-  console.log('total bo0ks='+total)
   return total
 }
 
 const fetchBooks = async (key, page = 1, howMany = 8) => {
-  
   const { data } = await axios.get("https://services.kpow.com/books.php?perPage="+howMany+"&page="+(Number(page)+1))
   const json = JSON.parse(convert.xml2json(data, { compact: true, spaces: 4 }))
   const bookData = json.GoodreadsResponse.reviews.review
-
-  const total = totalBooks();
-
-  const fullData = {data:bookData, total, hasMore:true}
+  const totalItems = await totalBooks();
+  const fullData = {data:bookData, totalItems, hasMore:true}
   return fullData
 }
 

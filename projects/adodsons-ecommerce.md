@@ -1,5 +1,5 @@
 ---
-title: 'adodsons.com - shopify/ecomm'
+title: 'adodsons.com'
 author: 'kpow'
 date: '2020-04-27'
 hero_image: '../static/adodsons.png'

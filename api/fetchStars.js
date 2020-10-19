@@ -17,13 +17,13 @@ const fetchStars = async (key, page = 0, howMany = 9) => {
   } 
 
   const stars = await axios.get("https://services.kpow.com/total_stars.php")
-  const totalStars = stars.data.length;
+  const totalItems = stars.data.length;
   const totalPages = stars.data.length/howMany
 
   const hasMore = totalPages > page ? true : false;
 
   data.reverse()
-  const fullData = {data,totalStars,hasMore}
+  const fullData = {data,totalItems,hasMore}
   return fullData
 }
 

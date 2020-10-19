@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import Divider from '@material-ui/core/Divider'
 
 import {
   usePaginatedQuery,
@@ -19,7 +20,7 @@ import StarCardBig from '@components/StarCard';
 import Typography from '@material-ui/core/Typography';
 
 import StarCardBigSkeleton from '@components/StarCardSkeleton';
-import StarPaginate from '@components/Paginate';
+import Paginate from '@components/Paginate';
 import Hero from '@components/Hero';
 import Title from 'components/Title';
 import useMediaQuery from '@material-ui/core/useMediaQuery'
@@ -57,26 +58,20 @@ function StarList({howMany}) {
     <>
       <Box>
         {/* this condition is for the home page list */}
-        { howMany == 3 ? 
+        { howMany <= 5 ? 
             <Box 
-              style={{display:'flex'}} 
-              flexDirection={flexDirect} 
-              justifyContent="space-between" 
-              alignItems="center"
+            style={{display:'flex', alignItems:'center', justifyContent:'space-between'}} 
+            flexDirection={flexDirect}
             >
-              <Box
-                style={{display:'flex'}} 
-                flexDirection="column"
-                alignItems="center"
-              >
-                <Title> star feed </Title> 
+              <Box style={{display:'flex', flexDirection:'column', alignItems:'center'}} >
+                <Title> Star feed </Title> 
                 <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                  {resolvedData?.totalStars} starred articles :) 
+                  {resolvedData?.totalItems} starred articles :) 
                 </Typography>
               
               </Box>
               <Box>  
-                <Link href="/starfeed">
+                <Link href="/bookfeed">
                   <Button
                     size="small" 
                     variant="outlined" 
@@ -89,66 +84,34 @@ function StarList({howMany}) {
             
           : <>
               {/* this condition is for the first listing */}  
-              {page==0 ? 
-                <Box
-                  style={{display:'flex'}} 
-                  flexDirection={flexDirect}
-                  alignItems="center"
-                  justifyContent="space-around"
-                >
-                  <Hero 
-                    title="star feed"
-                    content={`I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :)`}
-                  />
-                  <Box
-                    style={{display:'flex'}} 
-                    flexDirection="column"
-                    alignItems="center"
-                    justifyContent="center"
-                  >
-                    
-                    <StarPaginate 
+              <Box
+                style={{display:'flex', alignItems:'center', justifyContent:'space-between'}} 
+                flexDirection={flexDirect}
+              >
+                  <Box style={{display:'flex',alignItems:'center', justifyContent:'center', flexDirection:'column'}}>
+                    {page==0 ? 
+                      <Hero 
+                        title="Star feed"
+                        content={`I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :)`}
+                      />
+                    : <> 
+                      <Title> book feed </Title> 
+                      <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                        {resolvedData?.totalItems} starred articles :) 
+                      </Typography> 
+                      </>
+                    }
+                  </Box>
+                  <Box style={{display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column'}} >
+                    {page==0 ? 
+                      <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                        {resolvedData?.totalItems} starred articles :) 
+                      </Typography> 
+                    : <> </>}
+                    <Paginate 
                       page={page}
                       howMany={howMany}
-                      total={resolvedData?.totalStars} 
-                      latestData={latestData} 
-                      isFetching={isFetching}
-                      setPage={setPage}
-                    /> 
-                    <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                      {resolvedData?.totalStars} starred articles :) 
-                    </Typography>
-                  </Box>
-                </Box>
-              : <>
-              : {/* this condition is for the rest of the listing pages */}  
-                <Box
-                  style={{display:'flex'}} 
-                  flexDirection={flexDirect}
-                  alignItems="center"
-                  justifyContent="space-between"
-                >
-                  <Box
-                    style={{display:'flex'}} 
-                    flexDirection="column"
-                    alignItems="center"
-                  >
-                    <Title> star feed </Title> 
-                    <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                      {resolvedData?.totalStars} starred articles :) 
-                    </Typography> 
-                  
-                  </Box>
-                  <Box
-                     style={{display:'flex'}} 
-                     alignItems="center"
-                     justifyContent="center"
-                     flexDirection="column"
-                  >
-                    <StarPaginate 
-                      page={page}
-                      howMany={howMany}
-                      total={resolvedData?.totalStars} 
+                      total={resolvedData?.totalItems} 
                       latestData={latestData} 
                       isFetching={isFetching}
                       setPage={setPage}
@@ -156,9 +119,6 @@ function StarList({howMany}) {
                     
                   </Box> 
                 </Box>
-                </>
-              }
-        
             </>
           }  
       </Box>
@@ -196,15 +156,19 @@ function StarList({howMany}) {
           </Grid>
         )}
       </ReactQueryCacheProvider>
+
       {howMany>4 ?
-        <StarPaginate 
+        <>
+        <Divider style={{marginBottom:'20px',marginTop:'20px'}}/>            
+        <Paginate 
           page={page}
           howMany={howMany}
-          total={resolvedData?.totalStars}  
+          total={resolvedData?.totalItems}  
           latestData={latestData} 
           isFetching={isFetching}
           setPage={setPage}
         /> 
+        </>
       :<></> }
       <ReactQueryDevtools />
     </>

@@ -45,7 +45,7 @@ const StarHero = ({title, content}) =>{
             <Title>
               {title}
             </Title>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+            <Typography variant="h5" align="left" color="textSecondary" paragraph>
               {content} 
             </Typography>
           </Paper>
