@@ -8,45 +8,32 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import axios from 'axios';
-import {
-  Formik, Form, Field, ErrorMessage,
-} from 'formik';
-import * as Yup from 'yup';
-// import { DisplayFormikState } from './formikHelper';
+import Hidden from '@material-ui/core/Hidden'
 
-const styles = {
-
-};
-
-const contactFormEndpoint = process.env.REACT_APP_CONTACT_ENDPOINT;
-
-
-function Contact(props) {
+function ContactModal(props) {
   const { classes } = props;
   const [open, setOpen] = useState(false);
-  const [isSubmitionCompleted, setSubmitionCompleted] = useState(false);
   
   function handleClose() {
     setOpen(false);
   }
 
   function handleClickOpen() {
-    setSubmitionCompleted(false);
     setOpen(true);
   }
 
   return (
     <React.Fragment>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Contact us!
-      </Button>
+      
+        <Button variant="contained" size="small"  color="primary" onClick={handleClickOpen}>
+          contact kpow
+        </Button>
+        
       <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        {!isSubmitionCompleted &&
           <React.Fragment>
             <DialogTitle id="form-dialog-title">Contact</DialogTitle>
             <DialogContent>
@@ -73,29 +60,10 @@ function Contact(props) {
             </form>
             </DialogContent>
           </React.Fragment>
-        }
-        {isSubmitionCompleted &&
-          <React.Fragment>
-            <DialogTitle id="form-dialog-title">Thanks!</DialogTitle>
-            <DialogContent>
-              <DialogContentText>
-                Thanks
-              </DialogContentText>
-              <DialogActions>
-                <Button
-                  type="button"
-                  className="outline"
-                  onClick={handleClose}
-                >
-                  Back to app
-                  </Button>
-                {/* <DisplayFormikState {...props} /> */}
-              </DialogActions>
-            </DialogContent>
-          </React.Fragment>}
+      
       </Dialog>
     </React.Fragment >
   );
 }
 
-export default withStyles(styles)(Contact);
+export default ContactModal;

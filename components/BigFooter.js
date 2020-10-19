@@ -55,6 +55,7 @@ const BigFooter = React.memo(function BigFooter() {
                     <Typography paragraph className={classes.text}>
                         Digital Architect - Leader - Developer - Pixel Farmer - Voracious Reader and Dad. I'm into travel, ukes, pugs, live music, and pixels
                     </Typography>
+                    
                   </div>
                 </Paper>
               </Grid>

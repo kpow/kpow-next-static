@@ -26,6 +26,9 @@ import WebIcon from '@material-ui/icons/Web';
 import CameraRollIcon from '@material-ui/icons/CameraRoll';
 import HomeIcon from '@material-ui/icons/Home';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
+import ContactModal from '@components/ContactModal';
+import Hidden from '@material-ui/core/Hidden'
+
 
 const drawerWidth = 300;
 
@@ -110,6 +113,10 @@ export default function Header() {
             kpow-next
           </Typography>
 
+          <Box>
+            <Hidden xsDown>
+              <ContactModal />
+            </Hidden>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -119,6 +126,7 @@ export default function Header() {
           >
             <MenuIcon />
           </IconButton>
+          </Box>
         </Toolbar>
         </Container>
       </AppBar>
@@ -136,6 +144,11 @@ export default function Header() {
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
+          <Box m={0}>
+            <Hidden smUp>
+              <ContactModal />
+            </Hidden>
+          </Box>
         </div>
         
         <Divider />
@@ -203,7 +216,6 @@ export default function Header() {
             </a>
             
         </List>
-
        
       </Drawer>
 
