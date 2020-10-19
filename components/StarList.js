@@ -14,7 +14,7 @@ import {
   QueryCache
 } from 'react-query';
 import fetchStars from '../api/fetchStars.js';
-import { ReactQueryDevtools } from 'react-query-devtools';
+import { ReactQueryDevtools } from '../node_modules/react-query-devtools/dist/react-query-devtools.production.min.js';
 import StarCardBig from '@components/StarCard';
 import Typography from '@material-ui/core/Typography';
 
@@ -46,7 +46,7 @@ function StarList({howMany}) {
   // Prefetch the next page!
   React.useEffect(() => {
     window.scrollTo(0, 0)
-    // this howmany stops the home page from prefetching
+    // this hasMore stops the home page from prefetching
     if (latestData?.hasMore) {
       const nextPage = page+1
       cache.prefetchQuery(['stars', nextPage], fetchStars)
@@ -56,7 +56,7 @@ function StarList({howMany}) {
   return (
     <>
       <Box>
-        {/* this condition is for the home */}
+        {/* this condition is for the home page list */}
         { howMany == 3 ? 
             <Box 
               style={{display:'flex'}} 
@@ -70,11 +70,10 @@ function StarList({howMany}) {
                 alignItems="center"
               >
                 <Title> star feed </Title> 
-                {isFetching ? <></> : 
-                  <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                    {resolvedData.totalStars} starred articles :) 
-                  </Typography>
-                }
+                <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                  {resolvedData?.totalStars} starred articles :) 
+                </Typography>
+              
               </Box>
               <Box>  
                 <Link href="/starfeed">
