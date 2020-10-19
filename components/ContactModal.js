@@ -8,7 +8,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Hidden from '@material-ui/core/Hidden'
 
 function ContactModal(props) {
   const { classes } = props;
@@ -28,7 +27,7 @@ function ContactModal(props) {
         <Button variant="contained" size="small"  color="primary" onClick={handleClickOpen}>
           contact kpow
         </Button>
-        
+
       <Dialog
         open={open}
         onClose={handleClose}

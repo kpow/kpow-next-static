@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
+
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
@@ -19,13 +21,19 @@ import Typography from '@material-ui/core/Typography';
 import StarCardBigSkeleton from '@components/StarCardSkeleton';
 import StarPaginate from '@components/Paginate';
 import Hero from '@components/Hero';
-import Title from 'components/Title'
+import Title from 'components/Title';
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+
 
 const queryCache = new QueryCache()
 
 function StarList({howMany}) {
   const cache = useQueryCache()
   const [page, setPage] = React.useState(0)
+  const theme = useTheme();
+
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const flexDirect = matches ? 'row' : 'column';
   
   const {
     status,
@@ -47,58 +55,113 @@ function StarList({howMany}) {
 
   return (
     <>
-      <Box style={{display:'flex'}} justifyContent="space-between" flexDirection={ page >= 1 ? "row" : "column" }>
-        {page >= 1 || howMany == 3 ? 
-            <Box style={{display:'flex',alignItems:'center'}} flexDirection="row">
-              <Title> star feed </Title> 
-
-            
-              {page > 0 ? null : 
-                <div style={{display:'flex', minWidth:'110px',textAlign:'right', margin:'20px 20px 20px'}}>
-                  
-                  {isFetching ? <></> : 
-                    <Typography variant="subtitle1" color="textSecondary">
-                      {resolvedData.totalStars} starred articles :) 
-                    </Typography>
-                  }
-                  <Link href="/starfeed">
-                    <Button
-                      size="small" 
-                      variant="outlined" 
-                      endIcon={<NavigateNextIcon />}
-                      children="see more"
-                    />
-                  </Link>
-                </div>
-              }  
-
+      <Box>
+        {/* this condition is for the home */}
+        { howMany == 3 ? 
+            <Box 
+              style={{display:'flex'}} 
+              flexDirection={flexDirect} 
+              justifyContent="space-between" 
+              alignItems="center"
+            >
+              <Box
+                style={{display:'flex'}} 
+                flexDirection="column"
+                alignItems="center"
+              >
+                <Title> star feed </Title> 
+                {isFetching ? <></> : 
+                  <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                    {resolvedData.totalStars} starred articles :) 
+                  </Typography>
+                }
+              </Box>
+              <Box>  
+                <Link href="/starfeed">
+                  <Button
+                    size="small" 
+                    variant="outlined" 
+                    endIcon={<NavigateNextIcon />}
+                    children="see more"
+                  />
+                </Link> 
+              </Box>                
             </Box>
-          : <Hero 
-              title="star feed"
-              content={`I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :)`}
-            />
-          }  
+            
+          : <>
+              {/* this condition is for the first listing */}  
+              {page==0 ? 
+                <Box
+                  style={{display:'flex'}} 
+                  flexDirection={flexDirect}
+                  alignItems="center"
+                  justifyContent="space-around"
+                >
+                  <Hero 
+                    title="star feed"
+                    content={`I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :)`}
+                  />
+                  <Box
+                    style={{display:'flex'}} 
+                    flexDirection="column"
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    
+                    <StarPaginate 
+                      page={page}
+                      howMany={howMany}
+                      total={resolvedData?.totalStars} 
+                      latestData={latestData} 
+                      isFetching={isFetching}
+                      setPage={setPage}
+                    /> 
+                    <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                      {resolvedData?.totalStars} starred articles :) 
+                    </Typography>
+                  </Box>
+                </Box>
+              : <>
+              : {/* this condition is for the rest of the listing pages */}  
+                <Box
+                  style={{display:'flex'}} 
+                  flexDirection={flexDirect}
+                  alignItems="center"
+                  justifyContent="space-between"
+                >
+                  <Box
+                    style={{display:'flex'}} 
+                    flexDirection="column"
+                    alignItems="center"
+                  >
+                    <Title> star feed </Title> 
+                    <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                      {resolvedData?.totalStars} starred articles :) 
+                    </Typography> 
+                  
+                  </Box>
+                  <Box
+                     style={{display:'flex'}} 
+                     alignItems="center"
+                     justifyContent="center"
+                     flexDirection="column"
+                  >
+                    <StarPaginate 
+                      page={page}
+                      howMany={howMany}
+                      total={resolvedData?.totalStars} 
+                      latestData={latestData} 
+                      isFetching={isFetching}
+                      setPage={setPage}
+                    />
+                    
+                  </Box> 
+                </Box>
+                </>
+              }
         
-        {howMany>4 ?
-          <Box style={{display:'flex',alignItems:'center', justifyContent:'flex-end'}} flexDirection="row"> 
-            {isFetching ? <></> : 
-              <>
-              <Typography variant="subtitle1" color="textSecondary">
-                {resolvedData.totalStars} starred articles :)&nbsp;&nbsp;
-              </Typography>
-              
-              <StarPaginate 
-                page={page}
-                howMany={howMany}
-                total={resolvedData.totalStars} 
-                latestData={latestData} 
-                isFetching={isFetching}
-                setPage={setPage}
-              /> 
             </>
-            }  
-          </Box>
-          :<></> }
+          }  
       </Box>
       
       <ReactQueryCacheProvider queryCache={queryCache}>
@@ -135,19 +198,15 @@ function StarList({howMany}) {
         )}
       </ReactQueryCacheProvider>
       {howMany>4 ?
-        <>
-        {isFetching ?  <></> : 
-          <>
-            <StarPaginate 
-              page={page}
-              howMany={howMany}
-              total={resolvedData.totalStars}  
-              latestData={latestData} 
-              isFetching={isFetching}
-              setPage={setPage}
-            /> 
-          </>
-        }</> :<></> }
+        <StarPaginate 
+          page={page}
+          howMany={howMany}
+          total={resolvedData?.totalStars}  
+          latestData={latestData} 
+          isFetching={isFetching}
+          setPage={setPage}
+        /> 
+      :<></> }
       <ReactQueryDevtools />
     </>
   )

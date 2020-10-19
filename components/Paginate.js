@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
 import Chip from '@material-ui/core/Chip'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
@@ -14,7 +15,7 @@ const StarPaginate = ({page, latestData, isFetching, howMany, setPage, total}) =
     }
 
     return(
-        <div style={{textAlign:'right', margin:'20px 0 20px', minWidth:'225px'}}>
+        <Box>
           <Button
             size="small"
             children="Prev" 
@@ -34,7 +35,7 @@ const StarPaginate = ({page, latestData, isFetching, howMany, setPage, total}) =
             onClick={() => setPage(old => (!latestData || !latestData.hasMore ? old : old + 1)) }
             disabled={!latestData || !latestData.hasMore}
           />
-        </div>
+        </Box>
     )
 }
 

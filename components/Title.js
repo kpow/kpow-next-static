@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Title(props) {
   const classes = useStyles();
   return (
-    <Typography component="h2" variant="h4" className={classes.title} gutterBottom>
+    <Typography component="h2" variant="h4" className={classes.title}>
       {props.children}
     </Typography>
   );

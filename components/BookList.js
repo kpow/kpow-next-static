@@ -45,7 +45,7 @@ function BookList({howMany}) {
 
   return (
     <>
-      <Box style={{display:'flex'}} justifyContent="space-between" flexDirection={ page >= 1 ? "row" : "column" }>
+      <Box style={{display:'flex'}} justifyContent="space-between" flexDirection={ "column" }>
         {page >= 1 || howMany == 4 ? 
           <Box style={{display:'flex', alignItems:'flex-end'}} flexDirection="row">
             <Title> Book feed </Title> 
