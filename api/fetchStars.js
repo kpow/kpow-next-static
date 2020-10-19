@@ -21,7 +21,6 @@ const fetchStars = async (key, page = 0, howMany = 9) => {
   const totalPages = stars.data.length/howMany
 
   const hasMore = totalPages > page ? true : false;
-  console.log(hasMore)
 
   data.reverse()
   const fullData = {data,totalStars,hasMore}
