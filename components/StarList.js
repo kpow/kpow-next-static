@@ -71,7 +71,7 @@ function StarList({howMany}) {
               
               </Box>
               <Box>  
-                <Link href="/bookfeed">
+                <Link href="/starfeed">
                   <Button
                     size="small" 
                     variant="outlined" 
