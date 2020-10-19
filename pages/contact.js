@@ -54,6 +54,9 @@ function Contact(props) {
                 Send us a comment!
               </DialogContentText>
               <Formik
+                action="/?success=true" 
+                netlify-honeypot="bot-field" 
+                data-netlify="true"
                 initialValues={{ email: '', name: '', comment: '' }}
                 onSubmit={(values, { setSubmitting }) => {
                    setSubmitting(true);

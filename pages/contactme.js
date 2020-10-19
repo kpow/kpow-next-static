@@ -31,7 +31,7 @@ export default function Home() {
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <form name="contact" method="POST" action="/?success=true" data-netlify="true">
+            <form name="contact" method="POST" action="/?success=true" netlify-honeypot="bot-field" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />
               <p>
                 <label htmlFor="name">Name</label>
