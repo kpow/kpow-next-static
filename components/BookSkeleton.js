@@ -132,13 +132,13 @@ export default function BookSkeleton({article}) {
 
             </Typography>
             <Box className={classes.bookRatingHolder} style={{width:'100%'}}>
-              <Box mr={3} style={{display:'block'}} style={{width:'100%'}}>
+              <Box mr={3} style={{display:'block'}} style={{width:'50%'}}>
                 <Typography className={classes.bookRating} color="textSecondary">
                   <Skeleton animation="wave" style={{width:'100%'}}/>
                 </Typography>
                  <Skeleton animation="wave" style={{width:'100%'}}/>
               </Box>
-              <Box style={{width:'100%'}}>
+              <Box style={{width:'50%'}}>
                 <Typography className={classes.bookRating} color="textSecondary">
                   <Skeleton animation="wave" style={{width:'100%'}}/>
                 </Typography>

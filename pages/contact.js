@@ -57,7 +57,7 @@ function Contact(props) {
                 initialValues={{ email: '', name: '', comment: '' }}
                 onSubmit={(values, { setSubmitting }) => {
                    setSubmitting(true);
-                  axios.post('/',
+                  axios.post('/?success=true',
                     values,
                     {
                       headers: {
@@ -95,7 +95,6 @@ function Contact(props) {
                   } = props;
                   return (
                     <form   
-                      action="/?success=true" 
                       netlify-honeypot="bot-field" 
                       data-netlify="true"
                       onSubmit={handleSubmit}

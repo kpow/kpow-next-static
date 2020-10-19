@@ -82,7 +82,7 @@ function BookList({howMany}) {
       
       <ReactQueryCacheProvider queryCache={queryCache}>
         {status === '!loading' ? (
-          <Grid container spacing={2}>
+          <Grid container spacing={0}>
             <BookCardSkeleton />
             <BookCardSkeleton />
             <BookCardSkeleton />
