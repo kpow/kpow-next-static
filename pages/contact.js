@@ -53,92 +53,24 @@ function Contact(props) {
               <DialogContentText>
                 Send us a comment!
               </DialogContentText>
-              <Formik
-                initialValues={{ email: '', name: '', comment: '' }}
-                onSubmit={(values, { setSubmitting }) => {
-                   setSubmitting(true);
-                }}
-
-                validationSchema={Yup.object().shape({
-                  email: Yup.string()
-                    .email()
-                    .required('Required'),
-                  name: Yup.string()
-                    .required('Required'),
-                  comment: Yup.string()
-                    .required('Required'),
-                })}
-              >
-                {(props) => {
-                  const {
-                    values,
-                    touched,
-                    errors,
-                    dirty,
-                    isSubmitting,
-                    handleChange,
-                    handleBlur,
-                    handleSubmit,
-                    handleReset,
-                  } = props;
-                  return (
-                    <form   
-                      netlify-honeypot="bot-field" 
-                      data-netlify="true"
-                      action="/?success=true"
-                      onSubmit={handleSubmit}
-                    >
-                      <TextField
-                        label="name"
-                        name="name"
-                        className={classes.textField}
-                        value={values.name}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        helperText={(errors.name && touched.name) && errors.name}
-                        margin="normal"
-                      />
-
-                      <TextField
-                        error={errors.email && touched.email}
-                        label="email"
-                        name="email"
-                        className={classes.textField}
-                        value={values.email}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        helperText={(errors.email && touched.email) && errors.email}
-                        margin="normal"
-                      />
-
-                      <TextField
-                        label="comment"
-                        name="comment"
-                        className={classes.textField}
-                        value={values.comment}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        helperText={(errors.comment && touched.comment) && errors.comment}
-                        margin="normal"
-                      />
-                      <DialogActions>
-                        <Button
-                          type="button"
-                          className="outline"
-                          onClick={handleReset}
-                          disabled={!dirty || isSubmitting}
-                        >
-                          Reset
-                        </Button>
-                        <Button type="submit" disabled={isSubmitting}>
-                          Submit
-                        </Button>
-                        {/* <DisplayFormikState {...props} /> */}
-                      </DialogActions>
-                    </form>
-                  );
-                }}
-              </Formik>
+              <form name="contact" method="POST" action="/?success=true" netlify-honeypot="bot-field" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
+              <p>
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" name="name" />
+              </p>
+              <p>
+                <label htmlFor="email">Email</label>
+                <input type="text" id="email" name="email" />
+              </p>
+              <p>
+                <label htmlFor="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
+            </form>
             </DialogContent>
           </React.Fragment>
         }
