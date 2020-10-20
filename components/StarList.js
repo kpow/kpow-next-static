@@ -1,13 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
-
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Divider from '@material-ui/core/Divider'
-
 import {
   usePaginatedQuery,
   useQueryCache,
@@ -17,14 +11,10 @@ import {
 import fetchStars from '../api/fetchStars.js';
 import { ReactQueryDevtools } from '../node_modules/react-query-devtools/dist/react-query-devtools.production.min.js';
 import StarCardBig from '@components/StarCard';
-import Typography from '@material-ui/core/Typography';
-
 import StarCardBigSkeleton from '@components/StarCardSkeleton';
-import Paginate from '@components/Paginate';
-import Hero from '@components/Hero';
-import Title from 'components/Title';
+import Paginate from '@components/Paginate';;
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-
+import ListHeader from '@components/ListHeader';
 
 const queryCache = new QueryCache()
 
@@ -32,10 +22,11 @@ function StarList({howMany}) {
   const cache = useQueryCache()
   const [page, setPage] = React.useState(0)
   const theme = useTheme();
+  let skeletons = []
+  for(let i=0; i<howMany; i++){
+    skeletons.push(i)
+  } 
 
-  const matches = useMediaQuery(theme.breakpoints.up('sm'));
-  const flexDirect = matches ? 'row' : 'column';
-  
   const {
     status,
     resolvedData,
@@ -56,82 +47,24 @@ function StarList({howMany}) {
 
   return (
     <>
-      <Box>
-        {/* this condition is for the home page list */}
-        { howMany <= 5 ? 
-            <Box 
-            style={{display:'flex', alignItems:'center', justifyContent:'space-between'}} 
-            flexDirection={flexDirect}
-            >
-              <Box style={{display:'flex', flexDirection:'column', alignItems:'center'}} >
-                <Title> Star feed </Title> 
-                <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                  {resolvedData?.totalItems} starred articles :) 
-                </Typography>
-              
-              </Box>
-              <Box>  
-                <Link href="/starfeed">
-                  <Button
-                    size="small" 
-                    variant="outlined" 
-                    endIcon={<NavigateNextIcon />}
-                    children="see more"
-                  />
-                </Link> 
-              </Box>                
-            </Box>
-            
-          : <>
-              {/* this condition is for the first listing */}  
-              <Box
-                style={{display:'flex', alignItems:'center', justifyContent:'space-between'}} 
-                flexDirection={flexDirect}
-              >
-                  <Box style={{display:'flex',alignItems:'center', justifyContent:'center', flexDirection:'column'}}>
-                    {page==0 ? 
-                      <Hero 
-                        title="Star feed"
-                        content={`I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :)`}
-                      />
-                    : <> 
-                      <Title> book feed </Title> 
-                      <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                        {resolvedData?.totalItems} starred articles :) 
-                      </Typography> 
-                      </>
-                    }
-                  </Box>
-                  <Box style={{display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column'}} >
-                    {page==0 ? 
-                      <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                        {resolvedData?.totalItems} starred articles :) 
-                      </Typography> 
-                    : <> </>}
-                    <Paginate 
-                      page={page}
-                      howMany={howMany}
-                      total={resolvedData?.totalItems} 
-                      latestData={latestData} 
-                      isFetching={isFetching}
-                      setPage={setPage}
-                    />
-                    
-                  </Box> 
-                </Box>
-            </>
-          }  
-      </Box>
-      
+      <ListHeader 
+        howMany={howMany} 
+        resolvedData={resolvedData} 
+        latestData={latestData} 
+        isFetching={isFetching} 
+        page={page} 
+        setPage={setPage}
+        seeMore="/starfeed"
+        title="star feed"
+        heroContent={`I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :)`}
+        totalItemsLabel=" starred articles :)"
+      />
       <ReactQueryCacheProvider queryCache={queryCache}>
         {status === 'loading' ? (
           <Grid container spacing={4}>
-            <StarCardBigSkeleton />
-            <StarCardBigSkeleton />
-            <StarCardBigSkeleton />
-            <StarCardBigSkeleton />
-            <StarCardBigSkeleton />
-            <StarCardBigSkeleton />
+            {skeletons.map(id => (       
+              <StarCardBigSkeleton key={id}/>
+            ))} 
           </Grid>
         ) : status === 'error' ? (
           <div>Error: {error.message}</div>
@@ -140,12 +73,9 @@ function StarList({howMany}) {
           <Grid container spacing={4}>
             {isFetching ? 
               <>
-                <StarCardBigSkeleton />
-                <StarCardBigSkeleton />
-                <StarCardBigSkeleton />
-                <StarCardBigSkeleton />
-                <StarCardBigSkeleton />
-                <StarCardBigSkeleton />
+                {skeletons.map(id => (       
+                  <StarCardBigSkeleton key={id}/>
+                ))} 
               </>
             : <>
               {resolvedData.data.map(project => (       

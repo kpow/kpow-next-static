@@ -1,28 +1,14 @@
 import React, { useState, useCallback } from "react";
 import { Box, Container, Grid } from '@material-ui/core';
 import Title from '@components/Title';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-
 import Layout from '@components/Layout';
 import { makeStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
+import VideoCard from '@components/VideoCard';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 400,
-  },
-  media: {
-    height: 240,
-  },
-  content: {
-    maxHeight:185,
-    height: 185,
-    overflow:'hidden',
-    marginBottom: 35
   },
   videoContainer: {
     position: "relative",
@@ -65,7 +51,6 @@ function PlayerDialog(props) {
 }
 
 export default function VideoPage({ data }) {
-  const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState({});
 
@@ -94,25 +79,7 @@ export default function VideoPage({ data }) {
             const { description, title, thumbnails = {}, resourceId = {} } = snippet;
             const { medium } = thumbnails;
             return (
-              <Grid key={id} container item xs={12} sm={6} md={4} style={{margin:'0 auto'}}>
-                <Card className={classes.root} onClick={ ( ) => { handleClickOpen({id:resourceId.videoId}) } }>
-                  <CardActionArea>
-                    <CardMedia
-                      className={classes.media}
-                      image={medium.url}
-                      title={ title }
-                    />
-                    <CardContent className={classes.content}>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        { title }
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary" component="p">
-                        {description}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Grid>
+              <VideoCard description={description} title={title} resourceId={resourceId} medium={medium} handleClickOpen={handleClickOpen} />
             )
           })}
         </Grid>

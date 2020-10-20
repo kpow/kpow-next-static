@@ -1,29 +1,20 @@
 import React from 'react';
-import Link from 'next/link';
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
-
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import Grid from '@material-ui/core/Grid';;
 import Divider from '@material-ui/core/Divider'
-
 import {
   usePaginatedQuery,
   useQueryCache,
   ReactQueryCacheProvider,
   QueryCache
 } from 'react-query';
-
 import fetchBooks from '../api/fetchBooks.js';
 import { ReactQueryDevtools } from 'react-query-devtools';
 import BookCardFull from 'components/BookCardFull';
 import BookCardSkeleton from 'components/BookCardSkeleton';
 import Paginate from 'components/Paginate';
-import Hero from 'components/Hero';
-import Title from 'components/Title';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import ListHeader from '@components/ListHeader';
 
 const queryCache = new QueryCache()
 
@@ -31,9 +22,10 @@ function BookList({howMany}) {
   const cache = useQueryCache()
   const [page, setPage] = React.useState(0)
   const theme = useTheme();
-
-  const matches = useMediaQuery(theme.breakpoints.up('sm'));
-  const flexDirect = matches ? 'row' : 'column';
+  let skeletons = []
+  for(let i=0; i<howMany; i++){
+    skeletons.push(i)
+  } 
   
   const {
     status,
@@ -54,80 +46,24 @@ function BookList({howMany}) {
 
   return (
     <>
-      <Box>
-        {/* this condition is for the home page list */}
-        { howMany <= 5 ? 
-            <Box 
-            style={{display:'flex', alignItems:'center', justifyContent:'space-between'}} 
-            flexDirection={flexDirect}
-            >
-              <Box style={{display:'flex', flexDirection:'column', alignItems:'center'}} >
-                <Title> book feed </Title> 
-                <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                  {resolvedData?.totalItems} books in shelves :) 
-                </Typography>
-              
-              </Box>
-              <Box>  
-                <Link href="/bookfeed">
-                  <Button
-                    size="small" 
-                    variant="outlined" 
-                    endIcon={<NavigateNextIcon />}
-                    children="see more"
-                  />
-                </Link> 
-              </Box>                
-            </Box>
-            
-          : <>
-              {/* this condition is for the first listing */}  
-              <Box
-                style={{display:'flex', alignItems:'center', justifyContent:'space-between'}} 
-                flexDirection={flexDirect}
-              >
-                  <Box style={{display:'flex',alignItems:'center', justifyContent:'center', flexDirection:'column'}}>
-                    {page==0 ? 
-                      <Hero 
-                        title="book feed"
-                        content={`Here is my list of books; I've read, want to read, or currently reading - I have a "thing" for science fiction.`}
-                      />
-                    : <> 
-                      <Title> book feed </Title> 
-                      <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                        {resolvedData?.totalItems} books in shelves :) 
-                      </Typography> 
-                      </>
-                    }
-                  </Box>
-                  <Box style={{display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column'}} >
-                    {page==0 ? 
-                      <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                        {resolvedData?.totalItems} books in shelves :) 
-                      </Typography> 
-                    : <> </>}
-                    <Paginate 
-                      page={page}
-                      howMany={howMany}
-                      total={resolvedData?.totalItems} 
-                      latestData={latestData} 
-                      isFetching={isFetching}
-                      setPage={setPage}
-                    />
-                    
-                  </Box> 
-                </Box>
-            </>
-          }  
-      </Box>
-      
+      <ListHeader 
+        howMany={howMany} 
+        resolvedData={resolvedData} 
+        latestData={latestData} 
+        isFetching={isFetching} 
+        page={page} 
+        setPage={setPage}
+        seeMore="/bookfeed"
+        title="book feed"
+        heroContent={`Here is my list of books; I've read, want to read, or currently reading - I have a "thing" for science fiction.`}
+        totalItemsLabel=" books in shelves :) "
+      />  
       <ReactQueryCacheProvider queryCache={queryCache}>
         {status === '!loading' ? (
           <Grid container spacing={0}>
-            <BookCardSkeleton />
-            <BookCardSkeleton />
-            <BookCardSkeleton />
-            <BookCardSkeleton />
+            {skeletons.map(id => (       
+              <BookCardSkeleton key={id}/>
+            ))} 
          
           </Grid>
         ) : status === 'error' ? (
@@ -137,10 +73,9 @@ function BookList({howMany}) {
           <Grid container spacing={3}>
             {isFetching ? 
               <>
-                <BookCardSkeleton />
-                <BookCardSkeleton />
-                <BookCardSkeleton />
-                <BookCardSkeleton />
+                {skeletons.map(id => (       
+                  <BookCardSkeleton key={id}/>
+                ))} 
               </>
             : <>
               {resolvedData.data.map(project => (       
@@ -149,6 +84,7 @@ function BookList({howMany}) {
               </>
             } 
           </Grid>
+          
         )}
       </ReactQueryCacheProvider>
       {howMany > 4 ? 

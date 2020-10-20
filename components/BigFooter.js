@@ -1,12 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import { flexbox } from '@material-ui/system';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
 
 const BigFooter = React.memo(function BigFooter() {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('md'));
+  const flexDirect = matches ? 'row' : 'column';
 
   return (
       <Box bgcolor="#000" width={'100%'} height={'100%'} px={{ xs: 2, sm: 3, lg: 4 }} >
@@ -44,7 +47,7 @@ const BigFooter = React.memo(function BigFooter() {
           <div className={classes.root}>
             <Grid container spacing={3} justify="space-between">
               <Grid item lg={4} md={6} sm={12}>
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} style={{flexDirection:flexDirect}}>
                   <Box>
                     <Avatar alt="kpow" src="../static/headshot.png" className={classes.large} />
                   </Box>
@@ -66,7 +69,7 @@ const BigFooter = React.memo(function BigFooter() {
                       Site
                     </Typography>
                     <Typography paragraph className={classes.text}>
-                      This is built with Next.js, React, Material-UI, React-Query, and some content in Markdown. Hosted as a static site using Instagram, GoodReads, Feedbin, Unsplash, faviconkit and whatever other API's I'm playing with :)
+                      This is a JAMstack site built with Next.js, React.js, Material-UI, React-Query, and some content in Markdown. Using Instagram, GoodReads, Feedbin, Unsplash, faviconkit and whatever other API's I'm playing with :)
                     </Typography>  
                   </div>
                 </Paper>
