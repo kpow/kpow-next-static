@@ -193,7 +193,7 @@ export default function Header() {
                 <ListItemIcon>
                   <VideoLibraryIcon />
                 </ListItemIcon>
-                <ListItemText primary="youtube live gems" />
+                <ListItemText primary="youtube live" />
               </ListItem>
             </Link>
 
