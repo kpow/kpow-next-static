@@ -25,7 +25,7 @@ function ContactModal(props) {
     <React.Fragment>
       
         <Button variant="contained" size="small"  color="primary" onClick={handleClickOpen}>
-          contact kpow
+          contact
         </Button>
 
       <Dialog
@@ -37,7 +37,7 @@ function ContactModal(props) {
             <DialogTitle id="form-dialog-title">Contact</DialogTitle>
             <DialogContent>
               <DialogContentText>
-                Send us a comment!
+                Send me a comment!
               </DialogContentText>
               <form name="contact" method="POST" action="/?success=true" netlify-honeypot="bot-field" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />

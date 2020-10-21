@@ -3,7 +3,7 @@ title: 'Walmart Bakery'
 author: 'kpow'
 date: '2020-04-27'
 hero_image: '../static/wm-bakery.png'
-thumb_image: '../static/wm-bakery-thumb.png'
+thumb_image: '../static/wm-bakery-thumb.jpg'
 col: 1
 row: 1
 hero_color: '#f3ec9e'

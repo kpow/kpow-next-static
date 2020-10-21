@@ -1,9 +1,12 @@
 import Layout from '@components/Layout';
+import Link from 'next/link';
 import Divider from '@material-ui/core/Divider'
 import MuiAlert from '@material-ui/lab/Alert';
 import Snackbar from '@material-ui/core/Snackbar';
 import { useTheme } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import Title from '@components/Title';
+import Container from '@material-ui/core/Container';
 import {
   QueryCache,
   ReactQueryCacheProvider,
@@ -15,6 +18,7 @@ import ProjectListImages from '@components/ProjectListImages';
 import fetchStars from '../api/fetchStars.js';
 import fetchBooks from '../api/fetchBooks.js';
 import getPosts from '@utils/getPosts';
+import { Masonry } from "masonic";
 
 const queryCache = new QueryCache()
 const bookQueryCache = new QueryCache()
@@ -22,6 +26,22 @@ const bookQueryCache = new QueryCache()
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
+
+const shuffle = array => 
+  [...Array(array.length)]
+    .map((...args) => Math.floor(Math.random() * (args[1] + 1)))
+    .reduce( (a, rv, i) => ([a[i], a[rv]] = [a[rv], a[i]]) && a, array);
+
+const FakeCard = (props) => {
+  console.log(props)
+  return (
+  <Link href={{ pathname: `/projects/${props.data?.slug}` }}>    
+    <div>
+      <img style={{width:'100%'}} alt="kitty" src={props.data?.frontmatter?.thumb_image} />
+    </div>
+  </Link>
+)
+};
 
 const Index = ({ projects, title, description, ...props }) => {
   const theme = useTheme();
@@ -36,6 +56,8 @@ const Index = ({ projects, title, description, ...props }) => {
     }
     setOpen(false);
   };
+
+  shuffle(projects)
 
   return (
     
@@ -59,8 +81,24 @@ const Index = ({ projects, title, description, ...props }) => {
         <Title>
           projects
         </Title>
-
-        <ProjectListImages projects={projects} />
+        <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+          a random selection of projects I've worked on.
+        </Typography>
+        <Container maxWidth="md" style={{maxHeight:'60vh', overflow:'hidden'}}>
+        <Masonry
+          // Provides the data for our grid items
+          items={projects}
+          // Adds 8px of space between the grid cells
+          columnGutter={2}
+          // Sets the minimum column width to 172px
+          columnWidth={250}
+          // Pre-renders 5 windows worth of content
+          overscanBy={2}
+          // This is the grid item component
+          render={FakeCard}
+        />
+        </Container>
+        {/* <ProjectListImages projects={projects} /> */}
 
         <Divider style={{marginTop:'40px'}} />
         
@@ -97,6 +135,9 @@ const Index = ({ projects, title, description, ...props }) => {
         <Title>
           instagram
         </Title>
+        <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+          I love live music (when we had live music) 
+        </Typography>
         <div className="elfsight-app-aa9b91b7-7757-4793-aae3-67df059446a2"></div>
 
         <Divider style={{marginTop:'40px'}} />

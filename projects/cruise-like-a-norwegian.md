@@ -3,7 +3,7 @@ title: 'Cruise Like a Norwegian'
 author: 'kpow'
 date: '2020-04-27'
 hero_image: '../static/ncl.png'
-thumb_image: '../static/ncl-thumb.png'
+thumb_image: '../static/ncl-thumb.jpg'
 col: 1
 row: 1
 hero_color: '#826c61'

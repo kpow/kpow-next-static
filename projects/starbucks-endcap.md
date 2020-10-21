@@ -3,7 +3,7 @@ title: 'Starbucks EndCap'
 author: 'kpow'
 date: '2020-04-27'
 hero_image: '../static/starbucks.png'
-thumb_image: '../static/starbucks-thumb.png'
+thumb_image: '../static/starbucks-thumb.jpg'
 col: 1
 row: 1
 hero_color: '#a7787d'

@@ -3,7 +3,7 @@ title: 'adodsons.com'
 author: 'kpow'
 date: '2020-04-27'
 hero_image: '../static/adodsons.png'
-thumb_image: '../static/adodsons-thumb.png'
+thumb_image: '../static/adodsons-thumb.jpg'
 col: 2
 row: 1
 hero_color: '#040909'

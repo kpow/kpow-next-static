@@ -3,7 +3,7 @@ title: 'Virginia Ironworks'
 author: 'kpow'
 date: '2020-04-27'
 hero_image: '../static/vairon.png'
-thumb_image: '../static/vairon-thumb.png'
+thumb_image: '../static/vairon-thumb.jpg'
 hero_color: '#534639'
 col: 2
 row: 1
