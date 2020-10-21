@@ -32,13 +32,12 @@ const shuffle = array =>
     .map((...args) => Math.floor(Math.random() * (args[1] + 1)))
     .reduce( (a, rv, i) => ([a[i], a[rv]] = [a[rv], a[i]]) && a, array);
 
-const FakeCard = (props) => {
-  console.log(props)
+const ProjectCard = ({data}) => {
   return (
-  <Link href={{ pathname: `/projects/${props.data?.slug}` }}>    
-    <div>
-      <img style={{width:'100%'}} alt="kitty" src={props.data?.frontmatter?.thumb_image} />
-    </div>
+  <Link href={{ pathname: `/projects/${data?.slug}` }}>    
+    
+      <img style={{width:'100%'}} alt="kitty" src={data?.frontmatter?.thumb_image} />
+    
   </Link>
 )
 };
@@ -75,8 +74,6 @@ const Index = ({ projects, title, description, ...props }) => {
             Hi! this my site :) You'll find my digital collections, coding experiments and my public info. Hopefully, it's working and have fun poking around.
           </Alert>
         </Snackbar>
-
-        <Divider style={{marginTop:'40px'}} />
         
         <Title>
           projects
@@ -86,16 +83,11 @@ const Index = ({ projects, title, description, ...props }) => {
         </Typography>
         <Container maxWidth="md" style={{maxHeight:'60vh', overflow:'hidden'}}>
         <Masonry
-          // Provides the data for our grid items
           items={projects}
-          // Adds 8px of space between the grid cells
           columnGutter={2}
-          // Sets the minimum column width to 172px
           columnWidth={250}
-          // Pre-renders 5 windows worth of content
-          overscanBy={2}
-          // This is the grid item component
-          render={FakeCard}
+          overscanBy={1}
+          render={ProjectCard}
         />
         </Container>
         {/* <ProjectListImages projects={projects} /> */}

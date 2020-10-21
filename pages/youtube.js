@@ -79,7 +79,7 @@ export default function VideoPage({ data }) {
             const { description, title, thumbnails = {}, resourceId = {} } = snippet;
             const { medium } = thumbnails;
             return (
-              <VideoCard description={description} title={title} resourceId={resourceId} medium={medium} handleClickOpen={handleClickOpen} />
+              <VideoCard key={title} description={description} title={title} resourceId={resourceId} medium={medium} handleClickOpen={handleClickOpen} />
             )
           })}
         </Grid>
