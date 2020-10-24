@@ -14,13 +14,16 @@ import StarCardBig from '@components/StarCard';
 import StarCardBigSkeleton from '@components/StarCardSkeleton';
 import Paginate from '@components/Paginate';;
 import ListHeader from '@components/ListHeader';
+import { useRouter, withRouter } from "next/router";
 
+let initalLoaded = false;
 const queryCache = new QueryCache()
 
 function StarList({howMany}) {
   const cache = useQueryCache()
   const [page, setPage] = React.useState(0)
   const theme = useTheme();
+  const { query: { p } } = useRouter();
 
   // let i = 0
   // const skeletons = Array.from(Array(howMany), () => ({id: i++}))
@@ -41,6 +44,15 @@ function StarList({howMany}) {
   // Prefetch the next page!
   React.useEffect(() => {
     window.scrollTo(0, 0)
+
+    if(p>1 && !initalLoaded){
+      initalLoaded = true;
+      setPage(Number(p))
+      history.pushState(null, '', '?p='+(page));
+    }else{
+      history.pushState(null, '', '?p='+(page+1));
+    }
+    
     // this hasMore stops the home page from prefetching
     if (latestData?.hasMore) {
       const nextPage = page+1

@@ -15,13 +15,17 @@ import BookCardSkeleton from 'components/BookCardSkeleton';
 import Paginate from 'components/Paginate';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import ListHeader from '@components/ListHeader';
+import { useRouter, withRouter } from "next/router";
 
+let initalLoaded = false;
 const queryCache = new QueryCache()
 
 function BookList({howMany}) {
   const cache = useQueryCache()
   const [page, setPage] = React.useState(0)
   const theme = useTheme();
+  const { query: { p } } = useRouter()
+
   let skeletons = []
   for(let i=0; i<howMany; i++){
     skeletons.push(i)
@@ -38,6 +42,15 @@ function BookList({howMany}) {
   // Prefetch the next page!
   React.useEffect(() => {
     window.scrollTo(0, 0)
+
+    if(p>1 && !initalLoaded){
+      initalLoaded = true;
+      setPage(Number(p))
+      history.pushState(null, '', '?p='+(page));
+    }else{
+      history.pushState(null, '', '?p='+(page+1));
+    }
+
     if (latestData?.hasMore) {
       const nextPage = page+1
       cache.prefetchQuery(['books', nextPage], fetchBooks)

@@ -1,27 +1,17 @@
 import React from 'react';
-import clsx from 'clsx';
 import Skeleton from '@material-ui/lab/Skeleton';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
-import Collapse from '@material-ui/core/Collapse';
 import Box from '@material-ui/core/Box'
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Chip from '@material-ui/core/Chip';
-
-
-import { format, parseISO} from 'date-fns'
 import { withStyles } from '@material-ui/core/styles';
-
 import Rating from '@material-ui/lab/Rating';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-
 import FaceIcon from '@material-ui/icons/Face';
-import DoneIcon from '@material-ui/icons/Done';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -93,8 +83,6 @@ export default function BookCardFull({article}) {
   const theme = useTheme();
 
   const [expanded, setExpanded] = React.useState(false);
-  // const publishedDate = parseISO(props.article?.published)
-  // const formatDate = format(publishedDate, "M.d.yyyy" )
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -103,7 +91,6 @@ export default function BookCardFull({article}) {
   return (
     <Grid container item xs={12} sm={6} md={6}>
       <Card className={classes.root}>
-     
         <div className={classes.details}>
           <CardContent className={classes.content}>
             <Typography component="h5" className={classes.bookTitle} variant="h5">
@@ -112,19 +99,11 @@ export default function BookCardFull({article}) {
             <Typography variant="subtitle1" color="textSecondary">
               <Skeleton variant="text" width={300} height={50} />
             </Typography>
-            <Box className={classes.bookRatingHolder}>
-        
-            </Box>
-         
+            <Box className={classes.bookRatingHolder} />
           </CardContent>
           <div className={classes.controls}>
-            <IconButton
-              children={<Skeleton variant="circle" width={40} height={40} animation="wave"/>}
-            />
-
-            <Chip
-              icon={<FaceIcon />}
-            />
+            <IconButton  children={<Skeleton variant="circle" width={40} height={40} animation="wave"/>} />
+            <Chip icon={<FaceIcon />} />
           </div>
         </div>
         <CardMedia

@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
     width:'100%',
     justifyContent:'space-between',
     minHeight: 250,
+    flexDirection: 'column',
+    [theme.breakpoints.up('sm')]: {
+      flexDirection: 'row',
+    },
   },
   details: {
     display: 'flex',
@@ -82,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     flexDirection: 'row'
   }
+
 }));
 
 const StyledRating = withStyles({
@@ -193,7 +198,6 @@ export default function BookCardFull({article}) {
         <CardMedia
           className={classes.cover}
           style={{height:coverHeight, order:coverOrder}}
-          // image={article.book.image_url._text}
           title={article.book.title_without_series._text}
         >
           <Chip
@@ -201,7 +205,7 @@ export default function BookCardFull({article}) {
               style={{position:'absolute', marginBottom:10, marginRight:5}}
               label={article.shelves?.shelf._attributes?.name == 'currently-reading' ? 'reading' : article.shelves?.shelf._attributes?.name}
               color={article.shelves?.shelf._attributes?.name == 'read' ? 'primary' : 'secondary'}
-            />
+          />
           <img src={article.book.image_url._text} className={classes.coverImage} />
         </CardMedia>      
       </Card>
