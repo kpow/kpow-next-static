@@ -41,18 +41,15 @@ function ContactModal(props) {
               </DialogContentText>
               <form name="contact" method="POST" action="/?success=true" netlify-honeypot="bot-field" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />
-              <p>
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" />
-              </p>
-              <p>
-                <label htmlFor="email">Email</label>
-                <input type="text" id="email" name="email" />
-              </p>
-              <p>
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message"></textarea>
-              </p>
+           
+                <TextField fullWidth id="name" name="name" label="Name" variant="filled" />
+                <br></br>
+                <br></br>
+                <TextField fullWidth id="email" name="email" label="Email" variant="filled" />
+                <br></br>
+                <br></br>
+                <TextField multiline fullWidth id="message" name="message" label="Message" variant="filled" />
+           
               <p>
                 <button type="submit">Send</button>
               </p>
