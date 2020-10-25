@@ -8,6 +8,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Title from '@components/Title';
 
 function ContactModal(props) {
   const { classes } = props;
@@ -27,17 +28,21 @@ function ContactModal(props) {
         <Button variant="contained" size="small"  color="primary" onClick={handleClickOpen}>
           contact
         </Button>
-
       <Dialog
         open={open}
+        maxWidth="md"
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-          <React.Fragment>
-            <DialogTitle id="form-dialog-title">Contact</DialogTitle>
+          <div style={{width:'400px'}}>  
+            <DialogTitle id="form-dialog-title">
+              <Title>
+                What's Up :)
+              </Title>  
+            </DialogTitle>
             <DialogContent>
               <DialogContentText>
-                Send me a comment!
+                Send me a anything, but spam :( 
               </DialogContentText>
               <form name="contact" method="POST" action="/?success=true" netlify-honeypot="bot-field" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />
@@ -49,14 +54,17 @@ function ContactModal(props) {
                 <br></br>
                 <br></br>
                 <TextField multiline fullWidth id="message" name="message" label="Message" variant="filled" />
-           
-              <p>
-                <button type="submit">Send</button>
-              </p>
+                <br></br>
+                <br></br>
+                <Button type="submit" variant="contained" size="small"  color="primary" >
+                  send
+                </Button>
+                <br></br>
+                <br></br>  
+              
             </form>
             </DialogContent>
-          </React.Fragment>
-      
+      </div>
       </Dialog>
     </React.Fragment >
   );
