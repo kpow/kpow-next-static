@@ -1,15 +1,10 @@
 import Layout from '@components/Layout'
-import { Container, Grid, Button, Paper } from '@material-ui/core';
+import { Container} from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box'
 import Title from '@components/Title';
 import React, { useState, useCallback } from "react";
 import pmonks from "../src/pmonk";
 import { Masonry } from "masonic";
-
-
-const randomChoice = (items) => items[Math.floor(Math.random() * items.length)];
 
 const ImageCard = ({ data: { id, src } }) =>{
   return (
@@ -18,19 +13,26 @@ const ImageCard = ({ data: { id, src } }) =>{
   </div>
 )};
 
+const shuffle = array => 
+  [...Array(array.length)]
+    .map((...args) => Math.floor(Math.random() * (args[1] + 1)))
+    .reduce( (a, rv, i) => ([a[i], a[rv]] = [a[rv], a[i]]) && a, array);
+
 
 const PmonkFirehose = ({ title, description, ...props }) => {
 
   const [items] = React.useState(() =>
-    Array.from(Array(pmonks.length), (index) => ({
-      id: index,
-      src: randomChoice(pmonks)
+    Array.from(Array(pmonks.length), (index, i) => ({
+      id: i,
+      src: pmonks[i]
     }))
   );
-  
+
+  shuffle(items)
+
   return (
     <Layout pageTitle={`${title} | About`} description={description}>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" style={{ backgroundColor: '#fafafa'}}>
       <Title>
         pmonk firehose
       </Title>
@@ -40,9 +42,9 @@ const PmonkFirehose = ({ title, description, ...props }) => {
       <div>
         <Masonry
           items={items}
-          columnGutter={8}
-          columnWidth={230}
-          overscanBy={5}
+          columnGutter={2}
+          columnWidth={300}
+          overscanBy={2}
           render={ImageCard}
         />
       </div> 

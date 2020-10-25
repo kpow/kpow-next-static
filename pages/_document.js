@@ -15,7 +15,9 @@ export default class MyDocument extends Document {
             />
             <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet"></link>
         </Head>
-        <body>
+        <body
+          
+        >
           <Main />
           <NextScript />
         </body>

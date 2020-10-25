@@ -20,6 +20,7 @@ const StarPaginate = ({page, latestData, isFetching, howMany, setPage, total}) =
             size="small"
             children="Prev" 
             variant="outlined" 
+            style={{backgroundColor:'#fafafa'}}
             startIcon={<NavigateBeforeIcon />}
             onClick={() => setPage(old => Math.max(old - 1, 0))}
             disabled={page === 0}
@@ -31,6 +32,7 @@ const StarPaginate = ({page, latestData, isFetching, howMany, setPage, total}) =
             size="small" 
             children="Next"
             variant="outlined" 
+            style={{backgroundColor:'#fafafa'}}
             endIcon={<NavigateNextIcon />}
             onClick={() => setPage(old => (!latestData || !latestData.hasMore ? old : old + 1)) }
             disabled={!latestData || !latestData.hasMore}

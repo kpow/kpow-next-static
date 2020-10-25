@@ -76,7 +76,7 @@ function StarList({howMany}) {
       />
       <ReactQueryCacheProvider queryCache={queryCache}>
         {status === 'loading' ? (
-          <Grid container spacing={4}>
+          <Grid container spacing={4} >
             {skeletons.map(id => (       
               <StarCardBigSkeleton key={id}/>
             ))} 

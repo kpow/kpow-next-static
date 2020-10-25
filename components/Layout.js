@@ -29,6 +29,15 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     left: 0,
     backgroundColor: 'rgba(0,0,0,.3)',
+  },
+  bg: {
+    backgroundColor: "#fafafa",
+    opacity: 0.1,
+    backgroundImage:
+      "linear-gradient(135deg, #7c7c7c 25%, transparent 25%), linear-gradient(225deg, #7c7c7c 25%, transparent 25%), linear-gradient(45deg, #7c7c7c 25%, transparent 25%), linear-gradient(315deg, #7c7c7c 25%, #fafafa 25%)",
+    backgroundPosition: "19px 0, 19px 0, 0 0, 0 0",
+    backgroundSize: "19px 19px",
+    backgroundRepeat: "repeat"
   }
 }));
 
@@ -61,7 +70,16 @@ export default function Layout({ children, pageTitle, description, ...props }) {
       <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8FH7QS" height="0" width="0" style={{display:'none', visibility:'hidden'}}></iframe>
       </noscript>
-      <React.Fragment>
+      <div style={{
+
+backgroundColor: '#fafafa',
+backgroundImage:  'repeating-radial-gradient( circle at 0 0, transparent 0, #fafafa 40px ), repeating-linear-gradient( #e1e1e155, #e1e1e1 )'
+// backgroundColor: '#fafafa',
+// backgroundImage:  'linear-gradient(30deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(150deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(30deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(150deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(60deg, #ebebeb77 25%, transparent 25.5%, transparent 75%, #ebebeb77 75%, #ebebeb77), linear-gradient(60deg, #ebebeb77 25%, transparent 25.5%, transparent 75%, #ebebeb77 75%, #ebebeb77)',
+// backgroundSize: '38px 67px',
+// backgroundPosition: '0 0, 0 0, 19px 33px, 19px 33px, 0 0, 19px 33px'
+
+}}>
         <CssBaseline />
         <Header />
         <Paper className={classes.mainFeaturedPost} style={{ marginTop:'40px', backgroundImage: `url(https://source.unsplash.com/1200x300/?space,nasa)` }}>
@@ -79,7 +97,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         </Paper>
         <BigFooter /> 
 
-      </React.Fragment>      
+      </div>      
     </>
   )
 }

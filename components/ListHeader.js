@@ -10,7 +10,6 @@ import Hero from 'components/Hero';
 import Title from 'components/Title';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-
 function ListHeader({howMany, 
                      resolvedData, 
                      latestData, 
@@ -30,8 +29,8 @@ function ListHeader({howMany,
         {/* this condition is for the home page list i need to refine this condition */}
         { howMany <= 5 ? 
             <Box 
-            style={{display:'flex', alignItems:'center', justifyContent:'space-between'}} 
-            flexDirection={flexDirect}
+              style={{display:'flex', alignItems:'center', justifyContent:'space-between'}} 
+              flexDirection={flexDirect}
             >
               <Box style={{display:'flex', flexDirection:'column', alignItems:'center'}} >
                 <Title> {title} </Title> 
@@ -43,6 +42,7 @@ function ListHeader({howMany,
               <Box>  
                 <Link href={seeMore}>
                   <Button
+                    style={{marginBottom:'10px'}}
                     size="small" 
                     variant="outlined" 
                     endIcon={<NavigateNextIcon />}
@@ -65,10 +65,10 @@ function ListHeader({howMany,
                         content={heroContent}
                       />
                     : <> 
-                      <Title> {title} </Title> 
-                      <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                        {resolvedData?.totalItems}{' '}{totalItemsLabel}) 
-                      </Typography> 
+                        <Title> {title} </Title> 
+                        <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                          {resolvedData?.totalItems}{' '}{totalItemsLabel}) 
+                        </Typography> 
                       </>
                     }
                   </Box>

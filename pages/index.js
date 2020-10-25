@@ -14,11 +14,12 @@ import {
 
 import StarList from 'components/StarList';
 import BookList from 'components/BookList';
-import ProjectListImages from '@components/ProjectListImages';
 import fetchStars from '../api/fetchStars.js';
 import fetchBooks from '../api/fetchBooks.js';
 import getPosts from '@utils/getPosts';
 import { Masonry } from "masonic";
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+
 
 const queryCache = new QueryCache()
 const bookQueryCache = new QueryCache()
@@ -27,6 +28,8 @@ function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
+
+// still need to work on projects section
 const shuffle = array => 
   [...Array(array.length)]
     .map((...args) => Math.floor(Math.random() * (args[1] + 1)))
@@ -44,8 +47,12 @@ const ProjectCard = ({data}) => {
 
 const Index = ({ projects, title, description, ...props }) => {
   const theme = useTheme();
-  const { status, data, error, isFetching } = fetchStars(1,3);
-  const { status:bookStatus, data:bookData, error:bookError, isFetching:bookIsFetching,} = fetchBooks(1,4);
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const totalStarsDisplay = matches ? 3 : 2;
+  const totalBooksDisplay = matches ? 4 : 2;
+
+  const { status, data, error, isFetching } = fetchStars(1,totalStarsDisplay);
+  const { status:bookStatus, data:bookData, error:bookError, isFetching:bookIsFetching,} = fetchBooks(1,totalBooksDisplay);
 
   const [open, setOpen] = React.useState(true);
 
@@ -61,6 +68,7 @@ const Index = ({ projects, title, description, ...props }) => {
   return (
     
       <Layout pageTitle={title} description={description}>
+      <div style={{ backgroundColor: '#fafafa',padding:'15px'}}>
         <Snackbar 
           anchorOrigin={{ vertical: 'top', horizontal: 'center' }} 
           open={open} autoHideDuration={8000} 
@@ -81,16 +89,15 @@ const Index = ({ projects, title, description, ...props }) => {
         <Typography variant="subtitle1" color="textSecondary" gutterBottom>
           a random selection of projects I've worked on.
         </Typography>
-        <Container maxWidth="md" style={{maxHeight:'60vh', overflow:'hidden'}}>
-        <Masonry
-          items={projects}
-          columnGutter={2}
-          columnWidth={250}
-          overscanBy={1}
-          render={ProjectCard}
-        />
+        <Container maxWidth="md" style={{maxHeight:'40vh', overflow:'hidden'}}>
+          <Masonry
+            items={projects}
+            columnGutter={2}
+            columnWidth={250}
+            overscanBy={1}
+            render={ProjectCard}
+          />
         </Container>
-        {/* <ProjectListImages projects={projects} /> */}
 
         <Divider style={{marginTop:'40px'}} />
         
@@ -100,7 +107,7 @@ const Index = ({ projects, title, description, ...props }) => {
           <>
             <div>
               <ReactQueryCacheProvider queryCache={bookQueryCache}>
-                <BookList howMany={4}/>
+                <BookList howMany={totalBooksDisplay}/>
               </ReactQueryCacheProvider>  
             </div>
             <div>{bookIsFetching ? "Background Updating..." : " "}</div>
@@ -115,7 +122,7 @@ const Index = ({ projects, title, description, ...props }) => {
           <>
             <div>
             <ReactQueryCacheProvider queryCache={queryCache}>
-              <StarList howMany={3}/>
+              <StarList howMany={totalStarsDisplay}/>
             </ReactQueryCacheProvider>  
             </div>
             <div>{isFetching ? "Background Updating..." : " "}</div>
@@ -133,6 +140,7 @@ const Index = ({ projects, title, description, ...props }) => {
         <div className="elfsight-app-aa9b91b7-7757-4793-aae3-67df059446a2"></div>
 
         <Divider style={{marginTop:'40px'}} />
+      </div>
       </Layout>
   )
 }

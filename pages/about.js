@@ -18,7 +18,7 @@ import Title from '@components/Title';
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
-    padding: theme.spacing(0, 0, 6),
+    padding: theme.spacing(0, 0, 0),
     marginTop: '30px;'
   },
   heroPaper: {
@@ -53,6 +53,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     fontWeight: 'bold'
   },
+  mainContent: {
+    paddingTop:'30px;',
+    paddingBottom:'30px;',
+    marginTop: '-40px',
+    backgroundColor: '#fafafa'
+  },
 }));
 
 const About = ({ title, description, ...props }) => {
@@ -61,7 +67,7 @@ const About = ({ title, description, ...props }) => {
   return (
       <Layout pageTitle={`${title} | About`} description={description}>
         <div className={classes.heroContent}>
-          <Container maxWidth="md">
+          <Container maxWidth="md" className={classes.mainContent}>
             <Paper elevation={3} className={classes.heroPaper}>
             <Title>
               Hi, I'm Kevin
