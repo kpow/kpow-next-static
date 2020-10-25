@@ -1,11 +1,19 @@
 import React from 'react'
 import Layout from '@components/Layout';
 import BookList from 'components/BookList';
+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
+
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+
 
 export default function Bookfeed({title, description, ...props }) {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const numberOfItems = matches ? 8 : 4;
+
   return (
     <Layout pageTitle={title} description={description}>
-      <BookList howMany={8}/>
+      <BookList howMany={numberOfItems}/>
     </Layout>
   )
 }

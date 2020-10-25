@@ -7,27 +7,16 @@ import { useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Title from '@components/Title';
 import Container from '@material-ui/core/Container';
-import {
-  QueryCache,
-  ReactQueryCacheProvider,
-} from "react-query";
-
 import StarList from 'components/StarList';
 import BookList from 'components/BookList';
-import fetchStars from '../api/fetchStars.js';
-import fetchBooks from '../api/fetchBooks.js';
 import getPosts from '@utils/getPosts';
 import { Masonry } from "masonic";
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 
-const queryCache = new QueryCache()
-const bookQueryCache = new QueryCache()
-
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
-
 
 // still need to work on projects section
 const shuffle = array => 
@@ -50,9 +39,6 @@ const Index = ({ projects, title, description, ...props }) => {
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const totalStarsDisplay = matches ? 3 : 2;
   const totalBooksDisplay = matches ? 4 : 2;
-
-  const { status, data, error, isFetching } = fetchStars(1,totalStarsDisplay);
-  const { status:bookStatus, data:bookData, error:bookError, isFetching:bookIsFetching,} = fetchBooks(1,totalBooksDisplay);
 
   const [open, setOpen] = React.useState(true);
 
@@ -83,11 +69,12 @@ const Index = ({ projects, title, description, ...props }) => {
           </Alert>
         </Snackbar>
         
+
         <Title>
           projects
         </Title>
         <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-          a random selection of projects I've worked on.
+          a selection of projects I've worked on.
         </Typography>
         <Container maxWidth="md" style={{maxHeight:'40vh', overflow:'hidden'}}>
           <Masonry
@@ -100,37 +87,12 @@ const Index = ({ projects, title, description, ...props }) => {
         </Container>
 
         <Divider style={{marginTop:'40px'}} />
-        
-        {bookStatus === "loading" ? ( 
-          <></>
-        ) : bookStatus === "error" ? ( <span>Error: {bookError.message}</span> ) : (
-          <>
-            <div>
-              <ReactQueryCacheProvider queryCache={bookQueryCache}>
-                <BookList howMany={totalBooksDisplay}/>
-              </ReactQueryCacheProvider>  
-            </div>
-            <div>{bookIsFetching ? "Background Updating..." : " "}</div>
-          </>
-        )}
-        
-        <Divider style={{marginTop:'40px'}}/>
-
-        {status === "loading" ? ( 
-          <></>
-        ) : status === "error" ? ( <span>Error: {error.message}</span> ) : (
-          <>
-            <div>
-            <ReactQueryCacheProvider queryCache={queryCache}>
-              <StarList howMany={totalStarsDisplay}/>
-            </ReactQueryCacheProvider>  
-            </div>
-            <div>{isFetching ? "Background Updating..." : " "}</div>
-          </>
-        )}
+        <BookList howMany={totalBooksDisplay}/>
 
         <Divider style={{marginTop:'40px'}}/>
-        
+        <StarList howMany={totalStarsDisplay}/>
+
+        <Divider style={{marginTop:'40px'}}/>
         <Title>
           instagram
         </Title>

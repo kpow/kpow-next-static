@@ -29,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
+    order:2,
+    [theme.breakpoints.up('sm')]: {
+      order:1,
+    },
   },
   content: {
     flex: '1 0 auto',
@@ -58,7 +62,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: '100%',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    backgroundColor:'#666'
+    backgroundColor:'#666',
+    order:1,
+    [theme.breakpoints.up('sm')]: {
+      order:2,
+      height:'250px',
+    },
   },
   coverImage:{
     height:'100%',
@@ -101,10 +110,6 @@ export default function BookCardFull({article}) {
   const theme = useTheme();
 
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
-  const flexDirect = matches ? 'row' : 'column';
-  const coverHeight = matches ? '100%' : '250px';
-  const coverOrder = matches ? 2 : 1;
-  const detailsOrder = matches ? 1 : 2;
   const ratingExist = article.rating._text == 0 ? 'none' : 'block' ;
 
   // const [expanded, setExpanded] = React.useState(false);
@@ -114,9 +119,9 @@ export default function BookCardFull({article}) {
 
   return (
     <Grid container item xs={12} sm={10} md={6} style={{margin:'0 auto'}}>
-      <Card className={classes.root} style={{flexDirection:flexDirect}}>
+      <Card className={classes.root}>
 
-        <div style={{order:detailsOrder}} className={classes.details}>
+        <div className={classes.details}>
           <CardContent className={classes.content}>
             <Typography component="h5" className={classes.bookTitle} variant="h5">
               <span>
@@ -197,7 +202,6 @@ export default function BookCardFull({article}) {
         </div>
         <CardMedia
           className={classes.cover}
-          style={{height:coverHeight, order:coverOrder}}
           title={article.book.title_without_series._text}
         >
           <Chip

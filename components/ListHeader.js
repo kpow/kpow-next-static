@@ -9,6 +9,7 @@ import Paginate from 'components/Paginate';
 import Hero from 'components/Hero';
 import Title from 'components/Title';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useRouter } from 'next/router'
 
 function ListHeader({howMany, 
                      resolvedData, 
@@ -23,11 +24,13 @@ function ListHeader({howMany,
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const flexDirect = matches ? 'row' : 'column';
+  const router = useRouter();
+  const path = router.pathname;
+
   return (
     <>
       <Box>
-        {/* this condition is for the home page list i need to refine this condition */}
-        { howMany <= 5 ? 
+        { path == '/' ? 
             <Box 
               style={{display:'flex', alignItems:'center', justifyContent:'space-between'}} 
               flexDirection={flexDirect}
@@ -61,7 +64,7 @@ function ListHeader({howMany,
                   <Box style={{display:'flex',alignItems:'center', justifyContent:'center', flexDirection:'column'}}>
                     {page==0 ? 
                       <Hero 
-                        title={`${title} feed`}
+                        title={title}
                         content={heroContent}
                       />
                     : <> 
@@ -72,7 +75,7 @@ function ListHeader({howMany,
                       </>
                     }
                   </Box>
-                  <Box style={{display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column'}} >
+                  <Box style={{ marginBottom:'20px',display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column'}} >
                     {page==0 ? 
                       <Typography variant="subtitle1" color="textSecondary" gutterBottom>
                         {resolvedData?.totalItems}{' '}{totalItemsLabel} 

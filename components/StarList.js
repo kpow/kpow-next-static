@@ -24,6 +24,8 @@ function StarList({howMany}) {
   const [page, setPage] = React.useState(0)
   const theme = useTheme();
   const { query: { p } } = useRouter();
+  const router = useRouter();
+  const path = router.pathname;
 
   // let i = 0
   // const skeletons = Array.from(Array(howMany), () => ({id: i++}))
@@ -45,20 +47,23 @@ function StarList({howMany}) {
   React.useEffect(() => {
     window.scrollTo(0, 0)
 
+    // this added pgination to url, need to figure out better way breaks the back button
     if(p>1 && !initalLoaded){
       initalLoaded = true;
       setPage(Number(p))
       history.pushState(null, '', '?p='+(page));
     }else{
-      history.pushState(null, '', '?p='+(page+1));
+      if(path != '/'){
+        history.pushState(null, '', '?p='+(page+1));
+      }
     }
     
     // this hasMore stops the home page from prefetching
     if (latestData?.hasMore) {
       const nextPage = page+1
-      cache.prefetchQuery(['stars', nextPage], fetchStars)
+      cache.prefetchQuery(['stars', nextPage, howMany], fetchStars)
     }
-  }, [latestData, fetchStars, page])
+  }, [latestData, fetchStars, page, howMany])
 
   return (
     <>
@@ -102,17 +107,17 @@ function StarList({howMany}) {
         )}
       </ReactQueryCacheProvider>
 
-      {howMany>4 ?
+      {path != '/' ?
         <>
-        <Divider style={{marginBottom:'20px',marginTop:'20px'}}/>            
-        <Paginate 
-          page={page}
-          howMany={howMany}
-          total={resolvedData?.totalItems}  
-          latestData={latestData} 
-          isFetching={isFetching}
-          setPage={setPage}
-        /> 
+          <Divider style={{marginBottom:'20px',marginTop:'20px'}}/>            
+          <Paginate 
+            page={page}
+            howMany={howMany}
+            total={resolvedData?.totalItems}  
+            latestData={latestData} 
+            isFetching={isFetching}
+            setPage={setPage}
+          /> 
         </>
       :<></> }
       <ReactQueryDevtools />

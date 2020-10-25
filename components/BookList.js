@@ -25,6 +25,8 @@ function BookList({howMany}) {
   const [page, setPage] = React.useState(0)
   const theme = useTheme();
   const { query: { p } } = useRouter()
+  const router = useRouter();
+  const path = router.pathname;
 
   let skeletons = []
   for(let i=0; i<howMany; i++){
@@ -43,19 +45,22 @@ function BookList({howMany}) {
   React.useEffect(() => {
     window.scrollTo(0, 0)
 
+    // this added pgination to url, need to figure out better way breaks the back button
     if(p>1 && !initalLoaded){
       initalLoaded = true;
       setPage(Number(p))
       history.pushState(null, '', '?p='+(page));
     }else{
-      history.pushState(null, '', '?p='+(page+1));
+      if(path != '/'){
+        history.pushState(null, '', '?p='+(page+1));
+      }
     }
 
     if (latestData?.hasMore) {
       const nextPage = page+1
-      cache.prefetchQuery(['books', nextPage], fetchBooks)
+      cache.prefetchQuery(['books', nextPage, howMany], fetchBooks)
     }
-  }, [latestData, fetchBooks, page])
+  }, [latestData, fetchBooks, page. howMany])
 
   return (
     <>
@@ -77,7 +82,6 @@ function BookList({howMany}) {
             {skeletons.map(id => (       
               <BookCardSkeleton key={id}/>
             ))} 
-         
           </Grid>
         ) : status === 'error' ? (
           <div>Error: {error.message}</div>
@@ -100,17 +104,17 @@ function BookList({howMany}) {
           
         )}
       </ReactQueryCacheProvider>
-      {howMany > 4 ? 
+      {path != '/' ? 
         <>
-        <Divider style={{marginBottom:'20px',marginTop:'20px'}}/>            
-        <Paginate 
-          page={page}
-          howMany={howMany}
-          total={resolvedData?.totalItems}  
-          latestData={latestData} 
-          isFetching={isFetching}
-          setPage={setPage}
-        /> 
+          <Divider style={{marginBottom:'20px',marginTop:'20px'}}/>            
+          <Paginate 
+            page={page}
+            howMany={howMany}
+            total={resolvedData?.totalItems}  
+            latestData={latestData} 
+            isFetching={isFetching}
+            setPage={setPage}
+          /> 
         </>
       : <></> }           
      

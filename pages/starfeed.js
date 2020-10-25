@@ -2,20 +2,20 @@ import React from 'react'
 import Layout from '@components/Layout';
 import StarList from 'components/StarList';
 import { useRouter, withRouter } from "next/router";
+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-// const User = () => {
-//   const {
-//     query: { p },
-//   } = useRouter();
-//   return <span>The user id is {p}</span>;
-// };
 
 export default function Starfeed({title, description, ...props }) {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const numberOfItems = matches ? 9 : 4;
+
   return (
     <Layout pageTitle={title} description={description}>
-      {/* <User /> */}
-      <StarList howMany={9}/>
+  
+      <StarList howMany={numberOfItems}/>
       
     </Layout>
   )

@@ -31,15 +31,17 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     color: theme.palette.text.secondary,
     flexGrow: 1,
-    backgroundColor: '#000'
+    backgroundColor: '#000',
+    flexDirection: 'column',
+    [theme.breakpoints.up('md')]: {
+      flexDirection: 'row',
+    },
   },
 }));
 
 const BigFooter = React.memo(function BigFooter() {
   const classes = useStyles();
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('md'));
-  const flexDirect = matches ? 'row' : 'column';
 
   return (
       <Box bgcolor="#000" width={'100%'} height={'100%'} px={{ xs: 2, sm: 3, lg: 4 }} >
@@ -47,7 +49,7 @@ const BigFooter = React.memo(function BigFooter() {
           <div className={classes.root}>
             <Grid container spacing={3} justify="space-between">
               <Grid item lg={4} md={6} sm={12}>
-                <Paper className={classes.paper} style={{flexDirection:flexDirect}}>
+                <Paper className={classes.paper}>
                   <Box>
                     <Avatar alt="kpow" src="../static/headshot.png" className={classes.large} />
                   </Box>
