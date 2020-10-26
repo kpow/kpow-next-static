@@ -10,8 +10,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Title from '@components/Title';
 
-function ContactModal(props) {
-  const { classes } = props;
+function ContactModal() {
   const [open, setOpen] = useState(false);
   
   function handleClose() {
@@ -56,7 +55,7 @@ function ContactModal(props) {
                 <TextField multiline fullWidth id="message" name="message" label="Message" variant="filled" />
                 <br></br>
                 <br></br>
-                <Button type="submit" variant="contained" size="small"  color="primary" >
+                <Button type="submit" variant="contained" size="large"  color="primary" >
                   send
                 </Button>
                 <br></br>

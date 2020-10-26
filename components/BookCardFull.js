@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flex: '1 0 auto',
+    paddingBottom:'20px !important',
   },
   articleContent:{
     display:'flex', 

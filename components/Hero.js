@@ -6,29 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Title from '@components/Title';
 
 const useStyles = makeStyles((theme) => ({
-    icon: {
-      marginRight: theme.spacing(2),
-    },
     heroContent: {
       padding: theme.spacing( 0, 0),
-    },
-    heroButtons: { 
-      marginTop: theme.spacing(4),
-    },
-    cardGrid: {
-      paddingTop: theme.spacing(8),
-      paddingBottom: theme.spacing(8),
-    },
-    card: {
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-    },
-    cardMedia: {
-      paddingTop: '56.25%', // 16:9
-    },
-    cardContent: {
-      flexGrow: 1,
     },
     paperPadding: { 
       padding: theme.spacing(4),
@@ -40,7 +19,7 @@ const StarHero = ({title, content}) =>{
     const classes = useStyles();
     return(
       <div className={classes.heroContent}>
-        <Container maxWidth="sm">
+        <Container maxWidth="sm" style={{padding:'0'}}>
           <Paper elevation={3} className={classes.paperPadding}>
             <Title>
               {title}
