@@ -1,0 +1,6375 @@
+ [
+      {
+        "id": 1009392,
+        "name": "La Nuit",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/10/4c003d76b5ec6",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "X-Force (1991) #116"
+            },
+            {
+              "name": "X-Force: Famous, Mutant & Mortal (Hardcover)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "X-Force (1991 - 2004)"
+            },
+            {
+              "name": "X-Force: Famous, Mutant & Mortal (2003)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Cover #38198",
+              "type": "cover"
+            },
+            {
+              "name": "Exit Wounds",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2723/la_nuit?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Nuit%2C_La?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009392/la_nuit?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011327,
+        "name": "Lady Bullseye",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/4ce5a67d44f61",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Black Panther: The Most Dangerous Man Alive  (2010) #525"
+            },
+            {
+              "name": "Black Panther: The Most Dangerous Man Alive  (2010) #526"
+            },
+            {
+              "name": "Black Widow (2010) #2"
+            },
+            {
+              "name": "Black Widow (2010) #4"
+            },
+            {
+              "name": "Black Widow (2010) #5"
+            },
+            {
+              "name": "Daredevil (1998) #111"
+            },
+            {
+              "name": "Daredevil (1998) #112"
+            },
+            {
+              "name": "Daredevil (1998) #113"
+            },
+            {
+              "name": "Daredevil (1998) #114"
+            },
+            {
+              "name": "Daredevil (1998) #115"
+            },
+            {
+              "name": "Daredevil (1998) #116"
+            },
+            {
+              "name": "Daredevil (1998) #118"
+            },
+            {
+              "name": "Daredevil (1998) #119"
+            },
+            {
+              "name": "Daredevil (1998) #500"
+            },
+            {
+              "name": "Daredevil (1998) #501"
+            },
+            {
+              "name": "Daredevil (1998) #503"
+            },
+            {
+              "name": "Daredevil by Ed Brubaker & Michael Lark Omnibus Vol. 2 (Hardcover)"
+            },
+            {
+              "name": "Elektra (2014) #1"
+            },
+            {
+              "name": "Elektra (2014) #2"
+            },
+            {
+              "name": "Elektra (2014) #3"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Black Panther: The Most Dangerous Man Alive  (2010 - 2012)"
+            },
+            {
+              "name": "Black Widow (2010 - 2011)"
+            },
+            {
+              "name": "Daredevil (1998 - 2011)"
+            },
+            {
+              "name": "Daredevil by Ed Brubaker & Michael Lark Omnibus Vol. 2 (2017)"
+            },
+            {
+              "name": "Elektra (2014 - 2015)"
+            },
+            {
+              "name": "Savage Wolverine (2013 - 2014)"
+            },
+            {
+              "name": "Shadowland (2010)"
+            },
+            {
+              "name": "Vengeance (2011)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "5 of 6",
+              "type": "cover"
+            },
+            {
+              "name": "6 of 6",
+              "type": "cover"
+            },
+            {
+              "name": "Lady Bullseye 3 of 5",
+              "type": "cover"
+            },
+            {
+              "name": "Lady Bullseye 4 of 5",
+              "type": "cover"
+            },
+            {
+              "name": "Lady Bullseye 5 of 5",
+              "type": "cover"
+            },
+            {
+              "name": "1 of 5 Kingpin",
+              "type": "cover"
+            },
+            {
+              "name": "3 of 5 Kingpin",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #54741",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #54743",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #54745",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #54749",
+              "type": "cover"
+            },
+            {
+              "name": "Shadowland (2010) #2",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #64553",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Shadowland (2010) #3",
+              "type": "cover"
+            },
+            {
+              "name": "Shadowland (2010) #4",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #64557",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Black Widow (2010) #2",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Black Widow (2010) #4",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Black Widow (2010) #5",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Shadowland (2010) #5",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Marvel NOW!"
+            },
+            {
+              "name": "Shadowland"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1196/lady_bullseye?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lady_Bullseye?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011327/lady_bullseye?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009393,
+        "name": "Lady Deathstrike",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/60/535ff2c1ef191",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Alpha Flight (1983) #34"
+            },
+            {
+              "name": "Captain America (1998) #1"
+            },
+            {
+              "name": "Domino (1997) #2"
+            },
+            {
+              "name": "Domino (1997) #3"
+            },
+            {
+              "name": "Essential X-Men Vol. 6 (All-New Edition) (Trade Paperback)"
+            },
+            {
+              "name": "Hunt for Wolverine: Claws of a Killer (2018) #1"
+            },
+            {
+              "name": "Hunt for Wolverine: Claws of a Killer (2018) #2"
+            },
+            {
+              "name": "Hunt for Wolverine: Claws of a Killer (2018) #3"
+            },
+            {
+              "name": "Hunt for Wolverine: Claws of a Killer (2018) #4"
+            },
+            {
+              "name": "Hunt for Wolverine: Claws of a Killer (Trade Paperback)"
+            },
+            {
+              "name": "MARVEL POINT ONE TPB (Trade Paperback)"
+            },
+            {
+              "name": "Rogue (2004) #11"
+            },
+            {
+              "name": "Rogue: Forget-Me-Not (Trade Paperback)"
+            },
+            {
+              "name": "Secret Avengers (2010) #24"
+            },
+            {
+              "name": "The Totally Awesome Hulk (2015) #20"
+            },
+            {
+              "name": "The Totally Awesome Hulk (2015) #21"
+            },
+            {
+              "name": "The Totally Awesome Hulk (2015) #22"
+            },
+            {
+              "name": "The Totally Awesome Hulk Vol. 4: My Best Friends Are Monsters (Trade Paperback)"
+            },
+            {
+              "name": "Uncanny X-Force (2010) #20"
+            },
+            {
+              "name": "Uncanny X-Men (1963) #247"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Alpha Flight (1983 - 1994)"
+            },
+            {
+              "name": "Captain America (1998 - 2002)"
+            },
+            {
+              "name": "Domino (1997)"
+            },
+            {
+              "name": "Essential X-Men Vol. 6 (All-New Edition) (2011 - Present)"
+            },
+            {
+              "name": "Hunt for Wolverine: Claws of a Killer (2018)"
+            },
+            {
+              "name": "Hunt for Wolverine: Claws of a Killer (2018)"
+            },
+            {
+              "name": "MARVEL POINT ONE TPB (2011 - Present)"
+            },
+            {
+              "name": "Rogue (2004 - 2005)"
+            },
+            {
+              "name": "Rogue: Forget-Me-Not (2005)"
+            },
+            {
+              "name": "Secret Avengers (2010 - 2012)"
+            },
+            {
+              "name": "The Totally Awesome Hulk (2015 - 2017)"
+            },
+            {
+              "name": "The Totally Awesome Hulk Vol. 4: My Best Friends Are Monsters (2017)"
+            },
+            {
+              "name": "Uncanny X-Force (2010 - 2012)"
+            },
+            {
+              "name": "Uncanny X-Men (1963 - 2011)"
+            },
+            {
+              "name": "Weapon X (2017 - 2018)"
+            },
+            {
+              "name": "Weapon X Vol. 1: Weapons of Mutant Destruction Prelude (2017)"
+            },
+            {
+              "name": "Weapon X Vol. 2: The Hunt For Weapon H (2018)"
+            },
+            {
+              "name": "Weapon X Vol. 3: Modern Warfare (2018)"
+            },
+            {
+              "name": "Weapon X Vol. 4: Russian Revolution (2018)"
+            },
+            {
+              "name": "Weapon X Vol. 5: Weapon X-Force (2019)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "ROGUE (2004) #11",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #21224",
+              "type": "cover"
+            },
+            {
+              "name": "Captain America (1998) #1",
+              "type": "cover"
+            },
+            {
+              "name": "The Light That Failed",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The Cradle Will Fall",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The Dane Curse",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fever Dream",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover #28013",
+              "type": "cover"
+            },
+            {
+              "name": "Where's Wolverine?",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Storm Warnings",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Crash and Burn",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Harriers Hunt",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Scary Monsters",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Rogue Redux",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Too Many Mutants",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fresh Upstart",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Lost Souls",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Enter: Deathstrike",
+              "type": "cover"
+            },
+            {
+              "name": "Stay Alive Part 2",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The Logan Files Part 2",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Maximum Security"
+            },
+            {
+              "name": "X-Men: Regenesis"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1198/lady_deathstrike?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lady_Deathstrike?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009393/lady_deathstrike?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011014,
+        "name": "Lady Mastermind",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/d0/4c00326f63d4c",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "X-Treme X-Men (2001) #7"
+            },
+            {
+              "name": "X-Treme X-Men (2001) #8"
+            },
+            {
+              "name": "X-Treme X-Men (2001) #9"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "X-Treme X-Men (2001 - 2004)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "X-Treme X-Men (2001) #7",
+              "type": "cover"
+            },
+            {
+              "name": "Getting Even !",
+              "type": "interiorStory"
+            },
+            {
+              "name": "X-Treme X-Men (2001) #8",
+              "type": "cover"
+            },
+            {
+              "name": "Boomerang !",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Face The Music !",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1200/lady_mastermind?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lady_Mastermind?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011014/lady_mastermind?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1014977,
+        "name": "Lady Ursula",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/40/4cd053ea971ed",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1201/lady_ursula?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1014977/lady_ursula?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1014976,
+        "name": "Lady Vermin",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/10/4cd053529dd41",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1202/lady_vermin?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1014976/lady_vermin?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009394,
+        "name": "Lake",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1205/lake?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009394/lake?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009395,
+        "name": "Landau",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1210/landau?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009395/landau?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009397,
+        "name": "Lava-Man",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Journey Into Mystery Annual (1965) #1"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Journey Into Mystery Annual (1965)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Journey Into Mystery Annual (1965) #1",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1216/lava-man?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009397/lava-man?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011100,
+        "name": "Layla Miller",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/00/52740e37c104f",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "The Mighty Avengers (2007) #13"
+            },
+            {
+              "name": "X-Factor (2005) #21"
+            },
+            {
+              "name": "X-Factor (2005) #23"
+            },
+            {
+              "name": "X-Factor (2005) #25"
+            },
+            {
+              "name": "X-Factor (2005) #25 (Marc Silvestri Variant)"
+            },
+            {
+              "name": "X-Factor (2005) #27"
+            },
+            {
+              "name": "X-Factor (2005) #40"
+            },
+            {
+              "name": "X-Factor (2005) #41"
+            },
+            {
+              "name": "X-Factor (2005) #42"
+            },
+            {
+              "name": "X-Factor (2005) #43"
+            },
+            {
+              "name": "X-Factor (2005) #44"
+            },
+            {
+              "name": "X-Factor (2005) #45"
+            },
+            {
+              "name": "X-Factor (2005) #46"
+            },
+            {
+              "name": "X-Factor (2005) #47"
+            },
+            {
+              "name": "X-Factor (2005) #48"
+            },
+            {
+              "name": "X-Factor (2005) #49"
+            },
+            {
+              "name": "X-Factor (2005) #50"
+            },
+            {
+              "name": "X-Factor (2005) #200"
+            },
+            {
+              "name": "X-Factor (2005) #201"
+            },
+            {
+              "name": "X-Factor (2005) #207"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "The Mighty Avengers (2007 - 2010)"
+            },
+            {
+              "name": "X-Factor (2005 - 2013)"
+            },
+            {
+              "name": "X-Factor: Layla Miller (2008)"
+            },
+            {
+              "name": "X-Factor: The Quick and the Dead (2008)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "X-FACTOR (2005) #21",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #23",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #25",
+              "type": "cover"
+            },
+            {
+              "name": "Messiah Complex 3 of 13",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #27",
+              "type": "cover"
+            },
+            {
+              "name": "Secret Invasion 2 of 8",
+              "type": "interiorStory"
+            },
+            {
+              "name": "1 of 1",
+              "type": "interiorStory"
+            },
+            {
+              "name": "1 of 1",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #40",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #41",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #42",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #43",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #44",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #45",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #46",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #47",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #48",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #49",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #50",
+              "type": "cover"
+            },
+            {
+              "name": "X-FACTOR (2005) #200",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Messiah CompleX"
+            },
+            {
+              "name": "Secret Invasion"
+            },
+            {
+              "name": "X-Men: Regenesis"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1011100/layla_miller?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Miller%2C_Layla?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011100/layla_miller?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009398,
+        "name": "Leader",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/c0/52b0d25c3dbb9",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Earth X (1999) #7"
+            },
+            {
+              "name": "EARTH X TPB (Trade Paperback)"
+            },
+            {
+              "name": "Fall of the Hulks: The Savage She-Hulks (2010) #1"
+            },
+            {
+              "name": "Hulk Visionaries: Peter David Vol. 1 (Trade Paperback)"
+            },
+            {
+              "name": "Hulk (1999) #30"
+            },
+            {
+              "name": "Hulk (1999) #31"
+            },
+            {
+              "name": "Incredible Hulk (1962) #115"
+            },
+            {
+              "name": "Incredible Hulk (1962) #116"
+            },
+            {
+              "name": "Incredible Hulk (1962) #117"
+            },
+            {
+              "name": "Incredible Hulk (1962) #123"
+            },
+            {
+              "name": "Incredible Hulk (1962) #139"
+            },
+            {
+              "name": "Incredible Hulk (1962) #200"
+            },
+            {
+              "name": "Incredible Hulk (1962) #281"
+            },
+            {
+              "name": "Incredible Hulk (1962) #314"
+            },
+            {
+              "name": "Incredible Hulk (1962) #339"
+            },
+            {
+              "name": "Incredible Hulk (1962) #340"
+            },
+            {
+              "name": "Incredible Hulk (1962) #341"
+            },
+            {
+              "name": "Incredible Hulk (1962) #342"
+            },
+            {
+              "name": "Incredible Hulk (1962) #343"
+            },
+            {
+              "name": "Incredible Hulk (1962) #344"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Earth X (1999 - 2000)"
+            },
+            {
+              "name": "EARTH X TPB (2006)"
+            },
+            {
+              "name": "Fall of the Hulks: The Savage She-Hulks (2010)"
+            },
+            {
+              "name": "Hulk (1999 - 2008)"
+            },
+            {
+              "name": "Hulk Visionaries: Peter David Vol. 1 (2005)"
+            },
+            {
+              "name": "Incredible Hulk (1962 - 1999)"
+            },
+            {
+              "name": "Incredible Hulk Annual (1976 - 1994)"
+            },
+            {
+              "name": "Incredible Hulk Epic Collection: The Hulk Must Die (2017)"
+            },
+            {
+              "name": "Incredible Hulk Epic Collection: The Leader Lives (2018)"
+            },
+            {
+              "name": "Incredible Hulks (2010 - 2011)"
+            },
+            {
+              "name": "Marvel Super-Heroes (1967 - 1982)"
+            },
+            {
+              "name": "Monsters Unleashed (2017 - 2018)"
+            },
+            {
+              "name": "She-Hulk (2017 - 2018)"
+            },
+            {
+              "name": "What If? (1977 - 1984)"
+            },
+            {
+              "name": "What If? (1989 - 1998)"
+            },
+            {
+              "name": "Wolverine (1988 - 2003)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "INCREDIBLE HULK (1962) #115",
+              "type": "cover"
+            },
+            {
+              "name": "Lo, the Leader Lives",
+              "type": "interiorStory"
+            },
+            {
+              "name": "INCREDIBLE HULK (1962) #116",
+              "type": "cover"
+            },
+            {
+              "name": "INCREDIBLE HULK (1962) #117",
+              "type": "cover"
+            },
+            {
+              "name": "INCREDIBLE HULK (1962) #123",
+              "type": "cover"
+            },
+            {
+              "name": "No More the Monster",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover #18423",
+              "type": "cover"
+            },
+            {
+              "name": "Incredible Hulk (1962) #200",
+              "type": "cover"
+            },
+            {
+              "name": "An Intruder In the Mind!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Audition",
+              "type": ""
+            },
+            {
+              "name": "Cover #18776",
+              "type": "cover"
+            },
+            {
+              "name": "Incredible Hulk (1962) #339",
+              "type": "cover"
+            },
+            {
+              "name": "Native Son",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Incredible Hulk (1962) #340",
+              "type": "cover"
+            },
+            {
+              "name": "Vicious Circle",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Incredible Hulk (1962) #341",
+              "type": "cover"
+            },
+            {
+              "name": "The Savage Bull Doth Bear the Yoke",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Incredible Hulk (1962) #342",
+              "type": "cover"
+            },
+            {
+              "name": "No Human Fears",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Incredible Hulk (1962) #343",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Fall of the Hulks"
+            },
+            {
+              "name": "Fall of the Mutants"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009398/leader?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Leader_(Samuel_Sterns)?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009398/leader?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011092,
+        "name": "Leech",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Weapon X (2002) #5"
+            },
+            {
+              "name": "X-Factor Annual (1986) #2"
+            },
+            {
+              "name": "X-Factor Annual (1986) #3"
+            },
+            {
+              "name": "X-Factor Annual (1986) #4"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Weapon X (2002 - 2004)"
+            },
+            {
+              "name": "X-Factor Annual (1986 - 1994)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Interior #50743",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The Man in the Moon",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Changes !",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Happy Summer Vacation",
+              "type": "pinup"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Atlantis Attacks"
+            },
+            {
+              "name": "Evolutionary War"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1223/leech?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Leech?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011092/leech?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009399,
+        "name": "Legion",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/30/526547cc31b36",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Alpha Flight (1983) #88"
+            },
+            {
+              "name": "Legion (2018) #1"
+            },
+            {
+              "name": "Legion (2018) #2"
+            },
+            {
+              "name": "Legion (2018) #3"
+            },
+            {
+              "name": "Legion (2018) #4"
+            },
+            {
+              "name": "Legion (2018) #5"
+            },
+            {
+              "name": "Legion: Son of X Vol. 1 - Prodigal (Trade Paperback)"
+            },
+            {
+              "name": "Legion: Son of X Vol. 2 - Invasive Exotics (Trade Paperback)"
+            },
+            {
+              "name": "Legion: Son of X Vol. 4 - For We Are Many (Trade Paperback)"
+            },
+            {
+              "name": "Legion: Trauma (Trade Paperback)"
+            },
+            {
+              "name": "New Mutants (2009) #1"
+            },
+            {
+              "name": "New Mutants (2009) #1 (BENJAMIN VARIANT)"
+            },
+            {
+              "name": "New Mutants (2009) #2"
+            },
+            {
+              "name": "New Mutants (2009) #2 (2ND PRINTING VARIANT)"
+            },
+            {
+              "name": "New Mutants (2009) #3"
+            },
+            {
+              "name": "New Mutants (2009) #4"
+            },
+            {
+              "name": "New Mutants (2009) #5"
+            },
+            {
+              "name": "New Mutants (2009) #9"
+            },
+            {
+              "name": "New Mutants (2009) #23 (2nd Printing Variant)"
+            },
+            {
+              "name": "New Mutants (2009) #24"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Alpha Flight (1983 - 1994)"
+            },
+            {
+              "name": "Legion (2018)"
+            },
+            {
+              "name": "Legion: Son of X Vol. 1 - Prodigal (2018)"
+            },
+            {
+              "name": "Legion: Son of X Vol. 2 - Invasive Exotics (2018)"
+            },
+            {
+              "name": "Legion: Son of X Vol. 4 - For We Are Many (2018)"
+            },
+            {
+              "name": "Legion: Trauma (2018)"
+            },
+            {
+              "name": "New Mutants (1983 - 1991)"
+            },
+            {
+              "name": "New Mutants (2009 - 2012)"
+            },
+            {
+              "name": "New Mutants by Zeb Wells: The Complete Collection (2018)"
+            },
+            {
+              "name": "New Mutants Classic Vol. 3 (2008)"
+            },
+            {
+              "name": "New Mutants Classic Vol. 6 (2010 - Present)"
+            },
+            {
+              "name": "Secret Wars II (1985)"
+            },
+            {
+              "name": "Uncanny X-Men (1963 - 2011)"
+            },
+            {
+              "name": "Uncanny X-Men (2018 - 2019)"
+            },
+            {
+              "name": "What If? (1989 - 1998)"
+            },
+            {
+              "name": "X-Factor (1986 - 1998)"
+            },
+            {
+              "name": "X-Factor Annual (1986 - 1994)"
+            },
+            {
+              "name": "X-Force (1991 - 2004)"
+            },
+            {
+              "name": "X-Men (1991 - 2001)"
+            },
+            {
+              "name": "X-Men Annual (1970 - 1994)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Kings of Pain Part 3",
+              "type": "cover"
+            },
+            {
+              "name": "Kings of Pain Part 3: Queens of Sacrifice",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Building Blocks Part Two: Trust",
+              "type": "interiorStory"
+            },
+            {
+              "name": "David Charles Haller",
+              "type": "pin-up"
+            },
+            {
+              "name": "NEW MUTANTS (1983) #44",
+              "type": "cover"
+            },
+            {
+              "name": "Runaway!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Promised Vengeance",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Legion Quest",
+              "type": "cover"
+            },
+            {
+              "name": "The Waking",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Creatures On the Loose",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Clash Reunion",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Endings",
+              "type": "interiorStory"
+            },
+            {
+              "name": "To Save The Dream--A New Legend Is Born!",
+              "type": "cover"
+            },
+            {
+              "name": "All-New, All-Different--Here We Go Again",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Crash and Burn",
+              "type": "interiorStory"
+            },
+            {
+              "name": "I Am Lady Mandarin",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Broken Chains",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Dream a Little Dream",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The Battle of Muir Isle",
+              "type": "interiorStory"
+            },
+            {
+              "name": "One Step Back--Two Steps Forward",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Acts of Vengeance!"
+            },
+            {
+              "name": "Age of Apocalypse"
+            },
+            {
+              "name": "Age of X"
+            },
+            {
+              "name": "Kings of Pain"
+            },
+            {
+              "name": "Secret Wars II"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009399/legion?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Legion_(David_Haller)?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009399/legion?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011403,
+        "name": "Lei Kung, The Thunderer",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "The Immortal Iron Fist (2006) #7"
+            },
+            {
+              "name": "The Immortal Iron Fist (2006) #11"
+            },
+            {
+              "name": "The Immortal Iron Fist (2006) #12"
+            },
+            {
+              "name": "The Immortal Iron Fist (2006) #13"
+            },
+            {
+              "name": "The Immortal Iron Fist (2006) #14"
+            },
+            {
+              "name": "The Immortal Iron Fist (2006) #26"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "The Immortal Iron Fist (2006 - 2009)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Story A 1 of 1",
+              "type": "interiorStory"
+            },
+            {
+              "name": "THE IMMORTAL IRON FIST (2006) #11",
+              "type": "cover"
+            },
+            {
+              "name": "TBD 4 of 7",
+              "type": "interiorStory"
+            },
+            {
+              "name": "TBD 5 of 7",
+              "type": "interiorStory"
+            },
+            {
+              "name": "THE IMMORTAL IRON FIST (2006) #13",
+              "type": "cover"
+            },
+            {
+              "name": "TBD 6 of 7",
+              "type": "interiorStory"
+            },
+            {
+              "name": "THE IMMORTAL IRON FIST (2006) #14",
+              "type": "cover"
+            },
+            {
+              "name": "4 of 4",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1228/lei_kung_the_thunderer?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011403/lei_kung_the_thunderer?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009166,
+        "name": "Lenny Balinger",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2684/lenny_balinger?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009166/lenny_balinger?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011186,
+        "name": "Leo (Zodiac)",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1231/leo?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011186/leo_zodiac?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010340,
+        "name": "Leopardon",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1232/leopardon?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010340/leopardon?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011375,
+        "name": "Leper Queen",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "X-Force (2008) #3"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "X-Force (2008 - 2010)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Angels and Demons 3 of 6",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2924/leper_queen?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Leper%20Queen?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011375/leper_queen?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1014988,
+        "name": "Lester",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/80/4cd060cb94659",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1233/lester?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1014988/lester?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011421,
+        "name": "Lethal Legion",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/50/4c002e13dd271",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Avengers (1996) #7"
+            },
+            {
+              "name": "Avengers (1996) #8"
+            },
+            {
+              "name": "Avengers (1963) #79"
+            },
+            {
+              "name": "Avengers (1963) #164"
+            },
+            {
+              "name": "Avengers (2016) #676"
+            },
+            {
+              "name": "Avengers: X-Sanction (2011) #1"
+            },
+            {
+              "name": "Dark Reign: Lethal Legion (2009) #1"
+            },
+            {
+              "name": "Dark Reign: Lethal Legion (2009) #2"
+            },
+            {
+              "name": "Dark Reign: Lethal Legion (2009) #3"
+            },
+            {
+              "name": "Heroes Reborn: Avengers (Trade Paperback)"
+            },
+            {
+              "name": "Marvel Masterworks: The Avengers Vol. 8 (Hardcover)"
+            },
+            {
+              "name": "MARVEL MASTERWORKS: THE AVENGERS VOL. 8 HC (Hardcover)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Avengers (2016 - 2018)"
+            },
+            {
+              "name": "Avengers (1963 - 1996)"
+            },
+            {
+              "name": "Avengers (1996 - 1997)"
+            },
+            {
+              "name": "Avengers: X-Sanction (2011 - 2012)"
+            },
+            {
+              "name": "Dark Reign: Lethal Legion (2009)"
+            },
+            {
+              "name": "Heroes Reborn: Avengers (2006)"
+            },
+            {
+              "name": "Marvel Masterworks: The Avengers Vol. 8 (2008 - Present)"
+            },
+            {
+              "name": "MARVEL MASTERWORKS: THE AVENGERS VOL. 8 HC (2008 - Present)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "AVENGERS (1963) #164",
+              "type": "cover"
+            },
+            {
+              "name": "AVENGERS (1963) #79",
+              "type": "cover"
+            },
+            {
+              "name": "Avengers (1996) #7",
+              "type": "cover"
+            },
+            {
+              "name": "Avengers (1996) #8",
+              "type": "cover"
+            },
+            {
+              "name": "DARK REIGN: LETHAL LEGION (2009) #1",
+              "type": "cover"
+            },
+            {
+              "name": "DARK REIGN: LETHAL LEGION (2009) #2",
+              "type": "cover"
+            },
+            {
+              "name": "DARK REIGN: LETHAL LEGION (2009) #3",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #90286",
+              "type": "interiorStory"
+            },
+            {
+              "name": "cover from Avengers (2017) #676",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Dark Reign"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1234/lethal_legion?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lethal%20Legion?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011421/lethal_legion?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010977,
+        "name": "Lieutenant Marcus Stone",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/30/4c0032b127cf1",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Thor (1966) #451"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Thor (1966 - 1996)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Thor (1966) #451",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2852/lieutenant_marcus_stone?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Stone%2C_Lieutenant_Marcus?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010977/lieutenant_marcus_stone?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009401,
+        "name": "Lifeguard",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "X-Treme X-Men (2001) #7"
+            },
+            {
+              "name": "X-Treme X-Men (2001) #8"
+            },
+            {
+              "name": "X-Treme X-Men (2001) #9"
+            },
+            {
+              "name": "X-Treme X-Men (2001) #10"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "X-Treme X-Men (2001 - 2004)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "X-Treme X-Men (2001) #10",
+              "type": "cover"
+            },
+            {
+              "name": "Keys of the Kingdom",
+              "type": "interiorStory"
+            },
+            {
+              "name": "X-Treme X-Men (2001) #7",
+              "type": "cover"
+            },
+            {
+              "name": "Getting Even !",
+              "type": "interiorStory"
+            },
+            {
+              "name": "X-Treme X-Men (2001) #8",
+              "type": "cover"
+            },
+            {
+              "name": "Boomerang !",
+              "type": "interiorStory"
+            },
+            {
+              "name": "X-Treme X-Men (2001) #9",
+              "type": "cover"
+            },
+            {
+              "name": "Face The Music !",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1241/lifeguard?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lifeguard?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009401/lifeguard?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011408,
+        "name": "Lightning Lords of Nepal",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/b0/4c002e24a1794",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "The Immortal Iron Fist (2006) #10"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "The Immortal Iron Fist (2006 - 2009)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "TBD 3 of 5",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1244/lightning_lords_of_nepal?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lightning_Lords_of_Nepal?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011408/lightning_lords_of_nepal?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010450,
+        "name": "Lightspeed",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/4c7c643921b8e",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Avengers Academy (2010) #23"
+            },
+            {
+              "name": "Avengers Academy (2010) #24"
+            },
+            {
+              "name": "Avengers Academy (2010) #25"
+            },
+            {
+              "name": "Avengers Academy (2010) #26"
+            },
+            {
+              "name": "Avengers Academy (2010) #27"
+            },
+            {
+              "name": "Avengers Academy (2010) #31"
+            },
+            {
+              "name": "Avengers Academy (2010) #32"
+            },
+            {
+              "name": "Avengers Academy (2010) #33"
+            },
+            {
+              "name": "Avengers Academy (2010) #34"
+            },
+            {
+              "name": "Avengers Academy (2010) #35"
+            },
+            {
+              "name": "Avengers Academy (2010) #36"
+            },
+            {
+              "name": "Avengers Academy (2010) #37"
+            },
+            {
+              "name": "Avengers Academy (2010) #38"
+            },
+            {
+              "name": "Future Foundation (2019) #1"
+            },
+            {
+              "name": "Future Foundation (2019) #3"
+            },
+            {
+              "name": "Future Foundation (2019) #4"
+            },
+            {
+              "name": "Future Foundation (2019) #5"
+            },
+            {
+              "name": "Iron Man and Power Pack (2007) #1"
+            },
+            {
+              "name": "Iron Man and Power Pack (2007) #2"
+            },
+            {
+              "name": "Iron Man and Power Pack (2007) #3"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Avengers Academy (2010 - 2012)"
+            },
+            {
+              "name": "Future Foundation (2019 - Present)"
+            },
+            {
+              "name": "Iron Man and Power Pack (2007 - 2008)"
+            },
+            {
+              "name": "Runaways (2017 - Present)"
+            },
+            {
+              "name": "The Loners (2007 - 2008)"
+            },
+            {
+              "name": "Uncanny X-Men (1963 - 2011)"
+            },
+            {
+              "name": "X-Men and Power Pack (2005 - 2006)"
+            },
+            {
+              "name": "X-Men and Power Pack: The Power of X (2006)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "X-Men and Power Pack (2005) #1",
+              "type": "cover"
+            },
+            {
+              "name": "1 of 4 - 4XLS",
+              "type": "interiorStory"
+            },
+            {
+              "name": "X-Men and Power Pack (2005) #2",
+              "type": "cover"
+            },
+            {
+              "name": "2 of 4 - 4XLS",
+              "type": "interiorStory"
+            },
+            {
+              "name": "X-Men and Power Pack (2005) #3",
+              "type": "cover"
+            },
+            {
+              "name": "3 of 4 - 4XLS",
+              "type": "interiorStory"
+            },
+            {
+              "name": "X-Men and Power Pack (2005) #4",
+              "type": "cover"
+            },
+            {
+              "name": "4 of 4 - 4XLS",
+              "type": "interiorStory"
+            },
+            {
+              "name": "1 of 6 - 6XLS",
+              "type": "cover"
+            },
+            {
+              "name": "2 of 6 - 6XLS",
+              "type": "cover"
+            },
+            {
+              "name": "UNCANNY X-MEN (1963) #195",
+              "type": "cover"
+            },
+            {
+              "name": "3 of 6 - 6XLS",
+              "type": "cover"
+            },
+            {
+              "name": "4 of 6 - 6XLS",
+              "type": "cover"
+            },
+            {
+              "name": "5 of 6 - 6XLS",
+              "type": "cover"
+            },
+            {
+              "name": "6 of 6 - 6XLS",
+              "type": "cover"
+            },
+            {
+              "name": "Iron Man and Power Pack (2007) #1",
+              "type": "cover"
+            },
+            {
+              "name": "4XLS 1 of 4",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Iron Man and Power Pack (2007) #2",
+              "type": "cover"
+            },
+            {
+              "name": "4XLS 2 of 4",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Iron Man and Power Pack (2007) #3",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Avengers VS X-Men"
+            },
+            {
+              "name": "Shattered Heroes"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1246/lightspeed?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lightspeed?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010450/lightspeed?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009236,
+        "name": "Lila Cheney",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "New Mutants (1983) #25"
+            },
+            {
+              "name": "New Mutants (1983) #42"
+            },
+            {
+              "name": "New Mutants Classic Vol. 3 (Trade Paperback)"
+            },
+            {
+              "name": "New Mutants Classic Vol. 6 (Trade Paperback)"
+            },
+            {
+              "name": "X-Factor (1986) #111"
+            },
+            {
+              "name": "X-Force (1991) #19"
+            },
+            {
+              "name": "X-Men '92 Vol. 2: Lilapalooza (Trade Paperback)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "New Mutants (1983 - 1991)"
+            },
+            {
+              "name": "New Mutants Classic Vol. 3 (2008)"
+            },
+            {
+              "name": "New Mutants Classic Vol. 6 (2010 - Present)"
+            },
+            {
+              "name": "X-Factor (1986 - 1998)"
+            },
+            {
+              "name": "X-Force (1991 - 2004)"
+            },
+            {
+              "name": "X-Men '92 Vol. 2: Lilapalooza (2017)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Lila Cheney",
+              "type": "pin-up"
+            },
+            {
+              "name": "NEW MUTANTS (1983) #42",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #22113",
+              "type": "cover"
+            },
+            {
+              "name": "The Open Hand, The Closed Fist",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Interior #83111",
+              "type": "interiorStory"
+            },
+            {
+              "name": "cover from X-Men '92 (2017)",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2691/lila_cheney?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Cheney,_Lila?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009236/lila_cheney?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009402,
+        "name": "Lilandra",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/20/52740ff3f2c50",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Avengers (1998) #35"
+            },
+            {
+              "name": "Avengers Assemble Vol. 4 (Hardcover)"
+            },
+            {
+              "name": "Avengers: Galactic Storm Vol. 2 (Trade Paperback)"
+            },
+            {
+              "name": "Classic X-Men (1986) #12"
+            },
+            {
+              "name": "Classic X-Men (1986) #13"
+            },
+            {
+              "name": "Classic X-Men (1986) #14"
+            },
+            {
+              "name": "Excalibur (1988) #116"
+            },
+            {
+              "name": "Fantastic Four (1961) #261"
+            },
+            {
+              "name": "Fantastic Four (1961) #262"
+            },
+            {
+              "name": "FANTASTIC FOUR VISIONARIES: JOHN BYRNE VOL. 4 TPB (Trade Paperback)"
+            },
+            {
+              "name": "Fantastic Four/Inhumans (Trade Paperback)"
+            },
+            {
+              "name": "Inhumans (2000) #3"
+            },
+            {
+              "name": "Inhumans (2000) #4"
+            },
+            {
+              "name": "MARVEL MASTERWORKS: THE UNCANNY X-MEN VOL. 2 HC (Hardcover)"
+            },
+            {
+              "name": "Marvel Visionaries: Chris Claremont (Hardcover)"
+            },
+            {
+              "name": "Marvel Visionaries: John Romita Jr. (Hardcover)"
+            },
+            {
+              "name": "Maximum Security (2000) #1"
+            },
+            {
+              "name": "Maximum Security (2000) #3"
+            },
+            {
+              "name": "Maximum Security: Dangerous Planet (2000) #1"
+            },
+            {
+              "name": "New Avengers: Illuminati (Trade Paperback)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Avengers (1998 - 2004)"
+            },
+            {
+              "name": "Avengers Assemble Vol. 4 (2007)"
+            },
+            {
+              "name": "Avengers: Galactic Storm Vol. 2 (2006)"
+            },
+            {
+              "name": "Classic X-Men (1986 - 1990)"
+            },
+            {
+              "name": "Excalibur (1988 - 1998)"
+            },
+            {
+              "name": "Fantastic Four (1961 - 1998)"
+            },
+            {
+              "name": "FANTASTIC FOUR VISIONARIES: JOHN BYRNE VOL. 4 TPB (2001 - Present)"
+            },
+            {
+              "name": "Fantastic Four/Inhumans (2007)"
+            },
+            {
+              "name": "Inhumans (2000)"
+            },
+            {
+              "name": "MARVEL MASTERWORKS: THE UNCANNY X-MEN VOL. 2 HC (2005)"
+            },
+            {
+              "name": "Marvel Visionaries: Chris Claremont (2005)"
+            },
+            {
+              "name": "Marvel Visionaries: John Romita Jr. (2005)"
+            },
+            {
+              "name": "Maximum Security (2000 - 2001)"
+            },
+            {
+              "name": "Maximum Security: Dangerous Planet (2000)"
+            },
+            {
+              "name": "New Avengers: Illuminati (2008)"
+            },
+            {
+              "name": "New Avengers: Illuminati (2006 - 2008)"
+            },
+            {
+              "name": "New Avengers: Illuminati Premiere (2008)"
+            },
+            {
+              "name": "New Mutants Classic Vol. 1 (2006)"
+            },
+            {
+              "name": "New X-Men (2001 - 2004)"
+            },
+            {
+              "name": "New X-Men (2006)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "UNCANNY X-MEN (1963) #475",
+              "type": "cover"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #66",
+              "type": "cover"
+            },
+            {
+              "name": "1 of 3 -",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #67",
+              "type": "cover"
+            },
+            {
+              "name": "2 of 3 -",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #68",
+              "type": "cover"
+            },
+            {
+              "name": "3 of 3 - Date Night",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #69",
+              "type": "cover"
+            },
+            {
+              "name": "1 of 3 -",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #70",
+              "type": "cover"
+            },
+            {
+              "name": "2 of 3 -",
+              "type": "interiorStory"
+            },
+            {
+              "name": "1 of 5 - 5XLS",
+              "type": "cover"
+            },
+            {
+              "name": "2 of 5 - 5 XLS",
+              "type": "cover"
+            },
+            {
+              "name": "UNCANNY X-MEN (1963) #486",
+              "type": "cover"
+            },
+            {
+              "name": "3 of 5 - 5XLS - Secret Wars",
+              "type": "cover"
+            },
+            {
+              "name": "The Search for Reed Richards",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The Trial of Reed Richards",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Who Will Stop the Juggernaut?",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The Gentleman's Name is Magneto",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Phoenix Unleashed!",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Acts of Vengeance!"
+            },
+            {
+              "name": "Fatal Attractions"
+            },
+            {
+              "name": "Maximum Security"
+            },
+            {
+              "name": "Secret Wars II"
+            },
+            {
+              "name": "War of Kings"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1248/lilandra?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Neramani%2C_Lilandra?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009402/lilandra?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011074,
+        "name": "Lilith",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/e0/52740fe6287e4",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Doctor Strange, Sorcerer Supreme (1988) #59"
+            },
+            {
+              "name": "Giant-Size Chillers (1974) #1"
+            },
+            {
+              "name": "Marvel Preview (1975) #12"
+            },
+            {
+              "name": "Marvel Preview (1975) #16"
+            },
+            {
+              "name": "Tomb of Dracula Omnibus Vol. 1 (Hardcover)"
+            },
+            {
+              "name": "Vampire Tales (1973) #6"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Doctor Strange, Sorcerer Supreme (1988 - 1996)"
+            },
+            {
+              "name": "Giant-Size Chillers (1974)"
+            },
+            {
+              "name": "Marvel Preview (1975 - 1981)"
+            },
+            {
+              "name": "Tomb of Dracula Omnibus Vol. 1 (2008 - Present)"
+            },
+            {
+              "name": "Vampire Tales (1973 - 1975)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "[The Axe Man]",
+              "type": ""
+            },
+            {
+              "name": "Cover #41915",
+              "type": "cover"
+            },
+            {
+              "name": "textpiece: Editorial",
+              "type": ""
+            },
+            {
+              "name": "Lilith, Daughter Of Dracula",
+              "type": ""
+            },
+            {
+              "name": "Profits Are Plunging!",
+              "type": ""
+            },
+            {
+              "name": "Slinking Through The Psycho-Ward",
+              "type": ""
+            },
+            {
+              "name": "Death Of The Living Dead!",
+              "type": ""
+            },
+            {
+              "name": "Death By Disco!",
+              "type": ""
+            },
+            {
+              "name": "Cover #51734",
+              "type": "cover"
+            },
+            {
+              "name": "Night of the She-Demon",
+              "type": "interiorStory"
+            },
+            {
+              "name": "cover from Doctor Strange, Sorcerer Supreme (1988) #59",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1250/lilith?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lilith?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011074/lilith?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011257,
+        "name": "Lily Hollister",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Amazing Spider-Man (1999) #581"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #584"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #585"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #586"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #588"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #596"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #598"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #599"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #645"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Amazing Spider-Man (1999 - 2013)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Amazing Spider-Man (1999) #581",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #584",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #586",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #586 ",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #585",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #588",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #588",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #596",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #596 - Int",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #598",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #599",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #645 - Int",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Dark Reign"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2897/lily_hollister?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Hollister,_Lily?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011257/lily_hollister?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010337,
+        "name": "Lionheart",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Brute Force (1990) #1"
+            },
+            {
+              "name": "Brute Force (1990) #2"
+            },
+            {
+              "name": "Brute Force (1990) #3"
+            },
+            {
+              "name": "Brute Force (1990) #4"
+            },
+            {
+              "name": "New Excalibur (2005) #4"
+            },
+            {
+              "name": "New Excalibur (2005) #20"
+            },
+            {
+              "name": "New Excalibur (2005) #22"
+            },
+            {
+              "name": "New Excalibur Vol. 1: Defenders of the Realm (Trade Paperback)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Brute Force (1990)"
+            },
+            {
+              "name": "New Excalibur (2005 - 2007)"
+            },
+            {
+              "name": "New Excalibur Vol. 1: Defenders of the Realm (2006)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "NEW EXCALIBUR (2005) #4",
+              "type": "cover"
+            },
+            {
+              "name": "NEW EXCALIBUR (2005) #20",
+              "type": "cover"
+            },
+            {
+              "name": "NEW EXCALIBUR (2005) #22",
+              "type": "cover"
+            },
+            {
+              "name": "cover from Brute Force (1990) #1",
+              "type": "cover"
+            },
+            {
+              "name": "cover from Brute Force (1990) #2",
+              "type": "cover"
+            },
+            {
+              "name": "cover from Brute Force (1990) #3",
+              "type": "cover"
+            },
+            {
+              "name": "cover from Brute Force (1990) #4",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1252/lionheart?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lionheart?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010337/lionheart?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010854,
+        "name": "Living Lightning",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/4c0035c72cc26",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Avengers (1998) #1"
+            },
+            {
+              "name": "Avengers (1998) #2"
+            },
+            {
+              "name": "Avengers (1998) #3"
+            },
+            {
+              "name": "Avengers (1998) #4"
+            },
+            {
+              "name": "Avengers (1998) #27"
+            },
+            {
+              "name": "Avengers (1998) #38"
+            },
+            {
+              "name": "Avengers (1998) #47"
+            },
+            {
+              "name": "Avengers (1998) #48"
+            },
+            {
+              "name": "Avengers (1998) #50"
+            },
+            {
+              "name": "Avengers (1998) #52"
+            },
+            {
+              "name": "Avengers (1998) #53"
+            },
+            {
+              "name": "Avengers (1998) #55"
+            },
+            {
+              "name": "Avengers Assemble (Hardcover)"
+            },
+            {
+              "name": "Avengers Assemble Vol. 3 (Hardcover)"
+            },
+            {
+              "name": "Avengers Assemble Vol. 4 (Hardcover)"
+            },
+            {
+              "name": "West Coast Avengers Annual (1986) #6"
+            },
+            {
+              "name": "West Coast Avengers Annual (1986) #7"
+            },
+            {
+              "name": "Avengers: Galactic Storm Vol. 2 (Trade Paperback)"
+            },
+            {
+              "name": "Avengers: The Kang Dynasty (Trade Paperback)"
+            },
+            {
+              "name": "Hulk (2008) #55"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Avengers (1998 - 2004)"
+            },
+            {
+              "name": "Avengers Assemble (2004)"
+            },
+            {
+              "name": "Avengers Assemble Vol. 3 (2006)"
+            },
+            {
+              "name": "Avengers Assemble Vol. 4 (2007)"
+            },
+            {
+              "name": "Avengers: Galactic Storm Vol. 2 (2006)"
+            },
+            {
+              "name": "Avengers: The Kang Dynasty (2002)"
+            },
+            {
+              "name": "Hulk (2008 - 2012)"
+            },
+            {
+              "name": "Thor (1966 - 1996)"
+            },
+            {
+              "name": "West Coast Avengers Annual (1986 - 1988)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Now Strikes the Starforce",
+              "type": ""
+            },
+            {
+              "name": "Cover #37337",
+              "type": "cover"
+            },
+            {
+              "name": "Once an Avenger...",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Avengers (1998) #2",
+              "type": "cover"
+            },
+            {
+              "name": "The Call",
+              "type": "interiorStory"
+            },
+            {
+              "name": "New Order",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fata Morgana",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Above and Beyond",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Avengers (1998) #4",
+              "type": "cover"
+            },
+            {
+              "name": "Too Many Avengers!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "In the Heart of Battle",
+              "type": "interiorStory"
+            },
+            {
+              "name": "War Plan \"A\"",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Book of Revelations",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Counter Attack",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The Last Castle",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The Last Farewell",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Justice, Like Lightning",
+              "type": ""
+            },
+            {
+              "name": "My Name Is Legion",
+              "type": ""
+            },
+            {
+              "name": "Thor (1966) #446",
+              "type": "cover"
+            },
+            {
+              "name": "Hulk (2008) #55",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2841/living_lightning?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Living%20Lightning?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010854/living_lightning?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011036,
+        "name": "Living Mummy",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Bloodstone (2001) #2"
+            },
+            {
+              "name": "Bloodstone (2001) #3"
+            },
+            {
+              "name": "BLOODSTONE & THE LEGION OF MONSTERS TPB (Trade Paperback)"
+            },
+            {
+              "name": "Captain America (1968) #361"
+            },
+            {
+              "name": "Legion of Monsters (2011) #1"
+            },
+            {
+              "name": "Legion of Monsters (2011) #2"
+            },
+            {
+              "name": "Legion of Monsters (2011) #3"
+            },
+            {
+              "name": "Legion of Monsters (2011) #4"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Bloodstone (2001 - 2002)"
+            },
+            {
+              "name": "BLOODSTONE & THE LEGION OF MONSTERS TPB (2017)"
+            },
+            {
+              "name": "Captain America (1968 - 1996)"
+            },
+            {
+              "name": "Legion of Monsters (2011 - 2012)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Captain America (1968) #361",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Legion of Monsters (2011) #1",
+              "type": "cover"
+            },
+            {
+              "name": "Legion of Monsters (2011) #2",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #71215",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #71218",
+              "type": "cover"
+            },
+            {
+              "name": "cover from BLOODSTONE & THE LEGION OF MONSTERS TPB (2017) #1",
+              "type": "cover"
+            },
+            {
+              "name": "cover to Bloodstone (2001) #2",
+              "type": "cover"
+            },
+            {
+              "name": "cover to Bloodstone (2001) #3",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2863/living_mummy?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/living_mummy?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011036/living_mummy?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011059,
+        "name": "Living Tribunal",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/a0/4c0031062f91f",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Journey Into Mystery (2011) #627"
+            },
+            {
+              "name": "Marvel Universe: The End (2003) #5"
+            },
+            {
+              "name": "Marvel Universe: The End (2003) #6"
+            },
+            {
+              "name": "She-Hulk (2005) #12"
+            },
+            {
+              "name": "SHE-HULK VOL. 4: LAWS OF ATTRACTION TPB (Trade Paperback)"
+            },
+            {
+              "name": "Thanos Vol. 3: Marvel Universe - The End (2003)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Journey Into Mystery (2011 - 2013)"
+            },
+            {
+              "name": "Marvel Universe: The End (2003 - 2004)"
+            },
+            {
+              "name": "She-Hulk (2005 - 2009)"
+            },
+            {
+              "name": "SHE-HULK VOL. 4: LAWS OF ATTRACTION TPB (2007)"
+            },
+            {
+              "name": "Thanos Vol. 3: Marvel Universe - The End (2003)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Cover #4763",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #44951",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #50606",
+              "type": "cover"
+            },
+            {
+              "name": "Journey Into Mystery (2011) #627",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #81145",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2868/living_tribunal?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Living_Tribunal?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011059/living_tribunal?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009403,
+        "name": "Liz Osborn",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "The Amazing Spider-Man (1963) #379"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #581"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #582"
+            },
+            {
+              "name": "Amazing Spider-Man Family (2008) #3"
+            },
+            {
+              "name": "Green Goblin (1995) #7"
+            },
+            {
+              "name": "Peter Parker, the Spectacular Spider-Man (1976) #85"
+            },
+            {
+              "name": "Peter Parker, the Spectacular Spider-Man (1976) #146"
+            },
+            {
+              "name": "Spider-Man Legends Vol. 2: Todd Mcfarlane Book II (Trade Paperback)"
+            },
+            {
+              "name": "Spider-Man Legends Vol. III: Todd Mcfarlane Book III (Trade Paperback)"
+            },
+            {
+              "name": "The Amazing Spider-Man (1963) #311"
+            },
+            {
+              "name": "The Amazing Spider-Man (1963) #321"
+            },
+            {
+              "name": "The Amazing Spider-Man (1963) #412"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Amazing Spider-Man (1999 - 2013)"
+            },
+            {
+              "name": "Amazing Spider-Man Family (2008 - 2009)"
+            },
+            {
+              "name": "Green Goblin (1995 - 1996)"
+            },
+            {
+              "name": "Peter Parker, the Spectacular Spider-Man (1976 - 1998)"
+            },
+            {
+              "name": "Spider-Man Legends Vol. 2: Todd Mcfarlane Book II (2003)"
+            },
+            {
+              "name": "Spider-Man Legends Vol. III: Todd Mcfarlane Book III (2004)"
+            },
+            {
+              "name": "The Amazing Spider-Man (1963 - 1998)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Amazing Spider-Man (1963) #311",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1963) #321",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1963) #379",
+              "type": "cover"
+            },
+            {
+              "name": "Peter Parker, The Spectacular Spider-Man (1976) #146",
+              "type": "cover"
+            },
+            {
+              "name": "Peter Parker, The Spectacular Spider-Man (1976) #85",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #581 - Int",
+              "type": "interiorStory"
+            },
+            {
+              "name": "AMAZING SPIDER-MAN FAMILY (2008) #3",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #582",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Amazing Spider-Man (1963) #412",
+              "type": "cover"
+            },
+            {
+              "name": "cover from Green Goblin (1995) #7",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Inferno"
+            },
+            {
+              "name": "Maximum Carnage"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2726/liz_osborn?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009403/liz_osborn?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009404,
+        "name": "Lizard",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/50/528d33efe2cae",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "The Amazing Spider-Man (1963) #6"
+            },
+            {
+              "name": "The Amazing Spider-Man (1963) #75"
+            },
+            {
+              "name": "The Amazing Spider-Man (1963) #76"
+            },
+            {
+              "name": "The Amazing Spider-Man (1963) #77"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #612"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #612 (VARIANT)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #612 (GRANOV 50/50 COVER)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #614"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #622"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #630"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #630 (QUINONES VARIANT)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #631"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #631 (HEROIC AGE VARIANT)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #632"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #633"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #633 (HEROIC AGE VARIANT)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #634"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #634 (VILLAIN VARIANT)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #634 (50/50 VARIANT)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #634 (2ND PRINTING VARIANT)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Amazing Spider-Man (1999 - 2013)"
+            },
+            {
+              "name": "Amazing Spider-Man Annual (1964 - 2018)"
+            },
+            {
+              "name": "Amazing Spider-Man Epic Collection: Spider-Man No More (2018)"
+            },
+            {
+              "name": "Amazing Spider-Man Family (2008 - 2009)"
+            },
+            {
+              "name": "Amazing Spider-Man: Renew Your Vows (2016 - 2018)"
+            },
+            {
+              "name": "Amazing Spider-Man: The Clone Conspiracy (2017)"
+            },
+            {
+              "name": "Captain America and Bucky (2011 - 2012)"
+            },
+            {
+              "name": "Exiles (2001 - 2008)"
+            },
+            {
+              "name": "Exiles Vol. 3: Out of Time (2003)"
+            },
+            {
+              "name": "MARVEL MASTERWORKS: THE AMAZING SPIDER-MAN VOL. 8 HC (2006)"
+            },
+            {
+              "name": "Marvel Team-Up (1972 - 1985)"
+            },
+            {
+              "name": "MARVEL UNIVERSE ULTIMATE SPIDER-MAN VS. THE SINISTER SIX VOL. 2 DIGEST (2017)"
+            },
+            {
+              "name": "Marvelous Adventures of Gus Beezer & Spider-Man (2004)"
+            },
+            {
+              "name": "Peter Parker, the Spectacular Spider-Man (1976 - 1998)"
+            },
+            {
+              "name": "Point One (2011)"
+            },
+            {
+              "name": "Secret Wars (1984 - 1985)"
+            },
+            {
+              "name": "Sensational Spider-Man (2006 - 2007)"
+            },
+            {
+              "name": "Sensational Spider-Man: Feral Premiere (2006)"
+            },
+            {
+              "name": "Spider-Man (1990 - 1998)"
+            },
+            {
+              "name": "Spider-Man Legends Vol. 2: Todd Mcfarlane Book II (2003)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "SENSATIONAL SPIDER-MAN (2006) #23",
+              "type": "cover"
+            },
+            {
+              "name": "SENSATIONAL SPIDER-MAN (2006) #24",
+              "type": "cover"
+            },
+            {
+              "name": "SENSATIONAL SPIDER-MAN (2006) #25",
+              "type": "cover"
+            },
+            {
+              "name": "SENSATIONAL SPIDER-MAN (2006) #26",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #13540",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #13542",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #13689",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1963) #312",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1963) #313",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1963) #365",
+              "type": "cover"
+            },
+            {
+              "name": "Spidey Smashes Out!",
+              "type": "cover"
+            },
+            {
+              "name": "Spidey Smashes Out!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover #14342",
+              "type": "cover"
+            },
+            {
+              "name": "If This Be Bedlam!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Death Without Warning!",
+              "type": "cover"
+            },
+            {
+              "name": "The Lizard Lives!",
+              "type": "cover"
+            },
+            {
+              "name": "The Lizard Lives!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "In the Blaze of Battle!",
+              "type": "cover"
+            },
+            {
+              "name": "In the Blaze of Battle!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover #21588",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Dead No More: The Clone Conspiracy"
+            },
+            {
+              "name": "Inferno"
+            },
+            {
+              "name": "Secret Wars"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009404/lizard?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lizard_%28Curtis_Connors%29?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009404/lizard?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010939,
+        "name": "Lizard (Ultimate)",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/4c0034207bd80",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Ultimate Marvel Team-Up (2001) #10"
+            },
+            {
+              "name": "Ultimate Marvel Team-Up Ultimate Collection (Trade Paperback)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Ultimate Marvel Team-Up (2001 - 2002)"
+            },
+            {
+              "name": "Ultimate Marvel Team-Up Ultimate Collection (2006)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Ultimate Marvel Team-Up (2001) #10",
+              "type": "cover"
+            },
+            {
+              "name": "[Spider-Man & the Man-Thing]",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1260/lizard?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lizard_%28Ultimate%29?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010939/lizard_ultimate?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011414,
+        "name": "Loa",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/a0/52740fd40a2cc",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Cable (2008) #22"
+            },
+            {
+              "name": "Fear Itself: The Deep (2011) #1"
+            },
+            {
+              "name": "Fear Itself: The Deep (2011) #2"
+            },
+            {
+              "name": "Fear Itself: The Deep (2011) #3"
+            },
+            {
+              "name": "Fear Itself: The Deep (2011) #4"
+            },
+            {
+              "name": "Runaways (2008) #10"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Cable (2008 - 2010)"
+            },
+            {
+              "name": "Fear Itself: The Deep (2011)"
+            },
+            {
+              "name": "Runaways (2008 - 2009)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Interior #53571",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cable (2008) #22",
+              "type": "cover"
+            },
+            {
+              "name": "Cable (2008) #22 - Int",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fear Itself: The Deep (2011) #1",
+              "type": "cover"
+            },
+            {
+              "name": "Fear Itself: The Deep #1",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fear Itself: The Deep (2011) #2",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #85448",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fear Itself: The Deep (2011) #4",
+              "type": "cover"
+            },
+            {
+              "name": "Fear Itself: The Deep (2011) #4 - Int",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fear Itself: The Deep (2011) #3",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #85462",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Fear Itself"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1263/loa?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Loa?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011414/loa?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009405,
+        "name": "Lockheed",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/7/20/4c7c6465c79c5",
+          "extension": "png"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "A+X (2012) #2"
+            },
+            {
+              "name": "A+X (2012) #8"
+            },
+            {
+              "name": "Astonishing X-Men (2004) #7"
+            },
+            {
+              "name": "Astonishing X-Men (2004) #24 (Variant)"
+            },
+            {
+              "name": "Astonishing X-Men (2004) #42"
+            },
+            {
+              "name": "Astonishing X-Men by Joss Whedon & John Cassaday (Hardcover)"
+            },
+            {
+              "name": "Astonishing X-Men Vol. 1 (Hardcover)"
+            },
+            {
+              "name": "Astonishing X-Men Vol. 2: Dangerous (Trade Paperback)"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010) #1"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010) #2"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010) #3"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010) #4"
+            },
+            {
+              "name": "Excalibur (1988) #33"
+            },
+            {
+              "name": "Excalibur (1988) #40"
+            },
+            {
+              "name": "Excalibur (1988) #68"
+            },
+            {
+              "name": "Excalibur (1988) #71"
+            },
+            {
+              "name": "Excalibur (1988) #76"
+            },
+            {
+              "name": "Excalibur (1988) #97"
+            },
+            {
+              "name": "Excalibur (1988) #100"
+            },
+            {
+              "name": "Excalibur (1988) #101"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "A+X (2012 - 2014)"
+            },
+            {
+              "name": "Astonishing X-Men (2004 - 2013)"
+            },
+            {
+              "name": "Astonishing X-Men by Joss Whedon & John Cassaday (2009 - Present)"
+            },
+            {
+              "name": "Astonishing X-Men Vol. 1 (2006)"
+            },
+            {
+              "name": "Astonishing X-Men Vol. 2: Dangerous (2005)"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010 - 2011)"
+            },
+            {
+              "name": "Excalibur (1988 - 1998)"
+            },
+            {
+              "name": "Excalibur Classic Vol. 5 (2008)"
+            },
+            {
+              "name": "Lockjaw and the Pet Avengers (2009)"
+            },
+            {
+              "name": "Marauders (2019 - 2020)"
+            },
+            {
+              "name": "New X-Men (2004 - 2008)"
+            },
+            {
+              "name": "Nightcrawler (1985 - 1986)"
+            },
+            {
+              "name": "Secret Wars (1984 - 1985)"
+            },
+            {
+              "name": "SECRET WARS TPB (2005)"
+            },
+            {
+              "name": "Thor (1966 - 1996)"
+            },
+            {
+              "name": "Uncanny X-Men (1963 - 2011)"
+            },
+            {
+              "name": "Wolverine (1988 - 2003)"
+            },
+            {
+              "name": "Wolverine by Claremont & Miller (2006)"
+            },
+            {
+              "name": "Wolverine Saga (2009)"
+            },
+            {
+              "name": "Women of Marvel Vol. 2 (2007)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Cover for Astonishing X-Men (2004) #7",
+              "type": "cover"
+            },
+            {
+              "name": "1 of 6 - Dangerous",
+              "type": "interiorStory"
+            },
+            {
+              "name": "New X-Men (2004) #4",
+              "type": "cover"
+            },
+            {
+              "name": "This World Is Mine!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Performance",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Scavenger Hunt",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover #19882",
+              "type": "cover"
+            },
+            {
+              "name": "The Adventures of Lockheed the Space Dragon and His Pet Girl, Kitty",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The War Begins",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Prisoners of War",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Tempest Without, Crisis Within",
+              "type": "interiorStory"
+            },
+            {
+              "name": "A Little Death...",
+              "type": "interiorStory"
+            },
+            {
+              "name": "London's Burning",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Quiet",
+              "type": "interiorStory"
+            },
+            {
+              "name": "After the Bomb",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Faith",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover #22437",
+              "type": "cover"
+            },
+            {
+              "name": "For the One I Love",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Amendments",
+              "type": "interiorStory"
+            },
+            {
+              "name": "New Year's Evil",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Fatal Attractions"
+            },
+            {
+              "name": "Mutant Massacre"
+            },
+            {
+              "name": "Onslaught"
+            },
+            {
+              "name": "Secret Wars"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1266/lockheed?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lockheed?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009405/lockheed?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009406,
+        "name": "Lockjaw",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/20/4c003d64a5a99",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Avengers (2010) #8"
+            },
+            {
+              "name": "Avengers (1963) #110"
+            },
+            {
+              "name": "Avengers (1963) #127"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010) #1"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (Graphic Novel)"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010) #2"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010) #3"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010) #4"
+            },
+            {
+              "name": "Black Bolt (2017) #7"
+            },
+            {
+              "name": "Black Bolt Vol. 1: Hard Time (Trade Paperback)"
+            },
+            {
+              "name": "Captain Marvel (1968) #53"
+            },
+            {
+              "name": "Earth X (1999) #9"
+            },
+            {
+              "name": "EARTH X TPB (Trade Paperback)"
+            },
+            {
+              "name": "Essential Fantastic Four Vol. 4 (Trade Paperback)"
+            },
+            {
+              "name": "Fantastic Four (1996) #8"
+            },
+            {
+              "name": "Fantastic Four (1996) #10"
+            },
+            {
+              "name": "Fantastic Four (1998) #51"
+            },
+            {
+              "name": "Fantastic Four (1998) #52"
+            },
+            {
+              "name": "Fantastic Four (1998) #53"
+            },
+            {
+              "name": "Fantastic Four (1998) #54"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Avengers (1963 - 1996)"
+            },
+            {
+              "name": "Avengers (2010 - 2012)"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010 - Present)"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010 - 2011)"
+            },
+            {
+              "name": "Black Bolt (2017 - 2018)"
+            },
+            {
+              "name": "Black Bolt Vol. 1: Hard Time (2017)"
+            },
+            {
+              "name": "Captain Marvel (1968 - 1979)"
+            },
+            {
+              "name": "Earth X (1999 - 2000)"
+            },
+            {
+              "name": "EARTH X TPB (2006)"
+            },
+            {
+              "name": "Essential Fantastic Four Vol. 4 (2005)"
+            },
+            {
+              "name": "Fantastic Four (1996 - 1997)"
+            },
+            {
+              "name": "Fantastic Four (1961 - 1998)"
+            },
+            {
+              "name": "Fantastic Four (1998 - 2012)"
+            },
+            {
+              "name": "Fantastic Four Annual (1963 - 1994)"
+            },
+            {
+              "name": "Fantastic Four Omnibus Vol. 2 (2007)"
+            },
+            {
+              "name": "FANTASTIC FOUR VISIONARIES: JOHN BYRNE VOL. 2 TPB (2004)"
+            },
+            {
+              "name": "Fantastic Four/Inhumans (2007)"
+            },
+            {
+              "name": "Heroes Reborn: Fantastic Four (2006)"
+            },
+            {
+              "name": "Inhuman (2014 - 2015)"
+            },
+            {
+              "name": "Inhumans (2000)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Ultimate Fantastic Four Annual (2005) #1",
+              "type": "cover"
+            },
+            {
+              "name": "1 of 1 - Inhumans",
+              "type": "interiorStory"
+            },
+            {
+              "name": "2 of 6 - Silent War",
+              "type": "cover"
+            },
+            {
+              "name": "3 of 6 - Silent War",
+              "type": "cover"
+            },
+            {
+              "name": "4 of 6 - Silent War",
+              "type": "cover"
+            },
+            {
+              "name": "In One World--and Out the Other!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fantastic Four (1961) #161",
+              "type": "cover"
+            },
+            {
+              "name": "All the World Wars at Once!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fantastic Four (1961) #248",
+              "type": "cover"
+            },
+            {
+              "name": "Nightmare!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The Marvel Rage!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "And Now, Magneto",
+              "type": "interiorStory"
+            },
+            {
+              "name": "AVENGERS (1963) #127",
+              "type": "cover"
+            },
+            {
+              "name": "Fantastic Four Annual (1963) #4",
+              "type": "cover"
+            },
+            {
+              "name": "The Torch That Was",
+              "type": ""
+            },
+            {
+              "name": "The Greatest Array of Supporting Characters Ever Assembled in One Issue",
+              "type": "pinup"
+            },
+            {
+              "name": "Captain Marvel (1968) #53",
+              "type": "cover"
+            },
+            {
+              "name": "The War Of The Three Galaxies!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Endgame Part 3: Lunar Opposition",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Finale",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Inhumanity"
+            },
+            {
+              "name": "Marvel NOW!"
+            },
+            {
+              "name": "Secret Invasion"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1267/lockjaw?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lockjaw?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009406/lockjaw?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010363,
+        "name": "Logan",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Before the Fantastic Four: Ben Grimm & Logan (2000) #1"
+            },
+            {
+              "name": "Before the Fantastic Four: Ben Grimm & Logan (2000) #2"
+            },
+            {
+              "name": "Before the Fantastic Four: Ben Grimm & Logan (2000) #3"
+            },
+            {
+              "name": "Dead Man Logan Vol. 1: Sins Of The Father (Trade Paperback)"
+            },
+            {
+              "name": "Dead Man Logan Vol. 2: Welcome Back, Logan  (Trade Paperback)"
+            },
+            {
+              "name": "Fantastic Force (2009) #1"
+            },
+            {
+              "name": "Logan (2008) #1"
+            },
+            {
+              "name": "Logan (2008) #2"
+            },
+            {
+              "name": "Logan (2008) #3"
+            },
+            {
+              "name": "Pulse (2004) #6"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #43"
+            },
+            {
+              "name": "Wolverine (2003) #66"
+            },
+            {
+              "name": "Wolverine (2003) #67"
+            },
+            {
+              "name": "Wolverine (2003) #68"
+            },
+            {
+              "name": "Wolverine (2003) #69"
+            },
+            {
+              "name": "Wolverine (2003) #70"
+            },
+            {
+              "name": "Wolverine (2003) #71"
+            },
+            {
+              "name": "Wolverine (2003) #72"
+            },
+            {
+              "name": "Wolverine Origins (2006) #12"
+            },
+            {
+              "name": "Wolverine Origins (2006) #16"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Before the Fantastic Four: Ben Grimm & Logan (2000)"
+            },
+            {
+              "name": "Dead Man Logan Vol. 1: Sins Of The Father (2019)"
+            },
+            {
+              "name": "Dead Man Logan Vol. 2: Welcome Back, Logan  (2019)"
+            },
+            {
+              "name": "Fantastic Force (2009)"
+            },
+            {
+              "name": "Logan (2008)"
+            },
+            {
+              "name": "Pulse (2004 - 2006)"
+            },
+            {
+              "name": "Ultimate X-Men (2001 - 2009)"
+            },
+            {
+              "name": "Wolverine (2003 - 2009)"
+            },
+            {
+              "name": "Wolverine Origins (2006 - 2010)"
+            },
+            {
+              "name": "Wolverine: Netsuke (2002 - 2003)"
+            },
+            {
+              "name": "Wolverine: Origins Vol. 3 - Swift and Terrible (2007)"
+            },
+            {
+              "name": "Wolverine: Origins Vol. 4 - Our War Premiere (2008)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "ULTIMATE X-MEN (2000) #43",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine Origins (2006) #12",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine Origins (2006) #16",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine Origins (2006) #17",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine Origins (2006) #18",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine Origins (2006) #19",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Wolverine Origins (2006) #20",
+              "type": "cover"
+            },
+            {
+              "name": "3XLS 1 of 3 Marvel Knights branding",
+              "type": "cover"
+            },
+            {
+              "name": "3XLS 2 of 3 Marvel Knights branding",
+              "type": "cover"
+            },
+            {
+              "name": "3XLS 3 of 3 Marvel Knights branding",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine (2003) #66",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine (2003) #67",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine (2003) #68",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine (2003) #69",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine (2003) #70",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine (2003) #71",
+              "type": "cover"
+            },
+            {
+              "name": "Wolverine (2003) #72",
+              "type": "cover"
+            },
+            {
+              "name": "Fantastic Force (2009) #1",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #53345",
+              "type": "interiorStory"
+            },
+            {
+              "name": "cover to The Pulse (2004) #6",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1272/logan?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010363/logan?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009407,
+        "name": "Loki",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/90/526547f509313",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "A+X (2012) #5"
+            },
+            {
+              "name": "All-Winners Squad: Band of Heroes (2011) #3"
+            },
+            {
+              "name": "Alpha Flight (1983) #50"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #503"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #504"
+            },
+            {
+              "name": "AMAZING SPIDER-MAN VOL. 7: BOOK OF EZEKIEL TPB (Trade Paperback)"
+            },
+            {
+              "name": "Amazing Spider-Man Vol. 7: The Book of Ezekiel (Trade Paperback)"
+            },
+            {
+              "name": "Amazing-Spider-Man: Worldwide Vol. 8 (Trade Paperback)"
+            },
+            {
+              "name": "Asgardians Of The Galaxy Vol. 2: War Of The Realms (Trade Paperback)"
+            },
+            {
+              "name": "Vengeance (2011) #4"
+            },
+            {
+              "name": "Avengers (1996) #1"
+            },
+            {
+              "name": "Avengers (1963) #1"
+            },
+            {
+              "name": "Avengers (1996) #3"
+            },
+            {
+              "name": "Avengers (2018) #3"
+            },
+            {
+              "name": "Avengers (1996) #4"
+            },
+            {
+              "name": "Avengers (2018) #5"
+            },
+            {
+              "name": "Avengers (1996) #6"
+            },
+            {
+              "name": "Avengers (1963) #7"
+            },
+            {
+              "name": "Avengers (1996) #8"
+            },
+            {
+              "name": "Avengers (1996) #9"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "A+X (2012 - 2014)"
+            },
+            {
+              "name": "All-Winners Squad: Band of Heroes (2011)"
+            },
+            {
+              "name": "Alpha Flight (1983 - 1994)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999 - 2013)"
+            },
+            {
+              "name": "AMAZING SPIDER-MAN VOL. 7: BOOK OF EZEKIEL TPB (2005)"
+            },
+            {
+              "name": "Amazing Spider-Man Vol. 7: The Book of Ezekiel (2004)"
+            },
+            {
+              "name": "Amazing-Spider-Man: Worldwide Vol. 8 (2018)"
+            },
+            {
+              "name": "Asgardians Of The Galaxy Vol. 2: War Of The Realms (2019)"
+            },
+            {
+              "name": "Avengers (1996 - 1997)"
+            },
+            {
+              "name": "Avengers (2018 - Present)"
+            },
+            {
+              "name": "Avengers (1963 - 1996)"
+            },
+            {
+              "name": "Avengers Annual (1967 - 1994)"
+            },
+            {
+              "name": "Avengers Origins: Thor (2011)"
+            },
+            {
+              "name": "Avengers Vs (2015)"
+            },
+            {
+              "name": "Avengers West Coast: Darker than Scarlet (2008)"
+            },
+            {
+              "name": "Avengers: Tales to Astonish (2017)"
+            },
+            {
+              "name": "Avengers: The Origin (2010)"
+            },
+            {
+              "name": "Black Panther (1998 - 2003)"
+            },
+            {
+              "name": "Black Panther (2009 - 2010)"
+            },
+            {
+              "name": "Cap and Thor! Avengers (2010)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Amazing Spider-Man (1999) #503",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #1664",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #504",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #1666",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover #1731",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #1732",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover #1733",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #1734",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover #1735",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #1736",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover for Loki (2004) #4",
+              "type": "cover"
+            },
+            {
+              "name": "The conclusion to the epic adventure that dares you to see Asgardian legend through the eyes of Loki! You knew it was coming. Th",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Interior #2380",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover #2391",
+              "type": "cover"
+            },
+            {
+              "name": "1 of 1 - Thor",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Loki 1-4",
+              "type": "interiorStory"
+            },
+            {
+              "name": "JOURNEY INTO MYSTERY (1952) #108",
+              "type": "cover"
+            },
+            {
+              "name": "Loki the Evil One!  Thor's Eternal Enemy!",
+              "type": "pinup"
+            },
+            {
+              "name": "Journey Into Mystery (1952) #113",
+              "type": "cover"
+            },
+            {
+              "name": "A World Gone Mad",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Acts of Vengeance!"
+            },
+            {
+              "name": "Atlantis Attacks"
+            },
+            {
+              "name": "Axis"
+            },
+            {
+              "name": "Dark Reign"
+            },
+            {
+              "name": "Fear Itself"
+            },
+            {
+              "name": "Original Sin"
+            },
+            {
+              "name": "Secret Wars II"
+            },
+            {
+              "name": "Shattered Heroes"
+            },
+            {
+              "name": "Siege"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009407/loki?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Loki?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009407/loki?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1017299,
+        "name": "Loki (LEGO Marvel Super Heroes)",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5239c4e1c5351",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/33/loki?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1017299/loki_lego_marvel_super_heroes?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010768,
+        "name": "Loners",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/00/4c0037581a64e",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "The Loners (2007) #1"
+            },
+            {
+              "name": "The Loners (2007) #2"
+            },
+            {
+              "name": "The Loners (2007) #3"
+            },
+            {
+              "name": "The Loners (2007) #4"
+            },
+            {
+              "name": "The Loners (2007) #5"
+            },
+            {
+              "name": "The Loners (2007) #6"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "The Loners (2007 - 2008)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "1 of 6 - 6XLS",
+              "type": "cover"
+            },
+            {
+              "name": "2 of 6 - 6XLS",
+              "type": "cover"
+            },
+            {
+              "name": "3 of 6 - 6XLS",
+              "type": "cover"
+            },
+            {
+              "name": "4 of 6 - 6XLS",
+              "type": "cover"
+            },
+            {
+              "name": "5 of 6 - 6XLS",
+              "type": "cover"
+            },
+            {
+              "name": "6 of 6 - 6XLS",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1273/loners?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Loners?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010768/loners?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009408,
+        "name": "Longshot",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/60/4c003d6176aa1",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Alpha Flight (1983) #61"
+            },
+            {
+              "name": "Cable (2017) #150"
+            },
+            {
+              "name": "Cable (2017) #152"
+            },
+            {
+              "name": "Cable (2017) #153"
+            },
+            {
+              "name": "Cable Vol. 2: The Newer Mutants (Trade Paperback)"
+            },
+            {
+              "name": "Domino (2018) #10"
+            },
+            {
+              "name": "Exiles (2001) #90"
+            },
+            {
+              "name": "Longshot (1985) #1"
+            },
+            {
+              "name": "Longshot (1985) #2"
+            },
+            {
+              "name": "Longshot (1985) #3"
+            },
+            {
+              "name": "Longshot (1985) #4"
+            },
+            {
+              "name": "Longshot (1985) #5"
+            },
+            {
+              "name": "Longshot (1985) #6"
+            },
+            {
+              "name": "Marvel Comics Presents (1988) #16"
+            },
+            {
+              "name": "Marvel Fanfare (1982) #38"
+            },
+            {
+              "name": "New Mutants Classic Vol. 6 (Trade Paperback)"
+            },
+            {
+              "name": "Uncanny X-Men (1963)"
+            },
+            {
+              "name": "Uncanny X-Men (1963) #215"
+            },
+            {
+              "name": "Uncanny X-Men (1963) #216"
+            },
+            {
+              "name": "Uncanny X-Men (1963) #217"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Alpha Flight (1983 - 1994)"
+            },
+            {
+              "name": "Cable (2017 - 2018)"
+            },
+            {
+              "name": "Cable Vol. 2: The Newer Mutants (2018)"
+            },
+            {
+              "name": "Domino (2018)"
+            },
+            {
+              "name": "Exiles (2001 - 2008)"
+            },
+            {
+              "name": "Longshot (1985 - 1986)"
+            },
+            {
+              "name": "Marvel Comics Presents (1988 - 1995)"
+            },
+            {
+              "name": "Marvel Fanfare (1982 - 1992)"
+            },
+            {
+              "name": "New Mutants Classic Vol. 6 (2010 - Present)"
+            },
+            {
+              "name": "Uncanny X-Men (1963 - 2011)"
+            },
+            {
+              "name": "Women of Marvel (2006)"
+            },
+            {
+              "name": "Women of Marvel Vol. 2 (2007)"
+            },
+            {
+              "name": "X-Factor (1986 - 1998)"
+            },
+            {
+              "name": "X-Factor (2005 - 2013)"
+            },
+            {
+              "name": "X-Force (1991 - 2004)"
+            },
+            {
+              "name": "X-Men (1991 - 2001)"
+            },
+            {
+              "name": "X-Men Annual (1970 - 1994)"
+            },
+            {
+              "name": "X-Men Legends Vol. 3: Art Adams Book I (2003)"
+            },
+            {
+              "name": "X-Men Legends Vol. III: Arthur Adams Book I (2003)"
+            },
+            {
+              "name": "X-Men Unlimited (1993 - 2003)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "1 of 5 - Enemy of the Stars",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #19847",
+              "type": "cover"
+            },
+            {
+              "name": "X-MEN ANNUAL (1970) #11",
+              "type": "cover"
+            },
+            {
+              "name": "Lost In the Funhouse",
+              "type": "interiorStory"
+            },
+            {
+              "name": "The Evolutionary War",
+              "type": "cover"
+            },
+            {
+              "name": "Resurrection",
+              "type": "interiorStory"
+            },
+            {
+              "name": "I Want My X-Men!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Atlantis Attacks Part 3",
+              "type": "cover"
+            },
+            {
+              "name": "Double Cross",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Jubilation Day",
+              "type": "interiorStory"
+            },
+            {
+              "name": "X-Men Past and Present",
+              "type": "pinup"
+            },
+            {
+              "name": "...Inquistition",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Duet!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Ashes to Ashes",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Dreamwalk",
+              "type": ""
+            },
+            {
+              "name": "The Boy Who Saw Tomorrow!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Old Soldiers",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Crucible",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Folly's Gambit",
+              "type": "interiorStory"
+            },
+            {
+              "name": "UNCANNY X-MEN (1963) #218",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Atlantis Attacks"
+            },
+            {
+              "name": "Days of Future Present"
+            },
+            {
+              "name": "Evolutionary War"
+            },
+            {
+              "name": "Fall of the Mutants"
+            },
+            {
+              "name": "Inferno"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009408/longshot?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Longshot?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009408/longshot?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010940,
+        "name": "Longshot (Ultimate)",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/40/4c00341b3ec43",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Ultimate X-Men (2001) #55"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #62"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #63"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #65"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Ultimate X-Men (2001 - 2009)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "2 of 3 - Longshot",
+              "type": "cover"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #62",
+              "type": "cover"
+            },
+            {
+              "name": "2 of 5 - Escape of Magneto",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #63",
+              "type": "cover"
+            },
+            {
+              "name": "3 of 5 - Magnetic North",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Ultimate X-Men (2001) #65",
+              "type": "cover"
+            },
+            {
+              "name": "5 of 5 - Magnetic North",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1275/longshot?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Longshot_%28Ultimate%29?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010940/longshot_ultimate?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011145,
+        "name": "Lord Hawal",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/10/4c002f7d355de",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Annihilation: Super-Skrull (2006) #3"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Annihilation: Super-Skrull (2006)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Annihilation: Super-Skrull (2006) #3",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Annihilation"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2877/lord_hawal?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Hawal?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011145/lord_hawal?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1014980,
+        "name": "Lord Tyger",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/1/b0/4cd05ab2bd5ee",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/3414/lord_tyger?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1014980/lord_tyger?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011283,
+        "name": "Lords of Avalon",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "1 of 12 - 12XLS",
+              "type": "interiorStory"
+            },
+            {
+              "name": "1 of 12 - 12XLS",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1280/lords_of_avalon?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lords%20of%20Avalon?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011283/lords_of_avalon?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009260,
+        "name": "Lorna Dane",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "New X-Men (Hardcover)"
+            },
+            {
+              "name": "New X-Men (2001) #132"
+            },
+            {
+              "name": "New X-Men Vol. III: New Worlds (Hardcover)"
+            },
+            {
+              "name": "Uncanny X-Men (1963) #59"
+            },
+            {
+              "name": "Uncanny X-Men (1963) #65"
+            },
+            {
+              "name": "Uncanny X-Men (1963) #430"
+            },
+            {
+              "name": "Uncanny X-Men Omnibus Vol. 1 (Hardcover)"
+            },
+            {
+              "name": "Uncanny X-Men (1963) #97"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "New X-Men (2001 - 2004)"
+            },
+            {
+              "name": "New X-Men (2006)"
+            },
+            {
+              "name": "New X-Men Vol. III: New Worlds (2004)"
+            },
+            {
+              "name": "Uncanny X-Men (1963 - 2011)"
+            },
+            {
+              "name": "Uncanny X-Men Omnibus Vol. 1 (2006)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Uncanny X-Men (1963) #59",
+              "type": "cover"
+            },
+            {
+              "name": "Uncanny X-Men (1963) #65",
+              "type": "cover"
+            },
+            {
+              "name": "Uncanny X-Men (1963) #97",
+              "type": "cover"
+            },
+            {
+              "name": "UNCANNY X-MEN (1963) #430",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #30437",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2700/lorna_dane?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009260/lorna_dane?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009409,
+        "name": "Luckman",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1284/luckman?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009409/luckman?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011405,
+        "name": "Lucky Pierre",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/a/e0/4c002e2ce2ba0",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "The Immortal Iron Fist (2006) #10"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "The Immortal Iron Fist (2006 - 2009)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "TBD 3 of 5",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2932/lucky_pierre?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lucky_Pierre_(Ernst_Erskine)?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011405/lucky_pierre?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010751,
+        "name": "Lucy in the Sky",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/50/4c00377435871",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1285/lucy_in_the_sky?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lucy_In_The_Sky?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010751/lucy_in_the_sky?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009215,
+        "name": "Luke Cage",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5112d8b6e596c",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Age of Ultron (2013) #3"
+            },
+            {
+              "name": "Age of Ultron (2013) #4"
+            },
+            {
+              "name": "Alias (2001) #1"
+            },
+            {
+              "name": "Alias (2001) #2"
+            },
+            {
+              "name": "Alias (2001) #3"
+            },
+            {
+              "name": "Alias (2001) #15"
+            },
+            {
+              "name": "Alias Omnibus (Hardcover)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #519"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #520"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #522"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #523"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #601"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #653"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #654"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #654 (2nd Printing Variant)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #666"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #667"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #669 (Slott Variant)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #669 (Architect Variant)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #669 (Architect Sketch Variant)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Age of Ultron (2013)"
+            },
+            {
+              "name": "Alias (2001 - 2003)"
+            },
+            {
+              "name": "Alias Omnibus (2006)"
+            },
+            {
+              "name": "Amazing Spider-Man (1999 - 2013)"
+            },
+            {
+              "name": "Amazing Spider-Man Annual (2012)"
+            },
+            {
+              "name": "AMAZING SPIDER-MAN VOL. 10: NEW AVENGERS TPB (2005)"
+            },
+            {
+              "name": "Astonishing X-Men (2004 - 2013)"
+            },
+            {
+              "name": "Avengers (1963 - 1996)"
+            },
+            {
+              "name": "Avengers (2010 - 2012)"
+            },
+            {
+              "name": "Avengers Academy (2010 - 2012)"
+            },
+            {
+              "name": "Avengers Annual (2012)"
+            },
+            {
+              "name": "Avengers Assemble (2012 - 2014)"
+            },
+            {
+              "name": "Avengers Classic (2007 - 2008)"
+            },
+            {
+              "name": "Avengers Origins: Luke Cage (2013)"
+            },
+            {
+              "name": "Avengers Vs. Pet Avengers (2010 - 2011)"
+            },
+            {
+              "name": "Avengers Vs. X-Men (2012)"
+            },
+            {
+              "name": "Avengers/Invaders (2008 - 2009)"
+            },
+            {
+              "name": "Barnes & Noble Black Panther: Who Is the Black Panther? (2018)"
+            },
+            {
+              "name": "Black Panther (2016 - 2018)"
+            },
+            {
+              "name": "Black Panther (2005 - 2008)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Amazing Spider-Man (1999) #519",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #520",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #522",
+              "type": "cover"
+            },
+            {
+              "name": "Amazing Spider-Man (1999) #523",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #1500",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Cover #1717",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #2339",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #2341",
+              "type": "cover"
+            },
+            {
+              "name": "\"THIN AIR\" PART 5 (OF 5) The downfall of Norman Osborn – the shocking conclusion to the story that rocked the Spidey-verse!  Str",
+              "type": "cover"
+            },
+            {
+              "name": "4 of 4 - Secret War arc",
+              "type": "cover"
+            },
+            {
+              "name": "1 of 5 -",
+              "type": "cover"
+            },
+            {
+              "name": "1 of",
+              "type": "cover"
+            },
+            {
+              "name": "2 of - Fear",
+              "type": "cover"
+            },
+            {
+              "name": "3 of 4 - Fear",
+              "type": "cover"
+            },
+            {
+              "name": "Iron Fist (2004) #2",
+              "type": "cover"
+            },
+            {
+              "name": "Interior #3193",
+              "type": "interiorStory"
+            },
+            {
+              "name": "New Avengers (2004) #1",
+              "type": "cover"
+            },
+            {
+              "name": "New Avengers (2004) #1",
+              "type": "interiorStory"
+            },
+            {
+              "name": "2 of 5 - The Raft",
+              "type": "cover"
+            },
+            {
+              "name": "Cover #3439",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+              "name": "Age of Ultron"
+            },
+            {
+              "name": "Avengers VS X-Men"
+            },
+            {
+              "name": "Chaos War"
+            },
+            {
+              "name": "Civil War"
+            },
+            {
+              "name": "Dark Reign"
+            },
+            {
+              "name": "Fear Itself"
+            },
+            {
+              "name": "Infinity"
+            },
+            {
+              "name": "Inhumanity"
+            },
+            {
+              "name": "Other - Evolve or Die"
+            },
+            {
+              "name": "Secret Empire"
+            },
+            {
+              "name": "Secret Invasion"
+            },
+            {
+              "name": "Secret Wars II"
+            },
+            {
+              "name": "Shadowland"
+            },
+            {
+              "name": "Siege"
+            },
+            {
+              "name": "Spider-Island"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009215/luke_cage?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Luke_Cage?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009215/luke_cage?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011200,
+        "name": "Luminals",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/b0/4c002f1f80d5c",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1287/luminals?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Luminals?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011200/luminals?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010896,
+        "name": "Lyja",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/40/4c003594c52e8",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+              "name": "Fantastic Five (2007) #1"
+            },
+            {
+              "name": "Fantastic Five (1999) #1"
+            },
+            {
+              "name": "Fantastic Five (1999) #2"
+            },
+            {
+              "name": "Fantastic Five (2007) #2"
+            },
+            {
+              "name": "Fantastic Five (1999) #3"
+            },
+            {
+              "name": "Fantastic Five (2007) #3"
+            },
+            {
+              "name": "Fantastic Five (2007) #4"
+            },
+            {
+              "name": "Fantastic Five (1999) #4"
+            },
+            {
+              "name": "Fantastic Five (2007) #5"
+            },
+            {
+              "name": "Fantastic Five (1999) #5"
+            },
+            {
+              "name": "Fantastic Five: The Final Doom (Trade Paperback)"
+            },
+            {
+              "name": "Fantastic Four (1961) #381"
+            },
+            {
+              "name": "Fantastic Four (1961) #382"
+            },
+            {
+              "name": "Fantastic Four (1961) #383"
+            },
+            {
+              "name": "Fantastic Four (1961) #384"
+            },
+            {
+              "name": "Fantastic Four (1961) #385"
+            },
+            {
+              "name": "Fantastic Four (1961) #386"
+            },
+            {
+              "name": "Fantastic Four (1961) #387"
+            },
+            {
+              "name": "Fantastic Four (1961) #389"
+            },
+            {
+              "name": "Fantastic Four (1961) #390"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+              "name": "Fantastic Five (2007)"
+            },
+            {
+              "name": "Fantastic Five (1999 - 2000)"
+            },
+            {
+              "name": "Fantastic Five: The Final Doom (2007)"
+            },
+            {
+              "name": "Fantastic Four (1961 - 1998)"
+            },
+            {
+              "name": "Incredible Hulk Annual (1976 - 1994)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+              "name": "Fantastic Four (1961) #381",
+              "type": "cover"
+            },
+            {
+              "name": "And Then There Were 3!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fantastic Four (1961) #382",
+              "type": "cover"
+            },
+            {
+              "name": "\"Captured!\"",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fantastic Four (1961) #383",
+              "type": "cover"
+            },
+            {
+              "name": "\"A World Against Them!\"",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fantastic Four (1961) #384",
+              "type": "cover"
+            },
+            {
+              "name": "My Enemy, My Son!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fantastic Four (1961) #385",
+              "type": "cover"
+            },
+            {
+              "name": "Into the Deep!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fantastic Four (1961) #386",
+              "type": "cover"
+            },
+            {
+              "name": "And Then Came Despair",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fantastic Four (1961) #387",
+              "type": "cover"
+            },
+            {
+              "name": "Nobody Gets Out Alive!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fantastic Four (1961) #389",
+              "type": "cover"
+            },
+            {
+              "name": "Behold a Fatal Future!",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fantastic Four (1961) #390",
+              "type": "cover"
+            },
+            {
+              "name": "\"Past Deceptions and Future Lies!\"",
+              "type": "interiorStory"
+            },
+            {
+              "name": "Fantastic Four (1961) #391",
+              "type": "cover"
+            },
+            {
+              "name": "If Death Be Our Destiny--!",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1293/lyja?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lyja?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010896/lyja?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      }
+    ]

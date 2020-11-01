@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import heros from '../src/superheros'
+import heros from '../src/superheros-prod';
 import Divider from '@material-ui/core/Divider'
 import SuperHeroCard from '@components/SuperHeroCard';
 import fetchHeros from '../api/fetchHeros.js';
@@ -81,7 +81,7 @@ const queryCache = new QueryCache()
 const Battle = ({ title, description, ...props }) => {
   const getHero = async (hero) =>{
     const data = await fetchHeros('heros',hero)
-    return data.data.data.results[0]?.description
+    return data.data.data?.results[0]?.description
   }
   const cache = useQueryCache()
   const classes = useStyles();
@@ -106,18 +106,19 @@ const Battle = ({ title, description, ...props }) => {
                   options={heros}
 
                   onChange={async(params, value)=>{
-                    console.log(value)
-                    const result = heros.filter(item => item.name == params.target.textContent);
-                    
                     let newData
-                    if(result[0]?.biography?.publisher == "Marvel Comics"){
-                      //const heroSlug = params.target.textContent.replace(/\s+/g, '-');
-                      const heroDescription = await getHero(value.name)
-                      newData = { data:result[0], description:heroDescription }
+                    if(value){
+                      const result = heros.filter(item => item.name == value.name);
+                      if(result[0]?.biography?.publisher == "Marvel Comics"){
+                        const heroDescription = await getHero(value.name)
+                        newData = { data:result[0], description:heroDescription }
+                      }else{
+                        newData = { data:result[0], description:false }
+                      }
                     }else{
-                      newData = { data:result[0], description:'na' }
+                      newData = false
                     }
-                    console.log(newData)
+                    
                     setPlayer1Data(newData)
                     
                   }}
@@ -139,19 +140,20 @@ const Battle = ({ title, description, ...props }) => {
                   
                   options={heros}
 
-                  onChange={async(params)=>{
-                    const result = heros.filter(item => item.name == params.target.textContent);
-                    
+                  onChange={async(params, value)=>{
                     let newData
-                    if(result[0]?.biography?.publisher == "Marvel Comics"){
-                      const heroSlug = params.target.textContent.replace(/\s+/g, '-');
-                      const heroDescription = await getHero(heroSlug)
-                      newData = { data:result[0], description:heroDescription }
-                      console.log(newData)
+                    if(value){
+                      const result = heros.filter(item => item.name == value.name);
+                      if(result[0]?.biography?.publisher == "Marvel Comics"){
+                        const heroDescription = await getHero(value.name)
+                        newData = { data:result[0], description:heroDescription }
+                      }else{
+                        newData = { data:result[0], description:false }
+                      }
                     }else{
-                      newData = { data:result[0], description:false }
+                      newData = false
                     }
-
+                    
                     setPlayer2Data(newData)
                     
                   }}

@@ -1,0 +1,4938 @@
+[
+      {
+        "id": 1011081,
+        "name": "Ka-Zar",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/40/4dcc503738d3d",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Amazing Spider-Man Annual (1964) #15"
+            },
+            {
+                    "name": "Astonishing Tales (1970) #10"
+            },
+            {
+                    "name": "Astonishing Tales (1970) #12"
+            },
+            {
+                    "name": "Astonishing Tales (1970) #13"
+            },
+            {
+                    "name": "Astonishing Tales (1970) #15"
+            },
+            {
+                    "name": "Astonishing Tales (1970) #16"
+            },
+            {
+                    "name": "Astonishing Tales (1970) #17"
+            },
+            {
+                    "name": "Astonishing Tales (1970) #18"
+            },
+            {
+                    "name": "Astonishing Tales (1970) #19"
+            },
+            {
+                    "name": "Astonishing Tales (1970) #20"
+            },
+            {
+                    "name": "Avengers (2018) #12"
+            },
+            {
+                    "name": "Captain America (1998) #31"
+            },
+            {
+                    "name": "Captain America (1968) #414"
+            },
+            {
+                    "name": "Captain America (1968) #415"
+            },
+            {
+                    "name": "Captain America (1968) #416"
+            },
+            {
+                    "name": "Captain America (1968) #417"
+            },
+            {
+                    "name": "Daredevil Epic Collection: Mike Murdock Must Die! (Trade Paperback)"
+            },
+            {
+                    "name": "Empyre: Avengers (2020) #2"
+            },
+            {
+                    "name": "Empyre: Avengers (2020) #3"
+            },
+            {
+                    "name": "Fantastic Four: The Prodigal Sun (2019) #1"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Amazing Spider-Man Annual (1964 - 2018)"
+            },
+            {
+                    "name": "Astonishing Tales (1970)"
+            },
+            {
+                    "name": "Avengers (2018 - Present)"
+            },
+            {
+                    "name": "Captain America (1968 - 1996)"
+            },
+            {
+                    "name": "Captain America (1998 - 2002)"
+            },
+            {
+                    "name": "Daredevil Epic Collection: Mike Murdock Must Die! (2018)"
+            },
+            {
+                    "name": "Empyre: Avengers (2020)"
+            },
+            {
+                    "name": "Fantastic Four: The Prodigal Sun (2019)"
+            },
+            {
+                    "name": "Incredible Hulks (2010 - 2011)"
+            },
+            {
+                    "name": "Incredible Hulks: Planet Savage TPB (2010 - Present)"
+            },
+            {
+                    "name": "Ka-Zar (2011)"
+            },
+            {
+                    "name": "Ka-Zar (1974 - 1977)"
+            },
+            {
+                    "name": "Ka-Zar (1997 - 1999)"
+            },
+            {
+                    "name": "Ka-Zar Annual (1997)"
+            },
+            {
+                    "name": "Ka-Zar the Savage (1981 - 1984)"
+            },
+            {
+                    "name": "Klaws of the Panther (2010)"
+            },
+            {
+                    "name": "Lockjaw (2018)"
+            },
+            {
+                    "name": "Marvel Atlas (2007 - 2008)"
+            },
+            {
+                    "name": "Marvel Comics Presents (1988 - 1995)"
+            },
+            {
+                    "name": "Marvel Comics Presents (2007 - 2008)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Uncanny X-Men (1963) #458",
+              "type": "cover"
+            },
+            {
+                    "name": "4 of 5 - World's End",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "5 of 5 - World's End",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover #13544",
+              "type": "cover"
+            },
+            {
+                    "name": "Cover #13546",
+              "type": "cover"
+            },
+            {
+                    "name": "Uncanny X-Men (1963) #10",
+              "type": "cover"
+            },
+            {
+                    "name": "Uncanny X-Men (1963) #62",
+              "type": "cover"
+            },
+            {
+                    "name": "Uncanny X-Men (1963) #63",
+              "type": "cover"
+            },
+            {
+                    "name": "Captain America (1968) #414",
+              "type": "cover"
+            },
+            {
+                    "name": "Escape From AIM Isle",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Captain America (1968) #415",
+              "type": "cover"
+            },
+            {
+                    "name": "Savage Landings",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Captain America (1968) #416",
+              "type": "cover"
+            },
+            {
+                    "name": "Savage Land Showdown",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Captain America (1968) #417",
+              "type": "cover"
+            },
+            {
+                    "name": "Termination Day",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "The Lost Land of Ka-Zar!",
+              "type": "cover"
+            },
+            {
+                    "name": "The Monster and the Man-Beast!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "What if...Ka-Zar...were a Middle-Aged Accountant instead of a Savage?",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "This Is A Savage Land",
+              "type": ""
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Secret Invasion"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1011081/ka-zar?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Ka-Zar_%28Kevin_Plunder%29?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011081/ka-zar?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011193,
+        "name": "Kabuki",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Kabuki (2004) #1"
+            },
+            {
+                    "name": "Kabuki (2004) #2"
+            },
+            {
+                    "name": "Kabuki (2004) #3"
+            },
+            {
+                    "name": "Kabuki (2004) #4"
+            },
+            {
+                    "name": "Kabuki (2004) #5"
+            },
+            {
+                    "name": "Kabuki (2004) #5"
+            },
+            {
+                    "name": "Kabuki (2004) #6"
+            },
+            {
+                    "name": "Kabuki (2004) #7"
+            },
+            {
+                    "name": "Kabuki (2004) #8"
+            },
+            {
+                    "name": "Kabuki (2004) #9"
+            },
+            {
+                    "name": "Kabuki (2004) #9 (Mike Allred Variant)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Kabuki (2004 - 2007)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Interior #3961",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #3965",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "“THE ALCHEMY” PART 2 An all-new start for Kabuki and the perfect jumping-on point for new readers! After escaping the institutio",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #3969",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #3971",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #3973",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #3975",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #3977",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #3979",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #8167",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #8169",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1113/kabuki?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011193/kabuki?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009384,
+        "name": "Kang",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/4/30/52695ed19538d",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Alpha Flight (1983) #113"
+            },
+            {
+                    "name": "Avengers (2010) #1"
+            },
+            {
+                    "name": "Avengers (2010) #1 (HEROIC AGE VARIANT)"
+            },
+            {
+                    "name": "Avengers (2010) #1 (ROMITA JR. VARIANT)"
+            },
+            {
+                    "name": "Avengers (2010) #1 (DJURDJEVIC VARIANT)"
+            },
+            {
+                    "name": "Avengers (2010) #1 (ROMITA SR. VARIANT)"
+            },
+            {
+                    "name": "Avengers (2010) #1 (I AM AN AVENGER BLANK COVER VARIANT)"
+            },
+            {
+                    "name": "Avengers (2016) #2"
+            },
+            {
+                    "name": "Avengers (1996) #2"
+            },
+            {
+                    "name": "Avengers (2010) #2"
+            },
+            {
+                    "name": "Avengers (1996) #3"
+            },
+            {
+                    "name": "Avengers (2010) #3"
+            },
+            {
+                    "name": "Avengers (2010) #3 (ROMITA JR. VARIANT)"
+            },
+            {
+                    "name": "Avengers (2016) #4"
+            },
+            {
+                    "name": "Avengers (2010) #6"
+            },
+            {
+                    "name": "Avengers (1996) #8"
+            },
+            {
+                    "name": "Avengers (1963) #8"
+            },
+            {
+                    "name": "Avengers (1963) #11"
+            },
+            {
+                    "name": "Avengers (1963) #24"
+            },
+            {
+                    "name": "Avengers (1998) #38"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Alpha Flight (1983 - 1994)"
+            },
+            {
+                    "name": "Avengers (1996 - 1997)"
+            },
+            {
+                    "name": "Avengers (2016 - 2018)"
+            },
+            {
+                    "name": "Avengers (1963 - 1996)"
+            },
+            {
+                    "name": "Avengers (1998 - 2004)"
+            },
+            {
+                    "name": "Avengers (2010 - 2012)"
+            },
+            {
+                    "name": "Avengers and Power Pack (2017)"
+            },
+            {
+                    "name": "Avengers and Power Pack Assemble! (2006)"
+            },
+            {
+                    "name": "Avengers Annual (1967 - 1994)"
+            },
+            {
+                    "name": "Avengers Assemble Vol. 4 (2007)"
+            },
+            {
+                    "name": "Avengers Assemble Vol. 5 (2007)"
+            },
+            {
+                    "name": "Avengers by Brian Michael Bendis: The Complete Collection Vol. 1 (2017)"
+            },
+            {
+                    "name": "Avengers Forever (1998 - 2001)"
+            },
+            {
+                    "name": "Avengers Legends Vol. I: Avengers Forever (2002)"
+            },
+            {
+                    "name": "Avengers: Citizen Kang (2010 - Present)"
+            },
+            {
+                    "name": "Avengers: Earth's Mightiest Heroes (2004 - 2005)"
+            },
+            {
+                    "name": "Avengers: First to Last (2008 - Present)"
+            },
+            {
+                    "name": "AVENGERS: FIRST TO LAST PREMIERE HC (2008 - Present)"
+            },
+            {
+                    "name": "Avengers: Kang Time and Time Again (2005)"
+            },
+            {
+                    "name": "AVENGERS: THE COMPLETE CELESTIAL MADONNA SAGA TPB (2017)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Avengers: Earth's Mightiest Heroes (2004) #4",
+              "type": "cover"
+            },
+            {
+                    "name": "4 of 8 - 8XLS",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "4 of 6 - Sidekicks",
+              "type": "cover"
+            },
+            {
+                    "name": "Avengers and Power Pack Assemble! (2006) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "3 of 4 - 4XLS",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Avengers and Power Pack Assemble! (2006) #4",
+              "type": "cover"
+            },
+            {
+                    "name": "4 of 4 - 4XLS",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "The Challenge of...the Watcher!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four (1961) #323",
+              "type": "cover"
+            },
+            {
+                    "name": "Orphan of the Storm!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four (1961) #324",
+              "type": "cover"
+            },
+            {
+                    "name": "I Die Like the Stars!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four (1961) #325",
+              "type": "cover"
+            },
+            {
+                    "name": "A Christmas Tale",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four (1961) #330",
+              "type": "cover"
+            },
+            {
+                    "name": "Good Dreams!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four (1961) #338",
+              "type": "cover"
+            },
+            {
+                    "name": "Kangs for the Memories!!!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Rama-Tut",
+              "type": "pinup"
+            },
+            {
+                    "name": "AVENGERS (1963) #11",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Age of Ultron"
+            },
+            {
+                    "name": "Crossing"
+            },
+            {
+                    "name": "Inferno"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009384/kang?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Kang?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009384/kang?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1014983,
+        "name": "Karen O'Malley",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/b0/4cd05c8be4587",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/3416/karen_omalley?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1014983/karen_omalley?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011357,
+        "name": "Karen Page",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Daredevil (1998) #2"
+            },
+            {
+                    "name": "Daredevil (1998) #3"
+            },
+            {
+                    "name": "Daredevil (1998) #4"
+            },
+            {
+                    "name": "Daredevil (1998) #9"
+            },
+            {
+                    "name": "Daredevil (1964) #81"
+            },
+            {
+                    "name": "Daredevil (1964) #227"
+            },
+            {
+                    "name": "Daredevil (1964) #228"
+            },
+            {
+                    "name": "Daredevil (1964) #229"
+            },
+            {
+                    "name": "Daredevil (1964) #230"
+            },
+            {
+                    "name": "Daredevil (1964) #231"
+            },
+            {
+                    "name": "Daredevil (1964) #232"
+            },
+            {
+                    "name": "Daredevil (1964) #233"
+            },
+            {
+                    "name": "Daredevil (1964) #255"
+            },
+            {
+                    "name": "Daredevil (1964) #259"
+            },
+            {
+                    "name": "Daredevil (1964) #260"
+            },
+            {
+                    "name": "Daredevil (1964) #369"
+            },
+            {
+                    "name": "Daredevil (1964) #371"
+            },
+            {
+                    "name": "Daredevil Annual (1967) #1"
+            },
+            {
+                    "name": "Daredevil Legends Vol. I: Daredevil: Yellow (Trade Paperback)"
+            },
+            {
+                    "name": "Daredevil Visionaries: Kevin Smith (Daredevil Vol. I: Guardian Devil) (Trade Paperback)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Daredevil (1998 - 2011)"
+            },
+            {
+                    "name": "Daredevil (1964 - 1998)"
+            },
+            {
+                    "name": "Daredevil Annual (1967 - 1990)"
+            },
+            {
+                    "name": "Daredevil Legends Vol. I: Daredevil: Yellow (1999)"
+            },
+            {
+                    "name": "Daredevil Visionaries: Kevin Smith (Daredevil Vol. I: Guardian Devil) (1999)"
+            },
+            {
+                    "name": "Daredevil Vol. 10: The Widow (2004)"
+            },
+            {
+                    "name": "DAREDEVIL VOL. 6: LOWLIFE TPB (2003)"
+            },
+            {
+                    "name": "Daredevil Vol. II: Parts of a Hole (1999)"
+            },
+            {
+                    "name": "Daredevil: Season One (2012)"
+            },
+            {
+                    "name": "Daredevil: Yellow (2001 - 2002)"
+            },
+            {
+                    "name": "Elektra (1996 - 1998)"
+            },
+            {
+                    "name": "Fantastic Four Annual (1963 - 1994)"
+            },
+            {
+                    "name": "Fantastic Four Omnibus Vol. 2 (2007)"
+            },
+            {
+                    "name": "Marvel Masterworks: Daredevil Vol. 3 (2005)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Interior #534",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #535",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #537",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #538",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #539",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four Annual (1963) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "Bedlam at the Baxter Builing",
+              "type": ""
+            },
+            {
+                    "name": "Daredevil (1964) #227",
+              "type": "cover"
+            },
+            {
+                    "name": "Apocalypse",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Daredevil (1964) #228",
+              "type": "cover"
+            },
+            {
+                    "name": "Purgatory",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Daredevil (1964) #229",
+              "type": "cover"
+            },
+            {
+                    "name": "Pariah",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Daredevil (1964) #230",
+              "type": "cover"
+            },
+            {
+                    "name": "Born Again",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Daredevil (1964) #231",
+              "type": "cover"
+            },
+            {
+                    "name": "Saved",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Daredevil (1964) #232",
+              "type": "cover"
+            },
+            {
+                    "name": "God and Country",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Daredevil (1964) #233",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1011357/karen_page?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Page,_Karen?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011357/karen_page?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011386,
+        "name": "Karma",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/00/50febe78aacca",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Astonishing X-Men (2004) #52"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #56"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #57"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #58"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #59"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #60"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #61"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #62"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #63"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #64"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #65"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #66"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #67"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #68"
+            },
+            {
+                    "name": "New Mutants (2003) #1"
+            },
+            {
+                    "name": "New Mutants (2009) #1"
+            },
+            {
+                    "name": "New Mutants (2009) #1 (BENJAMIN VARIANT)"
+            },
+            {
+                    "name": "New Mutants (2009) #2"
+            },
+            {
+                    "name": "New Mutants (2009) #3"
+            },
+            {
+                    "name": "New Mutants (2009) #4"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Astonishing X-Men (2004 - 2013)"
+            },
+            {
+                    "name": "New Mutants (2003 - 2004)"
+            },
+            {
+                    "name": "New Mutants (2009 - 2012)"
+            },
+            {
+                    "name": "New Mutants by Zeb Wells: The Complete Collection (2018)"
+            },
+            {
+                    "name": "New Mutants Classic Vol. 1 (2006)"
+            },
+            {
+                    "name": "New Mutants Classic Vol. 2 (2007)"
+            },
+            {
+                    "name": "New Mutants Classic Vol. 6 (2010 - Present)"
+            },
+            {
+                    "name": "New Mutants Vol 1: Back to School (2003)"
+            },
+            {
+                    "name": "New Mutants Vol 1: Back to School (2005)"
+            },
+            {
+                    "name": "Uncanny X-Men (1963 - 2011)"
+            },
+            {
+                    "name": "X-Men: Alpha (1995)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "New Mutants (2003) #8",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #597",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "New Mutants (2003) #5",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #1297",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "New Mutants (2003) #10",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #1597",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "New Mutants (2003) #9",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #1889",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "New Mutants (2003) #12",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #1902",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "New Mutants (2003) #13",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #1904",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "New Mutants (2003) #7",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #2080",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "New Mutants (2003) #11",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #2156",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "New Mutants (2003) #6",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #2534",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "New Mutants (2003) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "The Wind Knows My Name",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Age of Apocalypse"
+            },
+            {
+                    "name": "Fear Itself"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1121/karma?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Karma?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011386/karma?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009385,
+        "name": "Karnak",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/52740e5d96fcc",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "All-New X-Men: Inevitable Vol. 4 - IVX (Trade Paperback)"
+            },
+            {
+                    "name": "Avengers (1963) #188"
+            },
+            {
+                    "name": "Avengers Academy (2010) #2 (2ND PRINTING VARIANT)"
+            },
+            {
+                    "name": "CIVIL WAR II FALLOUT TPB (Trade Paperback)"
+            },
+            {
+                    "name": "Civil War II: Ulysses (2016) #1"
+            },
+            {
+                    "name": "Civil War II: Ulysses (2016) #2"
+            },
+            {
+                    "name": "Civil War II: Ulysses (2016) #3"
+            },
+            {
+                    "name": "Civil War II: Ulysses (2016) #4"
+            },
+            {
+                    "name": "Civil War II: Ulysses (2016) #5"
+            },
+            {
+                    "name": "Civil War II: Ulysses (2016) #6"
+            },
+            {
+                    "name": "Daredevil (2015) #12"
+            },
+            {
+                    "name": "Daredevil (1964) #275"
+            },
+            {
+                    "name": "Daredevil (1964) #278"
+            },
+            {
+                    "name": "Daredevil (1964) #279"
+            },
+            {
+                    "name": "Daredevil (1964) #281"
+            },
+            {
+                    "name": "Daredevil Epic Collection: Heart of Darkness (Trade Paperback)"
+            },
+            {
+                    "name": "Earth X (1999) #1"
+            },
+            {
+                    "name": "Earth X (1999) #2"
+            },
+            {
+                    "name": "Earth X (1999) #3"
+            },
+            {
+                    "name": "Earth X (1999) #4"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "All-New X-Men: Inevitable Vol. 4 - IVX (2017)"
+            },
+            {
+                    "name": "Avengers (1963 - 1996)"
+            },
+            {
+                    "name": "Avengers Academy (2010 - 2012)"
+            },
+            {
+                    "name": "CIVIL WAR II FALLOUT TPB (2017)"
+            },
+            {
+                    "name": "Civil War II: Ulysses (2016)"
+            },
+            {
+                    "name": "Daredevil (2015 - 2018)"
+            },
+            {
+                    "name": "Daredevil (1964 - 1998)"
+            },
+            {
+                    "name": "Daredevil Epic Collection: Heart of Darkness (2017)"
+            },
+            {
+                    "name": "Earth X (1999 - 2000)"
+            },
+            {
+                    "name": "EARTH X TPB (2006)"
+            },
+            {
+                    "name": "Essential Fantastic Four Vol. 4 (2005)"
+            },
+            {
+                    "name": "Fantastic Four (1961 - 1998)"
+            },
+            {
+                    "name": "Fantastic Four (1996 - 1997)"
+            },
+            {
+                    "name": "Fantastic Four (1998 - 2012)"
+            },
+            {
+                    "name": "Fantastic Four Annual (1963 - 1994)"
+            },
+            {
+                    "name": "FANTASTIC FOUR VISIONARIES: JOHN BYRNE VOL. 2 TPB (2004)"
+            },
+            {
+                    "name": "Fantastic Four/Inhumans (2007)"
+            },
+            {
+                    "name": "Heroes Reborn: Fantastic Four (2006)"
+            },
+            {
+                    "name": "Incredible Hulk (1962 - 1999)"
+            },
+            {
+                    "name": "Inhuman (2014 - 2015)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Ultimate Fantastic Four Annual (2005) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "1 of 1 - Inhumans",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four (1961) #248",
+              "type": "cover"
+            },
+            {
+                    "name": "Nightmare!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "The Marvel Rage!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Suddenly ... The Secret Defenders",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "It's Always Darkest Before the ... DOOM!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four (1961) #391",
+              "type": "cover"
+            },
+            {
+                    "name": "If Death Be Our Destiny--!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "At the Mercy of Maximus!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Avengers (1963) #188",
+              "type": "cover"
+            },
+            {
+                    "name": "Fantastic Four Annual (1963) #5",
+              "type": "cover"
+            },
+            {
+                    "name": "Divide and Conquer",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover #16111",
+              "type": "cover"
+            },
+            {
+                    "name": "Heart of Darkness !",
+              "type": "cover"
+            },
+            {
+                    "name": "By The Hand of Mephisto !",
+              "type": "cover"
+            },
+            {
+                    "name": "By Demons Deluged !",
+              "type": "cover"
+            },
+            {
+                    "name": "Incredible Hulk (1962) #175",
+              "type": "cover"
+            },
+            {
+                    "name": "Man-Brute In the Hidden Land",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Endgame Part 3: Lunar Opposition",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Acts of Vengeance!"
+            },
+            {
+                    "name": "Inhumanity"
+            },
+            {
+                    "name": "Inhumans Vs. X-Men"
+            },
+            {
+                    "name": "Marvel NOW!"
+            },
+            {
+                    "name": "Secret Empire"
+            },
+            {
+                    "name": "Secret Invasion"
+            },
+            {
+                    "name": "The Thanos Imperative"
+            },
+            {
+                    "name": "War of Kings"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1122/karnak?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Karnak?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009385/karnak?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010752,
+        "name": "Karolina Dean ",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/50/4c00377435871",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Runaways (2005) #1"
+            },
+            {
+                    "name": "Runaways (2017) #3"
+            },
+            {
+                    "name": "Runaways (2008) #10"
+            },
+            {
+                    "name": "Runaways (2005) #18"
+            },
+            {
+                    "name": "Runaways (2005) #27"
+            },
+            {
+                    "name": "Runaways by Rainbow Rowell Vol. 1: Find Your Way Home (Trade Paperback)"
+            },
+            {
+                    "name": "Runaways Vol. 10: Rock Zombies (Trade Paperback)"
+            },
+            {
+                    "name": "RUNAWAYS VOL. 4: TRUE BELIEVERS DIGEST (Digest)"
+            },
+            {
+                    "name": "Runaways Vol. 9: Dead Wrong (Trade Paperback)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Runaways (2005 - 2008)"
+            },
+            {
+                    "name": "Runaways (2008 - 2009)"
+            },
+            {
+                    "name": "Runaways (2017 - Present)"
+            },
+            {
+                    "name": "Runaways by Rainbow Rowell Vol. 1: Find Your Way Home (2018)"
+            },
+            {
+                    "name": "Runaways Vol. 10: Rock Zombies (2018)"
+            },
+            {
+                    "name": "RUNAWAYS VOL. 4: TRUE BELIEVERS DIGEST (2005)"
+            },
+            {
+                    "name": "Runaways Vol. 9: Dead Wrong (2018)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "1 of 6 - In with the New",
+              "type": "cover"
+            },
+            {
+                    "name": "5 of 5 - Parental Guidance",
+              "type": "cover"
+            },
+            {
+                    "name": "Dead End Kids 3 of 6",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #53571",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "cover from Runaways (2017) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from RUNAWAYS VOL. 9: DEAD WRONG TPB (2018) #9",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from RUNAWAYS BY RAINBOW ROWELL VOL. 1: FIND YOUR WAY HOME TPB (2018) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from RUNAWAYS VOL. 10: ROCK ZOMBIES TPB (2018) #10",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2818/karolina_dean_?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Lucy_In_The_Sky?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010752/karolina_dean_?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010783,
+        "name": "Kat Farrell",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Deadline (2002) #1"
+            },
+            {
+                    "name": "Deadline (2002) #2"
+            },
+            {
+                    "name": "Deadline (2002) #3"
+            },
+            {
+                    "name": "Deadline (2002) #4"
+            },
+            {
+                    "name": "Deadline Vol. I (Trade Paperback)"
+            },
+            {
+                    "name": "The Mighty Avengers (2007) #4"
+            },
+            {
+                    "name": "Mighty Avengers Vol. 1: The Ultron Initiative (Trade Paperback)"
+            },
+            {
+                    "name": "New Avengers (2004) #14"
+            },
+            {
+                    "name": "New Avengers (2004) #15"
+            },
+            {
+                    "name": "New Avengers Vol. 3: Secrets & Lies (Trade Paperback)"
+            },
+            {
+                    "name": "Spider-Man: The Daily Bugle (Trade Paperback)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Deadline (2002)"
+            },
+            {
+                    "name": "Deadline Vol. I (2002)"
+            },
+            {
+                    "name": "Mighty Avengers Vol. 1: The Ultron Initiative (2008)"
+            },
+            {
+                    "name": "New Avengers (2004 - 2010)"
+            },
+            {
+                    "name": "New Avengers Vol. 3: Secrets & Lies (2006)"
+            },
+            {
+                    "name": "Spider-Man: The Daily Bugle (2017)"
+            },
+            {
+                    "name": "The Mighty Avengers (2007 - 2010)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "1 of 2 - Spider-Woman",
+              "type": "cover"
+            },
+            {
+                    "name": "2 of 2 - Spider-Woman",
+              "type": "cover"
+            },
+            {
+                    "name": "4 of 6 - Ultron; THE INITIATIVE BANNER",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover #43740",
+              "type": "cover"
+            },
+            {
+                    "name": "Deadline 1 cover",
+              "type": "cover"
+            },
+            {
+                    "name": "Deadline 3 cover",
+              "type": "cover"
+            },
+            {
+                    "name": "Deadline 4 cover",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from SPIDER-MAN: THE DAILY BUGLE TPB (2017) #1",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Initiative"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2827/kat_farrell?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010783/kat_farrell?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010810,
+        "name": "Kate Bishop",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/60/4c0035f5b8c95",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "All-New Hawkeye (2015) #1"
+            },
+            {
+                    "name": "All-New Hawkeye (2015) #2"
+            },
+            {
+                    "name": "All-New Hawkeye (2015) #3"
+            },
+            {
+                    "name": "All-New Hawkeye (2015) #4"
+            },
+            {
+                    "name": "All-New Hawkeye (2015) #5"
+            },
+            {
+                    "name": "Avengers: The Children's Crusade - Young Avengers (2010) #1"
+            },
+            {
+                    "name": "Civil War: Young Avengers & Runaways (2006) #1"
+            },
+            {
+                    "name": "Civil War: Young Avengers & Runaways (2006) #2"
+            },
+            {
+                    "name": "Civil War: Young Avengers & Runaways (2006) #3"
+            },
+            {
+                    "name": "Civil War: Young Avengers & Runaways (2006) #4"
+            },
+            {
+                    "name": "Hawkeye (2016) #2"
+            },
+            {
+                    "name": "Siege: Young Avengers (2010) #1"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "All-New Hawkeye (2015)"
+            },
+            {
+                    "name": "Avengers: The Children's Crusade - Young Avengers (2010)"
+            },
+            {
+                    "name": "Civil War: Young Avengers & Runaways (2006)"
+            },
+            {
+                    "name": "Hawkeye (2016 - 2018)"
+            },
+            {
+                    "name": "Siege: Young Avengers (2010)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "1 of 4",
+              "type": "cover"
+            },
+            {
+                    "name": "2 of 4",
+              "type": "cover"
+            },
+            {
+                    "name": "3 of 4",
+              "type": "cover"
+            },
+            {
+                    "name": "4 of 4",
+              "type": "cover"
+            },
+            {
+                    "name": "Cover #74200",
+              "type": "cover"
+            },
+            {
+                    "name": "Avengers: The Children's Crusade - Young Avengers (2010) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from All-New Hawkeye (2015) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from All-New Hawkeye (2015) #2",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from All-New Hawkeye (2015) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from All-New Hawkeye (2015) #4",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from All-New Hawkeye (2015) #5",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Hawkeye (2016) #2",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Civil War"
+            },
+            {
+                    "name": "Siege"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2834/kate_bishop?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Hawkeye_%28Kate_Bishop%29?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010810/kate_bishop?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011250,
+        "name": "Katie Power",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/90/4ce5a5bf6b872",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Avengers Next (2006) #2"
+            },
+            {
+                    "name": "Avengers Next (2006) #3"
+            },
+            {
+                    "name": "Avengers Next (2006) #4"
+            },
+            {
+                    "name": "Avengers Next (2006) #5"
+            },
+            {
+                    "name": "New Mutants (1983) #49"
+            },
+            {
+                    "name": "Power Pack (2017) #63"
+            },
+            {
+                    "name": "Thor and the Warriors Four (2010) #1"
+            },
+            {
+                    "name": "Thor and the Warriors Four (2010) #2"
+            },
+            {
+                    "name": "Thor and the Warriors Four (2010) #3"
+            },
+            {
+                    "name": "Thor and the Warriors Four (2010) #4"
+            },
+            {
+                    "name": "X-Factor Annual (1986) #2"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Avengers Next (2006 - 2007)"
+            },
+            {
+                    "name": "New Mutants (1983 - 1991)"
+            },
+            {
+                    "name": "Power Pack (2017)"
+            },
+            {
+                    "name": "Thor and the Warriors Four (2010)"
+            },
+            {
+                    "name": "X-Factor Annual (1986 - 1994)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Interior #6262",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Avengers Next (2006) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #6264",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Avengers Next (2006) #4",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #6266",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Avengers Next (2006) #5",
+              "type": "cover"
+            },
+            {
+                    "name": "5 of 5 - Story A - 5XLS",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "NEW MUTANTS (1983) #49",
+              "type": "cover"
+            },
+            {
+                    "name": "The Man in the Moon",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Thor and the Warriors Four (2010) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "Thor and the Warriors Four (2010) #2",
+              "type": "cover"
+            },
+            {
+                    "name": "Thor and the Warriors Four (2010) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "Thor and the Warriors Four (2010) #4",
+              "type": "cover"
+            },
+            {
+                    "name": "Avengers Next (2006) #2",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Power Pack (2017) #125",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2896/katie_power?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011250/katie_power?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011319,
+        "name": "Ken Ellis",
+        "description": "Former Daily Bugle and current DB! reporter Ken Ellis first made a splash during the public debut of Ben Reilly as the Scarlet Spider, providing the new costumed hero with his name following a pitched battle with Venom.",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/80/4c002e50c1a87",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Daily Bugle (1996) #1"
+            },
+            {
+                    "name": "Daily Bugle (1996) #2"
+            },
+            {
+                    "name": "Daily Bugle (1996) #3"
+            },
+            {
+                    "name": "The Amazing Spider-Man (1963) #409"
+            },
+            {
+                    "name": "Venom: Separation Anxiety (1994) #3"
+            },
+            {
+                    "name": "Venom: Separation Anxiety (1994) #4"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Daily Bugle (1996 - 1997)"
+            },
+            {
+                    "name": "The Amazing Spider-Man (1963 - 1998)"
+            },
+            {
+                    "name": "Venom: Separation Anxiety (1994 - 1995)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Amazing Spider-Man (1963) #409",
+              "type": "cover"
+            },
+            {
+                    "name": "cover to Venom: Separation Anxiety (1994) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "cover to Venom: Separation Anxiety (1994) #4",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Daily Bugle (1996) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Daily Bugle (1996) #2",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Daily Bugle (1996) #3",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2912/ken_ellis?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Ellis,_Ken?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011319/ken_ellis?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009386,
+        "name": "Khan",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1127/khan?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009386/khan?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010893,
+        "name": "Kid Colt",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Fantastic Four (1998) #33"
+            },
+            {
+                    "name": "Fantastic Four (1998) #34"
+            },
+            {
+                    "name": "Indestructible Hulk (2012) #12"
+            },
+            {
+                    "name": "Kid Colt (2009) #1"
+            },
+            {
+                    "name": "Kid Colt (2009) #2"
+            },
+            {
+                    "name": "Kid Colt (2009) #3"
+            },
+            {
+                    "name": "Kid Colt (2009) #4"
+            },
+            {
+                    "name": "Rawhide Kid (1955) #64"
+            },
+            {
+                    "name": "Rawhide Kid (1955) #67"
+            },
+            {
+                    "name": "Two-Gun Kid (1948) #14"
+            },
+            {
+                    "name": "Two-Gun Kid (1948) #15"
+            },
+            {
+                    "name": "Two-Gun Kid (1948) #19"
+            },
+            {
+                    "name": "Two-Gun Kid (1948) #88"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Fantastic Four (1998 - 2012)"
+            },
+            {
+                    "name": "Indestructible Hulk (2012 - 2014)"
+            },
+            {
+                    "name": "Kid Colt (2009)"
+            },
+            {
+                    "name": "Rawhide Kid (1955 - 1979)"
+            },
+            {
+                    "name": "Two-Gun Kid (1948 - 1977)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Fantastic Four (1998) #33",
+              "type": "cover"
+            },
+            {
+                    "name": "A Town Called Revelation",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four (1998) #34",
+              "type": "cover"
+            },
+            {
+                    "name": "A Nice Day for Oblivion",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "The Deadly Double",
+              "type": ""
+            },
+            {
+                    "name": "Dixie Or Die",
+              "type": ""
+            },
+            {
+                    "name": "[I told yuh it's no use tryin', Ted!",
+              "type": ""
+            },
+            {
+                    "name": "The New Sheriff",
+              "type": ""
+            },
+            {
+                    "name": "[I'm letting you off easy this time, Crane!",
+              "type": ""
+            },
+            {
+                    "name": "The Making of a Man",
+              "type": ""
+            },
+            {
+                    "name": "Interior #56446",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #56448",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #56450",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #56452",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Indestructible Hulk (2012) #12",
+              "type": "cover"
+            },
+            {
+                    "name": "story from Indestructible Hulk (2012) #12",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1135/kid_colt?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010893/kid_colt?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011397,
+        "name": "Killer Shrike",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Elektra (1996) #6"
+            },
+            {
+                    "name": "Marc Spector: Moon Knight (1989) #10"
+            },
+            {
+                    "name": "Spider-Man Legends Vol. 2: Todd Mcfarlane Book II (Trade Paperback)"
+            },
+            {
+                    "name": "The Amazing Spider-Man (1963) #310"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Elektra (1996 - 1998)"
+            },
+            {
+                    "name": "Marc Spector: Moon Knight (1989 - 1994)"
+            },
+            {
+                    "name": "Spider-Man Legends Vol. 2: Todd Mcfarlane Book II (2003)"
+            },
+            {
+                    "name": "The Amazing Spider-Man (1963 - 1998)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Amazing Spider-Man (1963) #310",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Marc Spector: Moon Knight (1989) #10",
+              "type": "cover"
+            },
+            {
+                    "name": "cover to Elektra (1996) #6",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2928/killer_shrike?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011397/killer_shrike?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011289,
+        "name": "Killmonger",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Black Panther (2018) #19"
+            },
+            {
+                    "name": "Black Panther (2005) #36"
+            },
+            {
+                    "name": "Black Panther (2005) #37"
+            },
+            {
+                    "name": "Black Panther (2005) #38"
+            },
+            {
+                    "name": "Black Panther: Killmonger - By Any Means (Trade Paperback)"
+            },
+            {
+                    "name": "Iron Man Annual (1976) #5"
+            },
+            {
+                    "name": "Jungle Action (1972) #6"
+            },
+            {
+                    "name": "Jungle Action (1972) #7"
+            },
+            {
+                    "name": "Jungle Action (1972) #8"
+            },
+            {
+                    "name": "Jungle Action (1972) #12"
+            },
+            {
+                    "name": "Jungle Action (1972) #13"
+            },
+            {
+                    "name": "Jungle Action (1972) #14"
+            },
+            {
+                    "name": "Jungle Action (1972) #15"
+            },
+            {
+                    "name": "Jungle Action (1972) #16"
+            },
+            {
+                    "name": "Jungle Action (1972) #17"
+            },
+            {
+                    "name": "Jungle Action (1972) #18"
+            },
+            {
+                    "name": "Killmonger (2018) #1"
+            },
+            {
+                    "name": "Killmonger (2018) #2"
+            },
+            {
+                    "name": "Killmonger (2018) #3"
+            },
+            {
+                    "name": "Killmonger (2018) #4"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Black Panther (2018 - 2020)"
+            },
+            {
+                    "name": "Black Panther (2005 - 2008)"
+            },
+            {
+                    "name": "Black Panther: Killmonger - By Any Means (2019)"
+            },
+            {
+                    "name": "Iron Man Annual (1976 - 1994)"
+            },
+            {
+                    "name": "Jungle Action (1972 - 1976)"
+            },
+            {
+                    "name": "Killmonger (2018 - 2019)"
+            },
+            {
+                    "name": "Marvel's Black Panther Prelude (2018)"
+            },
+            {
+                    "name": "Marvel's Black Panther: The Art of the Movie Slipcase (2018)"
+            },
+            {
+                    "name": "Rise of the Black Panther (2018)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Cover #42597",
+              "type": "cover"
+            },
+            {
+                    "name": "Cover #45316",
+              "type": "cover"
+            },
+            {
+                    "name": "Cover #46794",
+              "type": "cover"
+            },
+            {
+                    "name": "Cover #47116",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from MARVEL'S BLACK PANTHER PRELUDE TPB (2018) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from MARVEL'S BLACK PANTHER: THE ART OF THE MOVIE HC SLIPCASE (2018) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "cover to Jungle Action (1973) #6",
+              "type": "cover"
+            },
+            {
+                    "name": "cover to Jungle Action (1973) #7",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Rise of the Black Panther (2018) #6",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Jungle Action (1972) #8",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Jungle Action (1972) #12",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Jungle Action (1972) #13",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Jungle Action (1972) #14",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Jungle Action (1972) #15",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Jungle Action (1972) #16",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Jungle Action (1972) #17",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Jungle Action (1972) #18",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Killmonger (2018) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Killmonger (2018) #2",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Killmonger (2018) #3",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1143/killmonger?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Killmonger,_Erik?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011289/killmonger?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011116,
+        "name": "Killraven",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Amazing Adventures (1970) #18"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #19"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #20"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #21"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #22"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #23"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #24"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #25"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #26"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #27"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #28"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #29"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #30"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #31"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #32"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #33"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #34"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #35"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #36"
+            },
+            {
+                    "name": "Amazing Adventures (1970) #37"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Amazing Adventures (1970 - 1976)"
+            },
+            {
+                    "name": "Avengers (2010 - 2012)"
+            },
+            {
+                    "name": "Killraven (2002 - 2003)"
+            },
+            {
+                    "name": "KILLRAVEN PREMIERE HC (2007)"
+            },
+            {
+                    "name": "Killraven: Warrior of the Worlds (1983)"
+            },
+            {
+                    "name": "Marvel Fanfare (1982 - 1992)"
+            },
+            {
+                    "name": "Marvel Masterworks: Killraven Vol. 1 (2018)"
+            },
+            {
+                    "name": "Marvel Zombies 5 (2010)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "pin-up",
+              "type": ""
+            },
+            {
+                    "name": "Cover #42542",
+              "type": "cover"
+            },
+            {
+                    "name": "[untitled]",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "[untitled]",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover #42545",
+              "type": "cover"
+            },
+            {
+                    "name": "[untitled]",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover #42547",
+              "type": "cover"
+            },
+            {
+                    "name": "[untitled]",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "[untitled]",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover #42550",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #42551",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #42552",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover #42553",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #42554",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover #42555",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #42556",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "They Call Him -- Killraven!",
+              "type": "cover"
+            },
+            {
+                    "name": "The War of the Worlds!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Amazing Mail",
+              "type": "text article"
+            },
+            {
+                    "name": "The Sirens of Seventh Avenue!",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1146/killraven?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Killraven?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011116/killraven?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009388,
+        "name": "King Bedlam",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "X-Force (1991) #87"
+            },
+            {
+                    "name": "X-Force (1991) #88"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "X-Force (1991 - 2004)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "The Future of X-Force is In The Cards",
+              "type": "cover"
+            },
+            {
+                    "name": "Battle With the New Hellions Round 1",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009388/king_bedlam?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009388/king_bedlam?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010842,
+        "name": "King Cobra",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Captain America (1968) #180"
+            },
+            {
+                    "name": "Captain America and the Falcon: Nomad (Trade Paperback)"
+            },
+            {
+                    "name": "Fantastic Four Annual (1963) #3"
+            },
+            {
+                    "name": "Fantastic Four Omnibus Vol. 2 (Hardcover)"
+            },
+            {
+                    "name": "Thor (1966) #440"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Captain America (1968 - 1996)"
+            },
+            {
+                    "name": "Captain America and the Falcon: Nomad (2006)"
+            },
+            {
+                    "name": "Fantastic Four Annual (1963 - 1994)"
+            },
+            {
+                    "name": "Fantastic Four Omnibus Vol. 2 (2007)"
+            },
+            {
+                    "name": "Thor (1966 - 1996)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Fantastic Four Annual (1963) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "Bedlam at the Baxter Builing",
+              "type": ""
+            },
+            {
+                    "name": "Captain America (1968) #180",
+              "type": "cover"
+            },
+            {
+                    "name": "The Coming of The Nomad!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Thor (1966) #440",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2839/king_cobra?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/King%20Cobra?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010842/king_cobra?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009389,
+        "name": "Kingpin",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/60/526034fb5aff7",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Amazing Spider-Girl (2006) #5"
+            },
+            {
+                    "name": "Amazing Spider-Girl (2006) #17"
+            },
+            {
+                    "name": "The Amazing Spider-Man (1963) #336"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #538"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #541"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #542"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #640"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #648"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #649"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #649 (2ND PRINTING VARIANT)"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #650"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #650 (2ND PRINTING VARIANT)"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #651"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #651 (2nd Printing Variant)"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #651 (TRON VARIANT)"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #674"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #690"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #697"
+            },
+            {
+                    "name": "Amazing Spider-Man Annual (1964) #19"
+            },
+            {
+                    "name": "Amazing Spider-Man: Family Business (Trade Paperback)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Amazing Spider-Girl (2006 - 2009)"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999 - 2013)"
+            },
+            {
+                    "name": "Amazing Spider-Man Annual (1964 - 2018)"
+            },
+            {
+                    "name": "Amazing Spider-Man: Family Business (2018)"
+            },
+            {
+                    "name": "Amazing Spider-Man: Family Business (2013)"
+            },
+            {
+                    "name": "Black Panther: The Most Dangerous Man Alive  (2010 - 2012)"
+            },
+            {
+                    "name": "Captain America (2018 - Present)"
+            },
+            {
+                    "name": "Captain America (1968 - 1996)"
+            },
+            {
+                    "name": "Civil War II: Kingpin (2016)"
+            },
+            {
+                    "name": "Civil War: War Crimes (2007)"
+            },
+            {
+                    "name": "Civil War: War Crimes (2006)"
+            },
+            {
+                    "name": "Code of Honor (1997)"
+            },
+            {
+                    "name": "Daredevil (1964 - 1998)"
+            },
+            {
+                    "name": "Daredevil (2015 - 2018)"
+            },
+            {
+                    "name": "Daredevil (2019 - Present)"
+            },
+            {
+                    "name": "Daredevil (1998 - 2011)"
+            },
+            {
+                    "name": "Daredevil by Ed Brubaker & Michael Lark Omnibus Vol. 2 (2017)"
+            },
+            {
+                    "name": "Daredevil Saga (2008)"
+            },
+            {
+                    "name": "Daredevil Visionaries: Kevin Smith (Daredevil Vol. I: Guardian Devil) (1999)"
+            },
+            {
+                    "name": "Daredevil Vol. 4: Underboss (2004)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "4 of 6 - The Devil in Cell Block D",
+              "type": "cover"
+            },
+            {
+                    "name": "5 of 6 - The Devil in Cell Block D",
+              "type": "cover"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #538",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #1611",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #1613",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #1615",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Spectacular Spider-Man (2003) #21",
+              "type": "cover"
+            },
+            {
+                    "name": "1 of 1 - Card Game",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Spectacular Spider-Man (2003) #23",
+              "type": "cover"
+            },
+            {
+                    "name": "1 of 4 - Gwen",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Whatever happened to Turk? Just how many times HAS Elektra died and come back to life? And who the heck is Mike Murdock?! Find o",
+              "type": "cover"
+            },
+            {
+                    "name": "Ghost Rider (2005) #4",
+              "type": "cover"
+            },
+            {
+                    "name": "4 of 6 - The Road to Damnation",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Ghost Rider (2005) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "3 of 6 - The Road to Damnation",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Ghost Rider (2005) #5",
+              "type": "cover"
+            },
+            {
+                    "name": "5 of 6 - The Road to Damnation",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover #6282",
+              "type": "cover"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #539",
+              "type": "cover"
+            },
+            {
+                    "name": "2 of 6 - Death of the Dream",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Acts of Vengeance!"
+            },
+            {
+                    "name": "Civil War"
+            },
+            {
+                    "name": "Secret Empire"
+            },
+            {
+                    "name": "Secret Wars"
+            },
+            {
+                    "name": "Secret Wars II"
+            },
+            {
+                    "name": "Shadowland"
+            },
+            {
+                    "name": "Spider-Island"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1150/kingpin?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Kingpin?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009389/kingpin?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011308,
+        "name": "Kinsey Walden",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2909/kinsey_walden?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Walden,_Kinsey?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011308/kinsey_walden?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009508,
+        "name": "Kitty Pryde",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/4/03/5261677b30b64",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "A+X (2012) #2"
+            },
+            {
+                    "name": "A+X (2012) #8"
+            },
+            {
+                    "name": "All-New X-Men (2012) #1"
+            },
+            {
+                    "name": "All-New X-Men (2012) #2"
+            },
+            {
+                    "name": "All-New X-Men (2012) #6"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #1"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #2"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #3"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #4"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #5"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #6"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #7"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #8"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #9"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #10"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #11"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #12"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #13"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #14"
+            },
+            {
+                    "name": "Astonishing X-Men (2004) #15"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "A+X (2012 - 2014)"
+            },
+            {
+                    "name": "All-New X-Men (2012 - 2015)"
+            },
+            {
+                    "name": "Astonishing X-Men (2004 - 2013)"
+            },
+            {
+                    "name": "Astonishing X-Men by Joss Whedon & John Cassaday (2009 - Present)"
+            },
+            {
+                    "name": "Astonishing X-Men Vol. 1 (2006)"
+            },
+            {
+                    "name": "Astonishing X-Men Vol. 1: Gifted (2004)"
+            },
+            {
+                    "name": "Astonishing X-Men Vol. 2: Dangerous (2005)"
+            },
+            {
+                    "name": "Astonishing X-Men Vol. 3: Torn (2007)"
+            },
+            {
+                    "name": "Astonishing X-Men Vol. 4: Unstoppable (2008)"
+            },
+            {
+                    "name": "Avengers (1998 - 2004)"
+            },
+            {
+                    "name": "Avengers Assemble (2004)"
+            },
+            {
+                    "name": "Cable (2008 - 2010)"
+            },
+            {
+                    "name": "Cable (1993 - 2002)"
+            },
+            {
+                    "name": "Cable and X-Force (2012 - 2014)"
+            },
+            {
+                    "name": "CLANDESTINE CLASSIC PREMIERE HC (2008)"
+            },
+            {
+                    "name": "Deadpool (1997 - 2002)"
+            },
+            {
+                    "name": "Excalibur (1988 - 1998)"
+            },
+            {
+                    "name": "Excalibur Epic Collection: Girls' School From Heck (2019)"
+            },
+            {
+                    "name": "Excalibur Epic Collection: The Cross-Time Caper (2018)"
+            },
+            {
+                    "name": "Excalibur Visionaries: Alan Davis Vol. 3 TPB (2010 - Present)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "5 of 5 - World's End",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "1 of 2 - Mojo Rising",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "2 of 2 - Mojo Rising",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "1 of 4 - Season of the Witch",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "2 of 3 - Grey's End",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "3 of 3 - Grey's End",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "ULTIMATE SPIDER-MAN (2000) #88",
+              "type": "cover"
+            },
+            {
+                    "name": "ULTIMATE X-MEN (2000) #43",
+              "type": "cover"
+            },
+            {
+                    "name": "ULTIMATE X-MEN (2000) #44",
+              "type": "cover"
+            },
+            {
+                    "name": "ULTIMATE X-MEN (2000) #73",
+              "type": "cover"
+            },
+            {
+                    "name": "6 of 6 - Enemy of the State",
+              "type": "cover"
+            },
+            {
+                    "name": "X-MEN: THE END - MEN AND X-MEN (2006) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "Cover for Astonishing X-Men (2004) #7",
+              "type": "cover"
+            },
+            {
+                    "name": "1 of 6 - Dangerous",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #3308",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #3310",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #3318",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "“GIFTED” 5 (OF 6)  As demand for the",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover for Astonishing X-Men (2004) #6",
+              "type": "cover"
+            },
+            {
+                    "name": "“GIFTED” PART 6 (OF 6) Outnumbered and outgunned, the X-Men are finally brought together as a team by their newest addition – bu",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Age of Apocalypse"
+            },
+            {
+                    "name": "Avengers VS X-Men"
+            },
+            {
+                    "name": "Enemy of the State"
+            },
+            {
+                    "name": "Fatal Attractions"
+            },
+            {
+                    "name": "Fear Itself"
+            },
+            {
+                    "name": "House of M"
+            },
+            {
+                    "name": "Inhumanity"
+            },
+            {
+                    "name": "Onslaught"
+            },
+            {
+                    "name": "Secret Empire"
+            },
+            {
+                    "name": "Secret Wars"
+            },
+            {
+                    "name": "Secret Wars II"
+            },
+            {
+                    "name": "X-Men: Battle of the Atom"
+            },
+            {
+                    "name": "X-Men: Regenesis"
+            },
+            {
+                    "name": "X-Men: Schism"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009508/kitty_pryde?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Pryde,_Kitty?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009508/kitty_pryde?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1017476,
+        "name": "Kitty Pryde (X-Men: Battle of the Atom)",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/60/52d72adad132a",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/32/kitty_pryde?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1017476/kitty_pryde_x-men_battle_of_the_atom?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009390,
+        "name": "Klaw",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/20/526034e1c6ede",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Avengers (1996) #8"
+            },
+            {
+                    "name": "Avengers (1996) #9"
+            },
+            {
+                    "name": "Avengers (1963) #54"
+            },
+            {
+                    "name": "Avengers (1963) #83"
+            },
+            {
+                    "name": "Avengers (1963) #87"
+            },
+            {
+                    "name": "Avengers (1963) #126"
+            },
+            {
+                    "name": "Black Panther (1977) #14"
+            },
+            {
+                    "name": "Black Panther (1977) #15"
+            },
+            {
+                    "name": "Black Panther (2016) #166"
+            },
+            {
+                    "name": "Black Panther (2016) #167"
+            },
+            {
+                    "name": "Black Panther (2016) #168"
+            },
+            {
+                    "name": "Black Panther (2016) #169"
+            },
+            {
+                    "name": "Black Panther (2016) #171"
+            },
+            {
+                    "name": "Black Panther (2016) #172"
+            },
+            {
+                    "name": "Black Panther Book 5: Avengers of the New World Part 2 (Trade Paperback)"
+            },
+            {
+                    "name": "Black Panther: The Sound and The Fury (2018) #1"
+            },
+            {
+                    "name": "Black Panther: Who Is The Black Panther? Prose Novel (Hardcover)"
+            },
+            {
+                    "name": "Cable (1993) #54"
+            },
+            {
+                    "name": "Cable: The Hellfire Hunt (Trade Paperback)"
+            },
+            {
+                    "name": "Captain America (1998) #21"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Avengers (1996 - 1997)"
+            },
+            {
+                    "name": "Avengers (1963 - 1996)"
+            },
+            {
+                    "name": "Black Panther (2016 - 2018)"
+            },
+            {
+                    "name": "Black Panther (1977 - 1979)"
+            },
+            {
+                    "name": "Black Panther Book 5: Avengers of the New World Part 2 (2018)"
+            },
+            {
+                    "name": "Black Panther: The Sound and The Fury (2018)"
+            },
+            {
+                    "name": "Black Panther: Who Is The Black Panther? Prose Novel (2017)"
+            },
+            {
+                    "name": "Cable (1993 - 2002)"
+            },
+            {
+                    "name": "Cable: The Hellfire Hunt (2017)"
+            },
+            {
+                    "name": "Captain America (1998 - 2002)"
+            },
+            {
+                    "name": "Daredevil (1964 - 1998)"
+            },
+            {
+                    "name": "Earth X (1999 - 2000)"
+            },
+            {
+                    "name": "EARTH X TPB (2006)"
+            },
+            {
+                    "name": "Fantastic Four (1961 - 1998)"
+            },
+            {
+                    "name": "Heroes Reborn: Avengers (2006)"
+            },
+            {
+                    "name": "Jungle Action (1972 - 1976)"
+            },
+            {
+                    "name": "Klaws of the Panther (2010)"
+            },
+            {
+                    "name": "Klaws of the Panther TPB (2010 - Present)"
+            },
+            {
+                    "name": "Marvel Fanfare (1982 - 1992)"
+            },
+            {
+                    "name": "MARVEL MASTERWORKS: THE AVENGERS VOL. 6 HC (2006)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "2 of 2 - Spider-Woman",
+              "type": "cover"
+            },
+            {
+                    "name": "Fantastic Four (1961) #326",
+              "type": "cover"
+            },
+            {
+                    "name": "The Illusion",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four (1961) #327",
+              "type": "cover"
+            },
+            {
+                    "name": "Why?!!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four (1961) #328",
+              "type": "cover"
+            },
+            {
+                    "name": "Bad Dream!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "The Dream is Dead Part Two",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "\"If This Be War--!\"",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "[untitled]",
+              "type": "cover"
+            },
+            {
+                    "name": "Chaos in the Courtroom",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Only Death Be My Salvation!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Fantastic Four (1961) #382",
+              "type": "cover"
+            },
+            {
+                    "name": "\"Captured!\"",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "FANTASTIC FOUR (1961) #56",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS (1963) #126",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS (1963) #54",
+              "type": "cover"
+            },
+            {
+                    "name": "...And Deliver Us from - - the Masters of Evil!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Come On In, The Revolution's Fine",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Look Homeward, Avenger",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Secret Wars"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1156/klaw?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Klaw?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009390/klaw?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1010818,
+        "name": "Komodo (Melati Kusuma)",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/a/30/535ff55a6d8f6",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Avengers: The Initiative (2007) #2"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #3"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #4"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #5"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #6"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #8"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #10"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #11"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #12"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #16"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #17"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #18"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #18 (ZOMBIE VARIANT)"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #19"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #20"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #21"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #22"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #23"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #24"
+            },
+            {
+                    "name": "Fear Itself: Youth in Revolt (2011) #1"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Avengers: The Initiative (2007 - 2010)"
+            },
+            {
+                    "name": "Fear Itself: Youth in Revolt (2011)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #2",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #4",
+              "type": "cover"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #5",
+              "type": "cover"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #6",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #8",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #10",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #11",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #12",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #16",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #17",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #18",
+              "type": "cover"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #18 - Int",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #18, Zombie Variant - Int",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #19",
+              "type": "cover"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #19 - Int",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "AVENGERS: THE INITIATIVE (2007) #20",
+              "type": "cover"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #20 - Int",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #21 - Int",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Avengers: The Initiative (2007) #22 - Int",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Dark Reign"
+            },
+            {
+                    "name": "Initiative"
+            },
+            {
+                    "name": "Secret Invasion"
+            },
+            {
+                    "name": "World War Hulk"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1162/komodo?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010818/komodo_melati_kusuma?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011147,
+        "name": "Korath",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/a0/4c002f7453eaa",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Annihilation: Ronan (2006) #2"
+            },
+            {
+                    "name": "Annihilation: Ronan (2006) #3"
+            },
+            {
+                    "name": "Annihilation: Ronan (2006) #4"
+            },
+            {
+                    "name": "Avengers: Galactic Storm Vol. 2 (Trade Paperback)"
+            },
+            {
+                    "name": "Thor (1966) #446"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Annihilation: Ronan (2006)"
+            },
+            {
+                    "name": "Avengers: Galactic Storm Vol. 2 (2006)"
+            },
+            {
+                    "name": "Thor (1966 - 1996)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Annihilation: Ronan (2006) #2",
+              "type": "cover"
+            },
+            {
+                    "name": "Annihilation: Ronan (2006) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "Annihilation: Ronan (2006) #4",
+              "type": "cover"
+            },
+            {
+                    "name": "Now Strikes the Starforce",
+              "type": ""
+            },
+            {
+                    "name": "Thor (1966) #446",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Annihilation"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1164/korath?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Korath?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011147/korath?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011080,
+        "name": "Korg",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/70/5269581a55d0c",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Hulk (1999) #96"
+            },
+            {
+                    "name": "Hulk (1999) #103"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #607 (MCGUINNESS VARIANT)"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #613"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #614"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #615"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #616"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #617"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #618"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #619"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #620"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #621"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #622"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #623"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #624"
+            },
+            {
+                    "name": "Incredible Hulks (2010) #624 (CAPTAIN AMERICA 70TH ANNIVERSARY VARIANT)"
+            },
+            {
+                    "name": "World War Hulk: Warbound (2007) #1"
+            },
+            {
+                    "name": "World War Hulk: Warbound (2007) #5"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Hulk (1999 - 2008)"
+            },
+            {
+                    "name": "Incredible Hulks (2010 - 2011)"
+            },
+            {
+                    "name": "World War Hulk: Warbound (2007)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "INCREDIBLE HULK (1999) #96",
+              "type": "cover"
+            },
+            {
+                    "name": "WORLD WAR HULK: WARBOUND (2007) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "WORLD WAR HULK: WARBOUND (2007) #5",
+              "type": "cover"
+            },
+            {
+                    "name": "INCREDIBLE HULK (1999) #103",
+              "type": "cover"
+            },
+            {
+                    "name": "INCREDIBLE HULKS (2010) #615",
+              "type": "cover"
+            },
+            {
+                    "name": "Interior #69703",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #69705",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #71182",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior From Incredible Hulks (2009) #619",
+              "type": "interiorStory"
+            },
+            {
+                    "name": " Interior #76109",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #77708",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Interior #79786  ",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "INCREDIBLE HULKS #623",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "INCREDIBLE HULKS (2010) #613",
+              "type": "cover"
+            },
+            {
+                    "name": "Incredible Hulks #622",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Incredible Hulks (2009) #607, MCGUINNESS VARIANT",
+              "type": "cover"
+            },
+            {
+                    "name": "INCREDIBLE HULKS (2010) #614",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Chaos War"
+            },
+            {
+                    "name": "Planet Hulk"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1167/korg?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Korg?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011080/korg?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011312,
+        "name": "Korvac",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/00/4ce5a6396201b",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Avengers Academy (2010) #11"
+            },
+            {
+                    "name": "Avengers Academy (2010) #12"
+            },
+            {
+                    "name": "Captain America (1998) #17"
+            },
+            {
+                    "name": "Captain America (1998) #18"
+            },
+            {
+                    "name": "Captain America & the Korvac Saga (2010) #3"
+            },
+            {
+                    "name": "Captain America by Mark Waid, Ron Garney & Andy Kubert (Hardcover)"
+            },
+            {
+                    "name": "Galactic Guardians (1994) #4"
+            },
+            {
+                    "name": "Guardians of the Galaxy Annual (1991) #1"
+            },
+            {
+                    "name": "MARVEL MASTERWORKS: THE AVENGERS VOL. 17 HC (Hardcover)"
+            },
+            {
+                    "name": "Marvel Masterworks: The Mighty Thor Vol. 16 (Hardcover)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Avengers Academy (2010 - 2012)"
+            },
+            {
+                    "name": "Captain America (1998 - 2002)"
+            },
+            {
+                    "name": "Captain America & the Korvac Saga (2010 - 2011)"
+            },
+            {
+                    "name": "Captain America by Mark Waid, Ron Garney & Andy Kubert (2017)"
+            },
+            {
+                    "name": "Galactic Guardians (1994)"
+            },
+            {
+                    "name": "Guardians of the Galaxy Annual (1991)"
+            },
+            {
+                    "name": "MARVEL MASTERWORKS: THE AVENGERS VOL. 17 HC (2017)"
+            },
+            {
+                    "name": "Marvel Masterworks: The Mighty Thor Vol. 16 (2017)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "1/2 Man, 1/2 Desk: The Life and Times of Korvac",
+              "type": "text article"
+            },
+            {
+                    "name": "Captain America (1998) #18",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Avengers Academy (2010) #11",
+              "type": "cover"
+            },
+            {
+                    "name": "Avengers Academy (2010) #11",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Avengers Academy (2010) #12",
+              "type": "cover"
+            },
+            {
+                    "name": "Captain America and the Korvac Saga #3",
+              "type": "cover"
+            },
+            {
+                    "name": "Guardians of the Galaxy Annual (1991)",
+              "type": "cover"
+            },
+            {
+                    "name": "interior to Guardians of the Galaxy Annual (1991)",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "cover from Marvel Masterworks: The Avengers (2017)",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Marvel Masterworks: The Mighty Thor (2017)",
+              "type": "cover"
+            },
+            {
+                    "name": "interior to Galactic Guardians #4",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "cover from CAPTAIN AMERICA BY MARK WAID, RON GARNEY & ANDY KUBERT OMNIBUS HC (2017) #1",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1168/korvac?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Korvac?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011312/korvac?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1009391,
+        "name": "Kraven the Hunter",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/e0/527410063de71",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "The Amazing Spider-Man (1963) #15"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #635"
+            },
+            {
+                    "name": "Amazing Spider-Man (1999) #635 (50/50 VARIANT)"
+            },
+            {
+                    "name": "Amazing Spider-Man Annual (1964) #1"
+            },
+            {
+                    "name": "Amazing Spider-Man Epic Collection: Spider-Man No More (Trade Paperback)"
+            },
+            {
+                    "name": "AMAZING SPIDER-MAN EPIC COLLECTION: THE GOBLIN'S LAST STAND TPB (Trade Paperback)"
+            },
+            {
+                    "name": "Amazing Spider-Man: Extra! (2008) #2"
+            },
+            {
+                    "name": "Amazing Spider-Man: Extra! (2008) #3"
+            },
+            {
+                    "name": "Avengers 1959 (2011) #1"
+            },
+            {
+                    "name": "Avengers 1959 (2011) #2"
+            },
+            {
+                    "name": "Avengers 1959 (2011) #3"
+            },
+            {
+                    "name": "Avengers 1959 (2011) #4"
+            },
+            {
+                    "name": "Avengers 1959 (2011) #5"
+            },
+            {
+                    "name": "Captain America (2017) #697"
+            },
+            {
+                    "name": "Daredevil (1964) #104"
+            },
+            {
+                    "name": "Deadpool (2019) #4"
+            },
+            {
+                    "name": "Deadpool (1997) #11"
+            },
+            {
+                    "name": "Deadpool: Back in Black (2016) #4"
+            },
+            {
+                    "name": "ESSENTIAL PETER PARKER, THE SPECTACULAR SPIDER-MAN (Trade Paperback)"
+            },
+            {
+                    "name": "MARVEL MASTERWORKS: THE INVINCIBLE IRON MAN VOL. 1 HC (Hardcover)"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Amazing Spider-Man (1999 - 2013)"
+            },
+            {
+                    "name": "Amazing Spider-Man Annual (1964 - 2018)"
+            },
+            {
+                    "name": "Amazing Spider-Man Epic Collection: Spider-Man No More (2018)"
+            },
+            {
+                    "name": "AMAZING SPIDER-MAN EPIC COLLECTION: THE GOBLIN'S LAST STAND TPB (2017)"
+            },
+            {
+                    "name": "Amazing Spider-Man: Extra! (2008 - 2009)"
+            },
+            {
+                    "name": "Avengers 1959 (2011 - 2012)"
+            },
+            {
+                    "name": "Captain America (2017 - 2018)"
+            },
+            {
+                    "name": "Daredevil (1964 - 1998)"
+            },
+            {
+                    "name": "Deadpool (2019 - 2020)"
+            },
+            {
+                    "name": "Deadpool (1997 - 2002)"
+            },
+            {
+                    "name": "Deadpool: Back in Black (2016)"
+            },
+            {
+                    "name": "ESSENTIAL PETER PARKER, THE SPECTACULAR SPIDER-MAN (2005)"
+            },
+            {
+                    "name": "MARVEL MASTERWORKS: THE INVINCIBLE IRON MAN VOL. 1 HC (2005)"
+            },
+            {
+                    "name": "Marvel Super Heroes (1990 - 1993)"
+            },
+            {
+                    "name": "Marvel Universe Ultimate Spider-Man Vs. the Sinister Six (2016 - Present)"
+            },
+            {
+                    "name": "MARVEL UNIVERSE ULTIMATE SPIDER-MAN VS. THE SINISTER SIX VOL. 2 DIGEST (2017)"
+            },
+            {
+                    "name": "Old Man Logan (2016 - 2018)"
+            },
+            {
+                    "name": "Peter Parker, the Spectacular Spider-Man (1976 - 1998)"
+            },
+            {
+                    "name": "Rocket Raccoon (2016 - 2017)"
+            },
+            {
+                    "name": "Spider-Man (1990 - 1998)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Spider-Man: Reign (2006) #2",
+              "type": "cover"
+            },
+            {
+                    "name": "2 of 4 - Reign - 4XLS",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Spider-Man: Reign (2006) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "3 of 4 - Reign - 4XLS",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "In Mortal Combat with Captain America!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover #13546",
+              "type": "cover"
+            },
+            {
+                    "name": "Cover #14314",
+              "type": "cover"
+            },
+            {
+                    "name": "Cover #15717",
+              "type": "cover"
+            },
+            {
+                    "name": " Spider-Man (1990) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "Torment, Part 3",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Torment, Part 4",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Deadpool (1997) #11",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "You Can Call Me Al Part Two",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "[Cover B]",
+              "type": "cover"
+            },
+            {
+                    "name": "\"...As Dreams are Made on...\", Part 2 of 3: In The Nightmare Factory",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "If I Had You",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "All of Me",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "[Cover B]",
+              "type": "cover"
+            },
+            {
+                    "name": "\"...As Dreams are Made on...\", Part 2 of 3: In The Nightmare Factory",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Kraven is the Hunter!",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Kraven's Last Hunt"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009391/kraven_the_hunter?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Kraven_(Sergei_Kravinoff)?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009391/kraven_the_hunter?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011148,
+        "name": "Kree",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/50/53a0b4b5c40f1",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Avengers (1963) #96"
+            },
+            {
+                    "name": "Avengers (1963) #345"
+            },
+            {
+                    "name": "Avengers (1963) #346"
+            },
+            {
+                    "name": "Avengers (1963) #347"
+            },
+            {
+                    "name": "Avengers Epic Collection: Operation Galactic Storm (Trade Paperback)"
+            },
+            {
+                    "name": "Avengers Strike File (1994) #1"
+            },
+            {
+                    "name": "Avengers: Galactic Storm Vol. 2 (Trade Paperback)"
+            },
+            {
+                    "name": "Avengers: Kree/Skrull War (Trade Paperback)"
+            },
+            {
+                    "name": "Captain Marvel (1968) #43"
+            },
+            {
+                    "name": "Captain Marvel (1968) #44"
+            },
+            {
+                    "name": "Captain Marvel: Earth's Mightiest Hero Vol. 4 (Trade Paperback)"
+            },
+            {
+                    "name": "Force Works (1994) #14"
+            },
+            {
+                    "name": "Iron Man (1968) #279"
+            },
+            {
+                    "name": "Marvel Knights Marvel Boy by Morrison & Jones (Trade Paperback)"
+            },
+            {
+                    "name": "The Mighty Avengers (2007) #19"
+            },
+            {
+                    "name": "Road To Empyre: The Kree/Skrull War (2020) #1"
+            },
+            {
+                    "name": "Royals Vol. 2: Judgment Day (Trade Paperback)"
+            },
+            {
+                    "name": "Silver Surfer (1987) #8"
+            },
+            {
+                    "name": "Silver Surfer (1987) #53"
+            },
+            {
+                    "name": "Thing: Freakshow (2002) #2"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Avengers (1963 - 1996)"
+            },
+            {
+                    "name": "Avengers Epic Collection: Operation Galactic Storm (2017)"
+            },
+            {
+                    "name": "Avengers Strike File (1994)"
+            },
+            {
+                    "name": "Avengers: Galactic Storm Vol. 2 (2006)"
+            },
+            {
+                    "name": "Avengers: Kree/Skrull War (2019)"
+            },
+            {
+                    "name": "Captain Marvel (1968 - 1979)"
+            },
+            {
+                    "name": "Captain Marvel: Earth's Mightiest Hero Vol. 4 (2017)"
+            },
+            {
+                    "name": "Force Works (1994 - 1996)"
+            },
+            {
+                    "name": "Iron Man (1968 - 1996)"
+            },
+            {
+                    "name": "Marvel Knights Marvel Boy by Morrison & Jones (2018)"
+            },
+            {
+                    "name": "Road To Empyre: The Kree/Skrull War (2020 - Present)"
+            },
+            {
+                    "name": "Royals Vol. 2: Judgment Day (2018)"
+            },
+            {
+                    "name": "Silver Surfer (1987 - 1998)"
+            },
+            {
+                    "name": "The Mighty Avengers (2007 - 2010)"
+            },
+            {
+                    "name": "Thing: Freakshow (2002)"
+            },
+            {
+                    "name": "Thor (1966 - 1996)"
+            },
+            {
+                    "name": "WEB OF VENOM: EMPYRE'S END 1 (2020 - Present)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "Avengers (1963) #345",
+              "type": "cover"
+            },
+            {
+                    "name": "Avengers (1963) #346",
+              "type": "cover"
+            },
+            {
+                    "name": "Avengers (1963) #347",
+              "type": "cover"
+            },
+            {
+                    "name": "AVENGERS (1963) #96",
+              "type": "cover"
+            },
+            {
+                    "name": "Now Strikes the Starforce",
+              "type": ""
+            },
+            {
+                    "name": "Cover #18298",
+              "type": "cover"
+            },
+            {
+                    "name": "Cover #18300",
+              "type": "cover"
+            },
+            {
+                    "name": "Thing: Freakshow (2002) #2",
+              "type": "cover"
+            },
+            {
+                    "name": "Old Friends",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Thing: Freakshow (2002) #3",
+              "type": "cover"
+            },
+            {
+                    "name": "Thing: Freakshow (2002) #4",
+              "type": "cover"
+            },
+            {
+                    "name": "It's Clobberin' Time!",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Cover #30850",
+              "type": "cover"
+            },
+            {
+                    "name": "Cover #30908",
+              "type": "cover"
+            },
+            {
+                    "name": "Secret Invasion 8 of 8",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "IRON MAN (1968) #279",
+              "type": "cover"
+            },
+            {
+                    "name": "Thor (1966) #446",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from Captain Marvel: Earth's Mightiest Hero (2017)",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from AVENGERS EPIC COLLECTION: OPERATION GALACTIC STORM TPB (2017) #1",
+              "type": "cover"
+            },
+            {
+                    "name": "cover from ROYALS VOL. 2: JUDGMENT DAY TPB (2018) #2",
+              "type": "cover"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            {
+                    "name": "Secret Invasion"
+            }
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1011148/kree?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Kree?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011148/kree?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1015017,
+        "name": "Krista Starr",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/3418/krista_starr?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1015017/krista_starr?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011178,
+        "name": "Kronos",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/4c7c623c74db8",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1182/kronos?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Kronos?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011178/kronos?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011029,
+        "name": "Kulan Gath",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            {
+                    "name": "Avengers (1998) #28"
+            },
+            {
+                    "name": "Avengers (1998) #29"
+            },
+            {
+                    "name": "Avengers (1998) #30"
+            },
+            {
+                    "name": "Avengers Assemble Vol. 3 (Hardcover)"
+            },
+            {
+                    "name": "Uncanny X-Men (1963) #190"
+            }
+          ]
+          },
+        "series": {
+         "items": [
+            {
+                    "name": "Avengers (1998 - 2004)"
+            },
+            {
+                    "name": "Avengers Assemble Vol. 3 (2006)"
+            },
+            {
+                    "name": "Uncanny X-Men (1963 - 2011)"
+            }
+          ]
+          },
+        "stories": {
+         "items": [
+            {
+                    "name": "An Age Undreamed Of",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "The Death-Song of Kulan Gath: Long Shadows of Forgotten Spires",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "The Death-Song of Kulan Gath: A Dream of Bitter Ash",
+              "type": "interiorStory"
+            },
+            {
+                    "name": "Avengers (1998) #30",
+              "type": "cover"
+            },
+            {
+                    "name": "The Death-Song of Kulan Gath: Conclusion!",
+              "type": "interiorStory"
+            }
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2862/kulan_gath?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/http://www.marvel.com/universe3zx/index.php?t&utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011029/kulan_gath?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      },
+      {
+        "id": 1011058,
+        "name": "Kylun",
+        "description": "",
+         "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/b0/4c003108ee445",
+          "extension": "jpg"
+        },
+        "comics": {
+         "items": [
+            
+          ]
+          },
+        "series": {
+         "items": [
+            
+          ]
+          },
+        "stories": {
+         "items": [
+            
+          ]
+          },
+        "events": {
+         "items": [
+            
+          ]
+          },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1193/kylun?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Kylun?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011058/kylun?utm_campaign=apiRef&utm_source=4448931a94acc39f53d20bcd20eadc94"
+          }
+        ]
+      }
+    ]
