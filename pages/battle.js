@@ -3,33 +3,20 @@ import { useState, useEffect } from 'react';
 
 import { Container, Grid, Button, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import heros from '../src/superheros'
 import Divider from '@material-ui/core/Divider'
-
-import Title from '@components/Title';
-
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-
-function createData(key, value) {
-  return { key, value};
-}
-
-
-
+import SuperHeroCard from '@components/SuperHeroCard';
+import fetchHeros from '../api/fetchHeros.js';
+import SecurityIcon from '@material-ui/icons/Security';
+import {
+  useQuery,
+  useQueryCache,
+  QueryCache
+} from 'react-query';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -62,120 +49,77 @@ const useStyles = makeStyles((theme) => ({
   table: {
     minWidth: 150,
   },
+  fightBar:{
+    width:'100%',
+    display:'flex',
+    justifyContent:'center',
+    marginBottom:'30px'
+  },
+  fightButton: {
+    boxShadow: "inset 0px 1px 0px 0px #f29c93",
+    background: "linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%)",
+    backgroundColor: "#fe1a00",
+    borderRadius: "42px",
+    display: "inline-block",
+    cursor: "pointer",
+    color: "#ffffff",
+    fontFamily: "Verdana",
+    fontSize: "23px",
+    fontWeight: "bold",
+    padding: "16px 36px",
+    textDecoration: "none",
+    textShadow: "0px 1px 0px #b23e35",
+    '&:hover': {
+      background: "linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%)",
+      backgroundColor: "#ce0100"
+    }
+  }
 }));
 
-const StatTable = ({rows}) =>{
-  const classes = useStyles();
-  return(
-    <TableContainer component={Paper}>
-    <Table className={classes.table} aria-label="simple table">
-      
-      <TableBody>
-        {rows.map((row) => (
-          <TableRow key={row.key}>
-            <TableCell component="th" scope="row">
-              {row.key}
-            </TableCell>
-            <TableCell align="right">{row.value}</TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
-  </TableContainer>
-  )
-}
-
-const HeroCard = ({playerData}) =>{
-  const classes = useStyles();
-
-  const appearanceRows = [
-    createData('gender', playerData.appearance.gender),
-    createData('race', playerData.appearance.race),
-    createData('hgt/wgt', `${playerData.appearance.height[0]} / ${playerData.appearance.weight[0]}`),
-    createData('eyes', playerData.appearance.eyeColor),
-    createData('hair', playerData.appearance.hairColor),
-    createData('publisher', playerData.biography.publisher),
-  ];
-
-  const powerstatRows = [
-    createData('combat', playerData.powerstats.combat),
-    createData('durability', playerData.powerstats.durability),
-    createData('intelligence', playerData.powerstats.intelligence),
-    createData('speed', playerData.powerstats.speed),
-    createData('strength', playerData.powerstats.strength),
-    createData('alignment', playerData.biography.alignment),
-  ];
-
-  const otherstatRows = [
-    createData('place of birth', playerData.biography.placeOfBirth),
-    createData('alignment', playerData.biography.alignment),
-    createData('publisher', playerData.biography.publisher),
-    createData('occupation', playerData.work.occupation),
-    createData('base', playerData.work.base),
-  ];
-
-  return(
-    <Card className={classes.root}>
-        <CardMedia
-          className={classes.heroImage}
-          component="img"
-          alt={playerData.name}
-          image={playerData.images.lg}
-          title={playerData.name}
-        />
-        <CardContent className={classes.mainContent}>
-          <Typography gutterBottom variant="h5" component="h2">
-            {playerData.name}
-          </Typography>
-          <div className={classes.heroTables}>
-            <div style={{width:'auto' }}>
-              <StatTable rows={powerstatRows}/>
-            </div>
-            <div style={{ width:'auto'}}>
-              <StatTable rows={appearanceRows} />
-            </div>
-            {/* <div style={{ width:'auto'}}>
-              <StatTable rows={otherstatRows} />
-            </div> */}
-          </div>
-            <Typography variant="subtitle1" color="textSecondary" style={{marginTop:'10px'}}>
-                name: <strong>{playerData.biography.fullName}</strong>    
-              </Typography>
-              <Typography variant="subtitle1" color="textSecondary">
-                place of birth: <strong>{playerData.biography.placeOfBirth}</strong>    
-              </Typography>
-        </CardContent>
-    
-        {/* <CardActions>
-          <Button size="small" color="primary">
-            choose super
-          </Button>
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
-        </CardActions> */}
-    </Card>
-  )
-}
+const queryCache = new QueryCache()
 
 const Battle = ({ title, description, ...props }) => {
+  const getHero = async (hero) =>{
+    const data = await fetchHeros('heros',hero)
+    return data.data.data.results[0]?.description
+  }
+  const cache = useQueryCache()
   const classes = useStyles();
   const [player1Data, setPlayer1Data]= useState(false)
-  const [player2Data, setPlayer2Data]= useState(null)
+  const [player2Data, setPlayer2Data]= useState(false)
 
   return (
       <Layout pageTitle={`${title} | About`} description={description}>
+
         <div className={classes.heroContent}>
           <Container maxWidth="md" className={classes.mainContent}>
+          <Box className={classes.fightBar} >  
+            <a href="#" className={classes.fightButton}>Fight!</a>
+          </Box> 
+          <Divider /> 
             <Grid container spacing={1} style={{display:'flex', flexDirection:'row'}}>
-              <Grid item xs={12} md={12} >
-    
+              <Grid item xs={12} md={6} >
                 <Autocomplete
                   id="combo-box-demo"
+                  autoSelect={true}
+                  autoComplete={true}
                   options={heros}
-                  onChange={(params)=>{
+
+                  onChange={async(params, value)=>{
+                    console.log(value)
                     const result = heros.filter(item => item.name == params.target.textContent);
-                    setPlayer1Data(result[0])
+                    
+                    let newData
+                    if(result[0]?.biography?.publisher == "Marvel Comics"){
+                      //const heroSlug = params.target.textContent.replace(/\s+/g, '-');
+                      const heroDescription = await getHero(value.name)
+                      newData = { data:result[0], description:heroDescription }
+                    }else{
+                      newData = { data:result[0], description:'na' }
+                    }
+                    console.log(newData)
+                    setPlayer1Data(newData)
+                    
                   }}
                   getOptionLabel={(option) => option.name}
                   style={{ width: '100%' }}
@@ -183,21 +127,33 @@ const Battle = ({ title, description, ...props }) => {
                 />
 
                   {!player1Data ? <h1>pick one</h1>
-                  : <HeroCard playerData={player1Data} /> }   
+                  : <SuperHeroCard playerData={player1Data} /> }   
                
               </Grid>
-              
-              <Grid item xs={12} md={12} >
 
-                <Divider style={{marginTop:'40px'}}/>
+              <Grid item xs={12} md={6} >
     
                 <Autocomplete
                   id="combo-box-demo2"
                   autoComplete
+                  
                   options={heros}
-                  onChange={(params)=>{
+
+                  onChange={async(params)=>{
                     const result = heros.filter(item => item.name == params.target.textContent);
-                    setPlayer2Data(result[0])
+                    
+                    let newData
+                    if(result[0]?.biography?.publisher == "Marvel Comics"){
+                      const heroSlug = params.target.textContent.replace(/\s+/g, '-');
+                      const heroDescription = await getHero(heroSlug)
+                      newData = { data:result[0], description:heroDescription }
+                      console.log(newData)
+                    }else{
+                      newData = { data:result[0], description:false }
+                    }
+
+                    setPlayer2Data(newData)
+                    
                   }}
                   
                   getOptionLabel={(option) => option.name}
@@ -206,7 +162,7 @@ const Battle = ({ title, description, ...props }) => {
                 />
 
                   {!player2Data ? <h1>pick one</h1>
-                  : <HeroCard playerData={player2Data} /> } 
+                  : <SuperHeroCard playerData={player2Data} /> } 
 
               </Grid>
             </Grid>
