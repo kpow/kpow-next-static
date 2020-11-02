@@ -1,4 +1,4 @@
-export default [
+export default[
   {
     "id": 1,
     "name": "A-Bomb",
@@ -30280,4 +30280,4 @@ export default [
       "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/731-zoom.jpg"
     }
   }
-];
+]
