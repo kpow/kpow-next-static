@@ -8037,7 +8037,7 @@ export default [
   },
   {
     "id": 1011128,
-    "name": "Venom (Ultimate)",
+    "name": "Venom",
     "description": "While Eddie Brock’s academic career seemed to take off, his personal life was in shambles due to his quick temper and inability to connect with women on any level, and Eddie became isolated, but when his old friend Peter Parker contacted him, he felt a rush of enthusiasm: here, at last, was someone with whom he could truly bond.",
     "path": "http://i.annihil.us/u/prod/marvel/i/mg/e/10/531773a976816"
   },
@@ -8161,18 +8161,6 @@ export default [
     "name": "War (Abraham Kieros)",
     "description": "A young veteran wounded during the Vietnam War, Abraham Kieros was selected by Apocalypse to become the Horseman War.",
     "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
-  },
-  {
-    "id": 1017322,
-    "name": "War Machine (Iron Man 3 - The Official Game)",
-    "description": "",
-    "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/80/5239c15d562d6"
-  },
-  {
-    "id": 1017304,
-    "name": "War Machine (Marvel: Avengers Alliance)",
-    "description": "",
-    "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/03/5239b57a59812"
   },
   {
     "id": 1010991,

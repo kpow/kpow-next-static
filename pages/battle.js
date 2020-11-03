@@ -8,6 +8,7 @@ import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import heros from '../src/superheros-prod';
+import powers from '../src/superheros-powers';
 import marvel from '../src/marvel';
 import Divider from '@material-ui/core/Divider'
 import SuperHeroCard from '@components/SuperHeroCard';
@@ -80,8 +81,38 @@ const useStyles = makeStyles((theme) => ({
 const Battle = ({ title, description, ...props }) => {
   const getMarvelData = (hero) =>{  
     const heros = marvel.filter((item)=> item.name.toLowerCase() == hero.toLowerCase() )
-    return heros[0]
+    console.log(heros)
+    if(heros.length>=1){
+      return heros[0]
+    }else{
+      return false
+    }
+    
   }
+
+  function createData(power, value) {
+    return { power, value};
+}
+
+  const getPowersData = (hero) =>{
+    const powerLabels = Object.keys(powers)
+    let powerData = []
+    let heroIndex 
+    for(let i=0; i<powers.Name.length;i++){
+      if(powers.Name[i] == hero){
+        heroIndex = i;
+        break;
+      }
+    }
+
+    for(let i=0; i<powerLabels.length; i++){
+      let powerLabel = powerLabels[i]
+      powerData.push(createData(powerLabel, powers[powerLabel][heroIndex]))
+
+    }
+    return powerData
+  }
+
   const classes = useStyles();
   const [player1Data, setPlayer1Data]= useState(false)
   const [player2Data, setPlayer2Data]= useState(false)
@@ -105,15 +136,18 @@ const Battle = ({ title, description, ...props }) => {
                     let newData
                     if(value){
                       const result = heros.filter(item => item.name == value.name);
+                      const powers = getPowersData(value.name)
+
                       if(result[0]?.biography?.publisher == "Marvel Comics"){
-                        const heroDescription = getMarvelData(value.name)
-                        newData = { data:result[0], description:heroDescription?.description }
+                        const marvelData = getMarvelData(value.name)
+                        newData = { data:result[0], marvelImage:marvelData?.path, description:marvelData?.description, powers }
                       }else{
-                        newData = { data:result[0], description:false }
+                        newData = { data:result[0], marvelImage:false, description:false, powers }
                       }
                     }else{
                       newData = false
                     }
+                    console.log(newData)
                     setPlayer1Data(newData)
                     
                   }}

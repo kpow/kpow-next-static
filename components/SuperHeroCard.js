@@ -10,6 +10,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import { makeStyles } from '@material-ui/core/styles';
 
+import Chip from '@material-ui/core/Chip';
 
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -149,6 +150,15 @@ const SuperHeroCard = ({playerData}) =>{
             <div style={{ width:'auto'}}>
               <StatTable rows={otherstatRows} />
             </div> 
+            <Paper style={{padding:10}}>
+              
+              {playerData.powers &&
+                playerData.powers.map((item) => {
+                  if(item.value && item.power != 'Name'){
+                    return ( <Chip style={{margin:'0 5px 5px'}} label={`${item.power}`} /> )
+                  }
+                })}
+            </Paper>
              
           </CardContent>
       
