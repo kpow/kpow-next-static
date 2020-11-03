@@ -74,7 +74,7 @@ const StatTable = ({rows}) =>{
     return(
       <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
-        
+      {/* <caption>A basic table example with a caption</caption>  */}
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.key}>
@@ -133,9 +133,7 @@ const SuperHeroCard = ({playerData}) =>{
               image={heroData?.images.lg}
               title={heroData?.name}
             />
-            <div style={{ margin:'0 auto', paddingTop:15, width:'90%'}}>
-              {playerData?.description}
-            </div> 
+            
           </div>
           <CardContent className={classes.mainContent}>
             <div className={classes.heroTables}>
@@ -159,6 +157,10 @@ const SuperHeroCard = ({playerData}) =>{
                   }
                 })}
             </Paper>
+
+            <div style={{ margin:'0 auto', paddingTop:15, width:'90%'}}>
+              {playerData?.description}
+            </div> 
              
           </CardContent>
       

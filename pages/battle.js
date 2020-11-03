@@ -12,13 +12,6 @@ import powers from '../src/superheros-powers';
 import marvel from '../src/marvel';
 import Divider from '@material-ui/core/Divider'
 import SuperHeroCard from '@components/SuperHeroCard';
-import fetchHeros from '../api/fetchHeros.js';
-import SecurityIcon from '@material-ui/icons/Security';
-import {
-  useQuery,
-  useQueryCache,
-  QueryCache
-} from 'react-query';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -79,12 +72,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Battle = ({ title, description, ...props }) => {
-  const createData = (power, value) => {power, value}
 
   const getMarvelData = (hero) =>{  
     const heros = marvel.filter((item)=> item.name.toLowerCase() == hero.toLowerCase() )
     if(heros.length>=1){ return heros[0] }
     else{ return false }
+  }
+
+  const createData = (power, value) => {
+    return {power, value};
   }
 
   const getPowersData = (hero) =>{
@@ -97,11 +93,29 @@ const Battle = ({ title, description, ...props }) => {
         break;
       }
     }
+    powerLabels.forEach((item, index)=>{
+      powerData.push(createData(item, powers[item][heroIndex]))
+    })
 
-    for(let i=0; i<powerLabels.length; i++){
-      powerData.push(createData(powerLabels[i], powers[powerLabels[i]][heroIndex]))
-    }
     return powerData
+  }
+
+  const getPlayerData =(value)=> {
+    let newData
+    if(value){
+      const result = heros.filter(item => item.name == value.name);
+      const powers = getPowersData(value.name)
+      const publisher = result[0]?.biography?.publisher  
+      if( publisher == "Marvel Comics"){
+        const marvelData = getMarvelData(value.name)
+        newData = { data:result[0], marvelImage:marvelData?.path, description:marvelData?.description, powers }
+      }else{
+        newData = { data:result[0], marvelImage:false, description:false, powers }
+      }
+    }else{
+      newData = false
+    }
+    return newData
   }
 
   const classes = useStyles();
@@ -121,26 +135,11 @@ const Battle = ({ title, description, ...props }) => {
               <Grid item xs={12} md={6} >
                 <Autocomplete
                   id="combo-box-demo"
+                  autoComplete
                   options={heros}
-
                   onChange={(params, value)=>{
-                    let newData
-                    if(value){
-                      const result = heros.filter(item => item.name == value.name);
-                      const powers = getPowersData(value.name)
-                      const publisher = result[0]?.biography?.publisher  
-                      if( publisher == "Marvel Comics"){
-                        const marvelData = getMarvelData(value.name)
-                        newData = { data:result[0], marvelImage:marvelData?.path, description:marvelData?.description, powers }
-                      }else{
-                        newData = { data:result[0], marvelImage:false, description:false, powers }
-                      }
-                    }else{
-                      newData = false
-                    }
-                    setPlayer1Data(newData)
+                    setPlayer1Data(getPlayerData(value))
                   }}
-                  
                   getOptionLabel={(option) => option.name}
                   style={{ width: '100%' }}
                   renderInput={(params) => <TextField {...params} label="pick a super"  />}
@@ -156,27 +155,10 @@ const Battle = ({ title, description, ...props }) => {
                 <Autocomplete
                   id="combo-box-demo2"
                   autoComplete
-                  
                   options={heros}
-
                   onChange={(params, value)=>{
-                    let newData
-                    if(value){
-                      const result = heros.filter(item => item.name == value.name);
-                      const powers = getPowersData(value.name)
-                      const publisher = result[0]?.biography?.publisher  
-                      if( publisher == "Marvel Comics"){
-                        const marvelData = getMarvelData(value.name)
-                        newData = { data:result[0], marvelImage:marvelData?.path, description:marvelData?.description, powers }
-                      }else{
-                        newData = { data:result[0], marvelImage:false, description:false, powers }
-                      }
-                    }else{
-                      newData = false
-                    }
-                    setPlayer2Data(newData)
+                    setPlayer2Data(getPlayerData(value))
                   }}
-                  
                   getOptionLabel={(option) => option.name}
                   style={{ width: '100%' }}
                   renderInput={(params) => <TextField {...params} label="pick a super" />}
