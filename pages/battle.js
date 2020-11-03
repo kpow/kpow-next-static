@@ -79,20 +79,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Battle = ({ title, description, ...props }) => {
+  const createData = (power, value) => {power, value}
+
   const getMarvelData = (hero) =>{  
     const heros = marvel.filter((item)=> item.name.toLowerCase() == hero.toLowerCase() )
-    console.log(heros)
-    if(heros.length>=1){
-      return heros[0]
-    }else{
-      return false
-    }
-    
+    if(heros.length>=1){ return heros[0] }
+    else{ return false }
   }
-
-  function createData(power, value) {
-    return { power, value};
-}
 
   const getPowersData = (hero) =>{
     const powerLabels = Object.keys(powers)
@@ -106,9 +99,7 @@ const Battle = ({ title, description, ...props }) => {
     }
 
     for(let i=0; i<powerLabels.length; i++){
-      let powerLabel = powerLabels[i]
-      powerData.push(createData(powerLabel, powers[powerLabel][heroIndex]))
-
+      powerData.push(createData(powerLabels[i], powers[powerLabels[i]][heroIndex]))
     }
     return powerData
   }
@@ -137,8 +128,8 @@ const Battle = ({ title, description, ...props }) => {
                     if(value){
                       const result = heros.filter(item => item.name == value.name);
                       const powers = getPowersData(value.name)
-
-                      if(result[0]?.biography?.publisher == "Marvel Comics"){
+                      const publisher = result[0]?.biography?.publisher  
+                      if( publisher == "Marvel Comics"){
                         const marvelData = getMarvelData(value.name)
                         newData = { data:result[0], marvelImage:marvelData?.path, description:marvelData?.description, powers }
                       }else{
@@ -147,9 +138,7 @@ const Battle = ({ title, description, ...props }) => {
                     }else{
                       newData = false
                     }
-                    console.log(newData)
                     setPlayer1Data(newData)
-                    
                   }}
                   
                   getOptionLabel={(option) => option.name}
@@ -174,17 +163,18 @@ const Battle = ({ title, description, ...props }) => {
                     let newData
                     if(value){
                       const result = heros.filter(item => item.name == value.name);
-                      if(result[0]?.biography?.publisher == "Marvel Comics"){
-                        const heroDescription = getMarvelData(value.name)
-                        newData = { data:result[0], description:heroDescription?.description }
+                      const powers = getPowersData(value.name)
+                      const publisher = result[0]?.biography?.publisher  
+                      if( publisher == "Marvel Comics"){
+                        const marvelData = getMarvelData(value.name)
+                        newData = { data:result[0], marvelImage:marvelData?.path, description:marvelData?.description, powers }
                       }else{
-                        newData = { data:result[0], description:false }
+                        newData = { data:result[0], marvelImage:false, description:false, powers }
                       }
                     }else{
                       newData = false
                     }
                     setPlayer2Data(newData)
-                    
                   }}
                   
                   getOptionLabel={(option) => option.name}
