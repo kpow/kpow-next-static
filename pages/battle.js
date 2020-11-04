@@ -12,6 +12,8 @@ import powers from '../src/superheros-powers';
 import marvel from '../src/marvel';
 import Divider from '@material-ui/core/Divider'
 import SuperHeroCard from '@components/SuperHeroCard';
+import BattleSteps from '@components/BattleSteps';
+import Title from '@components/Title';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,9 +50,15 @@ const useStyles = makeStyles((theme) => ({
     width:'100%',
     display:'flex',
     justifyContent:'center',
-    marginBottom:'30px'
+    alignItems:'center',
+    marginBottom:'30px',
+    flexGrow:'0',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection:'column'
+    },
   },
   fightButton: {
+    flexGrow:'0',
     boxShadow: "inset 0px 1px 0px 0px #f29c93",
     background: "linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%)",
     backgroundColor: "#fe1a00",
@@ -96,7 +104,6 @@ const Battle = ({ title, description, ...props }) => {
     powerLabels.forEach((item, index)=>{
       powerData.push(createData(item, powers[item][heroIndex]))
     })
-
     return powerData
   }
 
@@ -118,19 +125,52 @@ const Battle = ({ title, description, ...props }) => {
     return newData
   }
 
+  const [activeStep, setActiveStep] = React.useState(-1);
+  // const steps = getSteps();
+
+  const handleNext = () => {
+    if(activeStep<getSteps().length){
+      setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    }else{
+      setActiveStep(-1);
+    }
+    
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleReset = () => {
+    setActiveStep(0);
+  };
+
+  function getSteps() {
+    return ['Init VM', 'Load Models', 'FIGHT!'];
+  }
+  const steps = getSteps();
   const classes = useStyles();
   const [player1Data, setPlayer1Data]= useState(false)
   const [player2Data, setPlayer2Data]= useState(false)
 
   return (
       <Layout pageTitle={`${title} | About`} description={description}>
-
+         
         <div className={classes.heroContent}>
+          
           <Container maxWidth="md" className={classes.mainContent}>
+          <Title>
+            battle beta
+          </Title>
+          <Divider style={{marginTop:'20px',marginBottom:'30px'}}/>
           <Box className={classes.fightBar} >  
-            <a href="#" className={classes.fightButton}>Fight!</a>
+            <BattleSteps steps={steps} activeStep={activeStep}/>
+              <div>
+                <a href="#" onClick={handleNext} className={classes.fightButton}>Fight!</a>
+              </div>
+            <BattleSteps steps={steps} activeStep={activeStep}/>
           </Box> 
-          <Divider /> 
+          <Divider style={{marginBottom:'20px'}} /> 
             <Grid container spacing={1} style={{display:'flex', flexDirection:'row'}}>
               <Grid item xs={12} md={6} >
                 <Autocomplete
