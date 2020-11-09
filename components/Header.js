@@ -29,6 +29,8 @@ import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ContactModal from '@components/ContactModal';
 import Hidden from '@material-ui/core/Hidden'
 
+import SecurityIcon from '@material-ui/icons/Security';
+
 
 const drawerWidth = 300;
 
@@ -196,7 +198,15 @@ export default function Header() {
                 <ListItemText primary="youtube live" />
               </ListItem>
             </Link>
-
+            <Link href="/battle">
+              <ListItem button key="live">
+                <ListItemIcon>
+                  <SecurityIcon />
+                </ListItemIcon>
+                <ListItemText primary="hero battle" />
+              </ListItem>
+            </Link>
+            
             <Link href="/pmonk">
               <ListItem button key="live">
                 <ListItemIcon>

@@ -14,6 +14,7 @@ import Divider from '@material-ui/core/Divider'
 import SuperHeroCard from '@components/SuperHeroCard';
 import BattleSteps from '@components/BattleSteps';
 import Title from '@components/Title';
+import createHeroData from 'api/createHeroData';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,23 +29,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0, 0, 0),
     marginTop: '30px;'
   },
-  heroImage: {
-    maxWidth:'500px',
-    maxHeight:'500px'
-  },
-  heroTables:{
-    display:'flex',
-    flexDirection:'row',
-    [theme.breakpoints.down('sm')]: {
-      flexDirection:'column'
-    },
-  },
   mainContent: {
     width:'100%',
     backgroundColor: '#fafafa'
-  },
-  table: {
-    minWidth: 150,
   },
   fightBar:{
     width:'100%',
@@ -80,53 +67,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Battle = ({ title, description, ...props }) => {
-
-  const getMarvelData = (hero) =>{  
-    const heros = marvel.filter((item)=> item.name.toLowerCase() == hero.toLowerCase() )
-    if(heros.length>=1){ return heros[0] }
-    else{ return false }
-  }
-
-  const createData = (power, value) => {
-    return {power, value};
-  }
-
-  const getPowersData = (hero) =>{
-    const powerLabels = Object.keys(powers)
-    let powerData = []
-    let heroIndex 
-    for(let i=0; i<powers.Name.length;i++){
-      if(powers.Name[i] == hero){
-        heroIndex = i;
-        break;
-      }
-    }
-    powerLabels.forEach((item, index)=>{
-      powerData.push(createData(item, powers[item][heroIndex]))
-    })
-    return powerData
-  }
-
-  const getPlayerData =(value)=> {
-    let newData
-    if(value){
-      const result = heros.filter(item => item.name == value.name);
-      const powers = getPowersData(value.name)
-      const publisher = result[0]?.biography?.publisher  
-      if( publisher == "Marvel Comics"){
-        const marvelData = getMarvelData(value.name)
-        newData = { data:result[0], marvelImage:marvelData?.path, description:marvelData?.description, powers }
-      }else{
-        newData = { data:result[0], marvelImage:false, description:false, powers }
-      }
-    }else{
-      newData = false
-    }
-    return newData
-  }
-
+  const classes = useStyles();
+  const [player1Data, setPlayer1Data]= useState(false)
+  const [player2Data, setPlayer2Data]= useState(false)
+  const [winner, setWinner]= useState(false)
   const [activeStep, setActiveStep] = React.useState(-1);
-  // const steps = getSteps();
+  const steps = getSteps();
+  function getSteps() {
+    return ['Init VM', 'Load Models', 'FIGHT!'];
+  }
 
   const handleNext = () => {
     if(activeStep<getSteps().length){
@@ -145,13 +94,30 @@ const Battle = ({ title, description, ...props }) => {
     setActiveStep(0);
   };
 
-  function getSteps() {
-    return ['Init VM', 'Load Models', 'FIGHT!'];
+
+  function createData(key, value) {
+      return { key, value};
   }
-  const steps = getSteps();
-  const classes = useStyles();
-  const [player1Data, setPlayer1Data]= useState(false)
-  const [player2Data, setPlayer2Data]= useState(false)
+
+  const battle = () =>{
+    const powerStats =  ["intelligence", "strength","speed","durability","power","combat"]
+    let player1Count =0;
+    let player2Count = 0;
+    const battleResults = powerStats.map((power)=>{
+      const winner = player1Data.data.powerstats[power] < player2Data.data.powerstats[power] ? player2Data.data.name : player1Data.data.name;
+      winner == player2Data.data.name ? player2Count++ : player1Count++;
+      console.log(power+"= "+winner)
+      return createData(power, winner)
+    })
+    const battleWinner = player1Count > player2Count ? player1Data : player2Data;
+    const winnerObject = createData('winner',battleWinner)
+    battleResults.push(winnerObject)
+    console.log(player1Count +"-"+ player2Count)
+    console.log(battleWinner.data.name)
+    setWinner(battleWinner.data.name)
+    return battleResults
+  }
+
 
   return (
       <Layout pageTitle={`${title} | About`} description={description}>
@@ -166,7 +132,11 @@ const Battle = ({ title, description, ...props }) => {
           <Box className={classes.fightBar} >  
             <BattleSteps steps={steps} activeStep={activeStep}/>
               <div>
-                <a href="#" onClick={handleNext} className={classes.fightButton}>Fight!</a>
+                <a href="#" onClick={battle} className={classes.fightButton}>Fight!</a>
+                <Divider style={{marginTop:'20px',marginBottom:'15px'}}/>
+                <Typography gutterBottom variant="h5" component="h2" style={{textAlign:'center'}}>
+                {winner}
+                </Typography>
               </div>
             <BattleSteps steps={steps} activeStep={activeStep}/>
           </Box> 
@@ -178,7 +148,7 @@ const Battle = ({ title, description, ...props }) => {
                   autoComplete
                   options={heros}
                   onChange={(params, value)=>{
-                    setPlayer1Data(getPlayerData(value))
+                    setPlayer1Data(createHeroData(value))
                   }}
                   getOptionLabel={(option) => option.name}
                   style={{ width: '100%' }}
@@ -197,7 +167,7 @@ const Battle = ({ title, description, ...props }) => {
                   autoComplete
                   options={heros}
                   onChange={(params, value)=>{
-                    setPlayer2Data(getPlayerData(value))
+                    setPlayer2Data(createHeroData(value))
                   }}
                   getOptionLabel={(option) => option.name}
                   style={{ width: '100%' }}
