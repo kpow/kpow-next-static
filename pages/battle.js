@@ -106,14 +106,11 @@ const Battle = ({ title, description, ...props }) => {
     const battleResults = powerStats.map((power)=>{
       const winner = player1Data.data.powerstats[power] < player2Data.data.powerstats[power] ? player2Data.data.name : player1Data.data.name;
       winner == player2Data.data.name ? player2Count++ : player1Count++;
-      console.log(power+"= "+winner)
       return createData(power, winner)
     })
     const battleWinner = player1Count > player2Count ? player1Data : player2Data;
     const winnerObject = createData('winner',battleWinner)
     battleResults.push(winnerObject)
-    console.log(player1Count +"-"+ player2Count)
-    console.log(battleWinner.data.name)
     setWinner(battleWinner.data.name)
     return battleResults
   }
