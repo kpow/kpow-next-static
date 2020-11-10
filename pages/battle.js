@@ -8,8 +8,6 @@ import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import heros from '../src/superheros-prod';
-import powers from '../src/superheros-powers';
-import marvel from '../src/marvel';
 import Divider from '@material-ui/core/Divider'
 import SuperHeroCard from '@components/SuperHeroCard';
 import BattleSteps from '@components/BattleSteps';
@@ -94,24 +92,41 @@ const Battle = ({ title, description, ...props }) => {
     setActiveStep(0);
   };
 
-
   function createData(key, value) {
       return { key, value};
   }
 
-  const battle = () =>{
-    const powerStats =  ["intelligence", "strength","speed","durability","power","combat"]
+  const battle = (player1Data,player2Data) =>{
+    // internal count as we compare stats each check will increase or decrease these 
     let player1Count =0;
     let player2Count = 0;
-    const battleResults = powerStats.map((power)=>{
-      const winner = player1Data.data.powerstats[power] < player2Data.data.powerstats[power] ? player2Data.data.name : player1Data.data.name;
-      winner == player2Data.data.name ? player2Count++ : player1Count++;
+
+    // cycle through all the powerstats and compare and pick winner per stat save results to array
+    const powerStats =  Object.keys(player1Data.data.powerstats)
+    const battleResults = powerStats.map((power)=>{ 
+      if(player1Data.data.powerstats[power] == player2Data.data.powerstats[power]){
+        const rInt = (max = 1, min = 0) => Math.floor(Math.random() * (max + 1 - min)) + min;
+        rInt(1,0) ? player1Count++ : player2Count++;
+      }else if(player1Data.data.powerstats[power] < player2Data.data.powerstats[power]){
+        player2Count++
+      }else if(player1Data.data.powerstats[power] > player2Data.data.powerstats[power]){
+        player1Count++
+      }
+      // const winner = player1Data.data.powerstats[power] < player2Data.data.powerstats[power] ? player2Data.data.name : player1Data.data.name;
+      // winner == player2Data.data.name ? player2Count++ : player1Count++;
       return createData(power, winner)
     })
+    // add all power stats and pick the highest number
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const player1PowerTotal = Object.values(player1Data.data.powerstats).reduce(reducer)
+    const player2PowerTotal = Object.values(player1Data.data.powerstats).reduce(reducer)
+    player1PowerTotal>player2PowerTotal ? player1Count++ : player2Count++;
+
+    // compare counts to pick a winner
     const battleWinner = player1Count > player2Count ? player1Data : player2Data;
     const winnerObject = createData('winner',battleWinner)
     battleResults.push(winnerObject)
-    setWinner(battleWinner.data.name)
+    console.log(player1Count+" - "+player2Count)
     return battleResults
   }
 
@@ -129,7 +144,12 @@ const Battle = ({ title, description, ...props }) => {
           <Box className={classes.fightBar} >  
             <BattleSteps steps={steps} activeStep={activeStep}/>
               <div>
-                <a href="#" onClick={battle} className={classes.fightButton}>Fight!</a>
+                <a href="#" 
+                   onClick={()=>{setWinner(battle(player1Data,player2Data)[6].value.data.name)}} 
+                   className={classes.fightButton}
+                >
+                  Fight!
+                </a>
                 <Divider style={{marginTop:'20px',marginBottom:'15px'}}/>
                 <Typography gutterBottom variant="h5" component="h2" style={{textAlign:'center'}}>
                 {winner}
