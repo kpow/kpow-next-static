@@ -15,6 +15,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import Skeleton from '@material-ui/lab/Skeleton';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.down('sm')]: {
         flexDirection:'column'
       },
+    },
+    media: {
+      height: 290,
     },
     heroContent: {
       padding: theme.spacing(0, 0, 0),
@@ -88,33 +92,32 @@ const StatTable = ({rows}) =>{
   }  
 
 
-const SuperHeroCard = ({playerData}) =>{
-    const heroData = playerData.data
+const SuperHeroCardSkeleton = ({}) =>{
     const classes = useStyles();
   
     const appearanceRows = [
-      createData('gender', heroData?.appearance.gender),
-      createData('race', heroData?.appearance.race),
-      createData('hgt/wgt', `${heroData?.appearance.height[0]} / ${heroData?.appearance.weight[0]}`),
-      createData('eyes', heroData?.appearance.eyeColor),
-      createData('hair', heroData?.appearance.hairColor),
-      createData('pub', heroData?.biography.publisher),
+      createData('gender', ''),
+      createData('race', ''),
+      createData('hgt/wgt', ``),
+      createData('eyes', ''),
+      createData('hair', ''),
+      createData('pub', ''),
     ];
   
     const powerstatRows = [
-      createData('combat', heroData?.powerstats.combat),
-      createData('durability', heroData?.powerstats.durability),
-      createData('intelligence', heroData?.powerstats.intelligence),
-      createData('speed', heroData?.powerstats.speed),
-      createData('strength', heroData?.powerstats.strength),
-      createData('alignment', heroData?.biography.alignment),
+      createData('combat', ''),
+      createData('durability', ''),
+      createData('intelligence', ''),
+      createData('speed', ''),
+      createData('strength', ''),
+      createData('alignment', ''),
     ];
   
     const otherstatRows = [
-      createData('full name', heroData?.biography.fullName),
-      createData('POB', heroData?.biography.placeOfBirth),
-      createData('occupation', heroData?.work.occupation),
-      createData('base', heroData?.work.base),
+      createData('full name', ''),
+      createData('POB', ''),
+      createData('occupation', ''),
+      createData('base', ''),
     ];
   
     return(
@@ -123,13 +126,9 @@ const SuperHeroCard = ({playerData}) =>{
             {/* <Typography className={classes.heroTitle} gutterBottom variant="h5" component="h2">
               {heroData?.name}
             </Typography> */}
-            <CardMedia
-              className={classes.heroImage}
-              component="img"
-              alt={heroData?.name}
-              image={heroData?.images.lg}
-              title={heroData?.name}
-            />
+  
+            <Skeleton animation="wave" variant="rect" className={classes.media} />
+
             
           </div>
           <CardContent className={classes.mainContent}>
@@ -145,23 +144,11 @@ const SuperHeroCard = ({playerData}) =>{
             <div style={{ width:'auto'}}>
               <StatTable rows={otherstatRows} />
             </div> 
-            <Paper style={{padding:10}}>
-              
-              {playerData.powers &&
-                playerData.powers.map((item) => {
-                  if(item.value && item.power != 'Name'){
-                    return ( <Chip key={item.power} style={{margin:'0 5px 5px'}} label={`${item.power}`} /> )
-                  }
-                })}
-            </Paper>
-
-            <div style={{ margin:'0 auto', paddingTop:15, width:'90%'}}>
-              {playerData?.description}
-            </div> 
+    
              
           </CardContent>
       </Card>
     )
   }
 
-  export default SuperHeroCard
+  export default SuperHeroCardSkeleton

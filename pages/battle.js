@@ -14,6 +14,7 @@ import BattleSteps from '@components/BattleSteps';
 import Title from '@components/Title';
 import createHeroData from 'api/createHeroData';
 import runBattle from 'utils/runBattle';
+import SuperHeroCardSkeleton from '@components/SuperHeroCardSkeleton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -66,12 +67,22 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const FightButton = ({handleBattle}) => {
+const FightButton = ({handleBattle, handleReset, activeStep, steps}) => {
   const classes = useStyles();
+  if(activeStep <= -1){
     return(<a href="#" 
-      onClick={()=>{handleBattle()}} 
+      onClick={handleBattle} 
       className={classes.fightButton}
     >Fight!</a>)
+  }else if(activeStep>=steps.length){
+    return(<a href="#" 
+      onClick={handleReset} 
+      className={classes.fightButton}
+    >Reset!</a>)
+  }else{
+    return(<b>processing . . .</b>)
+  }
+    
 
 }
 
@@ -81,7 +92,7 @@ const Battle = ({ title, description, ...props }) => {
   const [player2Data, setPlayer2Data]= useState(false)
   const [winner, setWinner]= useState(false)
   const [activeStep, setActiveStep] = React.useState(-1);
-  const steps = ['Init VM', 'Load Models', 'FIGHT!','Running Sim','Winner'];
+  const steps = ['Init', 'Data', 'AI','FIGHT!','Winner'];
 
   const handleNext = () => {
     if(activeStep<steps.length){
@@ -127,7 +138,7 @@ const Battle = ({ title, description, ...props }) => {
                 <Typography variant="h5" component="h2" style={{textAlign:'center'}}>
                   {winner.data?.name}
                 </Typography>
-                <FightButton handleBattle={handleBattle} />
+                <FightButton steps={steps} handleBattle={handleBattle} handleReset={handleReset} activeStep={activeStep}/>
                 
               </div>
            
@@ -146,7 +157,7 @@ const Battle = ({ title, description, ...props }) => {
                   renderInput={(params) => <TextField {...params} label="pick a super"  />}
                 />
 
-                  {!player1Data ? <h1>pick one</h1>
+                  {!player1Data ? <SuperHeroCardSkeleton />
                   : <SuperHeroCard playerData={player1Data} /> }   
                
               </Grid>
@@ -165,7 +176,7 @@ const Battle = ({ title, description, ...props }) => {
                   renderInput={(params) => <TextField {...params} label="pick a super" />}
                 />
 
-                  {!player2Data ? <h1>pick one</h1>
+                  {!player2Data ? <SuperHeroCardSkeleton />
                   : <SuperHeroCard playerData={player2Data} /> } 
 
               </Grid>
