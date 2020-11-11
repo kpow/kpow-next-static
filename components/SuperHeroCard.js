@@ -150,7 +150,7 @@ const SuperHeroCard = ({playerData}) =>{
               {playerData.powers &&
                 playerData.powers.map((item) => {
                   if(item.value && item.power != 'Name'){
-                    return ( <Chip style={{margin:'0 5px 5px'}} label={`${item.power}`} /> )
+                    return ( <Chip key={item.power} style={{margin:'0 5px 5px'}} label={`${item.power}`} /> )
                   }
                 })}
             </Paper>

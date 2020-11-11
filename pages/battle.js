@@ -1,5 +1,5 @@
 import Layout from '@components/Layout'
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
 import { Container, Grid, Button, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
@@ -71,10 +71,10 @@ const Battle = ({ title, description, ...props }) => {
   const [player2Data, setPlayer2Data]= useState(false)
   const [winner, setWinner]= useState(false)
   const [activeStep, setActiveStep] = React.useState(-1);
-  const steps = ['Init VM', 'Load Models', 'FIGHT!'];
+  const steps = ['Init VM', 'Load Models', 'FIGHT!','Running Sim','Winner'];
 
   const handleNext = () => {
-    if(activeStep<getSteps().length){
+    if(activeStep<steps.length){
       setActiveStep((prevActiveStep) => prevActiveStep + 1);
     }else{
       setActiveStep(-1);
@@ -89,33 +89,50 @@ const Battle = ({ title, description, ...props }) => {
     setActiveStep(0);
   };
 
+
+  const handleBattle = () => {
+    if(activeStep==-1){
+      let i = -1
+      const int = setInterval(()=>{
+        i++
+        setActiveStep(i);
+        if( i == steps.length ){
+          setWinner(runBattle(player1Data,player2Data)[6].value)
+          clearInterval(int);
+        }
+      },500)  
+    }else{
+      setWinner('');
+      setActiveStep(-1);
+    }
+        
+  }
+
   return (
       <Layout pageTitle={`${title} | About`} description={description}>
          
         <div className={classes.heroContent}>
-          
           <Container maxWidth="md" className={classes.mainContent}>
           <Title>
             battle beta
           </Title>
           <Divider style={{marginTop:'20px',marginBottom:'30px'}}/>
           <Box className={classes.fightBar} >  
-            <BattleSteps steps={steps} activeStep={activeStep}/>
+            <BattleSteps steps={steps} activeStep={activeStep} />
               <div>
                 <a href="#" 
-                   onClick={()=>{setWinner(runBattle(player1Data,player2Data)[6].value)}} 
+                   onClick={()=>{handleBattle()}} 
                    className={classes.fightButton}
                 >
                   Fight!
                 </a>
                 <Divider style={{marginTop:'20px',marginBottom:'15px'}}/>
                 <Typography gutterBottom variant="h5" component="h2" style={{textAlign:'center'}}>
-                {winner.data?.name}
+                  {winner.data?.name}
                 </Typography>
               </div>
-            <BattleSteps steps={steps} activeStep={activeStep}/>
+           
           </Box> 
-          <Divider style={{marginBottom:'20px'}} /> 
             <Grid container spacing={1} style={{display:'flex', flexDirection:'row'}}>
               <Grid item xs={12} md={6} >
                 <Autocomplete
