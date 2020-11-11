@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems:'center',
     marginBottom:'30px',
     flexGrow:'0',
+    flexDirection:'column',
     [theme.breakpoints.down('sm')]: {
       flexDirection:'column'
     },
@@ -65,6 +66,15 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+const FightButton = ({handleBattle}) => {
+  const classes = useStyles();
+    return(<a href="#" 
+      onClick={()=>{handleBattle()}} 
+      className={classes.fightButton}
+    >Fight!</a>)
+
+}
+
 const Battle = ({ title, description, ...props }) => {
   const classes = useStyles();
   const [player1Data, setPlayer1Data]= useState(false)
@@ -79,19 +89,18 @@ const Battle = ({ title, description, ...props }) => {
     }else{
       setActiveStep(-1);
     }
-    
   };
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
   const handleReset = () => {
-    setActiveStep(0);
+    setActiveStep(-1);
+    setWinner('');
   };
 
 
   const handleBattle = () => {
-    if(activeStep==-1){
       let i = -1
       const int = setInterval(()=>{
         i++
@@ -100,12 +109,7 @@ const Battle = ({ title, description, ...props }) => {
           setWinner(runBattle(player1Data,player2Data)[6].value)
           clearInterval(int);
         }
-      },500)  
-    }else{
-      setWinner('');
-      setActiveStep(-1);
-    }
-        
+      },500)    
   }
 
   return (
@@ -119,17 +123,12 @@ const Battle = ({ title, description, ...props }) => {
           <Divider style={{marginTop:'20px',marginBottom:'30px'}}/>
           <Box className={classes.fightBar} >  
             <BattleSteps steps={steps} activeStep={activeStep} />
-              <div>
-                <a href="#" 
-                   onClick={()=>{handleBattle()}} 
-                   className={classes.fightButton}
-                >
-                  Fight!
-                </a>
-                <Divider style={{marginTop:'20px',marginBottom:'15px'}}/>
-                <Typography gutterBottom variant="h5" component="h2" style={{textAlign:'center'}}>
+              <div style={{display:'flex', alignItems:'center', alignContent:'center'}}>
+                <Typography variant="h5" component="h2" style={{textAlign:'center'}}>
                   {winner.data?.name}
                 </Typography>
+                <FightButton handleBattle={handleBattle} />
+                
               </div>
            
           </Box> 
