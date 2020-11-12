@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import Chip from '@material-ui/core/Chip';
 
@@ -15,6 +15,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
       display:'flex',
       flexDirection:'column',
       [theme.breakpoints.down('sm')]: {
-        flexDirection:'column'
+        flexDirection:'column',
+     
       },
     },
     heroContent: {
@@ -32,7 +35,15 @@ const useStyles = makeStyles((theme) => ({
     },
     heroTitle: {
       marginTop: '10px',
-      marginLeft: '20px'
+      marginLeft: '20px',
+      display: 'none',
+      [theme.breakpoints.down('sm')]: {
+        marginTop: '5px',
+        marginLeft: '5px',
+        fontSize:'17px',
+        display: 'block',
+     
+      },
     },
     heroImage: {
       maxWidth:'450px',
@@ -54,11 +65,15 @@ const useStyles = makeStyles((theme) => ({
     },
     mainContent: {
       width:'100%',
-      backgroundColor: '#fafafa'
+      backgroundColor: '#fafafa',
+      margin:0,
+      padding:0
     },
     table: {
       minWidth: 150,
-   
+      [theme.breakpoints.down('sm')]: {
+        minWidth:0
+      },
     },
   }));
 
@@ -91,38 +106,67 @@ const StatTable = ({rows}) =>{
 const SuperHeroCard = ({playerData}) =>{
     const heroData = playerData.data
     const classes = useStyles();
-  
-    const appearanceRows = [
-      createData('gender', heroData?.appearance.gender),
-      createData('race', heroData?.appearance.race),
-      createData('hgt/wgt', `${heroData?.appearance.height[0]} / ${heroData?.appearance.weight[0]}`),
-      createData('eyes', heroData?.appearance.eyeColor),
-      createData('hair', heroData?.appearance.hairColor),
-      createData('pub', heroData?.biography.publisher),
-    ];
-  
-    const powerstatRows = [
-      createData('combat', heroData?.powerstats.combat),
-      createData('durability', heroData?.powerstats.durability),
-      createData('intelligence', heroData?.powerstats.intelligence),
-      createData('speed', heroData?.powerstats.speed),
-      createData('strength', heroData?.powerstats.strength),
-      createData('alignment', heroData?.biography.alignment),
-    ];
-  
-    const otherstatRows = [
-      createData('full name', heroData?.biography.fullName),
-      createData('POB', heroData?.biography.placeOfBirth),
-      createData('occupation', heroData?.work.occupation),
-      createData('base', heroData?.work.base),
-    ];
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('sm'));
+
+      const appearanceRowsMobile = [
+        createData(heroData?.appearance.gender),
+        createData(heroData?.appearance.race),
+        createData(`${heroData?.appearance.height[0]} / ${heroData?.appearance.weight[0]}`),
+        createData('eyes/'+heroData?.appearance.eyeColor),
+        createData('hair/'+heroData?.appearance.hairColor),
+        createData(heroData?.biography.publisher),
+      ];
+    
+      const powerstatRowsMobile = [
+        createData('combat:'+heroData?.powerstats.combat),
+        createData('durability:'+heroData?.powerstats.durability),
+        createData('smarts:'+heroData?.powerstats.intelligence),
+        createData('speed:'+heroData?.powerstats.speed),
+        createData('strength:'+heroData?.powerstats.strength),
+        createData(heroData?.biography.alignment),
+      ];
+    
+      const otherstatRowsMobile = [
+        createData('name:'+heroData?.biography.fullName),
+        createData('POB:'+heroData?.biography.placeOfBirth),
+        createData('job:'+heroData?.work.occupation),
+        createData('base:'+heroData?.work.base),
+      ];
+
+      const appearanceRows = [
+        createData('gender', heroData?.appearance.gender),
+        createData('race', heroData?.appearance.race),
+        createData('hgt/wgt', `${heroData?.appearance.height[0]} / ${heroData?.appearance.weight[0]}`),
+        createData('eyes', heroData?.appearance.eyeColor),
+        createData('hair', heroData?.appearance.hairColor),
+        createData('pub', heroData?.biography.publisher),
+      ];
+    
+      const powerstatRows = [
+        createData('combat', heroData?.powerstats.combat),
+        createData('durability', heroData?.powerstats.durability),
+        createData('intelligence', heroData?.powerstats.intelligence),
+        createData('speed', heroData?.powerstats.speed),
+        createData('strength', heroData?.powerstats.strength),
+        createData('alignment', heroData?.biography.alignment),
+      ];
+    
+      const otherstatRows = [
+        createData('full name', heroData?.biography.fullName),
+        createData('POB', heroData?.biography.placeOfBirth),
+        createData('occupation', heroData?.work.occupation),
+        createData('base', heroData?.work.base),
+      ];
+
+
   
     return(
       <Card className={classes.root}>
           <div>
-            {/* <Typography className={classes.heroTitle} gutterBottom variant="h5" component="h2">
+            <Typography className={classes.heroTitle} gutterBottom variant="h5" component="h2">
               {heroData?.name}
-            </Typography> */}
+            </Typography>
             <CardMedia
               className={classes.heroImage}
               component="img"
@@ -130,20 +174,25 @@ const SuperHeroCard = ({playerData}) =>{
               image={heroData?.images.lg}
               title={heroData?.name}
             />
-            
           </div>
           <CardContent className={classes.mainContent}>
             <div className={classes.heroTables}>
+              
               <div className={classes.heroTable}>
-                <StatTable rows={powerstatRows}/>
+                {matches ? <StatTable rows={powerstatRows}/>
+                : <StatTable rows={powerstatRowsMobile}/> } 
               </div>
+
               <div className={classes.heroTable}>
-                <StatTable rows={appearanceRows} />
+                {matches ? <StatTable rows={appearanceRows}/>
+                : <StatTable rows={appearanceRowsMobile}/> } 
               </div>
+
             </div>
 
             <div style={{ width:'auto'}}>
-              <StatTable rows={otherstatRows} />
+              {matches ? <StatTable rows={otherstatRows}/>
+              : <StatTable rows={otherstatRowsMobile}/> } 
             </div> 
             <Paper style={{padding:10}}>
               

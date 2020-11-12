@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import { Container, Grid, Button, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -15,6 +15,8 @@ import Title from '@components/Title';
 import createHeroData from 'api/createHeroData';
 import runBattle from 'utils/runBattle';
 import SuperHeroCardSkeleton from '@components/SuperHeroCardSkeleton';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems:'center',
     marginBottom:'30px',
     flexGrow:'0',
-    flexDirection:'column',
     [theme.breakpoints.down('sm')]: {
       flexDirection:'column'
     },
@@ -55,9 +56,9 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     color: "#ffffff",
     fontFamily: "Verdana",
-    fontSize: "23px",
+    fontSize: "20px",
     fontWeight: "bold",
-    padding: "16px 36px",
+    padding: "8px 18px",
     textDecoration: "none",
     textShadow: "0px 1px 0px #b23e35",
     '&:hover': {
@@ -67,9 +68,9 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const FightButton = ({handleBattle, handleReset, activeStep, steps}) => {
+const FightButton = ({player1Data, player2Data, handleBattle, handleReset, activeStep, steps}) => {
   const classes = useStyles();
-  if(activeStep <= -1){
+  if(activeStep <= -1 && player1Data && player2Data){
     return(<a href="#" 
       onClick={handleBattle} 
       className={classes.fightButton}
@@ -80,7 +81,7 @@ const FightButton = ({handleBattle, handleReset, activeStep, steps}) => {
       className={classes.fightButton}
     >Reset!</a>)
   }else{
-    return(<b>processing . . .</b>)
+    return(<div className={classes.fightButton}>........</div>)
   }
     
 
@@ -88,6 +89,10 @@ const FightButton = ({handleBattle, handleReset, activeStep, steps}) => {
 
 const Battle = ({ title, description, ...props }) => {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const gridSpacing = matches ? 2 : 0;
+
   const [player1Data, setPlayer1Data]= useState(false)
   const [player2Data, setPlayer2Data]= useState(false)
   const [winner, setWinner]= useState(false)
@@ -131,20 +136,27 @@ const Battle = ({ title, description, ...props }) => {
           <Title>
             battle beta
           </Title>
-          <Divider style={{marginTop:'20px',marginBottom:'30px'}}/>
+          <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
+          {activeStep == steps.length ? 
+            <Typography variant="h5" component="h2" style={{textAlign:'center'}}>
+              Winner: {winner.data?.name}
+            </Typography>
+          : <></> }   
+          
           <Box className={classes.fightBar} >  
             <BattleSteps steps={steps} activeStep={activeStep} />
-              <div style={{display:'flex', alignItems:'center', alignContent:'center'}}>
-                <Typography variant="h5" component="h2" style={{textAlign:'center'}}>
-                  {winner.data?.name}
-                </Typography>
-                <FightButton steps={steps} handleBattle={handleBattle} handleReset={handleReset} activeStep={activeStep}/>
-                
-              </div>
-           
+            <FightButton 
+              player1Data={player1Data} 
+              player2Data={player2Data} 
+              steps={steps} 
+              handleBattle={handleBattle} 
+              handleReset={handleReset} 
+              activeStep={activeStep}
+            />
           </Box> 
-            <Grid container spacing={1} style={{display:'flex', flexDirection:'row'}}>
-              <Grid item xs={12} md={6} >
+         
+            <Grid container spacing={gridSpacing} style={{display:'flex', flexDirection:'row'}}>
+              <Grid item xs={6} md={6} >
                 <Autocomplete
                   id="combo-box-demo"
                   autoComplete
@@ -158,11 +170,11 @@ const Battle = ({ title, description, ...props }) => {
                 />
 
                   {!player1Data ? <SuperHeroCardSkeleton />
-                  : <SuperHeroCard playerData={player1Data} /> }   
+                  : <SuperHeroCard winner={winner} playerData={player1Data} /> }   
                
               </Grid>
 
-              <Grid item xs={12} md={6} >
+              <Grid item xs={6} md={6} >
     
                 <Autocomplete
                   id="combo-box-demo2"
@@ -177,7 +189,7 @@ const Battle = ({ title, description, ...props }) => {
                 />
 
                   {!player2Data ? <SuperHeroCardSkeleton />
-                  : <SuperHeroCard playerData={player2Data} /> } 
+                  : <SuperHeroCard winner={winner} playerData={player2Data} /> } 
 
               </Grid>
             </Grid>
