@@ -107,6 +107,7 @@ const SuperHeroCard = ({winner, playerData}) =>{
     const classes = useStyles();
     const theme = useTheme();
     const mobile = useMediaQuery(theme.breakpoints.up('sm'));
+    //maybe  move this to state
     let winStatus = 'none';
     if(winner){ winStatus = winner.data?.name == playerData.data?.name ? 'none' : 'block'; }
 
@@ -120,6 +121,7 @@ const SuperHeroCard = ({winner, playerData}) =>{
       ];
     
       const powerstatRowsMobile = [
+        createData('power:'+heroData?.powerstats.power),
         createData('combat:'+heroData?.powerstats.combat),
         createData('durability:'+heroData?.powerstats.durability),
         createData('smarts:'+heroData?.powerstats.intelligence),
@@ -145,7 +147,7 @@ const SuperHeroCard = ({winner, playerData}) =>{
       ];
     
       const powerstatRows = [
-        createData('combat', heroData?.powerstats.combat),
+        createData('power', heroData?.powerstats.power),
         createData('durability', heroData?.powerstats.durability),
         createData('intelligence', heroData?.powerstats.intelligence),
         createData('speed', heroData?.powerstats.speed),

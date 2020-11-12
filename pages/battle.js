@@ -123,7 +123,7 @@ const Battle = ({ title, description, ...props }) => {
           setWinner(runBattle(player1Data,player2Data)[6].value)
           clearInterval(int);
         }
-      },500)    
+      },400)    
   }
 
   return (

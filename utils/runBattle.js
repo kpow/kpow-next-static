@@ -8,6 +8,7 @@ const runBattle = (player1Data,player2Data) =>{
 
     // cycle through all the powerstats and compare and pick winner per stat save results to array
     const powerStats =  Object.keys(player1Data.data.powerstats)
+    console.log(powerStats)
     const battleResults = powerStats.map((power)=>{ 
       if(player1Data.data.powerstats[power] == player2Data.data.powerstats[power]){
         const rInt = (max = 1, min = 0) => Math.floor(Math.random() * (max + 1 - min)) + min;
@@ -17,6 +18,7 @@ const runBattle = (player1Data,player2Data) =>{
       }else if(player1Data.data.powerstats[power] > player2Data.data.powerstats[power]){
         player1Count++
       }
+      console.log(player1Data.data.powerstats[power])
       const winner = player1Data.data.powerstats[power] < player2Data.data.powerstats[power] ? player2Data.data.name : player1Data.data.name;
       //winner == player2Data.data.name ? player2Count++ : player1Count++;
       return createData(power, winner)
