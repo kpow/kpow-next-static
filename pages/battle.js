@@ -71,15 +71,19 @@ const useStyles = makeStyles((theme) => ({
 const FightButton = ({player1Data, player2Data, handleBattle, handleReset, activeStep, steps}) => {
   const classes = useStyles();
   if(activeStep <= -1 && player1Data && player2Data){
-    return(<a href="#mainContent" 
-      onClick={handleBattle} 
-      className={classes.fightButton}
-    >Fight!</a>)
+    return(
+      <a href="#mainContent" 
+        onClick={handleBattle} 
+        className={classes.fightButton}
+      >Fight!</a>
+    )
   }else if(activeStep>=steps.length){
-    return(<a href="#" 
-      onClick={handleReset} 
-      className={classes.fightButton}
-    >Reset!</a>)
+    return(
+      <a href="#" 
+        onClick={handleReset} 
+        className={classes.fightButton}
+      >Reset!</a>
+    )
   }else{
     return(<div className={classes.fightButton}>........</div>)
   }
