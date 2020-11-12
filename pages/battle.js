@@ -12,7 +12,7 @@ import Divider from '@material-ui/core/Divider'
 import SuperHeroCard from '@components/SuperHeroCard';
 import BattleSteps from '@components/BattleSteps';
 import Title from '@components/Title';
-import createHeroData from 'api/createHeroData';
+import createHeroData from '@utils/createHeroData';
 import runBattle from 'utils/runBattle';
 import SuperHeroCardSkeleton from '@components/SuperHeroCardSkeleton';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
 const FightButton = ({player1Data, player2Data, handleBattle, handleReset, activeStep, steps}) => {
   const classes = useStyles();
   if(activeStep <= -1 && player1Data && player2Data){
-    return(<a href="#" 
+    return(<a href="#mainContent" 
       onClick={handleBattle} 
       className={classes.fightButton}
     >Fight!</a>)
@@ -83,8 +83,6 @@ const FightButton = ({player1Data, player2Data, handleBattle, handleReset, activ
   }else{
     return(<div className={classes.fightButton}>........</div>)
   }
-    
-
 }
 
 const Battle = ({ title, description, ...props }) => {
@@ -132,7 +130,7 @@ const Battle = ({ title, description, ...props }) => {
       <Layout pageTitle={`${title} | About`} description={description}>
          
         <div className={classes.heroContent}>
-          <Container maxWidth="md" className={classes.mainContent}>
+          <Container maxWidth="md" className={classes.mainContent} id="mainContent">
           <Title>
             battle beta
           </Title>
@@ -148,10 +146,10 @@ const Battle = ({ title, description, ...props }) => {
             <FightButton 
               player1Data={player1Data} 
               player2Data={player2Data} 
-              steps={steps} 
+              steps={steps}
+              activeStep={activeStep} 
               handleBattle={handleBattle} 
               handleReset={handleReset} 
-              activeStep={activeStep}
             />
           </Box> 
          
@@ -162,7 +160,8 @@ const Battle = ({ title, description, ...props }) => {
                   autoComplete
                   options={heros}
                   onChange={(params, value)=>{
-                    setPlayer1Data(createHeroData(value))
+                    setPlayer1Data(createHeroData(value));
+                    handleReset();
                   }}
                   getOptionLabel={(option) => option.name}
                   style={{ width: '100%' }}
@@ -181,7 +180,8 @@ const Battle = ({ title, description, ...props }) => {
                   autoComplete
                   options={heros}
                   onChange={(params, value)=>{
-                    setPlayer2Data(createHeroData(value))
+                    setPlayer2Data(createHeroData(value));
+                    handleReset();
                   }}
                   getOptionLabel={(option) => option.name}
                   style={{ width: '100%' }}

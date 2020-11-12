@@ -100,14 +100,15 @@ const StatTable = ({rows}) =>{
       </Table>
     </TableContainer>
     )
-  }  
+}  
 
-
-const SuperHeroCard = ({playerData}) =>{
+const SuperHeroCard = ({winner, playerData}) =>{
     const heroData = playerData.data
     const classes = useStyles();
     const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.up('sm'));
+    const mobile = useMediaQuery(theme.breakpoints.up('sm'));
+    let winStatus = 'none';
+    if(winner){ winStatus = winner.data?.name == playerData.data?.name ? 'none' : 'block'; }
 
       const appearanceRowsMobile = [
         createData(heroData?.appearance.gender),
@@ -163,35 +164,38 @@ const SuperHeroCard = ({playerData}) =>{
   
     return(
       <Card className={classes.root}>
-          <div>
+          <div style={{position:'relative'}}>
             <Typography className={classes.heroTitle} gutterBottom variant="h5" component="h2">
               {heroData?.name}
             </Typography>
+             <img src="../static/loser.png" style={{display:winStatus, position:'absolute', width:'100%'}}/>
             <CardMedia
               className={classes.heroImage}
               component="img"
               alt={heroData?.name}
               image={heroData?.images.lg}
               title={heroData?.name}
-            />
+            >
+            </CardMedia> 
+            
           </div>
           <CardContent className={classes.mainContent}>
             <div className={classes.heroTables}>
               
               <div className={classes.heroTable}>
-                {matches ? <StatTable rows={powerstatRows}/>
+                {mobile ? <StatTable rows={powerstatRows}/>
                 : <StatTable rows={powerstatRowsMobile}/> } 
               </div>
 
               <div className={classes.heroTable}>
-                {matches ? <StatTable rows={appearanceRows}/>
+                {mobile ? <StatTable rows={appearanceRows}/>
                 : <StatTable rows={appearanceRowsMobile}/> } 
               </div>
 
             </div>
 
             <div style={{ width:'auto'}}>
-              {matches ? <StatTable rows={otherstatRows}/>
+              {mobile ? <StatTable rows={otherstatRows}/>
               : <StatTable rows={otherstatRowsMobile}/> } 
             </div> 
             <Paper style={{padding:10}}>
