@@ -16,6 +16,7 @@ import createHeroData from '@utils/createHeroData';
 import runBattle from 'utils/runBattle';
 import SuperHeroCardSkeleton from '@components/SuperHeroCardSkeleton';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import postBattle from '../api/postBattle';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -124,7 +125,10 @@ const Battle = ({ title, description, ...props }) => {
         i++
         setActiveStep(i);
         if( i == steps.length ){
-          setWinner(runBattle(player1Data,player2Data)[6].value)
+          const battleWinner = runBattle(player1Data,player2Data)
+          setWinner(battleWinner[6].value)
+          postBattle(battleWinner);
+          console.log(battleWinner)
           clearInterval(int);
         }
       },400)    
@@ -141,7 +145,7 @@ const Battle = ({ title, description, ...props }) => {
           <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
           {activeStep == steps.length ? 
             <Typography variant="h5" component="h2" style={{textAlign:'center'}}>
-              Winner: {winner.data?.name}
+              Winner: {winner}
             </Typography>
           : <></> }   
           

@@ -109,28 +109,31 @@ const SuperHeroCard = ({winner, playerData}) =>{
     const mobile = useMediaQuery(theme.breakpoints.up('sm'));
     //maybe  move this to state
     let winStatus = 'none';
-    if(winner){ winStatus = winner.data?.name == playerData.data?.name ? 'none' : 'block'; }
+    if(winner){ winStatus = winner == playerData.data?.name ? 'none' : 'block'; }
 
       const appearanceRowsMobile = [
-        createData(heroData?.appearance.gender),
-        createData(heroData?.appearance.race),
-        createData(`${heroData?.appearance.height[0]} / ${heroData?.appearance.weight[0]}`),
         createData('eyes/'+heroData?.appearance.eyeColor),
         createData('hair/'+heroData?.appearance.hairColor),
         createData(heroData?.biography.publisher),
       ];
     
       const powerstatRowsMobile = [
-        createData('power:'+heroData?.powerstats.power),
-        createData('combat:'+heroData?.powerstats.combat),
-        createData('durability:'+heroData?.powerstats.durability),
-        createData('smarts:'+heroData?.powerstats.intelligence),
-        createData('speed:'+heroData?.powerstats.speed),
-        createData('strength:'+heroData?.powerstats.strength),
-        createData(heroData?.biography.alignment),
+    
+        createData(heroData?.appearance.gender),
+        createData(heroData?.appearance.race),
+        createData(`${heroData?.appearance.height[0]} / ${heroData?.appearance.weight[0]}`),
+
+        // createData('power:'+heroData?.powerstats.power),
+        // createData('combat:'+heroData?.powerstats.combat),
+        // createData('durability:'+heroData?.powerstats.durability),
+        // createData('smarts:'+heroData?.powerstats.intelligence),
+        // createData('speed:'+heroData?.powerstats.speed),
+        // createData('strength:'+heroData?.powerstats.strength),
+        
       ];
     
       const otherstatRowsMobile = [
+        createData(heroData?.biography.alignment),
         createData('name:'+heroData?.biography.fullName),
         createData('POB:'+heroData?.biography.placeOfBirth),
         createData('job:'+heroData?.work.occupation),
@@ -138,24 +141,27 @@ const SuperHeroCard = ({winner, playerData}) =>{
       ];
 
       const appearanceRows = [
-        createData('gender', heroData?.appearance.gender),
-        createData('race', heroData?.appearance.race),
-        createData('hgt/wgt', `${heroData?.appearance.height[0]} / ${heroData?.appearance.weight[0]}`),
         createData('eyes', heroData?.appearance.eyeColor),
         createData('hair', heroData?.appearance.hairColor),
         createData('pub', heroData?.biography.publisher),
       ];
     
       const powerstatRows = [
-        createData('power', heroData?.powerstats.power),
-        createData('durability', heroData?.powerstats.durability),
-        createData('intelligence', heroData?.powerstats.intelligence),
-        createData('speed', heroData?.powerstats.speed),
-        createData('strength', heroData?.powerstats.strength),
-        createData('alignment', heroData?.biography.alignment),
+        createData('gender', heroData?.appearance.gender),
+        createData('race', heroData?.appearance.race),
+        createData('hgt/wgt', `${heroData?.appearance.height[0]} / ${heroData?.appearance.weight[0]}`),
+       
+        // createData('power', heroData?.powerstats.power),
+        // createData('combat', heroData?.powerstats.combat),
+        // createData('durability', heroData?.powerstats.durability),
+        // createData('intelligence', heroData?.powerstats.intelligence),
+        // createData('speed', heroData?.powerstats.speed),
+        // createData('strength', heroData?.powerstats.strength),
+       
       ];
     
       const otherstatRows = [
+        createData('alignment', heroData?.biography.alignment),
         createData('full name', heroData?.biography.fullName),
         createData('POB', heroData?.biography.placeOfBirth),
         createData('occupation', heroData?.work.occupation),

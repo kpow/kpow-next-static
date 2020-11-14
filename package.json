@@ -17,6 +17,7 @@
     "babel-plugin-styled-components": "^1.11.1",
     "clsx": "^1.1.1",
     "date-fns": "^2.16.1",
+    "google-spreadsheet": "^3.0.13",
     "gray-matter": "^4.0.2",
     "masonic": "^3.3.10",
     "next": "^9.5.0",
@@ -29,6 +30,7 @@
     "react-query": "^2.23.0",
     "react-query-devtools": "^2.5.1",
     "react-youtube": "^7.12.0",
+    "realm-web": "^1.0.0",
     "xml-js": "^1.6.11",
     "yup": "^0.29.3"
   }
