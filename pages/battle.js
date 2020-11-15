@@ -118,7 +118,6 @@ const Battle = ({ title, description, ...props }) => {
     setWinner('');
   };
 
-
   const handleBattle = () => {
       let i = -1
       const int = setInterval(()=>{
@@ -126,9 +125,8 @@ const Battle = ({ title, description, ...props }) => {
         setActiveStep(i);
         if( i == steps.length ){
           const battleWinner = runBattle(player1Data,player2Data)
-          setWinner(battleWinner[6].value)
+          setWinner(battleWinner[0].value)
           postBattle(battleWinner);
-          console.log(battleWinner)
           clearInterval(int);
         }
       },400)    
@@ -139,27 +137,26 @@ const Battle = ({ title, description, ...props }) => {
          
         <div className={classes.heroContent}>
           <Container maxWidth="md" className={classes.mainContent} id="mainContent">
-          <Title>
-            battle beta
-          </Title>
-          <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
-          {activeStep == steps.length ? 
+            <Title>
+              battle beta
+            </Title>
+            <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
+            
             <Typography variant="h5" component="h2" style={{textAlign:'center'}}>
-              Winner: {winner}
-            </Typography>
-          : <></> }   
-          
-          <Box className={classes.fightBar} >  
-            <BattleSteps steps={steps} activeStep={activeStep} />
-            <FightButton 
-              player1Data={player1Data} 
-              player2Data={player2Data} 
-              steps={steps}
-              activeStep={activeStep} 
-              handleBattle={handleBattle} 
-              handleReset={handleReset} 
-            />
-          </Box> 
+              Winner: {activeStep == steps.length ? <>{winner}</> : <>????</> } 
+            </Typography> 
+            
+            <Box className={classes.fightBar} >  
+              <BattleSteps steps={steps} activeStep={activeStep} />
+              <FightButton 
+                player1Data={player1Data} 
+                player2Data={player2Data} 
+                steps={steps}
+                activeStep={activeStep} 
+                handleBattle={handleBattle} 
+                handleReset={handleReset} 
+              />
+            </Box> 
          
             <Grid container spacing={gridSpacing} style={{display:'flex', flexDirection:'row'}}>
               <Grid item xs={6} md={6} >

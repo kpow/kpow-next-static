@@ -34,8 +34,9 @@ const runBattle = (player1Data,player2Data) =>{
     const battleLoser = player1Count < player2Count ? player1Data : player2Data;
     const winnerObject = createData('winner',battleWinner.data.name)
     const loserObject = createData('loser',battleLoser.data.name)
-    battleResults.push(winnerObject)
-    battleResults.push(loserObject)
+    battleResults.unshift(loserObject)
+    battleResults.unshift(winnerObject)
+   
     
     console.log(player1Count+" - "+player2Count)
     return battleResults
