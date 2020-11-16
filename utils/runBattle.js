@@ -49,7 +49,7 @@ const runBattle = (player1Data,player2Data) =>{
     // compare counts to pick a winner
     const battleWinner = player1Count > player2Count ? player1Data : player2Data;
     const battleLoser = player1Count < player2Count ? player1Data : player2Data;
-    battleResults.unshift(createData('underdog',wildCardPlayer))
+    battleResults.unshift(createData('overall',overallWinner))
     battleResults.unshift(createData('wildcard',wildCard))
     battleResults.unshift(createData('loser',battleLoser.data.name))
     battleResults.unshift(createData('winner',battleWinner.data.name))
