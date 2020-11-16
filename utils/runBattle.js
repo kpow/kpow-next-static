@@ -1,5 +1,3 @@
-
-
 function createData(key, value) {
   return { key, value};
 }
@@ -14,7 +12,6 @@ const runBattle = (player1Data,player2Data) =>{
 
     // cycle through all the powerstats and compare and pick winner per stat save results to array
     const powerStats =  Object.keys(player1Data.data.powerstats)
-    console.log(powerStats)
 
     const battleResults = powerStats.map((power)=>{ 
       if(player1Data.data.powerstats[power] == player2Data.data.powerstats[power]){
@@ -52,12 +49,11 @@ const runBattle = (player1Data,player2Data) =>{
     // compare counts to pick a winner
     const battleWinner = player1Count > player2Count ? player1Data : player2Data;
     const battleLoser = player1Count < player2Count ? player1Data : player2Data;
-    battleResults.unshift(createData('overall',overallWinner))
+    battleResults.unshift(createData('underdog',wildCardPlayer))
     battleResults.unshift(createData('wildcard',wildCard))
     battleResults.unshift(createData('loser',battleLoser.data.name))
     battleResults.unshift(createData('winner',battleWinner.data.name))
-    
-    
+    console.log(player1Count +' - '+player2Count)
     console.log(battleResults)
     return battleResults
   }
