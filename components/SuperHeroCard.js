@@ -114,7 +114,7 @@ const SuperHeroCard = ({winner, playerData}) =>{
       const appearanceRowsMobile = [
         createData('eyes/'+heroData?.appearance.eyeColor),
         createData('hair/'+heroData?.appearance.hairColor),
-        createData(heroData?.biography.publisher),
+        createData(heroData?.biography.alignment),
       ];
     
       const powerstatRowsMobile = [
@@ -133,7 +133,7 @@ const SuperHeroCard = ({winner, playerData}) =>{
       ];
     
       const otherstatRowsMobile = [
-        createData(heroData?.biography.alignment),
+        createData(heroData?.biography.publisher),
         createData('name:'+heroData?.biography.fullName),
         createData('POB:'+heroData?.biography.placeOfBirth),
         createData('job:'+heroData?.work.occupation),
@@ -143,7 +143,8 @@ const SuperHeroCard = ({winner, playerData}) =>{
       const appearanceRows = [
         createData('eyes', heroData?.appearance.eyeColor),
         createData('hair', heroData?.appearance.hairColor),
-        createData('pub', heroData?.biography.publisher),
+        
+        createData('alignment', heroData?.biography.alignment),
       ];
     
       const powerstatRows = [
@@ -161,11 +162,11 @@ const SuperHeroCard = ({winner, playerData}) =>{
       ];
     
       const otherstatRows = [
-        createData('alignment', heroData?.biography.alignment),
         createData('full name', heroData?.biography.fullName),
         createData('POB', heroData?.biography.placeOfBirth),
         createData('occupation', heroData?.work.occupation),
         createData('base', heroData?.work.base),
+        createData('pub', heroData?.biography.publisher),
       ];
 
 

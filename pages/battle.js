@@ -7,6 +7,14 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import InputLabel from '@material-ui/core/InputLabel';
+import Select from '@material-ui/core/Select';
+
 import heros from '../src/superheros-prod';
 import Divider from '@material-ui/core/Divider'
 import SuperHeroCard from '@components/SuperHeroCard';
@@ -42,51 +50,33 @@ const useStyles = makeStyles((theme) => ({
     justifyContent:'center',
     alignItems:'center',
     marginBottom:'30px',
-    flexGrow:'0',
     [theme.breakpoints.down('sm')]: {
       flexDirection:'column'
     },
   },
-  fightButton: {
-    flexGrow:'0',
-    boxShadow: "inset 0px 1px 0px 0px #f29c93",
-    background: "linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%)",
-    backgroundColor: "#fe1a00",
-    borderRadius: "42px",
-    display: "inline-block",
-    cursor: "pointer",
-    color: "#ffffff",
-    fontFamily: "Verdana",
-    fontSize: "20px",
-    fontWeight: "bold",
-    padding: "8px 18px",
-    textDecoration: "none",
-    textShadow: "0px 1px 0px #b23e35",
-    '&:hover': {
-      background: "linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%)",
-      backgroundColor: "#ce0100"
-    }
-  }
+
 }));
 
 const FightButton = ({player1Data, player2Data, handleBattle, handleReset, activeStep, steps}) => {
   const classes = useStyles();
   if(activeStep <= -1 && player1Data && player2Data){
     return(
-      <a href="#mainContent" 
-        onClick={handleBattle} 
-        className={classes.fightButton}
-      >Fight!</a>
+      <Button href="#mainContent"  onClick={handleBattle}  variant="contained" color="secondary">
+        fight
+      </Button>
     )
   }else if(activeStep>=steps.length){
     return(
-      <a href="#" 
-        onClick={handleReset} 
-        className={classes.fightButton}
-      >Reset!</a>
+      <Button onClick={handleReset}  variant="contained" color="secondary">
+        reset
+      </Button>
     )
   }else{
-    return(<div className={classes.fightButton}>........</div>)
+    return(
+      <Button variant="contained" color="secondary">
+      ........
+      </Button>
+    )
   }
 }
 
@@ -95,6 +85,10 @@ const Battle = ({ title, description, ...props }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const gridSpacing = matches ? 2 : 0;
+
+  const [gameObject, setGameObject]= useState({});
+  const [winnerPick, setWinnerPick] = React.useState('');
+  const [wager, setWager] = React.useState(0);
 
   const [player1Data, setPlayer1Data]= useState(false)
   const [player2Data, setPlayer2Data]= useState(false)
@@ -126,10 +120,21 @@ const Battle = ({ title, description, ...props }) => {
         if( i == steps.length ){
           const battleWinner = runBattle(player1Data,player2Data)
           setWinner(battleWinner[0].value)
+          if(battleWinner[0].value == winnerPick){
+            console.log('winner winner')
+          }
           postBattle(battleWinner);
           clearInterval(int);
         }
       },400)    
+  }
+
+  const handleRadioChange = (event) => {
+    setWinnerPick(event.target.value);
+  };
+
+  const handleTextChange = (event) => {
+    setWager(event.target.value)
   }
 
   return (
@@ -144,18 +149,57 @@ const Battle = ({ title, description, ...props }) => {
             
             <Typography variant="h5" component="h2" style={{textAlign:'center'}}>
               Winner: {activeStep == steps.length ? <>{winner}</> : <>????</> } 
-            </Typography> 
+            </Typography>
+            <p>user pick: {winnerPick} - wager: {wager}</p>
             
             <Box className={classes.fightBar} >  
               <BattleSteps steps={steps} activeStep={activeStep} />
-              <FightButton 
-                player1Data={player1Data} 
-                player2Data={player2Data} 
-                steps={steps}
-                activeStep={activeStep} 
-                handleBattle={handleBattle} 
-                handleReset={handleReset} 
-              />
+             
+            </Box>
+            <Box style={{width:'100%',display:'flex',justifyContent:'center', alignItems:'center'}}>
+            {player1Data && player2Data ? 
+                  <>
+                   <FormControl component="fieldset">
+                   <RadioGroup onChange={handleRadioChange} row aria-label="position" name="position" defaultValue="center" >
+                     <div style={{display:'flex',alignItems:'center', justifyContent:'center'}}>
+                     <FormControlLabel 
+                        label={player1Data.data?.name} 
+                        value={player1Data.data?.name} 
+                        control={<Radio color="primary" />} 
+                      />
+                     <FormControlLabel 
+                        label={player2Data.data?.name} 
+                        value={player2Data.data?.name} 
+                        control={<Radio color="primary" />} 
+                      />
+                     </div>
+                     <div style={{display:'flex',alignItems:'center', justifyContent:'center', padding:'10px'}}>
+                        <TextField
+                          style={{maxWidth:'70px'}}
+                          onChange={handleTextChange}
+                          label="wager"
+                          id="outlined-size-small"
+                          value={wager}
+                          variant="outlined"
+                          size="small"
+                        />
+                     </div>
+                   </RadioGroup>
+                  
+                 </FormControl>
+                   <FightButton 
+                     player1Data={player1Data} 
+                     player2Data={player2Data} 
+                     steps={steps}
+                     activeStep={activeStep} 
+                     handleBattle={handleBattle} 
+                     handleReset={handleReset} 
+                   />
+                  </>
+                  : <></>
+            }     
+       
+
             </Box> 
          
             <Grid container spacing={gridSpacing} style={{display:'flex', flexDirection:'row'}}>
