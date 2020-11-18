@@ -110,6 +110,7 @@ const Battle = ({ title, description, ...props }) => {
   const handleReset = () => {
     setActiveStep(-1);
     setWinner('');
+    setWager(0);
   };
 
   const handleBattle = () => {
@@ -158,35 +159,37 @@ const Battle = ({ title, description, ...props }) => {
             </Box>
             <Box style={{width:'100%',display:'flex',justifyContent:'center', alignItems:'center'}}>
             {player1Data && player2Data ? 
-                  <>
+                  <div style={{paddingBottom:30,}}>
                    <FormControl component="fieldset">
                    <RadioGroup onChange={handleRadioChange} row aria-label="position" name="position" defaultValue="center" >
-                     <div style={{display:'flex',alignItems:'center', justifyContent:'center'}}>
+                     <div style={{display:'flex', flexDirection:'column'}}>
                      <FormControlLabel 
-                        label={player1Data.data?.name} 
-                        value={player1Data.data?.name} 
+                        label={player1Data.data.name} 
+                        value={player1Data.data.name} 
                         control={<Radio color="primary" />} 
                       />
                      <FormControlLabel 
-                        label={player2Data.data?.name} 
-                        value={player2Data.data?.name} 
+                        label={player2Data.data.name} 
+                        value={player2Data.data.name} 
                         control={<Radio color="primary" />} 
                       />
                      </div>
                      <div style={{display:'flex',alignItems:'center', justifyContent:'center', padding:'10px'}}>
-                        <TextField
-                          style={{maxWidth:'70px'}}
-                          onChange={handleTextChange}
-                          label="wager"
-                          id="outlined-size-small"
-                          value={wager}
-                          variant="outlined"
-                          size="small"
-                        />
+                          <TextField
+                            size="small"
+                            style={{maxWidth:70}}
+                            onChange={handleTextChange}
+                            id="outlined-number"
+                            label="bet"
+                            type="number"
+                            value={wager}
+                            InputLabelProps={{
+                              shrink: true,
+                            }}
+                            variant="outlined"
+                          />
                      </div>
                    </RadioGroup>
-                  
-                 </FormControl>
                    <FightButton 
                      player1Data={player1Data} 
                      player2Data={player2Data} 
@@ -194,8 +197,10 @@ const Battle = ({ title, description, ...props }) => {
                      activeStep={activeStep} 
                      handleBattle={handleBattle} 
                      handleReset={handleReset} 
-                   />
-                  </>
+                   />         
+                 </FormControl>
+
+                  </div>
                   : <></>
             }     
        
