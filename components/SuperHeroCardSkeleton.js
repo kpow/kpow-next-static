@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '30px;'
   },
   media:{
-    height:390,
+    height:450,
     [theme.breakpoints.down('sm')]: {
       height:220,
    

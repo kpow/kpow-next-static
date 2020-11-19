@@ -30,7 +30,7 @@ import postBattle from '../api/postBattle';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: '100%',
-    marginTop: '30px',
+    marginTop: '20px',
     display:'flex',
     [theme.breakpoints.down('sm')]: {
       flexDirection:'column'
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heroContent: {
     padding: theme.spacing(0, 0, 0),
-    marginTop: '30px;'
+    marginTop: '10px;'
   },
   mainContent: {
     width:'100%',
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     display:'flex',
     justifyContent:'center',
     alignItems:'center',
-    marginBottom:'30px',
+    marginBottom:'10px',
     [theme.breakpoints.down('sm')]: {
       flexDirection:'column'
     },
@@ -148,18 +148,19 @@ const Battle = ({ title, description, ...props }) => {
             </Title>
             <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
             
-            <Typography variant="h5" component="h2" style={{textAlign:'center'}}>
-              Winner: {activeStep == steps.length ? <>{winner}</> : <>????</> } 
-            </Typography>
-            <p>user pick: {winnerPick} - wager: {wager}</p>
+            
+            
             
             <Box className={classes.fightBar} >  
               <BattleSteps steps={steps} activeStep={activeStep} />
              
             </Box>
-            <Box style={{width:'100%',display:'flex',justifyContent:'center', alignItems:'center'}}>
+            <Box style={{width:'100%',display:'flex',justifyContent:'center', flexDirection:'column', alignItems:'center'}}>
+            <Typography variant="h5" component="h2" style={{textAlign:'center'}}>
+              Winner: {activeStep == steps.length ? <>{winner}</> : <>????</> } 
+            </Typography>
             {player1Data && player2Data ? 
-                  <div style={{paddingBottom:30,}}>
+                  <div style={{paddingBottom:10,}}>
                    <FormControl component="fieldset">
                    <RadioGroup onChange={handleRadioChange} row aria-label="position" name="position" defaultValue="center" >
                      <div style={{display:'flex', flexDirection:'column'}}>
@@ -199,8 +200,8 @@ const Battle = ({ title, description, ...props }) => {
                      handleReset={handleReset} 
                    />         
                  </FormControl>
-
-                  </div>
+                 {/* <p>user pick: {winnerPick} - wager: {wager}</p>            */}
+                </div>
                   : <></>
             }     
        
