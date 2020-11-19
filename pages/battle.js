@@ -25,6 +25,12 @@ import runBattle from 'utils/runBattle';
 import SuperHeroCardSkeleton from '@components/SuperHeroCardSkeleton';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import postBattle from '../api/postBattle';
+import BattleController from '@components/BattleController';
+
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+import EditIcon from '@material-ui/icons/Edit';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -54,6 +60,24 @@ const useStyles = makeStyles((theme) => ({
       flexDirection:'column'
     },
   },
+  controller:{
+    width:'100%',
+    display:'flex',
+    justifyContent:'center', 
+    flexDirection:'column', 
+    alignItems:'center',
+    marginBottom:20
+  },
+  controllerOne:{
+    minWidth:'350px',
+    display:'flex',
+    justifyContent:'center', 
+    alignItems:'center',
+    flexDirection:'row',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection:'column'
+    },
+  }
 
 }));
 
@@ -61,19 +85,19 @@ const FightButton = ({player1Data, player2Data, handleBattle, handleReset, activ
   const classes = useStyles();
   if(activeStep <= -1 && player1Data && player2Data){
     return(
-      <Button href="#mainContent"  onClick={handleBattle}  variant="contained" color="secondary">
+      <Button fullWidth href="#mainContent"  onClick={handleBattle}  variant="contained" color="secondary">
         fight
       </Button>
     )
   }else if(activeStep>=steps.length){
     return(
-      <Button onClick={handleReset}  variant="contained" color="secondary">
+      <Button fullWidth onClick={handleReset}  variant="contained" color="secondary">
         reset
       </Button>
     )
   }else{
     return(
-      <Button variant="contained" color="secondary">
+      <Button fullWidth variant="contained" color="secondary">
       ........
       </Button>
     )
@@ -89,6 +113,8 @@ const Battle = ({ title, description, ...props }) => {
   const [gameObject, setGameObject]= useState({});
   const [winnerPick, setWinnerPick] = React.useState('');
   const [wager, setWager] = React.useState(0);
+  const [stash, setStash] = React.useState(100);
+  const [wagerError, setWagerError] = React.useState(false);
 
   const [player1Data, setPlayer1Data]= useState(false)
   const [player2Data, setPlayer2Data]= useState(false)
@@ -110,7 +136,6 @@ const Battle = ({ title, description, ...props }) => {
   const handleReset = () => {
     setActiveStep(-1);
     setWinner('');
-    setWager(0);
   };
 
   const handleBattle = () => {
@@ -120,10 +145,9 @@ const Battle = ({ title, description, ...props }) => {
         setActiveStep(i);
         if( i == steps.length ){
           const battleWinner = runBattle(player1Data,player2Data)
+          const newStash = battleWinner[0].value == winnerPick ? (Number(stash)+Number(wager)) : (Number(stash)-Number(wager))
           setWinner(battleWinner[0].value)
-          if(battleWinner[0].value == winnerPick){
-            console.log('winner winner')
-          }
+          setStash(newStash)
           postBattle(battleWinner);
           clearInterval(int);
         }
@@ -136,6 +160,8 @@ const Battle = ({ title, description, ...props }) => {
 
   const handleTextChange = (event) => {
     setWager(event.target.value)
+    event.target.value < 0 ? setWagerError(true) : setWagerError(false);
+  
   }
 
   return (
@@ -147,67 +173,16 @@ const Battle = ({ title, description, ...props }) => {
               battle beta
             </Title>
             <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
-            
-            
-            
-            
+          
             <Box className={classes.fightBar} >  
               <BattleSteps steps={steps} activeStep={activeStep} />
-             
             </Box>
-            <Box style={{width:'100%',display:'flex',justifyContent:'center', flexDirection:'column', alignItems:'center'}}>
-            <Typography variant="h5" component="h2" style={{textAlign:'center'}}>
-              Winner: {activeStep == steps.length ? <>{winner}</> : <>????</> } 
-            </Typography>
-            {player1Data && player2Data ? 
-                  <div style={{paddingBottom:10,}}>
-                   <FormControl component="fieldset">
-                   <RadioGroup onChange={handleRadioChange} row aria-label="position" name="position" defaultValue="center" >
-                     <div style={{display:'flex', flexDirection:'column'}}>
-                     <FormControlLabel 
-                        label={player1Data.data.name} 
-                        value={player1Data.data.name} 
-                        control={<Radio color="primary" />} 
-                      />
-                     <FormControlLabel 
-                        label={player2Data.data.name} 
-                        value={player2Data.data.name} 
-                        control={<Radio color="primary" />} 
-                      />
-                     </div>
-                     <div style={{display:'flex',alignItems:'center', justifyContent:'center', padding:'10px'}}>
-                          <TextField
-                            size="small"
-                            style={{maxWidth:70}}
-                            onChange={handleTextChange}
-                            id="outlined-number"
-                            label="bet"
-                            type="number"
-                            value={wager}
-                            InputLabelProps={{
-                              shrink: true,
-                            }}
-                            variant="outlined"
-                          />
-                     </div>
-                   </RadioGroup>
-                   <FightButton 
-                     player1Data={player1Data} 
-                     player2Data={player2Data} 
-                     steps={steps}
-                     activeStep={activeStep} 
-                     handleBattle={handleBattle} 
-                     handleReset={handleReset} 
-                   />         
-                 </FormControl>
-                 {/* <p>user pick: {winnerPick} - wager: {wager}</p>            */}
-                </div>
-                  : <></>
-            }     
-       
 
-            </Box> 
-         
+            {player1Data && player2Data ? 
+              <BattleController player1Data={player1Data} player2Data={player2Data} wager={wager} wagerError={wagerError} winner={winner} stash={stash} handleBattle={handleBattle} handleRadioChange={handleRadioChange} handleTextChange={handleTextChange} handleReset={handleReset} activeStep={activeStep} steps={steps} />
+              : <></>
+            }     
+
             <Grid container spacing={gridSpacing} style={{display:'flex', flexDirection:'row'}}>
               <Grid item xs={6} md={6} >
                 <Autocomplete
