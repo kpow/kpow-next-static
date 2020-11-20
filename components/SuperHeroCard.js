@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     heroTitle: {
       marginTop: '10px',
       marginLeft: '20px',
-      display: 'none',
+      // display: 'none',
       [theme.breakpoints.down('sm')]: {
         marginTop: '5px',
         marginLeft: '5px',
@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
     },
     heroImage: {
       maxWidth:'450px',
-      maxHeight:'450px'
+      maxHeight:'450px',
+      height:'450px',
     },
     heroTables:{
       display:'flex',

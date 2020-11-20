@@ -105,13 +105,13 @@ const BattleController = ({player1Data, player2Data, wager, wagerError,winner,st
                 
                 <div style={{display:'flex', flexDirection:'column'}}>
                     <FormControlLabel 
-                        label={player1Data.data.name} 
-                        value={player1Data.data.name} 
+                        label={player1Data.data?.name} 
+                        value={player1Data.data?.name} 
                         control={<Radio color="primary" />} 
                     />
                     <FormControlLabel 
-                        label={player2Data.data.name} 
-                        value={player2Data.data.name} 
+                        label={player2Data.data?.name} 
+                        value={player2Data.data?.name} 
                         control={<Radio color="primary" />} 
                     />
                 </div>
@@ -120,31 +120,35 @@ const BattleController = ({player1Data, player2Data, wager, wagerError,winner,st
                 
                     <div>
                         <TextField
-                        size="small"
-                        style={{maxWidth:80,padding:'5px'}}
-                        onChange={handleTextChange}
-                        id="outlined-number"
-                        label="bet"
-                        error={wagerError}
-                        type="number"
-                        value={wager}
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                        variant="outlined"
+                          size="small"
+                          style={{maxWidth:80,padding:'5px'}}
+                          onChange={handleTextChange}
+                          id="outlined-number"
+                          label="bet"
+                          error={wagerError}
+                          type="number"
+                          value={wager}
+                          inputProps={{
+                            min:20,
+                            max:100,
+                          }}
+                          InputLabelProps={{
+                              shrink: true,
+                          }}
+                          variant="outlined"
                         />
                         <TextField
-                        size="small"
-                        style={{maxWidth:80,padding:'5px'}}
-                        disabled
-                        id="outlined-number"
-                        label="stash"
-                        type="number"
-                        value={stash}
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                        variant="outlined"
+                          size="small"
+                          style={{maxWidth:80,padding:'5px'}}
+                          disabled
+                          id="outlined-number"
+                          label="stash"
+                          type="number"
+                          value={stash}
+                          InputLabelProps={{
+                              shrink: true,
+                          }}
+                          variant="outlined"
                         />
                     </div>
 

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import { Container, Grid, Button, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -14,7 +14,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
-
+import Switch from '@material-ui/core/Switch';
 import heros from '../src/superheros-prod';
 import Divider from '@material-ui/core/Divider'
 import SuperHeroCard from '@components/SuperHeroCard';
@@ -81,28 +81,59 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-const FightButton = ({player1Data, player2Data, handleBattle, handleReset, activeStep, steps}) => {
-  const classes = useStyles();
-  if(activeStep <= -1 && player1Data && player2Data){
-    return(
-      <Button fullWidth href="#mainContent"  onClick={handleBattle}  variant="contained" color="secondary">
-        fight
-      </Button>
-    )
-  }else if(activeStep>=steps.length){
-    return(
-      <Button fullWidth onClick={handleReset}  variant="contained" color="secondary">
-        reset
-      </Button>
-    )
-  }else{
-    return(
-      <Button fullWidth variant="contained" color="secondary">
-      ........
-      </Button>
-    )
-  }
-}
+const IOSSwitch = withStyles((theme) => ({
+  root: {
+    width: 42,
+    height: 26,
+    padding: 0,
+    margin: theme.spacing(1),
+  },
+  switchBase: {
+    padding: 1,
+    '&$checked': {
+      transform: 'translateX(16px)',
+      color: theme.palette.common.white,
+      '& + $track': {
+        backgroundColor: '#3f51b5',
+        opacity: 1,
+        border: 'none',
+      },
+    },
+    '&$focusVisible $thumb': {
+      color: '#52d869',
+      border: '6px solid #fff',
+    },
+  },
+  thumb: {
+    width: 24,
+    height: 24,
+  },
+  track: {
+    borderRadius: 26 / 2,
+    border: `1px solid ${theme.palette.grey[400]}`,
+    backgroundColor: '#999',
+    opacity: 1,
+    transition: theme.transitions.create(['background-color', 'border']),
+  },
+  checked: {},
+  focusVisible: {},
+}))(({ classes, ...props }) => {
+  return (
+    <Switch
+      focusVisibleClassName={classes.focusVisible}
+      disableRipple
+      classes={{
+        root: classes.root,
+        switchBase: classes.switchBase,
+        thumb: classes.thumb,
+        track: classes.track,
+        checked: classes.checked,
+      }}
+      {...props}
+    />
+  );
+});
+
 
 const Battle = ({ title, description, ...props }) => {
   const classes = useStyles();
@@ -110,9 +141,10 @@ const Battle = ({ title, description, ...props }) => {
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const gridSpacing = matches ? 2 : 0;
 
+  const [randomPlay, setRandomPlay]= useState(true);
   const [gameObject, setGameObject]= useState({});
   const [winnerPick, setWinnerPick] = React.useState('');
-  const [wager, setWager] = React.useState(0);
+  const [wager, setWager] = React.useState(20);
   const [stash, setStash] = React.useState(100);
   const [wagerError, setWagerError] = React.useState(false);
 
@@ -136,7 +168,13 @@ const Battle = ({ title, description, ...props }) => {
   const handleReset = () => {
     setActiveStep(-1);
     setWinner('');
+    if(randomPlay){
+      setPlayer1Data(createHeroData(heros[rInt(heros.length,0)]));
+      setPlayer2Data(createHeroData(heros[rInt(heros.length,0)]));
+    }
   };
+
+  const rInt = (max = 1, min = 0) => Math.floor(Math.random() * (max + 1 - min)) + min;
 
   const handleBattle = () => {
       let i = -1
@@ -161,17 +199,36 @@ const Battle = ({ title, description, ...props }) => {
   const handleTextChange = (event) => {
     setWager(event.target.value)
     event.target.value < 0 ? setWagerError(true) : setWagerError(false);
-  
   }
+
+  const handleRandomChange = (event) => {
+    setRandomPlay(event.target.checked);
+  };
+
+  React.useEffect(() => {
+    if(randomPlay){
+      setPlayer1Data(createHeroData(heros[rInt(heros.length,0)]));
+      setPlayer2Data(createHeroData(heros[rInt(heros.length,0)]));
+    }
+    
+
+  }, [setPlayer1Data, setPlayer2Data, createHeroData])
 
   return (
       <Layout pageTitle={`${title} | About`} description={description}>
          
         <div className={classes.heroContent}>
           <Container maxWidth="md" className={classes.mainContent} id="mainContent">
-            <Title>
-              battle beta
-            </Title>
+            <div className={classes.root}>
+              <Title>
+                battle beta
+              </Title>
+              <FormControlLabel
+                control={<IOSSwitch checked={randomPlay} onChange={handleRandomChange} name="randomPlay" />}
+                label="random play"
+              />
+
+            </div>
             <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
           
             <Box className={classes.fightBar} >  
@@ -185,18 +242,23 @@ const Battle = ({ title, description, ...props }) => {
 
             <Grid container spacing={gridSpacing} style={{display:'flex', flexDirection:'row'}}>
               <Grid item xs={6} md={6} >
-                <Autocomplete
-                  id="combo-box-demo"
-                  autoComplete
-                  options={heros}
-                  onChange={(params, value)=>{
-                    setPlayer1Data(createHeroData(value));
-                    handleReset();
-                  }}
-                  getOptionLabel={(option) => option.name}
-                  style={{ width: '100%' }}
-                  renderInput={(params) => <TextField {...params} label="pick a super"  />}
-                />
+                {!randomPlay ? 
+                  <Autocomplete
+                    id="combo-box-demo"
+                    autoComplete
+                    options={heros}
+                    onChange={(params, value)=>{
+                      setPlayer1Data(createHeroData(value));
+                      console.log(value);
+                      handleReset();
+                    }}
+                    getOptionLabel={(option) => option.name}
+                    style={{ width: '100%' }}
+                    renderInput={(params) => <TextField {...params} label="pick a super"  />}
+                  />
+                  : <></>
+                } 
+                
 
                   {!player1Data ? <SuperHeroCardSkeleton />
                   : <SuperHeroCard winner={winner} playerData={player1Data} /> }   
@@ -205,18 +267,21 @@ const Battle = ({ title, description, ...props }) => {
 
               <Grid item xs={6} md={6} >
     
-                <Autocomplete
-                  id="combo-box-demo2"
-                  autoComplete
-                  options={heros}
-                  onChange={(params, value)=>{
-                    setPlayer2Data(createHeroData(value));
-                    handleReset();
-                  }}
-                  getOptionLabel={(option) => option.name}
-                  style={{ width: '100%' }}
-                  renderInput={(params) => <TextField {...params} label="pick a super" />}
-                />
+                {!randomPlay ? 
+                  <Autocomplete
+                    id="combo-box-demo"
+                    autoComplete
+                    options={heros}
+                    onChange={(params, value)=>{
+                      setPlayer2Data(createHeroData(value));
+                      handleReset();
+                    }}
+                    getOptionLabel={(option) => option.name}
+                    style={{ width: '100%' }}
+                    renderInput={(params) => <TextField {...params} label="pick a super"  />}
+                  />
+                  : <></>
+                } 
 
                   {!player2Data ? <SuperHeroCardSkeleton />
                   : <SuperHeroCard winner={winner} playerData={player2Data} /> } 
