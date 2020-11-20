@@ -49,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
       maxWidth:'450px',
       maxHeight:'450px',
       height:'450px',
+      [theme.breakpoints.down('sm')]: {
+        height:'220px',
+      },
     },
     heroTables:{
       display:'flex',

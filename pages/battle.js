@@ -227,7 +227,6 @@ const Battle = ({ title, description, ...props }) => {
                 control={<IOSSwitch checked={randomPlay} onChange={handleRandomChange} name="randomPlay" />}
                 label="random play"
               />
-
             </div>
             <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
           
@@ -237,8 +236,7 @@ const Battle = ({ title, description, ...props }) => {
 
             {player1Data && player2Data ? 
               <BattleController player1Data={player1Data} player2Data={player2Data} wager={wager} wagerError={wagerError} winner={winner} stash={stash} handleBattle={handleBattle} handleRadioChange={handleRadioChange} handleTextChange={handleTextChange} handleReset={handleReset} activeStep={activeStep} steps={steps} />
-              : <></>
-            }     
+            : <></> }     
 
             <Grid container spacing={gridSpacing} style={{display:'flex', flexDirection:'row'}}>
               <Grid item xs={6} md={6} >
@@ -249,17 +247,14 @@ const Battle = ({ title, description, ...props }) => {
                     options={heros}
                     onChange={(params, value)=>{
                       setPlayer1Data(createHeroData(value));
-                      console.log(value);
                       handleReset();
                     }}
                     getOptionLabel={(option) => option.name}
                     style={{ width: '100%' }}
                     renderInput={(params) => <TextField {...params} label="pick a super"  />}
                   />
-                  : <></>
-                } 
+                : <></> } 
                 
-
                   {!player1Data ? <SuperHeroCardSkeleton />
                   : <SuperHeroCard winner={winner} playerData={player1Data} /> }   
                
@@ -280,8 +275,7 @@ const Battle = ({ title, description, ...props }) => {
                     style={{ width: '100%' }}
                     renderInput={(params) => <TextField {...params} label="pick a super"  />}
                   />
-                  : <></>
-                } 
+                : <></> } 
 
                   {!player2Data ? <SuperHeroCardSkeleton />
                   : <SuperHeroCard winner={winner} playerData={player2Data} /> } 
