@@ -85,7 +85,7 @@ const FightButton = ({player1Data, player2Data, handleBattle, handleReset, activ
   }
 }
 
-const BattleController = ({player1Data, player2Data, wager, wagerError,winner,stash, handleBattle,handleRadioChange,handleTextChange, handleReset, activeStep, steps}) => {
+const BattleController = ({randomPlay, player1Data, player2Data, wager, wagerError,winner,stash, handleBattle,handleRadioChange,handleTextChange, handleReset, activeStep, steps}) => {
   const classes = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
@@ -102,7 +102,7 @@ const BattleController = ({player1Data, player2Data, wager, wagerError,winner,st
     <div>
         <FormControl component="fieldset">
             <RadioGroup className={classes.controllerOne} onChange={handleRadioChange} row aria-label="position" name="position" defaultValue="center" >
-                
+              {randomPlay ? 
                 <div style={{display:'flex', flexDirection:'column'}}>
                     <FormControlLabel 
                         label={player1Data.data?.name} 
@@ -115,42 +115,44 @@ const BattleController = ({player1Data, player2Data, wager, wagerError,winner,st
                         control={<Radio color="primary" />} 
                     />
                 </div>
-
+              : <></> }   
                 <div style={{display:'flex',alignItems:'center',flexDirection:'column', justifyContent:'center'}}>
-                
+                  {randomPlay ? 
                     <div>
-                        <TextField
-                          size="small"
-                          style={{maxWidth:80,padding:'5px'}}
-                          onChange={handleTextChange}
-                          id="outlined-number"
-                          label="bet"
-                          error={wagerError}
-                          type="number"
-                          value={wager}
-                          inputProps={{
-                            min:20,
-                            max:100,
-                          }}
-                          InputLabelProps={{
-                              shrink: true,
-                          }}
-                          variant="outlined"
-                        />
-                        <TextField
-                          size="small"
-                          style={{maxWidth:80,padding:'5px'}}
-                          disabled
-                          id="outlined-number"
-                          label="stash"
-                          type="number"
-                          value={stash}
-                          InputLabelProps={{
-                              shrink: true,
-                          }}
-                          variant="outlined"
-                        />
+                      <TextField
+                        size="small"
+                        style={{maxWidth:80,padding:'5px'}}
+                        onChange={handleTextChange}
+                        id="outlined-number"
+                        label="bet"
+                        error={wagerError}
+                        type="number"
+                        value={wager}
+                        inputProps={{
+                          min:20,
+                          max:100,
+                        }}
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                        variant="outlined"
+                      />
+                      <TextField
+                        size="small"
+                        style={{maxWidth:80,padding:'5px'}}
+                        disabled
+                        id="outlined-number"
+                        label="stash"
+                        type="number"
+                        value={stash}
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                        variant="outlined"
+                      />
                     </div>
+                  : <></> }    
+                    
 
                     <FightButton 
                         player1Data={player1Data} 

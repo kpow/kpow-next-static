@@ -233,7 +233,7 @@ const Battle = ({ title, description, ...props }) => {
             </Box>
 
             {player1Data && player2Data ? 
-              <BattleController player1Data={player1Data} player2Data={player2Data} wager={wager} wagerError={wagerError} winner={winner} stash={stash} handleBattle={handleBattle} handleRadioChange={handleRadioChange} handleTextChange={handleTextChange} handleReset={handleReset} activeStep={activeStep} steps={steps} />
+              <BattleController randomPlay={randomPlay} player1Data={player1Data} player2Data={player2Data} wager={wager} wagerError={wagerError} winner={winner} stash={stash} handleBattle={handleBattle} handleRadioChange={handleRadioChange} handleTextChange={handleTextChange} handleReset={handleReset} activeStep={activeStep} steps={steps} />
             : <></> }     
 
             <Grid container spacing={gridSpacing} style={{display:'flex', flexDirection:'row'}}>
