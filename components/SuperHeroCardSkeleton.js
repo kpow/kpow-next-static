@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
   heroTitle: {
     marginTop: '10px',
     marginLeft: '20px',
-    display: 'none',
     [theme.breakpoints.down('sm')]: {
       marginTop: '5px',
       marginLeft: '5px',
@@ -53,7 +52,11 @@ const useStyles = makeStyles((theme) => ({
   },
   heroImage: {
     maxWidth:'450px',
-    maxHeight:'450px'
+    maxHeight:'450px',
+    height:'450px',
+    [theme.breakpoints.down('sm')]: {
+      height:'220px',
+    },
   },
   heroTables:{
     display:'flex',
@@ -141,7 +144,7 @@ const SuperHeroCardSkeleton = ({}) =>{
       <Card className={classes.root}>
           <div>
             <Typography className={classes.heroTitle} gutterBottom variant="h5" component="h2">
-            <Skeleton animation="wave" variant="rect" width="96%"/>
+              <Skeleton animation="wave" variant="rect" width="96%"/>
             </Typography>
   
             <Skeleton animation="wave" variant="rect" className={classes.media} />

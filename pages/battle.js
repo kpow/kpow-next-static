@@ -210,8 +210,6 @@ const Battle = ({ title, description, ...props }) => {
       setPlayer1Data(createHeroData(heros[rInt(heros.length,0)]));
       setPlayer2Data(createHeroData(heros[rInt(heros.length,0)]));
     }
-    
-
   }, [setPlayer1Data, setPlayer2Data, createHeroData])
 
   return (
@@ -255,8 +253,8 @@ const Battle = ({ title, description, ...props }) => {
                   />
                 : <></> } 
                 
-                  {!player1Data ? <SuperHeroCardSkeleton />
-                  : <SuperHeroCard winner={winner} playerData={player1Data} /> }   
+                {!player1Data ? <SuperHeroCardSkeleton />
+                : <SuperHeroCard winner={winner} playerData={player1Data} /> }   
                
               </Grid>
 
@@ -277,8 +275,8 @@ const Battle = ({ title, description, ...props }) => {
                   />
                 : <></> } 
 
-                  {!player2Data ? <SuperHeroCardSkeleton />
-                  : <SuperHeroCard winner={winner} playerData={player2Data} /> } 
+                {!player2Data ? <SuperHeroCardSkeleton />
+                : <SuperHeroCard winner={winner} playerData={player2Data} /> } 
 
               </Grid>
             </Grid>
