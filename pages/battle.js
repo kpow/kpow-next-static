@@ -1,19 +1,12 @@
 import Layout from '@components/Layout'
 import React, { useState, useEffect, useRef } from "react";
-
 import { Container, Grid, Button, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
 import Switch from '@material-ui/core/Switch';
 import heros from '../src/superheros-prod';
 import Divider from '@material-ui/core/Divider'
@@ -26,12 +19,6 @@ import SuperHeroCardSkeleton from '@components/SuperHeroCardSkeleton';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import postBattle from '../api/postBattle';
 import BattleController from '@components/BattleController';
-
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
-import EditIcon from '@material-ui/icons/Edit';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -140,8 +127,9 @@ const Battle = ({ title, description, ...props }) => {
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const gridSpacing = matches ? 2 : 0;
 
-  const [randomPlay, setRandomPlay]= useState(true);
   const [gameObject, setGameObject]= useState({});
+
+  const [randomPlay, setRandomPlay]= useState(true);
   const [winnerPick, setWinnerPick] = React.useState('');
   const [wager, setWager] = React.useState(20);
   const [stash, setStash] = React.useState(0);
@@ -152,7 +140,6 @@ const Battle = ({ title, description, ...props }) => {
   const [winner, setWinner]= useState(false)
   const [activeStep, setActiveStep] = React.useState(-1);
   const steps = ['Init', 'Data', 'AI','FIGHT!','Winner'];
-  const wagerInput = useRef();
 
   React.useEffect(() => {
     if(randomPlay){
@@ -183,6 +170,13 @@ const Battle = ({ title, description, ...props }) => {
           const battleWinner = runBattle(player1Data,player2Data)
           const newStash = battleWinner[0].value == winnerPick ? (Number(stash)+Number(wager)) : (Number(stash)-Number(wager))
           setWinner(battleWinner[0].value)
+
+          let isWinner = battleWinner[0].value == winnerPick ? true : false
+          isWinner = randomPlay ? isWinner : 'none';
+          const wagerData = randomPlay ? wager : 'none'; 
+          battleWinner.push(createData('isWinner', isWinner ))
+          battleWinner.push(createData('wager', wagerData ))
+
           if(randomPlay){
             setStash(newStash);
             localStorage.setItem('heroStash', newStash);
@@ -191,6 +185,10 @@ const Battle = ({ title, description, ...props }) => {
           clearInterval(int);
         }
       },400)    
+  }
+
+  function createData(key, value) {
+    return { key, value};
   }
 
   const handleTextChange = (event) => {
@@ -219,18 +217,19 @@ const Battle = ({ title, description, ...props }) => {
               <FormControlLabel
                 control={<IOSSwitch activeStep={activeStep} steps={steps} checked={randomPlay} onChange={handleRandomChange} name="randomPlay" />}
                 label="random"
-               
               />
             </div>
             <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
           
-            <Box className={classes.fightBar} >  
-              <BattleSteps steps={steps} activeStep={activeStep} />
-            </Box>
-
             {player1Data && player2Data ? 
-              <BattleController wagerInput={wagerInput} randomPlay={randomPlay} player1Data={player1Data} player2Data={player2Data} wager={wager} wagerError={wagerError} winner={winner} stash={stash} handleBattle={handleBattle} handleRadioChange={handleRadioChange} handleTextChange={handleTextChange} handleReset={handleReset} activeStep={activeStep} steps={steps} />
+              <BattleController randomPlay={randomPlay} player1Data={player1Data} player2Data={player2Data} wager={wager} wagerError={wagerError} winner={winner} stash={stash} handleBattle={handleBattle} handleRadioChange={handleRadioChange} handleTextChange={handleTextChange} handleReset={handleReset} activeStep={activeStep} steps={steps} />
             : <></> }     
+
+            <Paper className={classes.fightBar} >  
+              <BattleSteps steps={steps} activeStep={activeStep} />
+            </Paper>
+
+            
 
             <Grid container spacing={gridSpacing} style={{display:'flex', flexDirection:'row'}}>
               <Grid item xs={6} md={6} >
@@ -290,8 +289,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      title: configData.default.title,
-      description: configData.default.description,
+      title: "hero battle",
+      description: 'feed my machine learning project by wagering on some super battles',
     },
   }
 }
