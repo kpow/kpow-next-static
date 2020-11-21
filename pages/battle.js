@@ -218,7 +218,7 @@ const Battle = ({ title, description, ...props }) => {
               </Title>
               <FormControlLabel
                 control={<IOSSwitch activeStep={activeStep} steps={steps} checked={randomPlay} onChange={handleRandomChange} name="randomPlay" />}
-                label="random play"
+                label="random"
                
               />
             </div>
