@@ -174,8 +174,10 @@ const Battle = ({ title, description, ...props }) => {
           let isWinner = battleWinner[0].value == winnerPick ? true : false
           isWinner = randomPlay ? isWinner : 'none';
           const wagerData = randomPlay ? wager : 'none'; 
+          const stashData = randomPlay ? stash : 'none'; 
           battleWinner.push(createData('isWinner', isWinner ))
           battleWinner.push(createData('wager', wagerData ))
+          battleWinner.push(createData('stash', stashData ))
 
           if(randomPlay){
             setStash(newStash);
