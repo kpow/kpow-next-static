@@ -117,7 +117,7 @@ const IOSSwitch = withStyles((theme) => ({
   },
   checked: {},
   focusVisible: {},
-}))(({ classes, ...props }) => {
+}))(({activeStep, steps, classes, ...props }) => {
   return (
     <Switch
       focusVisibleClassName={classes.focusVisible}
@@ -134,7 +134,6 @@ const IOSSwitch = withStyles((theme) => ({
   );
 });
 
-
 const Battle = ({ title, description, ...props }) => {
   const classes = useStyles();
   const theme = useTheme();
@@ -145,7 +144,7 @@ const Battle = ({ title, description, ...props }) => {
   const [gameObject, setGameObject]= useState({});
   const [winnerPick, setWinnerPick] = React.useState('');
   const [wager, setWager] = React.useState(20);
-  const [stash, setStash] = React.useState(100);
+  const [stash, setStash] = React.useState(0);
   const [wagerError, setWagerError] = React.useState(false);
 
   const [player1Data, setPlayer1Data]= useState(false)
@@ -153,17 +152,18 @@ const Battle = ({ title, description, ...props }) => {
   const [winner, setWinner]= useState(false)
   const [activeStep, setActiveStep] = React.useState(-1);
   const steps = ['Init', 'Data', 'AI','FIGHT!','Winner'];
+  const wagerInput = useRef();
 
-  const handleNext = () => {
-    if(activeStep<steps.length){
-      setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    }else{
-      setActiveStep(-1);
+  React.useEffect(() => {
+    if(randomPlay){
+      const localStash = localStorage.getItem('heroStash')
+      localStash ? setStash(localStorage.getItem('heroStash')) : setStash(100);
+      setPlayer1Data(createHeroData(heros[rInt(heros.length,0)]));
+      setPlayer2Data(createHeroData(heros[rInt(heros.length,0)]));
     }
-  };
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
+  }, [setPlayer1Data, setPlayer2Data, createHeroData])
+
+  const rInt = (max = 1, min = 0) => Math.floor(Math.random() * (max + 1 - min)) + min;
 
   const handleReset = () => {
     setActiveStep(-1);
@@ -174,8 +174,6 @@ const Battle = ({ title, description, ...props }) => {
     }
   };
 
-  const rInt = (max = 1, min = 0) => Math.floor(Math.random() * (max + 1 - min)) + min;
-
   const handleBattle = () => {
       let i = -1
       const int = setInterval(()=>{
@@ -185,32 +183,29 @@ const Battle = ({ title, description, ...props }) => {
           const battleWinner = runBattle(player1Data,player2Data)
           const newStash = battleWinner[0].value == winnerPick ? (Number(stash)+Number(wager)) : (Number(stash)-Number(wager))
           setWinner(battleWinner[0].value)
-          setStash(newStash)
+          if(randomPlay){
+            setStash(newStash);
+            localStorage.setItem('heroStash', newStash);
+          }
           postBattle(battleWinner);
           clearInterval(int);
         }
       },400)    
   }
 
-  const handleRadioChange = (event) => {
-    setWinnerPick(event.target.value);
-  };
-
   const handleTextChange = (event) => {
-    setWager(event.target.value)
-    event.target.value < 0 ? setWagerError(true) : setWagerError(false);
-  }
-
-  const handleRandomChange = (event) => {
-    setRandomPlay(event.target.checked);
-  };
-
-  React.useEffect(() => {
-    if(randomPlay){
-      setPlayer1Data(createHeroData(heros[rInt(heros.length,0)]));
-      setPlayer2Data(createHeroData(heros[rInt(heros.length,0)]));
+    const maxBet = 100;
+    const minBet = 1;
+    if(event.target.value > maxBet){
+      setWager(maxBet);
+    }else if(event.target.value < minBet){
+      setWager(minBet);
+    }else{
+      setWager(event.target.value);
     }
-  }, [setPlayer1Data, setPlayer2Data, createHeroData])
+  }
+  const handleRadioChange = (event) => setWinnerPick(event.target.value);
+  const handleRandomChange = (event) => setRandomPlay(event.target.checked);
 
   return (
       <Layout pageTitle={`${title} | About`} description={description}>
@@ -222,8 +217,9 @@ const Battle = ({ title, description, ...props }) => {
                 battle beta
               </Title>
               <FormControlLabel
-                control={<IOSSwitch checked={randomPlay} onChange={handleRandomChange} name="randomPlay" />}
+                control={<IOSSwitch activeStep={activeStep} steps={steps} checked={randomPlay} onChange={handleRandomChange} name="randomPlay" />}
                 label="random play"
+               
               />
             </div>
             <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
@@ -233,7 +229,7 @@ const Battle = ({ title, description, ...props }) => {
             </Box>
 
             {player1Data && player2Data ? 
-              <BattleController randomPlay={randomPlay} player1Data={player1Data} player2Data={player2Data} wager={wager} wagerError={wagerError} winner={winner} stash={stash} handleBattle={handleBattle} handleRadioChange={handleRadioChange} handleTextChange={handleTextChange} handleReset={handleReset} activeStep={activeStep} steps={steps} />
+              <BattleController wagerInput={wagerInput} randomPlay={randomPlay} player1Data={player1Data} player2Data={player2Data} wager={wager} wagerError={wagerError} winner={winner} stash={stash} handleBattle={handleBattle} handleRadioChange={handleRadioChange} handleTextChange={handleTextChange} handleReset={handleReset} activeStep={activeStep} steps={steps} />
             : <></> }     
 
             <Grid container spacing={gridSpacing} style={{display:'flex', flexDirection:'row'}}>

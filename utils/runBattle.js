@@ -3,7 +3,7 @@ function createData(key, value) {
 }
 const runBattle = (player1Data,player2Data) =>{
     const WILDCARD_VALUE = 6 
-    const WILDCARD_CONDITION = 8
+    const WILDCARD_CONDITION = 9
     const WILDCARD_MAX = 10
     const rInt = (max = 1, min = 0) => Math.floor(Math.random() * (max + 1 - min)) + min;
     // internal count as we compare stats each check will increase or decrease these 
@@ -36,7 +36,7 @@ const runBattle = (player1Data,player2Data) =>{
     let wildCard = "none"
     let wildCardPlayer = player1PowerTotal>player2PowerTotal ? "player2" : "player1";
 
-    if (playerWildCard>WILDCARD_CONDITION){
+    if (playerWildCard>=WILDCARD_CONDITION){
       if(wildCardPlayer == "player1"){
         player1Count = player1Count+WILDCARD_VALUE
         wildCard = player1Data.data.name

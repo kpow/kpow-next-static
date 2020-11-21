@@ -85,7 +85,7 @@ const FightButton = ({player1Data, player2Data, handleBattle, handleReset, activ
   }
 }
 
-const BattleController = ({randomPlay, player1Data, player2Data, wager, wagerError,winner,stash, handleBattle,handleRadioChange,handleTextChange, handleReset, activeStep, steps}) => {
+const BattleController = ({wagerInput, randomPlay, player1Data, player2Data, wager, wagerError,winner,stash, handleBattle,handleRadioChange,handleTextChange, handleReset, activeStep, steps}) => {
   const classes = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
@@ -93,7 +93,7 @@ const BattleController = ({randomPlay, player1Data, player2Data, wager, wagerErr
 
   return (
 
-<Box className={classes.controller}>
+  <Box className={classes.controller}>
 
     <Typography variant="h5" component="h2" style={{textAlign:'center', paddingBottom:20}}>
         Winner: {activeStep == steps.length ? <>{winner}</> : <>????</> } 
@@ -127,9 +127,10 @@ const BattleController = ({randomPlay, player1Data, player2Data, wager, wagerErr
                         label="bet"
                         error={wagerError}
                         type="number"
+                        ref={wagerInput}
                         value={wager}
                         inputProps={{
-                          min:20,
+                          min:1,
                           max:100,
                         }}
                         InputLabelProps={{
