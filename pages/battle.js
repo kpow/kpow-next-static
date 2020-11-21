@@ -139,7 +139,7 @@ const Battle = ({ title, description, ...props }) => {
   const [player2Data, setPlayer2Data]= useState(false)
   const [winner, setWinner]= useState(false)
   const [activeStep, setActiveStep] = React.useState(-1);
-  const steps = ['Init', 'Data', 'AI','FIGHT!','Winner'];
+  const steps = ['Data', 'AI','FIGHT!'];
 
   React.useEffect(() => {
     if(randomPlay){
@@ -206,10 +206,10 @@ const Battle = ({ title, description, ...props }) => {
   const handleRandomChange = (event) => setRandomPlay(event.target.checked);
 
   return (
-      <Layout pageTitle={`${title} | About`} description={description}>
+      <Layout pageTitle={`${title} | kpow`} description={description}>
          
-        <div className={classes.heroContent}>
-          <Container maxWidth="md" className={classes.mainContent} id="mainContent">
+        <div className={classes.heroContent} id="mainContent">
+          <Container maxWidth="md" className={classes.mainContent}>
             <div className={classes.root}>
               <Title>
                 battle beta
@@ -220,14 +220,14 @@ const Battle = ({ title, description, ...props }) => {
               />
             </div>
             <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
-          
-            {player1Data && player2Data ? 
-              <BattleController randomPlay={randomPlay} player1Data={player1Data} player2Data={player2Data} wager={wager} wagerError={wagerError} winner={winner} stash={stash} handleBattle={handleBattle} handleRadioChange={handleRadioChange} handleTextChange={handleTextChange} handleReset={handleReset} activeStep={activeStep} steps={steps} />
-            : <></> }     
-
-            <Paper className={classes.fightBar} >  
-              <BattleSteps steps={steps} activeStep={activeStep} />
-            </Paper>
+            <div className={classes.root}>
+              <Paper className={classes.fightBar} >  
+                <BattleSteps steps={steps} activeStep={activeStep} />
+              </Paper>
+              {player1Data && player2Data ? 
+                <BattleController randomPlay={randomPlay} player1Data={player1Data} player2Data={player2Data} wager={wager} wagerError={wagerError} winner={winner} stash={stash} handleBattle={handleBattle} handleRadioChange={handleRadioChange} handleTextChange={handleTextChange} handleReset={handleReset} activeStep={activeStep} steps={steps} />
+              : <></> }     
+            </div>
 
             
 
