@@ -73,8 +73,8 @@ function BookList({howMany}) {
         setPage={setPage}
         seeMore="/bookfeed"
         title="book feed"
-        heroContent={`Here is my list of books; I've read, want to read, or currently reading - I have a "thing" for science fiction.`}
-        totalItemsLabel=" books in shelves :) "
+        heroContent={`Here is my list of books; I've read, want to read, or reading - I have a "thing" for science fiction.`}
+        totalItemsLabel=" books on the shelf "
       />  
       <ReactQueryCacheProvider queryCache={queryCache}>
         {status === '!loading' ? (

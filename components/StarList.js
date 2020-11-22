@@ -77,7 +77,7 @@ function StarList({howMany}) {
         seeMore="/starfeed"
         title="star feed"
         heroContent={`I'm still a big RSS fan. Here is a feed of the articles, that I star for some reason :)`}
-        totalItemsLabel=" starred articles :)"
+        totalItemsLabel=" articles"
       />
       <ReactQueryCacheProvider queryCache={queryCache}>
         {status === 'loading' ? (
