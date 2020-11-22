@@ -12,8 +12,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: '100%',

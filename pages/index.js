@@ -27,9 +27,7 @@ const shuffle = array =>
 const ProjectCard = ({data}) => {
   return (
   <Link href={{ pathname: `/projects/${data?.slug}` }}>    
-    
-      <img style={{width:'100%'}} alt="kitty" src={data?.frontmatter?.thumb_image} />
-    
+      <img style={{width:'100%'}} alt="kitty" src={data?.frontmatter?.thumb_image} />    
   </Link>
 )
 };
@@ -39,70 +37,73 @@ const Index = ({ projects, title, description, ...props }) => {
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const totalStarsDisplay = matches ? 3 : 2;
   const totalBooksDisplay = matches ? 4 : 2;
-
   const [open, setOpen] = React.useState(true);
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
+    if (reason === 'clickaway') {return;}
     setOpen(false);
+    const current = Date();
+    localStorage.setItem('closedSnackbar', true);
   };
+
+  React.useEffect(() => {
+      const snackBarStatus = localStorage.getItem('closedSnackbar')
+      setOpen(!snackBarStatus)      
+  })
 
   shuffle(projects)
 
   return (
     
       <Layout pageTitle={title} description={description}>
-      <div style={{ backgroundColor: '#fafafa',padding:'15px'}}>
-        <Snackbar 
-          anchorOrigin={{ vertical: 'top', horizontal: 'center' }} 
-          open={open} autoHideDuration={8000} 
-          onClose={handleClose}
-        >
-          <Alert 
-            onClose={handleClose} 
-            severity="info" 
-            style={{textAlign:'left', marginTop: theme.spacing(7) }}
+        <div style={{ backgroundColor: '#fafafa',padding:'15px'}}>
+          <Snackbar 
+            anchorOrigin={{ vertical: 'top', horizontal: 'center' }} 
+            open={open} autoHideDuration={8000} 
+            onClose={handleClose}
           >
-            Hi! this my site :) You'll find my digital collections, coding experiments and my public info. Hopefully, it's working and have fun poking around.
-          </Alert>
-        </Snackbar>
-        
+            <Alert 
+              onClose={handleClose} 
+              severity="info" 
+              style={{textAlign:'left', marginTop: theme.spacing(7) }}
+            >
+              Hi! this my site :) You'll find my digital collections, coding experiments and my public info. Hopefully, it's working and have fun poking around.
+            </Alert>
+          </Snackbar>
+          
+          <Title>
+            projects
+          </Title>
+          <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+            a selection of projects I've worked on.
+          </Typography>
+          <Container maxWidth="md" style={{maxHeight:'40vh', overflow:'hidden'}}>
+            <Masonry
+              items={projects}
+              columnGutter={2}
+              columnWidth={250}
+              overscanBy={1}
+              render={ProjectCard}
+            />
+          </Container>
 
-        <Title>
-          projects
-        </Title>
-        <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-          a selection of projects I've worked on.
-        </Typography>
-        <Container maxWidth="md" style={{maxHeight:'40vh', overflow:'hidden'}}>
-          <Masonry
-            items={projects}
-            columnGutter={2}
-            columnWidth={250}
-            overscanBy={1}
-            render={ProjectCard}
-          />
-        </Container>
+          <Divider style={{marginTop:'40px'}} />
+          <BookList howMany={totalBooksDisplay}/>
 
-        <Divider style={{marginTop:'40px'}} />
-        <BookList howMany={totalBooksDisplay}/>
+          <Divider style={{marginTop:'40px'}}/>
+          <StarList howMany={totalStarsDisplay}/>
 
-        <Divider style={{marginTop:'40px'}}/>
-        <StarList howMany={totalStarsDisplay}/>
+          <Divider style={{marginTop:'40px'}}/>
+          <Title>
+            instagram
+          </Title>
+          <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+            I love live music (when we had live music) 
+          </Typography>
+          <div className="elfsight-app-aa9b91b7-7757-4793-aae3-67df059446a2"></div>
 
-        <Divider style={{marginTop:'40px'}}/>
-        <Title>
-          instagram
-        </Title>
-        <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-          I love live music (when we had live music) 
-        </Typography>
-        <div className="elfsight-app-aa9b91b7-7757-4793-aae3-67df059446a2"></div>
-
-        <Divider style={{marginTop:'40px'}} />
-      </div>
+          <Divider style={{marginTop:'40px'}} />
+        </div>
       </Layout>
   )
 }

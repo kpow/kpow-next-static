@@ -221,7 +221,9 @@ const Battle = ({ title, description, ...props }) => {
                 label="random"
               />
             </div>
+            
             <Divider style={{marginTop:'20px',marginBottom:'20px'}}/>
+
             <div className={classes.root}>
               <Paper className={classes.fightBar} >  
                 <BattleSteps steps={steps} activeStep={activeStep} />
@@ -229,9 +231,7 @@ const Battle = ({ title, description, ...props }) => {
               {player1Data && player2Data ? 
                 <BattleController randomPlay={randomPlay} player1Data={player1Data} player2Data={player2Data} wager={wager} wagerError={wagerError} winner={winner} stash={stash} handleBattle={handleBattle} handleRadioChange={handleRadioChange} handleTextChange={handleTextChange} handleReset={handleReset} activeStep={activeStep} steps={steps} />
               : <></> }     
-            </div>
-
-            
+            </div>            
 
             <Grid container spacing={gridSpacing} style={{display:'flex', flexDirection:'row'}}>
               <Grid item xs={6} md={6} >
