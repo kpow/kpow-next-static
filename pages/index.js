@@ -82,7 +82,6 @@ const Index = ({ projects, title, description, ...props }) => {
                   <Title>
                     battle
                   </Title>
-
                     <Link href='/battle'>
                       <Button
                         style={{marginTop:'15px'}}
@@ -134,24 +133,23 @@ const Index = ({ projects, title, description, ...props }) => {
                 {/* </Paper> */}
               </Grid>  
 
-              <Grid item xs={12} sm={6} md={4} style={{margin:'0 auto'}}>
+              <Grid item xs={12} sm={12} md={4} style={{margin:'0 auto'}}>
                 {/* <Paper style={{padding:15}}> */}
                   <Divider style={{marginTop:'10px'}} />  
                   <Box style={{display:'flex'}}>
-                  <Title>
-                    pmonk
-                  </Title>
+                    <Title>
+                      pmonk
+                    </Title>
 
-                  <Link href='/pmonk'>
-                    <Button
-                      style={{marginTop:'15px'}}
-                      size="small" 
-                      variant="outlined" 
-                      endIcon={<NavigateNextIcon />}
-                      children="checkit"
-                    />
-                  </Link>
-                    
+                    <Link href='/pmonk'>
+                      <Button
+                        style={{marginTop:'15px'}}
+                        size="small" 
+                        variant="outlined" 
+                        endIcon={<NavigateNextIcon />}
+                        children="checkit"
+                      />
+                    </Link>
                   </Box>
                   <Divider style={{marginTop:'10px'}} />
                     <Link href='/pmonk'>
@@ -159,10 +157,10 @@ const Index = ({ projects, title, description, ...props }) => {
                         <img style={{width:'100%'}}  src="/static/pmonk_thumb.jpg" />    
                       </Paper>   
                     </Link>
-                  {/* <Typography variant="body2" color="textSecondary" component="p">
+                  {/*<Typography variant="body2" color="textSecondary" component="p">
                     Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                     across all continents except Antarctica
-                  </Typography> */}
+                  </Typography>*/}
                 {/* </Paper> */}
               </Grid>  
           </Grid>
