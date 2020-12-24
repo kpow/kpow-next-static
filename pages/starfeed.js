@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '@components/Layout';
-import StarList from 'components/StarList';
+import StarList from '@components/stars/StarList';
 import { useRouter, withRouter } from "next/router";
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 

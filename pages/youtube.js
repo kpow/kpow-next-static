@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { Box, Container, Grid } from '@material-ui/core';
-import Title from '@components/Title';
+import Title from '@components/shared/Title';
 import Layout from '@components/Layout';
 import { makeStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';

@@ -5,9 +5,9 @@ import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import Paginate from 'components/Paginate';
+import Paginate from '@components/shared/Paginate';
 import Hero from 'components/Hero';
-import Title from 'components/Title';
+import Title from '@components/shared/Title';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useRouter } from 'next/router'
 

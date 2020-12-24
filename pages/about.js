@@ -14,7 +14,7 @@ import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
 import LocalFloristIcon from '@material-ui/icons/LocalFlorist';
 import PolymerIcon from '@material-ui/icons/Polymer';
 
-import Title from '@components/Title';
+import Title from '@components/shared/Title';
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {

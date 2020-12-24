@@ -1,7 +1,7 @@
 import Layout from '@components/Layout'
 import { Container} from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import Title from '@components/Title';
+import Title from '@components/shared/Title';
 import React, { useState, useCallback } from "react";
 import pmonks from "../src/pmonk";
 import { Masonry } from "masonic";

@@ -3,7 +3,7 @@ import { Container, Grid, Button, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box'
-import Title from '@components/Title';
+import Title from '@components/shared/Title';
 
 import React, { useState, useCallback } from "react";
 import { render } from "react-dom";

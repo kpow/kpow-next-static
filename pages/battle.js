@@ -10,15 +10,15 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import heros from '../src/superheros-prod';
 import Divider from '@material-ui/core/Divider'
-import SuperHeroCard from '@components/SuperHeroCard';
-import BattleSteps from '@components/BattleSteps';
-import Title from '@components/Title';
+import SuperHeroCard from '@components/battle/SuperHeroCard';
+import BattleSteps from '@components/battle/BattleSteps';
+import Title from '@components/shared/Title';
 import createHeroData from '@utils/createHeroData';
 import runBattle from 'utils/runBattle';
-import SuperHeroCardSkeleton from '@components/SuperHeroCardSkeleton';
+import SuperHeroCardSkeleton from '@components/battle/SuperHeroCardSkeleton';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import postBattle from '../api/postBattle';
-import BattleController from '@components/BattleController';
+import BattleController from '@components/battle/BattleController';
 
 const useStyles = makeStyles((theme) => ({
   root: {
