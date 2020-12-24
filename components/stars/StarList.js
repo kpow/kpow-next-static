@@ -8,12 +8,12 @@ import {
   ReactQueryCacheProvider,
   QueryCache
 } from 'react-query';
-import fetchStars from '../api/fetchStars.js';
-import { ReactQueryDevtools } from '../node_modules/react-query-devtools/dist/react-query-devtools.production.min.js';
-import StarCardBig from '@components/StarCard';
-import StarCardBigSkeleton from '@components/StarCardSkeleton';
-import Paginate from '@components/Paginate';;
-import ListHeader from '@components/ListHeader';
+import fetchStars from '../../api/fetchStars.js';
+import { ReactQueryDevtools } from 'react-query-devtools/dist/react-query-devtools.production.min';
+import StarCardBig from '@components/stars/StarCard';
+import StarCardBigSkeleton from '@components/stars/StarCardSkeleton';
+import Paginate from '@components/shared/Paginate';;
+import ListHeader from '@components/shared/ListHeader';
 import { useRouter, withRouter } from "next/router";
 
 let initalLoaded = false;

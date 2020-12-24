@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import Title from '@components/Title';
+import Title from '@components/shared/Title';
 
 const useStyles = makeStyles((theme) => ({
     heroContent: {

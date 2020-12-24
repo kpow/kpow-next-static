@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '@components/Layout';
-import BookList from 'components/BookList';
+import BookList from '@components/books/BookList';
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 
 import useMediaQuery from '@material-ui/core/useMediaQuery'

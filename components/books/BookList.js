@@ -8,13 +8,13 @@ import {
   ReactQueryCacheProvider,
   QueryCache
 } from 'react-query';
-import fetchBooks from '../api/fetchBooks.js';
+import fetchBooks from '../../api/fetchBooks.js';
 import { ReactQueryDevtools } from 'react-query-devtools';
-import BookCardFull from 'components/BookCardFull';
-import BookCardSkeleton from 'components/BookCardSkeleton';
-import Paginate from 'components/Paginate';
+import BookCardFull from '@components/books/BookCardFull';
+import BookCardSkeleton from '@components/books/BookCardSkeleton';
+import Paginate from '@components/shared/Paginate';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import ListHeader from '@components/ListHeader';
+import ListHeader from '@components/shared/ListHeader';
 import { useRouter, withRouter } from "next/router";
 
 let initalLoaded = false;

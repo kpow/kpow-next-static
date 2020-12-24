@@ -10,10 +10,10 @@ import MuiAlert from '@material-ui/lab/Alert';
 import Snackbar from '@material-ui/core/Snackbar';
 import { useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Title from '@components/Title';
+import Title from '@components/shared/Title';
 import Container from '@material-ui/core/Container';
-import StarList from 'components/StarList';
-import BookList from 'components/BookList';
+import StarList from '@components/stars/StarList';
+import BookList from '@components/books/BookList';
 import getPosts from '@utils/getPosts';
 import { Masonry } from "masonic";
 import useMediaQuery from '@material-ui/core/useMediaQuery'

@@ -7,7 +7,7 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import Layout from '@components/Layout'
-import Title from '@components/Title'
+import Title from '@components/shared/Title'
 import getSlugs from '@utils/getSlugs'
 import getPosts from '@utils/getPosts';
 import { Paper } from '@material-ui/core'
