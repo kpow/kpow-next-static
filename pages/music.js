@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-// import '@components/music/bootstrap.min.module.css';
-
-
 import Banner from "@components/music/Banner"
 import Results from "@components/music/Results"
-
 import Footer from '@components/music/footer'
-
 import ErrorBoundary from '@components/music/ErrorBoundary';
+import Layout from '@components/Layout'
+import { makeStyles } from '@material-ui/core/styles';
 
-class App extends Component {
+const useStyles = makeStyles((theme) => ({
+
+}));
+
+class Music extends Component {
 
   constructor(props) {
     super(props);
@@ -18,7 +19,7 @@ class App extends Component {
 
   render() {
 
-    var appToLoad;
+    let appToLoad;
 
     if (this.state.data.length > 0) {
       appToLoad = <Results data={this.state.data} />;
@@ -31,15 +32,28 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
-        <ErrorBoundary>
-          {appToLoad}
-        </ErrorBoundary>
-        <Footer/>
-      </div>
-      
-    );
+      <Layout pageTitle={`kpow | music`} description="stats from my music listening">
+        <div className="App">
+          <ErrorBoundary>
+            {appToLoad}
+          </ErrorBoundary>
+          <Footer/>
+        </div>
+      </Layout>
+    )
   }
 }
 
-export default App;
+export default Music;
+
+export async function getStaticProps() {
+  const configData = await import(`../siteconfig.json`)
+
+  return {
+    props: {
+      title: configData.default.title,
+      description: configData.default.description,
+    },
+  }
+}
+

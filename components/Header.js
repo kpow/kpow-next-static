@@ -25,6 +25,7 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import WebIcon from '@material-ui/icons/Web';
 import CameraRollIcon from '@material-ui/icons/CameraRoll';
 import HomeIcon from '@material-ui/icons/Home';
+import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ContactModal from '@components/ContactModal';
 import Hidden from '@material-ui/core/Hidden'
@@ -198,6 +199,7 @@ export default function Header() {
                 <ListItemText primary="youtube live" />
               </ListItem>
             </Link>
+            
             <Link href="/battle">
               <ListItem button key="live">
                 <ListItemIcon>
@@ -215,12 +217,22 @@ export default function Header() {
                 <ListItemText primary="pmonk artifacts" />
               </ListItem>
             </Link>
+            
             <Link href="/pmonk_firehose">
               <ListItem button key="live">
                 <ListItemIcon>
                   <CameraRollIcon />
                 </ListItemIcon>
                 <ListItemText primary="pmonk firehose" />
+              </ListItem>
+            </Link>
+
+            <Link href="/music">
+              <ListItem button key="live">
+                <ListItemIcon>
+                  <MusicNoteIcon />
+                </ListItemIcon>
+                <ListItemText primary="itunes beta" />
               </ListItem>
             </Link>
 
