@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Banner from "@components/music/Banner"
+import { useState, useEffect, useRef } from "react";
+
+import Loader from "@components/music/Loader"
 import Results from "@components/music/Results"
 import Footer from '@components/music/footer'
 import ErrorBoundary from '@components/music/ErrorBoundary';
@@ -10,38 +12,28 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-class Music extends Component {
+const Music = ({ title, description, ...props }) => {
+  const classes = useStyles();
+  const [data, setData]= useState(false)
+  let appToLoad;
 
-  constructor(props) {
-    super(props);
-    this.state = { data: [] };
+  if (data.length > 0) {
+    appToLoad = <Results data={data} />;
+  } else {
+    appToLoad = <Loader dataResponseHandler={data => setData(data) } />;
   }
 
-  render() {
+  return (
+    <Layout pageTitle={`kpow | music stats`} description="stats from my itunes">
+      <div className="App">
+        <ErrorBoundary>
+          {appToLoad}
+        </ErrorBoundary>
+        <Footer/>
+      </div>
+    </Layout>
+  )
 
-    let appToLoad;
-
-    if (this.state.data.length > 0) {
-      appToLoad = <Results data={this.state.data} />;
-    } else {
-      appToLoad = <Banner dataResponseHandler={data => {
-        this.setState({
-          data: data
-        })        
-      }} />;
-    }
-
-    return (
-      <Layout pageTitle={`kpow | music`} description="stats from my music listening">
-        <div className="App">
-          <ErrorBoundary>
-            {appToLoad}
-          </ErrorBoundary>
-          <Footer/>
-        </div>
-      </Layout>
-    )
-  }
 }
 
 export default Music;
