@@ -1,35 +1,16 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import YearCollapse from './yearcollapse';
 
-class YearsTopSongs extends Component {
+const YearsTopSongs = (props) => {
+    const [years, setYears]= useState(props.years)
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            years: props.years,
-        };
+    let yearsBoxes = [];
+    for (let index = 0; index < years.length; index++) {
+        const year = years[index];
+        yearsBoxes.push(<YearCollapse year={year} key={year.key + "-full"} />);
     }
 
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            years: nextProps.years
-        });
-    }
-
-    render() {
-
-        var yearsBoxes = [];
-        for (let index = 0; index < this.state.years.length; index++) {
-            const year = this.state.years[index];
-            yearsBoxes.push(<YearCollapse year={year} key={year.key + "-full"} />);
-        }
-
-
-
-        return (yearsBoxes);
-
-    }
-
+    return (yearsBoxes);
 }
 
 export default YearsTopSongs;

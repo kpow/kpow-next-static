@@ -21,7 +21,7 @@ const Wrapped = ({ year }) => {
         }
 
         const div = <div className="wrapped" id="annualwrapped">
-        <h1 className="title">{titleString}</h1>
+        {/* <h1 className="title">{titleString}</h1> */}
         <div className="wrapped-content">
             <div className="left">
                 <h2 className="subtitle">I listened to</h2>

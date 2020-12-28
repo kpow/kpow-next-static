@@ -1,9 +1,6 @@
-import React, { Component } from 'react';
-import { useState, useEffect, useRef } from "react";
-
+import { useState } from "react";
 import Loader from "@components/music/Loader"
 import Results from "@components/music/Results"
-import Footer from '@components/music/footer'
 import ErrorBoundary from '@components/music/ErrorBoundary';
 import Layout from '@components/Layout'
 import { makeStyles } from '@material-ui/core/styles';
@@ -29,7 +26,6 @@ const Music = ({ title, description, ...props }) => {
         <ErrorBoundary>
           {appToLoad}
         </ErrorBoundary>
-        <Footer/>
       </div>
     </Layout>
   )

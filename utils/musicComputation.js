@@ -135,8 +135,6 @@ class Computation {
         }
     }
 
-    
-
     static calculateTop(data, excludedSongs, callback) {
 
         let today = new Date().getFullYear();
@@ -200,30 +198,13 @@ class Computation {
         }
 
 
-        // callback({
-        //     songs: [],
-        //     days: [],
-        //     months: [],
-        //     reasons: [],
-        //     years: [],
-        //     artists: [],
-        //     totals: totals,
-        //     filteredSongs: [],
-        //     excludedSongs: [],
-        //     hoursArray: heatmapData
-        // })
-
-
         var previousPlay;
 
         for (let index = 0; index < data.length; index++) {
             const play = data[index];
 
-            
-
             if (varExists(play["Content Name"]) && varExists(play["Artist Name"]) && varExists(play["Play Duration Milliseconds"]) && varExists(play["Media Duration In Milliseconds"]) && varExists(play["Event End Timestamp"]) && varExists(play["UTC Offset In Seconds"])) {
                 reasons[play["End Reason Type"]] = reasons[play["End Reason Type"]] + 1;
-
 
                 if (Computation.isPlay(play)) {
                     const uniqueID = "'" + play["Content Name"] + "' by " + play["Artist Name"];
@@ -240,7 +221,6 @@ class Computation {
                                 excluded: excludedSongs.includes(uniqueID)
                             };
                         }
-    
     
                         var missedMilliseconds = Number(play["Media Duration In Milliseconds"]) - Number(play["Play Duration Milliseconds"])
     
@@ -301,9 +281,7 @@ class Computation {
                                 heatmapData[dayint][hoursint] = Number(heatmapData[dayint][hoursint]) + Number(play["Play Duration Milliseconds"]);
                             }
                             
-    
-    
-    
+
                             var monthID = date.getFullYear() + "-" + Computation.monthNames[date.getMonth()];
     
                             if (months[monthID] == null) {
@@ -365,6 +343,7 @@ class Computation {
                                 thisYear.artists[play["Artist Name"]].missedTime = Number(thisYear.artists[play["Artist Name"]].missedTime) + missedMilliseconds;
         
                             }
+                            
     
                         }
     
