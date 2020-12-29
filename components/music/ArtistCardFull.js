@@ -56,35 +56,36 @@ export default function ArtistCardFull(props) {
 
   // console.log(props.artist)
 
-  let finalImageUrl = "/"
-  artistImages.forEach((item)=>{
-    if(item.key == artist.key){
-      finalImageUrl = item.url
-    }
-  })
+ 
 
   useEffect(() => {
 
-      if(finalImageUrl != "/"){
-
-        setImageURL(finalImageUrl)
-
-      }else{
-        const url = "https://itunes.apple.com/search?term=" + artist.key + "&country=US&media=music&entity=musicTrack"
-      
-        jsonp(url, null, (err, data) => {
-            if (err) {
-                console.error(err.message);
-            } else {
-                if (data.results.length > 0) {
-                  const resource = data.results[0].artworkUrl30.replace('30x30bb', '300x300bb')
-                  console.log(`{"key":"${artist.key}", "url":"${resource}"},`)
-                  setImageURL(resource)
-                }
-            }
-        });
+    let finalImageUrl = "/"
+    artistImages.forEach((item)=>{
+      if(item.key == artist.key){
+        finalImageUrl = item.url
       }
+    })
 
+    if(finalImageUrl != "/"){
+
+      setImageURL(finalImageUrl)
+
+    }else{
+      const url = "https://itunes.apple.com/search?term=" + artist.key + "&country=US&media=music&entity=musicTrack"
+    
+      jsonp(url, null, (err, data) => {
+          if (err) {
+              console.error(err.message);
+          } else {
+              if (data.results.length > 0) {
+                const resource = data.results[0].artworkUrl30.replace('30x30bb', '300x300bb')
+                console.log(`{"key":"${artist.key}", "url":"${resource}"},`)
+                setImageURL(resource)
+              }
+          }
+      });
+    }
       
   }, [])
 
