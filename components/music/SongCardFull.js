@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import jsonp from 'jsonp';
 import numeral from 'numeral';
 import Computation from "@utils/musicComputation";
+import artistImages from 'src/artist-images-cache';
+
 
 
 
@@ -106,17 +108,37 @@ export default function SongCardFull(props) {
   const [year, setYear]= useState(props.year.value[0])
   const [displayYear, setDisplayYear] =  useState(props.year.key);
 
+
   useEffect(() => {
-      const url = "https://itunes.apple.com/search?term=" + year.value.name + " " + year.value.artist + "&country=US&media=music&entity=musicTrack"
+
+    let finalImageUrl = "/"
+    artistImages.forEach((item)=>{
+      if(item.key == year.value.artist){
+        finalImageUrl = item.url
+      }
+    })
+
+    if(finalImageUrl != "/"){
+
+      setImageURL(finalImageUrl)
+
+    }else{
+      const url = "https://itunes.apple.com/search?term=" + year.value.artist + "&country=US&media=music&entity=musicTrack"
+    
       jsonp(url, null, (err, data) => {
           if (err) {
               console.error(err.message);
           } else {
               if (data.results.length > 0) {
-                  setImageURL(data.results[0].artworkUrl30.replace('30x30bb', '300x300bb'))
+                const resource = data.results[0].artworkUrl30.replace('30x30bb', '300x300bb')
+                console.log(`{"key":"${year.value.artist}", "url":"${resource}"},`)
+                setImageURL(resource)
               }
           }
       });
+    }
+
+      
   }, [])
 
   return (

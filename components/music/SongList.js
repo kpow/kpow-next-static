@@ -11,19 +11,6 @@ const YearBox = (props) => {
     const [imageURL, setImageURL]= useState(false)
     const [year, setDisplayYear]= useState(props.year.value[0])
 
-    useEffect(() => {
-        const url = "https://itunes.apple.com/search?term=" + year.value.name + " " + year.value.artist + "&country=US&media=music&entity=musicTrack"
-        jsonp(url, null, (err, data) => {
-            if (err) {
-                console.error(err.message);
-            } else {
-                if (data.results.length > 0) {
-                    setImageURL(data.results[0].artworkUrl30.replace('30x30bb', '300x300bb'))
-                }
-            }
-        });
-    }, [])
-
     let style = {}
     if (imageURL.length > 0) {
         let grad = "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)), url('"+ imageURL +"')";

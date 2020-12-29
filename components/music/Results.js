@@ -11,6 +11,7 @@ import TopSongBox from '@components/music/TopSongBox';
 import Wrapped from '@components/music/Wrapped';
 import Title from '@components/shared/Title';
 import ArtistCardFull from './ArtistCardFull';
+import { Button } from '@material-ui/core';
 
 
 class Results extends Component {
@@ -19,7 +20,9 @@ class Results extends Component {
         super(props);
         this.state = {
             data: props.data,
-            excludedSongs: []
+            excludedSongs: [],
+            artistPage: 0,
+            totalArtistPerPage: 8
         };
     }
 
@@ -99,6 +102,7 @@ class Results extends Component {
     }
 
 
+
     render() {
 
         if (this.state.songs == null) {
@@ -108,31 +112,22 @@ class Results extends Component {
         if (this.state.songs.length <= 1) {
             return(<div className="errorDiv box">There was an error processing your data <span role="img" aria-label="sad face emoji">☹️</span>  </div>)
         }
-
-        let artistTotalCount = (this.state.artists.length > 20 ? 20 : this.state.artists.length);
+        let currentIndex = this.state.artistPage*this.state.totalArtistPerPage;
+        let nextIndex = currentIndex+this.state.totalArtistPerPage
+        let artistTotalCount = (this.state.artists.length > nextIndex ? nextIndex : this.state.artists.length);
         let artistBoxes = [];
-        for (let index = 0; index < artistTotalCount; index++) {
+        for (let index = currentIndex; index < artistTotalCount; index++) {
             const artist = this.state.artists[index];
-
-            const div = <ArtistCardFull artist={artist} index={index} />
-
-            // const div = <Grid container item xs={12} sm={6} md={3} style={{margin:'0 auto'}} key={artist.key}>
-            //     <div>
-            //         <p style={{ marginBottom: 0 }}>Most played artist {index + 1}</p>
-            //         <h1>{artist.key}</h1>
-            //         <p className="lead">{numeral(artist.value.plays).format('0,0')} Plays</p>
-            //         <p>{Computation.convertTime(artist.value.time)}</p>
-            //     </div>
-            // </Grid>
-
+            const div = <ArtistCardFull artist={artist} index={index} key={artist.key}/>
             artistBoxes.push(div);
         }      
 
         return (
             <div>
-                 <Title>
-                      itune stats - beta
-                 </Title>
+                <Title>
+                    itune stats - beta
+                </Title>
+                
                 {/* <TopSongBox song={this.state.filteredSongs[0]} /> */}
                 
                 <Divider style={{marginTop:'10px'}} />  
@@ -145,8 +140,18 @@ class Results extends Component {
 
                 <Divider style={{marginTop:'30px'}} />  
                 <Title>
-                      top artist - all time
-                 </Title>
+                    top artist - all time
+                </Title>
+                <Button onClick={()=>{
+                    this.setState((prevState)=>{ return {artistPage:prevState.artistPage-1} })
+                }} >
+                    prev
+                </Button>
+                <Button onClick={()=>{
+                    this.setState((prevState)=>{ return {artistPage:prevState.artistPage+1} })
+                }} >
+                     next
+                </Button>
                 <Grid container spacing={3}>{artistBoxes}</Grid>
 
                 {this.state.thisYear.totalPlays > 1 &&
