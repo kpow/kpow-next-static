@@ -36,6 +36,24 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
+  circle:{
+    width: '50px',
+    height: '50px',
+    background: '#000',
+    color: '#fff',
+    borderRadius: '50%',
+    position:'absolute',
+    border:'3px solid #fff',
+    marginTop:-20,
+    marginLeft:-20,
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    fontWeight:'bold',
+    fontSize:20,
+    letterSpacing:-2,
+  
+  },
   avatar: {
     backgroundColor: '#999',
     border: '3px solid #666',
@@ -93,6 +111,9 @@ export default function ArtistCardFull(props) {
     <Grid container item xs={12} sm={6} md={3}>
     <Card className={classes.root}>
       <div>
+      <div className={classes.circle}>
+          {index + 1}
+      </div>
         <CardMedia
           className={classes.media}
           image={imageURL}
@@ -101,11 +122,11 @@ export default function ArtistCardFull(props) {
         </CardMedia>  
         <CardContent>
           <Typography gutterBottom variant="h5">
-          {index + 1}: {artist.key}
+          {artist.key}
           </Typography>
           
           <Typography variant="body2" color="textSecondary" component="p">
-            {numeral(artist.value.plays).format('0,0')} Plays : {Computation.convertTime(artist.value.time)}
+            {/* {numeral(artist.value.plays).format('0,0')} Plays : {Computation.convertTime(artist.value.time)} */}
           </Typography>
         </CardContent>
       </div> 

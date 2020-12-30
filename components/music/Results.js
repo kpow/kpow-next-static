@@ -140,19 +140,30 @@ class Results extends Component {
 
                 <Divider style={{marginTop:'30px'}} />  
                 <Title>
-                    top artist - all time
+                    top itunes 2015-2020
                 </Title>
-                <Button onClick={()=>{
-                    this.setState((prevState)=>{ return {artistPage:prevState.artistPage-1} })
-                }} >
+                <Divider style={{marginTop:'20px'}} />  
+                <Grid container spacing={3}>{artistBoxes}</Grid>
+                <Divider style={{marginBottom:'20px'}} />  
+                <Button 
+                    variant="outlined" 
+                    style={{backgroundColor:'#fafafa', marginRight:20}}
+                    onClick={()=>{
+                        this.setState((prevState)=>{ return {artistPage:prevState.artistPage-1} })
+                    }} 
+                >
                     prev
                 </Button>
-                <Button onClick={()=>{
-                    this.setState((prevState)=>{ return {artistPage:prevState.artistPage+1} })
-                }} >
+
+                <Button 
+                    variant="outlined" 
+                    style={{backgroundColor:'#fafafa'}}
+                    onClick={()=>{
+                        this.setState((prevState)=>{ return {artistPage:prevState.artistPage+1} })
+                    }} 
+                >
                      next
                 </Button>
-                <Grid container spacing={3}>{artistBoxes}</Grid>
 
                 {this.state.thisYear.totalPlays > 1 &&
                     <>
