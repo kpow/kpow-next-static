@@ -11,6 +11,7 @@ import TopSongBox from '@components/music/TopSongBox';
 import Wrapped from '@components/music/Wrapped';
 import Title from '@components/shared/Title';
 import ArtistCardFull from './ArtistCardFull';
+import TopArtist from '@components/music/TopArtist';
 import { Button } from '@material-ui/core';
 
 
@@ -105,6 +106,7 @@ class Results extends Component {
 
     render() {
 
+        
         if (this.state.songs == null) {
             return (<div><h4  style={{textAlign: 'center'}}>Almost there...</h4></div>);
         }
@@ -112,60 +114,26 @@ class Results extends Component {
         if (this.state.songs.length <= 1) {
             return(<div className="errorDiv box">There was an error processing your data <span role="img" aria-label="sad face emoji">☹️</span>  </div>)
         }
-        let currentIndex = this.state.artistPage*this.state.totalArtistPerPage;
-        let nextIndex = currentIndex+this.state.totalArtistPerPage
-        let artistTotalCount = (this.state.artists.length > nextIndex ? nextIndex : this.state.artists.length);
-        let artistBoxes = [];
-        for (let index = currentIndex; index < artistTotalCount; index++) {
-            const artist = this.state.artists[index];
-            const div = <ArtistCardFull artist={artist} index={index} key={artist.key}/>
-            artistBoxes.push(div);
-        }      
+        
 
         return (
             <div>
                 <Title>
-                    itune stats - beta
+                    itune stats - 2015-2020
                 </Title>
                 
                 {/* <TopSongBox song={this.state.filteredSongs[0]} /> */}
                 
                 <Divider style={{marginTop:'10px'}} />  
                 
-                <TotalsBoxes totals={this.state.totals} songs={this.state.songs.length} artists={this.state.artists.length} day={this.state.days[0]} />
-                
+                <TotalsBoxes totals={this.state.totals} songs={this.state.songs.length} artists={this.state.artists.length} day={this.state.days[0]} />          
                 <Divider/>  
-                
-                <TopYears years={this.state.years} />
+                <TopArtist artists={this.state.artists} />
 
                 <Divider style={{marginTop:'30px'}} />  
-                <Title>
-                    top itunes 2015-2020
-                </Title>
-                <Divider style={{marginTop:'20px'}} />  
-                <Grid container spacing={3}>{artistBoxes}</Grid>
-                <Divider style={{marginBottom:'20px'}} />  
-                <Button 
-                    variant="outlined" 
-                    style={{backgroundColor:'#fafafa', marginRight:20}}
-                    onClick={()=>{
-                        this.setState((prevState)=>{ return {artistPage:prevState.artistPage-1} })
-                    }} 
-                >
-                    prev
-                </Button>
-
-                <Button 
-                    variant="outlined" 
-                    style={{backgroundColor:'#fafafa'}}
-                    onClick={()=>{
-                        this.setState((prevState)=>{ return {artistPage:prevState.artistPage+1} })
-                    }} 
-                >
-                     next
-                </Button>
-
-                {this.state.thisYear.totalPlays > 1 &&
+                <TopYears years={this.state.years} />
+                
+                {/* {this.state.thisYear.totalPlays > 1 &&
                     <>
                         <Divider style={{marginTop:'30px'}} />  
                         <Title>
@@ -173,7 +141,7 @@ class Results extends Component {
                         </Title>
                         <Wrapped year={this.state.thisYear} songs={this.state.thisYear.songs}/>
                     </>
-                }
+                } */}
 
                 {/* <YearsTopSongs years={this.state.years} /> */}
 

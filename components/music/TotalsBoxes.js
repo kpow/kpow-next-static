@@ -4,9 +4,9 @@ import numeral from 'numeral';
 import Grid from '@material-ui/core/Grid';
 
 const TotalsBoxes = (props) => {
-    const [totals, setTotals]= useState(props.totals)
-    const [songs, setSongs]= useState(props.songs)
-    const [artists, setArtists]= useState(props.artists)
+    const totals = props.totals;
+    const songs= props.songs;
+    const artists = props.artists;
 
     return (
         <Grid container spacing={3} key="totals">

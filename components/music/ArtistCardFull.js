@@ -69,12 +69,8 @@ const useStyles = makeStyles((theme) => ({
 export default function ArtistCardFull(props) {
   const classes = useStyles();
   const [imageURL, setImageURL]= useState("/");
-  const [artist, setArtist] = useState(props.artist);
-  const [index, setIndex] = useState(props.index)
-
-  // console.log(props.artist)
-
- 
+  const artist = props.artist;
+  const index = props.index;
 
   useEffect(() => {
 

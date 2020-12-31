@@ -104,9 +104,9 @@ export default function SongCardFull(props) {
   const classes = useStyles();
   const theme = useTheme();
 
-  const [imageURL, setImageURL]= useState("")
-  const [year, setYear]= useState(props.year.value[0])
-  const [displayYear, setDisplayYear] =  useState(props.year.key);
+  const [imageURL, setImageURL]= useState("/");
+  const year = props.year.value[0];
+  const displayYear = props.year.key;
 
 
   useEffect(() => {

@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
     title: {
-      flexGrow: 1,
       fontFamily: 'Slackey',
       fontWeight: 'bold',
       lineHeight: 1,

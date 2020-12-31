@@ -2,21 +2,20 @@ import React, { useState } from 'react';
 import numeral from 'numeral';
 
 const Wrapped = ({ year }) => {
-        const [displayYear, setDisplayYear]= useState(year)
 
-        const artistCount = (displayYear.artists.length > 10 ? 10 : displayYear.artists.length);
-        const songCount = (displayYear.songs.length > 10 ? 10 : displayYear.songs.length);
-        const titleString = "My Music — " + displayYear.year;
+        const artistCount = (year.artists.length > 10 ? 10 : year.artists.length);
+        const songCount = (year.songs.length > 10 ? 10 : year.songs.length);
+        const titleString = "My Music — " + year.year;
 
         const artistsDivs = []
         for (let index = 0; index < artistCount; index++) {
-            let div = <div className="item" key={displayYear.artists[index].key}>{displayYear.artists[index].key}</div>;
+            let div = <div className="item" key={year.artists[index].key}>{year.artists[index].key}</div>;
             artistsDivs.push(div)
         }
 
         const songDivs = []
         for (let index = 0; index < songCount; index++) {
-            let div = <div className="item" key={displayYear.songs[index].key}>{displayYear.songs[index].value.name} <span className="artist">— {displayYear.songs[index].value.artist}</span></div>;
+            let div = <div className="item" key={year.songs[index].key}>{year.songs[index].value.name} <span className="artist">— {year.songs[index].value.artist}</span></div>;
             songDivs.push(div)
         }
 
@@ -25,7 +24,7 @@ const Wrapped = ({ year }) => {
         <div className="wrapped-content">
             <div className="left">
                 <h2 className="subtitle">I listened to</h2>
-                <div className="number">{numeral(parseInt(displayYear.totalTime) / 1000 / 60).format('0,0')}</div>
+                <div className="number">{numeral(parseInt(year.totalTime) / 1000 / 60).format('0,0')}</div>
                 <h3 className="small">minutes of music</h3>
             </div>
             <div className="right">
