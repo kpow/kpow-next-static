@@ -3,8 +3,8 @@ import SongCardFull from '@components/music/SongCardFull';
 import Title from '@components/shared/Title';
 import Divider from '@material-ui/core/Divider';
 
-const TopYears = (props) => {
-    const years = props.years;
+const TopYears = ({years}) => {
+   
     var yearsBoxes = [];
 
     for (let index = 0; index < years.length; index++) {

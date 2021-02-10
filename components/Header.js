@@ -214,16 +214,7 @@ export default function Header() {
                 <ListItemIcon>
                   <CameraRollIcon />
                 </ListItemIcon>
-                <ListItemText primary="pmonk artifacts" />
-              </ListItem>
-            </Link>
-            
-            <Link href="/pmonk_firehose">
-              <ListItem button key="live">
-                <ListItemIcon>
-                  <CameraRollIcon />
-                </ListItemIcon>
-                <ListItemText primary="pmonk firehose" />
+                <ListItemText primary="pmonk" />
               </ListItem>
             </Link>
 
