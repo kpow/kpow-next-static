@@ -1,10 +1,10 @@
 import React, { useState, useCallback } from "react";
-import { Box, Container, Grid } from '@material-ui/core';
+import { Box, Container, Grid, Divider } from '@material-ui/core';
 import Title from '@components/shared/Title';
 import Layout from '@components/Layout';
 import { makeStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
-import VideoCard from '@components/VideoCard';
+import VideoCardPmonk from '@components/VideoCardPmonk';
 
 const useStyles = makeStyles({
   root: {
@@ -68,15 +68,16 @@ export default function VideoPage({ data }) {
     <Layout pageTitle="youtube" description="youtube">
       <Container maxWidth="lg">
         <Title>
-          pmonk youtube
+          pmonk videoz
         </Title>
+        <Divider style={{marginTop:'10px', marginBottom:'20px'}} />
 
         <Grid container spacing={2}>
           {data.items.map(({ id, snippet = {} }) => {
             const { description, title, thumbnails = {}, resourceId = {} } = snippet;
             const { medium } = thumbnails;
             return (
-              <VideoCard key={title} description={description} title={title} resourceId={resourceId} medium={medium} handleClickOpen={handleClickOpen} />
+              <VideoCardPmonk key={title} description={description} title={title} resourceId={resourceId} medium={medium} handleClickOpen={handleClickOpen} />
             )
           })}
         </Grid>
