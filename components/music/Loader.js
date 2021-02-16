@@ -1,7 +1,16 @@
 import {useEffect} from 'react';
-import {readRemoteFile} from 'react-papaparse'
+import {readRemoteFile} from 'react-papaparse';
+import Title from '@components/shared/Title';
+import {Grid, Divider, Card, CardMedia, CardContent, Typography} from '@material-ui/core';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import MusicLoader from './MusicLoader';
+import { Button } from '@material-ui/core';
+import RangeSlider from '@components/music/RangeSlider';
+
+
 
 const Loader = ({ dataResponseHandler }) => {
+
 
     useEffect(() => {
         readRemoteFile('kpow-itunes-2015-2020-lite.csv', {
@@ -11,7 +20,7 @@ const Loader = ({ dataResponseHandler }) => {
     },[])
 
     return (
-        <div><h4 style={{textAlign: 'center'}}>Loading...</h4></div>
+        <MusicLoader />
     );
 
 }

@@ -11,6 +11,7 @@ import TopSongBox from '@components/music/TopSongBox';
 import Wrapped from '@components/music/Wrapped';
 import Title from '@components/shared/Title';
 import ArtistCardFull from './ArtistCardFull';
+import MusicLoader from './MusicLoader';
 import TopArtist from '@components/music/TopArtist';
 import { Button } from '@material-ui/core';
 
@@ -108,7 +109,7 @@ class Results extends Component {
 
         
         if (this.state.songs == null) {
-            return (<div><h4  style={{textAlign: 'center'}}>Almost there...</h4></div>);
+            return (<MusicLoader />);
         }
 
         if (this.state.songs.length <= 1) {
