@@ -37,9 +37,13 @@ function ListHeader({howMany,
             >
               <Box style={{display:'flex', flexDirection:'column', alignItems:'center'}} >
                 <Title> {title} </Title> 
-                <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-                  {resolvedData?.totalItems}{' '}{totalItemsLabel}
-                </Typography>
+                {totalItemsLabel!='' ? 
+                  <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                    {resolvedData?.totalItems}{' '}{totalItemsLabel}
+                  </Typography>
+                : <></>
+                }
+                
               
               </Box>
               <Box>  

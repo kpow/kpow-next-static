@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import Title from '@components/shared/Title';
 import Container from '@material-ui/core/Container';
 import StarList from '@components/stars/StarList';
+import ScrobbleList from '@components/scrobbles/ScrobbleList';
 import BookList from '@components/books/BookList';
 import getPosts from '@utils/getPosts';
 import { Masonry } from "masonic";
@@ -39,6 +40,7 @@ const ProjectCard = ({data}) => {
 const Index = ({ projects, title, description, ...props }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const totalScrobbleDisplay = matches ? 50 : 50;
   const totalStarsDisplay = matches ? 3 : 2;
   const totalBooksDisplay = matches ? 2 : 2;
   const [open, setOpen] = React.useState(true);
@@ -164,6 +166,9 @@ const Index = ({ projects, title, description, ...props }) => {
                 {/* </Paper> */}
               </Grid>  
           </Grid>
+          
+          <Divider style={{marginTop:'40px'}} />
+          <ScrobbleList howMany={totalScrobbleDisplay}/>
 
           <Divider style={{marginTop:'40px'}} />
           <BookList howMany={totalBooksDisplay}/>
