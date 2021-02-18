@@ -16,13 +16,50 @@ import Paginate from '@components/shared/Paginate';;
 import ListHeader from '@components/shared/ListHeader';
 import { useRouter, withRouter } from "next/router";
 
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+
+
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import IconButton from '@material-ui/core/IconButton';
+import InfoIcon from '@material-ui/icons/Info';
+
 let initalLoaded = false;
-const queryCache = new QueryCache()
+// const queryCache = new QueryCache()
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
+  },
+  gridList: {
+    flexWrap: 'nowrap',
+    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+    transform: 'translateZ(0)',
+  },
+  title: {
+    color: theme.palette.primary.light,
+  },
+  titleBar: {
+    background:
+      'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+  },
+}));
 
 function ScrobbleList({howMany}) {
-  const cache = useQueryCache()
-  const [page, setPage] = React.useState(0)
+  const classes = useStyles();
   const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const totalScrobbleDisplay = matches ? 5 : 1.5;
+
+  // const cache = useQueryCache()
+  const [page, setPage] = React.useState(0)
+ 
   const { query: { p } } = useRouter();
   const router = useRouter();
   const path = router.pathname;
@@ -74,38 +111,38 @@ function ScrobbleList({howMany}) {
         isFetching={isFetching} 
         page={page} 
         setPage={setPage}
-        seeMore="/starfeed"
-        title="scrobble feed"
+        seeMore="/music"
+        title="recently played . . ."
         heroContent={``}
-        totalItemsLabel=" scrobbles"
+        totalItemsLabel=""
       />
-      <ReactQueryCacheProvider queryCache={queryCache}>
-        {status === 'loading' ? (
-          <Grid container spacing={4} >
-            {skeletons.map(id => (       
-              <ScrobbleCardBigSkeleton key={id}/>
-            ))} 
-          </Grid>
-        ) : status === 'error' ? (
-          <div>Error: {error.message}</div>
-        ) : (
+      <Divider style={{marginBottom:'10px',marginTop:'10px'}}/>    
+      {/* <ReactQueryCacheProvider queryCache={queryCache}> */}
 
-          <Grid container spacing={0}>
-            {isFetching ? 
-              <>
-                {skeletons.map(id => (       
-                  <ScrobbleCardBigSkeleton key={id}/>
+          <div className={classes.root}>
+            <GridList cellHeight={240} className={classes.gridList} cols={totalScrobbleDisplay}>
+
+              {resolvedData &&
+                resolvedData.data.map(article => (    
+                  <GridListTile className={classes.tile} key={article?.image[2]['#text']}>
+                    <img src={article?.image[2]['#text']} />
+                    <GridListTileBar
+                      title={article?.name}
+                      subtitle={<span>by: {article?.artist["#text"]}</span>}
+                      actionIcon={
+                        <IconButton aria-label={`info about ${article?.artist["#text"]}`} className={classes.icon}>
+                          <InfoIcon />
+                        </IconButton>
+                      }
+                    />
+                  </GridListTile>   
+                  // <ScrobbleCardBig key={article.id} article={article} />
                 ))} 
-              </>
-            : <>
-              {resolvedData.data.map(article => (       
-                <ScrobbleCardBig key={article.id} article={article} />
-              ))} 
-              </>
-            } 
-          </Grid>
-        )}
-      </ReactQueryCacheProvider>
+            
+            </GridList>
+          </div>
+      
+      {/* </ReactQueryCacheProvider> */}
 
       {path != '/' ?
         <>

@@ -40,7 +40,7 @@ const ProjectCard = ({data}) => {
 const Index = ({ projects, title, description, ...props }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
-  const totalScrobbleDisplay = matches ? 20 : 12;
+  const totalScrobbleDisplay = matches ? 50 : 50;
   const totalStarsDisplay = matches ? 3 : 2;
   const totalBooksDisplay = matches ? 2 : 2;
   const [open, setOpen] = React.useState(true);
@@ -166,6 +166,9 @@ const Index = ({ projects, title, description, ...props }) => {
                 {/* </Paper> */}
               </Grid>  
           </Grid>
+          
+          <Divider style={{marginTop:'40px'}} />
+          <ScrobbleList howMany={totalScrobbleDisplay}/>
 
           <Divider style={{marginTop:'40px'}} />
           <BookList howMany={totalBooksDisplay}/>
@@ -189,9 +192,6 @@ const Index = ({ projects, title, description, ...props }) => {
 
           <Divider style={{marginTop:'40px'}}/>
           <StarList howMany={totalStarsDisplay}/>
-
-          <Divider style={{marginTop:'40px'}} />
-          <ScrobbleList howMany={totalScrobbleDisplay}/>
 
           <Divider style={{marginTop:'40px'}}/>
           <Title>
