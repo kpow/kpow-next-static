@@ -7,7 +7,7 @@ const fetchScrobbles = async (key, page = 0, howMany = 9) => {
   const totalItems = data.recenttracks.track.length;
   const totalPages = data.recenttracks.track.length/howMany
 
-  const hasMore = false
+  const hasMore = true;
   
   const fullData = {data:data.recenttracks.track,totalItems,hasMore}
   console.log(fullData)

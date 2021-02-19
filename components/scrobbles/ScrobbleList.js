@@ -57,20 +57,7 @@ function ScrobbleList({howMany}) {
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const totalScrobbleDisplay = matches ? 5 : 1.5;
 
-  // const cache = useQueryCache()
   const [page, setPage] = React.useState(0)
- 
-  const { query: { p } } = useRouter();
-  const router = useRouter();
-  const path = router.pathname;
-
-  // let i = 0
-  // const skeletons = Array.from(Array(howMany), () => ({id: i++}))
-
-  let skeletons = []
-  for(let i=0; i<howMany; i++){
-    skeletons.push(i)
-  } 
 
   const {
     status,
@@ -80,27 +67,6 @@ function ScrobbleList({howMany}) {
     isFetching,
   } = usePaginatedQuery(['scrobbles', page, howMany], fetchScrobbles, {})
 
-  // Prefetch the next page!
-  React.useEffect(() => {
-    window.scrollTo(0, 0)
-
-    // this added pgination to url, need to figure out better way breaks the back button
-    if(p>1 && !initalLoaded){
-      initalLoaded = true;
-      setPage(Number(p))
-      history.pushState(null, '', '?p='+(page));
-    }else{
-      if(path != '/'){
-        history.pushState(null, '', '?p='+(page+1));
-      }
-    }
-    
-    // this hasMore stops the home page from prefetching
-    if (latestData?.hasMore) {
-      const nextPage = page+1
-      cache.prefetchQuery(['scrobbles', nextPage, howMany], fetchScrobbles)
-    }
-  }, [latestData, fetchScrobbles, page, howMany])
 
   return (
     <>
@@ -117,7 +83,6 @@ function ScrobbleList({howMany}) {
         totalItemsLabel=""
       />
       <Divider style={{marginBottom:'10px',marginTop:'10px'}}/>    
-      {/* <ReactQueryCacheProvider queryCache={queryCache}> */}
 
           <div className={classes.root}>
             <GridList cellHeight={240} className={classes.gridList} cols={totalScrobbleDisplay}>
@@ -141,22 +106,7 @@ function ScrobbleList({howMany}) {
             
             </GridList>
           </div>
-      
-      {/* </ReactQueryCacheProvider> */}
 
-      {path != '/' ?
-        <>
-          <Divider style={{marginBottom:'20px',marginTop:'20px'}}/>            
-          <Paginate 
-            page={page}
-            howMany={howMany}
-            total={resolvedData?.totalItems}  
-            latestData={latestData} 
-            isFetching={isFetching}
-            setPage={setPage}
-          /> 
-        </>
-      :<></> }
       <ReactQueryDevtools />
     </>
   )
