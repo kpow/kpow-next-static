@@ -1,5 +1,5 @@
 [build]
-  functions = "my/serverless/functions/here"
+  functions = "data/"
   command = "npm run build && npm run export"
   publish = "out"
   
