@@ -5,7 +5,8 @@ const API_ENDPOINT = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttra
 exports.handler = async (event, context) => {
   
   return fetch(API_ENDPOINT, {method: 'GET', headers: { Accept: "application/json" } })
-    .then((response) => {console.log(response); response.json();})
+    .then((response) => {response.json();})
+    .then((data)=>{console.log(data); })
     .then((data) => ({
       statusCode: 200,
       body: data,
