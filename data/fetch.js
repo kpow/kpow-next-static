@@ -6,7 +6,12 @@ exports.handler = async (event, context) => {
   let response
   try {
     response = await fetch(API_ENDPOINT)
-    // handle response
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        data: response
+      })
+    }
   } catch (err) {
     return {
       statusCode: err.statusCode || 500,
@@ -16,10 +21,5 @@ exports.handler = async (event, context) => {
     }
   }
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      data: response
-    })
-  }
+  
 }
