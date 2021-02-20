@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const fetchScrobbles = async (key, page = 0, howMany = 9) => {
   
-  const { data } = await axios.get("https://services.kpow.com/scrobbles.php?page="+(page+1)+"&perPage="+howMany)
+  const { data } = await axios.get('https://kpow-wow.com/.netlify/functions/fetch')
 
   const totalItems = data.recenttracks.track.length;
   const totalPages = data.recenttracks.track.length/howMany

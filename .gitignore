@@ -8,3 +8,6 @@ yarn-debug.log*
 yarn-error.log*
 .env.local
 /public/pmonk
+
+# Local Netlify folder
+.netlify
