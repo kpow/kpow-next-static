@@ -6,6 +6,8 @@ exports.handler = async (event, context) => {
   let response
   try {
     response = await fetch(API_ENDPOINT)
+    console.log(API_ENDPOINT)
+    console.log(response)
     return {
       statusCode: 200,
       body: JSON.stringify({
