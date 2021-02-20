@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-const API_ENDPOINT = "https://icanhazdadjoke.com/";
+const API_ENDPOINT = "https://services.kpow.com/scrobbles.php?page="+1+"&perPage="+10;
 
 exports.handler = async (event, context) => {
   return fetch(API_ENDPOINT, { headers: { Accept: "application/json" } })
