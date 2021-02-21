@@ -2,10 +2,6 @@ const fetch = require("node-fetch");
 
 exports.handler = async (event, context) => {
   
-  // if (event.httpMethod !== "POST") {
-  //   return { statusCode: 405, body: "Method Not Allowed" };
-  // }
-  
   const { GOOD_READS_KEY } = process.env;
   const API_ENDPOINT = "https://www.goodreads.com/shelf/list.xml?key="+GOOD_READS_KEY+"&user_id=457389";
 
