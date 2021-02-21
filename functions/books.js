@@ -13,10 +13,9 @@ exports.handler = async (event, context) => {
   const API_ENDPOINT = "https://www.goodreads.com/review/list/457389.xml?key="+GOOD_READS_KEY+"&v=2&per_page="+howMany+"page="+page;
 
   return fetch(API_ENDPOINT, { headers: { Accept: "application/json" } })
-    .then((response) => response.json())
     .then((data) => ({
       statusCode: 200,
-      body: data,
+      body: String(data),
     }))
     .catch((error) => ({ statusCode: 422, body: String(error) }));
 };
