@@ -15,7 +15,7 @@ exports.handler = async (event, context) => {
   return fetch(API_ENDPOINT, { headers: { Accept: "application/json" } })
     .then((data) => ({
       statusCode: 200,
-      body: String(data),
+      body: data,
     }))
     .catch((error) => ({ statusCode: 422, body: String(error) }));
 };
