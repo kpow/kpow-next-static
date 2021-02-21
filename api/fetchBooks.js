@@ -2,7 +2,7 @@ import axios from 'axios'
 import convert from 'xml-js'
 
 const totalBooks = async () =>{
-  const { data } = await axios.post("/.netlify/functions/totalBooks")
+  const { data } = await axios.get("/.netlify/functions/totalBooks")
   const shelfJson = JSON.parse(convert.xml2json(data, { compact: true, spaces: 4 }))
   const shelves = shelfJson.GoodreadsResponse.shelves.user_shelf
   const totals = shelves.map((shelf)=> Number(shelf.book_count._text) )
