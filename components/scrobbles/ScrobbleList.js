@@ -41,6 +41,11 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'nowrap',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: 'translateZ(0)',
+   
+  },
+  tile: {
+    backgroundColor: '#666',
+    minHeight: '150px'
   },
   title: {
     color: theme.palette.primary.light,
@@ -87,8 +92,9 @@ function ScrobbleList({howMany}) {
           <div className={classes.root}>
             <GridList cellHeight={240} className={classes.gridList} cols={totalScrobbleDisplay}>
 
-              {resolvedData &&
-                resolvedData.data.map(article => (    
+            {resolvedData ? 
+                <>
+                {resolvedData.data.map(article => (    
                   <GridListTile className={classes.tile} key={article?.image[2]['#text']}>
                     <img src={article?.image[2]['#text']} />
                     <GridListTileBar
@@ -103,7 +109,23 @@ function ScrobbleList({howMany}) {
                   </GridListTile>   
                   // <ScrobbleCardBig key={article.id} article={article} />
                 ))} 
-            
+                </>
+
+              :  
+              
+              <>
+                <GridListTile className={classes.tile} >
+                    
+                    <GridListTileBar
+                      title="Loading . . ."
+                      subtitle={<span>by: Loading . . .</span>}
+                    />
+                </GridListTile>
+                
+              </>
+              
+            } 
+
             </GridList>
           </div>
 

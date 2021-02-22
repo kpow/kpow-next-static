@@ -10,6 +10,7 @@ exports.handler = async (event, context) => {
   const params = JSON.parse(event.body)
   const page = params.page || 0;
   const howMany = params.howMany || 20;
+  console.log(page)
   const API_ENDPOINT = "https://www.goodreads.com/review/list/457389.xml?key="+GOOD_READS_KEY+"&v=2&per_page="+howMany+"page="+page;
 
   return fetch(API_ENDPOINT, { headers: { Accept: "application/json" } })
