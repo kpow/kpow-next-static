@@ -15,6 +15,7 @@ import LocalFloristIcon from '@material-ui/icons/LocalFlorist';
 import PolymerIcon from '@material-ui/icons/Polymer';
 
 import Title from '@components/shared/Title';
+import { FreeBreakfastSharp } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
@@ -61,6 +62,32 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const skillz = [
+  "A digital Swiss Army knife with 20+ years of experience",
+  "Interfacing with stakeholders and UX/design teams",
+  "Managing development resources and product development",
+  "Maintaining partner relationships",
+  "Defining requirements and providing documentation",
+  "evaluating and elevating platforms, tools, and environments"
+]
+
+const iconz = (index) =>{
+  switch(index){
+    case 0:
+    return <BathtubIcon />
+    case 1:
+    return <BubbleChartIcon /> 
+    case 2:
+    return <CodeIcon />
+    case 3:
+    return <EmojiFoodBeverageIcon /> 
+    case 4:
+    return <LocalFloristIcon />
+    case 5:
+    return <PolymerIcon /> 
+  }
+}
+
 const About = ({ title, description, ...props }) => {
   const classes = useStyles();
 
@@ -86,64 +113,18 @@ const About = ({ title, description, ...props }) => {
                 what's up?
               </Title>
 
-          <div className={classes.demo}>
-            <List dense={false}>
-                <ListItem>
-                  <ListItemIcon>
-                    <BathtubIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary=" A digital Swiss Army knife with 20+ years of experience"
-                    // secondary="Secondary textl"
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <BubbleChartIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary="Interfacing with stakeholders and UX/design teams"
-                    // secondary="Secondary textl"
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CodeIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary="Managing development resources and product development"
-                    // secondary="Secondary textl"
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <EmojiFoodBeverageIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary="Maintaining partner relationships"
-                    // secondary="Secondary textl"
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <LocalFloristIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary="Defining requirements and providing documentation"
-                    // secondary="Secondary textl"
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <PolymerIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary="evaluating and elevating platforms, tools, and environments"
-                    // secondary="Secondary textl"
-                  />
-                </ListItem>
-            </List>
-          </div>
+              <div className={classes.demo}>
+                <List dense={false}>
+                    {skillz.map((article,index) => (    
+                      <ListItem>
+                        <ListItemIcon>
+                          {iconz(index)}
+                        </ListItemIcon>
+                        <ListItemText primary={skillz[index]} />
+                      </ListItem>
+                    ))} 
+                </List>
+              </div>
           
               <Typography component="p" style={{marginTop:'20px'}} gutterBottom>
                 I am a technologist with a relentless passion for designing solutions that overcome technical obstacles. Pushing for innovation, I continually challenge myself and my teams to make technology work harder and smarter for clients. Crafting dynamic experiences, robust design systems, efficient development practices, and continuous learning are among my core principles. Also, I am a donut connoisseur.
@@ -165,8 +146,7 @@ const About = ({ title, description, ...props }) => {
                   </Button>
                 </Grid>
               </Grid>
-            </div>
-            
+            </div>      
             
           </Container>
         </div>
