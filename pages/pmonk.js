@@ -1,23 +1,12 @@
 import Layout from '@components/Layout'
 import { Container, Grid, Button, Paper } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box'
-import React, { useState, useCallback } from "react";
 import Link from 'next/link';
 import NavigateNextIcon from '@material-ui/icons/NavigateNextOutlined'
 import Divider from '@material-ui/core/Divider'
-import Typography from '@material-ui/core/Typography';
 import Title from '@components/shared/Title';
 
-
-const useStyles = makeStyles((theme) => ({
-
-}));
-
-
-
 const Pmonk = ({ title, description, ...props }) => {
-
 
   return (
     <Layout pageTitle={`${title} | About`} description={description}>

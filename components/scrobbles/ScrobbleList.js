@@ -92,10 +92,9 @@ function ScrobbleList({howMany}) {
           <div className={classes.root}>
             <GridList cellHeight={240} className={classes.gridList} cols={totalScrobbleDisplay}>
 
-            {resolvedData ? 
-                <>
-                {resolvedData.data.map(article => (    
-                  <GridListTile className={classes.tile} key={article?.image[2]['#text']}>
+            {resolvedData &&
+              resolvedData.data.map(article => (    
+                  <GridListTile className={classes.tile} key={article?.name}>
                     <img src={article?.image[2]['#text']} />
                     <GridListTileBar
                       title={article?.name}
@@ -109,22 +108,6 @@ function ScrobbleList({howMany}) {
                   </GridListTile>   
                   // <ScrobbleCardBig key={article.id} article={article} />
                 ))} 
-                </>
-
-              :  
-              
-              <>
-                <GridListTile className={classes.tile} >
-                    
-                    <GridListTileBar
-                      title="Loading . . ."
-                      subtitle={<span>by: Loading . . .</span>}
-                    />
-                </GridListTile>
-                
-              </>
-              
-            } 
 
             </GridList>
           </div>

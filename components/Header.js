@@ -32,9 +32,6 @@ import Hidden from '@material-ui/core/Hidden'
 
 import SecurityIcon from '@material-ui/icons/Security';
 
-
-const drawerWidth = 300;
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -83,6 +80,31 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
+const drawerWidth = 300;
+const linkz =["/","/about","/starfeed","/bookfeed", "/youtube", "/battle", "/pmonk", "/music"]
+const labelz =["home","about kpow","star feed","book feed","youtube live","hero battle","pmonk","itunes beta"]
+const iconz = (index) =>{
+  switch(index){
+    case 0: 
+    return <HomeIcon />
+    case 1: 
+    return <FaceIcon />
+    case 2: 
+    return <StarsIcon />
+    case 3: 
+    return <MenuBookIcon />
+    case 4: 
+    return <VideoLibraryIcon />
+    case 5: 
+    return <SecurityIcon />
+    case 6: 
+    return <CameraRollIcon />
+    case 7: 
+    return <MusicNoteIcon />
+    case 8: 
+    return <WebIcon />
+  }
+}
 
 export default function Header() {
   const classes = useStyles();
@@ -97,7 +119,7 @@ export default function Header() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
+  
   return (
     <div className={classes.root}>
       
@@ -120,15 +142,15 @@ export default function Header() {
             <Hidden xsDown>
               <ContactModal />
             </Hidden>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="end"
-            onClick={handleDrawerOpen}
-            className={clsx(open && classes.hide)}
-          >
-            <MenuIcon />
-          </IconButton>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerOpen}
+              className={clsx(open && classes.hide)}
+            >
+              <MenuIcon />
+            </IconButton>
           </Box>
         </Toolbar>
         </Container>
@@ -156,77 +178,17 @@ export default function Header() {
         
         <Divider />
         <List>
-            <Link href="/">
-              <ListItem button key="about">
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText primary="home" />
-              </ListItem>
-            </Link>
-           <Link href="/about">
-              <ListItem button key="about">
-                <ListItemIcon>
-                  <FaceIcon />
-                </ListItemIcon>
-                <ListItemText primary="about kpow" />
-              </ListItem>
-            </Link>
-
-            <Link href="/starfeed">
-              <ListItem button key="stars">
-                <ListItemIcon>
-                  <StarsIcon />
-                </ListItemIcon>
-                <ListItemText primary="star feed" />
-              </ListItem>
-            </Link>
-
-            <Link href="/bookfeed">
-              <ListItem button key="books">
-                <ListItemIcon>
-                  <MenuBookIcon />
-                </ListItemIcon>
-                <ListItemText primary="book feed" />
-              </ListItem>
-            </Link>
-
-            <Link href="/youtube">
-              <ListItem button key="live">
-                <ListItemIcon>
-                  <VideoLibraryIcon />
-                </ListItemIcon>
-                <ListItemText primary="youtube live" />
-              </ListItem>
-            </Link>
+          {linkz.map((item,index) => (    
+            <Link href={item} key={item}>
+            <ListItem button>
+              <ListItemIcon>
+                {iconz(index)}
+              </ListItemIcon>
+              <ListItemText primary={labelz[index]} />
+            </ListItem>
+          </Link>
+          ))} 
             
-            <Link href="/battle">
-              <ListItem button key="live">
-                <ListItemIcon>
-                  <SecurityIcon />
-                </ListItemIcon>
-                <ListItemText primary="hero battle" />
-              </ListItem>
-            </Link>
-            
-            <Link href="/pmonk">
-              <ListItem button key="live">
-                <ListItemIcon>
-                  <CameraRollIcon />
-                </ListItemIcon>
-                <ListItemText primary="pmonk" />
-              </ListItem>
-            </Link>
-
-            <Link href="/music">
-              <ListItem button key="live">
-                <ListItemIcon>
-                  <MusicNoteIcon />
-                </ListItemIcon>
-                <ListItemText primary="itunes beta" />
-              </ListItem>
-            </Link>
-
             <a target="_blank" href="https://gatsby.kpow-wow.com">
               <ListItem button key="gatsby">
                 <ListItemIcon>

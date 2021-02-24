@@ -1,11 +1,8 @@
 import React from 'react'
 import Layout from '@components/Layout';
 import StarList from '@components/stars/StarList';
-import { useRouter, withRouter } from "next/router";
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
-
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-
 
 export default function Starfeed({title, description, ...props }) {
   const theme = useTheme();

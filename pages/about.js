@@ -15,7 +15,6 @@ import LocalFloristIcon from '@material-ui/icons/LocalFlorist';
 import PolymerIcon from '@material-ui/icons/Polymer';
 
 import Title from '@components/shared/Title';
-import { FreeBreakfastSharp } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
@@ -96,16 +95,16 @@ const About = ({ title, description, ...props }) => {
         <div className={classes.heroContent}>
           <Container maxWidth="md" className={classes.mainContent}>
             <Paper elevation={3} className={classes.heroPaper}>
-            <Title>
-              Hi, I'm Kevin
-            </Title>
-            <Typography className={classes.heroText} variant="h5" align="center" color="textSecondary" paragraph>
-                Digital Architect - Leader - Developer - Pixel Farmer.
-                <br></br>
-                Voracious Reader and Dad. 
-                <br></br>
-                I'm into travel, ukes, pugs, live music, and pixels.
-            </Typography>
+              <Title>
+                Hi, I'm Kevin
+              </Title>
+              <Typography className={classes.heroText} variant="h5" align="center" color="textSecondary" paragraph>
+                  Digital Architect - Leader - Developer - Pixel Farmer.
+                  <br></br>
+                  Voracious Reader and Dad. 
+                  <br></br>
+                  I'm into travel, ukes, pugs, live music, and pixels.
+              </Typography>
             </Paper>
 
             <Box className={classes.bioText}>

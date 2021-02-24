@@ -151,7 +151,7 @@ export default function BookCardFull({article}) {
                 <Typography className={classes.bookRating} color="textSecondary">my rating: </Typography>
                 <StyledRating
                   name="customized-color"
-                  defaultValue={article.rating._text}
+                  defaultValue={Number(article.rating._text)}
                   getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                   precision={0.5}
                   readOnly
@@ -162,7 +162,7 @@ export default function BookCardFull({article}) {
                 <Typography className={classes.bookRating} color="textSecondary">avg. rating: </Typography>
                 <StyledRating
                   name="customized-color"
-                  defaultValue={article.book.average_rating._text}
+                  defaultValue={Number(article.book.average_rating._text)}
                   getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                   precision={0.1}
                   readOnly

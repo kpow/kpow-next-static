@@ -13,7 +13,6 @@ import { ReactQueryDevtools } from 'react-query-devtools';
 import BookCardFull from '@components/books/BookCardFull';
 import BookCardSkeleton from '@components/books/BookCardSkeleton';
 import Paginate from '@components/shared/Paginate';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import ListHeader from '@components/shared/ListHeader';
 import { useRouter, withRouter } from "next/router";
 
@@ -45,7 +44,6 @@ function BookList({howMany}) {
   React.useEffect(() => {
     window.scrollTo(0, 0)
 
-    console.log(page)
     // this added pgination to url, need to figure out better way breaks the back button
     if(p>1 && !initalLoaded){
       initalLoaded = true;
