@@ -41,11 +41,12 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'nowrap',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: 'translateZ(0)',
+    minHeight: '240px'
    
   },
   tile: {
     backgroundColor: '#666',
-    minHeight: '150px'
+    minHeight: '240px'
   },
   title: {
     color: theme.palette.primary.light,
