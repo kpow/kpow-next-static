@@ -4,7 +4,7 @@ function createData(key, value) {
 const runBattle = (player1Data,player2Data) =>{
     const WILDCARD_VALUE = 6 
     const WILDCARD_CONDITION = 9
-    const WILDCARD_MAX = 10
+    const WILDCARD_MAX = 20
     const rInt = (max = 1, min = 0) => Math.floor(Math.random() * (max + 1 - min)) + min;
     // internal count as we compare stats each check will increase or decrease these 
     let player1Count =0;
