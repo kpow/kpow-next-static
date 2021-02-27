@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 
 const Donuts = ({ title, description, ...props }) => {
 
-  const MapWithNoSSR = dynamic(() => import("../components/Map"), {
+  const MapWithNoSSR = dynamic(() => import("../components/DonutMap"), {
     ssr: false
   });
 
