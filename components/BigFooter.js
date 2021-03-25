@@ -8,7 +8,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     color: '#FFF',
