@@ -45,8 +45,7 @@ export default function ScrobbleCardBig({article}) {
           className={classes.media}
           image={article?.image[2]['#text'] }
           title={article?.artist["#text"]}
-        >
-         
+        >         
             {article?.name}
         
         </CardMedia>
