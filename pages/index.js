@@ -1,3 +1,5 @@
+
+import {useState, useEffect} from 'react';
 import Layout from '@components/Layout';
 import Link from 'next/link';
 import Grid from '@material-ui/core/Grid';
@@ -43,7 +45,7 @@ const Index = ({ projects, title, description, ...props }) => {
   const totalScrobbleDisplay = matches ? 50 : 50;
   const totalStarsDisplay = matches ? 3 : 2;
   const totalBooksDisplay = matches ? 2 : 2;
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = useState(true);
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {return;}
@@ -52,7 +54,7 @@ const Index = ({ projects, title, description, ...props }) => {
     localStorage.setItem('closedSnackbar', true);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
       const snackBarStatus = localStorage.getItem('closedSnackbar')
       setOpen(!snackBarStatus)      
   })

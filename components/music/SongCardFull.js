@@ -165,9 +165,10 @@ export default function SongCardFull(props) {
         <CardMedia
           className={classes.cover}
           title={year.value.key}
+          children={<img src={imageURL} className={classes.coverImage} />}
         >
           
-          <img src={imageURL} className={classes.coverImage} />
+          
         </CardMedia>      
       </Card>
      

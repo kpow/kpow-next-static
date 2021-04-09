@@ -38,7 +38,7 @@ function BookList({howMany}) {
     latestData,
     error,
     isFetching,
-  } = usePaginatedQuery(['books', page, howMany], fetchBooks, {})
+  } = usePaginatedQuery(['books', page, howMany], fetchBooks, {staleTime:Infinity})
 
   // Prefetch the next page!
   React.useEffect(() => {
