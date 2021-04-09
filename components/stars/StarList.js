@@ -41,7 +41,7 @@ function StarList({howMany}) {
     latestData,
     error,
     isFetching,
-  } = usePaginatedQuery(['stars', page, howMany], fetchStars, {})
+  } = usePaginatedQuery(['stars', page, howMany], fetchStars, {staleTime:Infinity})
 
   // Prefetch the next page!
   React.useEffect(() => {
