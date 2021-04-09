@@ -1,5 +1,5 @@
 // import App from 'next/app'
-import "../src/map.css";
+import "../styles/map.css";
 
 function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />

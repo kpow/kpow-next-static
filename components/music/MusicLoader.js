@@ -227,7 +227,7 @@ const MusicLoader = () => {
                 <div className={classes.circle}>
                    0
                 </div>
-                    <CardMedia className={classes.media} >
+                    <CardMedia className={classes.media} children={<h4>loading</h4>}>
                     </CardMedia>  
                     <CardContent>
                     <Typography gutterBottom variant="h5">
@@ -244,7 +244,7 @@ const MusicLoader = () => {
                 <div className={classes.circle}>
                    0
                 </div>
-                    <CardMedia className={classes.media} >
+                    <CardMedia className={classes.media} children={<h4>loading</h4>}>
                     </CardMedia>  
                     <CardContent>
                     <Typography gutterBottom variant="h5">
@@ -261,7 +261,7 @@ const MusicLoader = () => {
                 <div className={classes.circle}>
                    0
                 </div>
-                    <CardMedia className={classes.media} >
+                    <CardMedia className={classes.media} children={<h4>loading</h4>}>
                     </CardMedia>  
                     <CardContent>
                     <Typography gutterBottom variant="h5">
@@ -278,7 +278,7 @@ const MusicLoader = () => {
                 <div className={classes.circle}>
                    0
                 </div>
-                    <CardMedia className={classes.media} >
+                    <CardMedia className={classes.media} children={<h4>loading</h4>}>
                     </CardMedia>  
                     <CardContent>
                     <Typography gutterBottom variant="h5">
@@ -321,7 +321,7 @@ const MusicLoader = () => {
                         
                         </CardContent>
                         </div>
-                        <CardMedia className={classes.cover} >
+                        <CardMedia className={classes.cover} children={<h4>loading</h4>}>
                         
                        
                         </CardMedia>      
@@ -348,7 +348,7 @@ const MusicLoader = () => {
                         
                         </CardContent>
                         </div>
-                        <CardMedia className={classes.cover} >
+                        <CardMedia className={classes.cover} children={<h4>loading</h4>}>
                         
                        
                         </CardMedia>      
@@ -375,7 +375,7 @@ const MusicLoader = () => {
                         
                         </CardContent>
                         </div>
-                        <CardMedia className={classes.cover} >
+                        <CardMedia className={classes.cover} children={<h4>loading</h4>}>
                         
                        
                         </CardMedia>      
@@ -402,7 +402,7 @@ const MusicLoader = () => {
                         
                         </CardContent>
                         </div>
-                        <CardMedia className={classes.cover} >
+                        <CardMedia className={classes.cover} children={<h4>loading</h4>}>
                         
                        
                         </CardMedia>      

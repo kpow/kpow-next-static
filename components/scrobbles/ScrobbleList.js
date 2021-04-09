@@ -73,6 +73,7 @@ function ScrobbleList({howMany}) {
     isFetching,
   } = usePaginatedQuery(['scrobbles', page, howMany], fetchScrobbles, {})
 
+  const holder = [<span>booty</span>]
 
   return (
     <>
@@ -91,7 +92,7 @@ function ScrobbleList({howMany}) {
       <Divider style={{marginBottom:'10px',marginTop:'10px'}}/>    
 
           <div className={classes.root}>
-            <GridList cellHeight={240} className={classes.gridList} cols={totalScrobbleDisplay}>
+            <GridList children={holder} cellHeight={240} className={classes.gridList} cols={totalScrobbleDisplay}>
 
             {resolvedData &&
               resolvedData.data.map(article => (    
