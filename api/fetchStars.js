@@ -15,9 +15,8 @@ const fetchStars = async (key, page = 0, howMany = 9) => {
       console.error(error);
     }
   } 
-
-  //const stars = await axios.get("/.netlify/functions/totalStars")
-  const totalItems = 5247;
+  const stars = await axios.get("/.netlify/functions/totalStars")
+  const totalItems = stars.data.data.length;
   const totalPages = totalItems/howMany
   const hasMore = totalPages > page ? true : false;
 

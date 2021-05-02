@@ -9,7 +9,7 @@ const Donuts = ({ title, description, ...props }) => {
   });
 
   return (
-    <Layout pageTitle={`${title} | About`} description={description}>
+    <Layout pageTitle={`${title} | Donuts`} description={description}>
       <Container maxWidth="md">
 
         <MapWithNoSSR />

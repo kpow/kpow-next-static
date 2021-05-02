@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const fetchDonuts = async (key, page = 0, howMany = 9) => {
-  
-  const { data } = await axios.post('/.netlify/functions/donuts',{page:page, howMany:howMany})
+const fetchDonuts = async (location) => {
+  console.log(location)
+  const { data } = await axios.post('/.netlify/functions/donuts',{location:location})
 
   const totalItems = 100
   const totalPages = 2
