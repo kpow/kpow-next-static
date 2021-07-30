@@ -4,6 +4,13 @@ import dynamic from "next/dynamic";
 
 const Donuts = ({ title, description, ...props }) => {
 
+  // filter array by a property 
+  const filter = (arr, prop, value) => arr.filter(item => item[prop] === value);
+  // remove duplicates from array
+  const unique = (arr) => arr.filter((item, pos, self) => self.indexOf(item) === pos);
+  // sort array by property
+  const sort = (arr, prop) => arr.sort((a, b) => a[prop] - b[prop]);
+      
   const MapWithNoSSR = dynamic(() => import("../components/DonutMap"), {
     ssr: false
   });

@@ -49,7 +49,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
 
   return (
     <>
-      <Head>
+      <Head  >
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="Description" content={description}></meta>
@@ -70,7 +70,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
       <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8FH7QS" height="0" width="0" style={{display:'none', visibility:'hidden'}}></iframe>
       </noscript>
-      <div style={{
+      <div  style={{
 
           // backgroundColor: '#fafafa',
           // backgroundImage:  'repeating-radial-gradient( circle at 0 0, transparent 0, #fafafa 40px ), repeating-linear-gradient( #e1e1e155, #e1e1e1 )'

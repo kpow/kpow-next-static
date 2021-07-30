@@ -2,3 +2,13 @@
     width: 100%;
     height: 50vh;
   }
+  .dark{
+    filter: invert(1);
+  }
+  .dark img{
+    filter: invert(1);
+  }
+
+  .dark #starImage{
+    filter: invert(1);
+  }

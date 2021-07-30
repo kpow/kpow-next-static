@@ -76,6 +76,7 @@ export default function StarCardBig({article}) {
         />
         <CardMedia
           className={classes.media}
+          id="starImage"
           image={article?.lead_image_url}
           title={article?.title}
         />
