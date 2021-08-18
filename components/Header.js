@@ -2,7 +2,7 @@ import Link from 'next/link'
 import clsx from 'clsx';
 import React from 'react';
 
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -15,7 +15,8 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -28,13 +29,15 @@ import HomeIcon from '@material-ui/icons/Home';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ContactModal from '@components/ContactModal';
-import Hidden from '@material-ui/core/Hidden'
-
+import Hidden from '@material-ui/core/Hidden';
 import SecurityIcon from '@material-ui/icons/Security';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  },
+  pageHeader: {
+    backgroundColor: '#000',
   },
   pageHeader: {
     backgroundColor: '#000',
@@ -106,11 +109,15 @@ const iconz = (index) =>{
   }
 }
 
-export default function Header() {
+export default function Header(props) {
   const classes = useStyles();
   const theme = useTheme();
 
+
+  const modelabel = props.pageMode;
+  const setPageMode = props.setPageMode;
   const [open, setOpen] = React.useState(false);
+  const [mode, setMode] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -119,9 +126,67 @@ export default function Header() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const toggleDarkMode = () => {
+    setMode(mode === false ? true : false);
+    setPageMode(mode === false ? 'dark' : 'light');
+  }
+
+  const IOSSwitch = withStyles((theme) => ({
+    root: {
+      width: 42,
+      height: 26,
+      padding: 0,
+      margin: theme.spacing(1),
+    },
+    switchBase: {
+      padding: 1,
+      '&$checked': {
+        transform: 'translateX(16px)',
+        color: theme.palette.common.white,
+        '& + $track': {
+          backgroundColor: '#3f51b5',
+          opacity: 1,
+          border: 'none',
+        },
+      },
+      '&$focusVisible $thumb': {
+        color: '#52d869',
+        border: '6px solid #fff',
+      },
+    },
+    thumb: {
+      width: 24,
+      height: 24,
+    },
+    track: {
+      borderRadius: 26 / 2,
+      border: `1px solid ${theme.palette.grey[400]}`,
+      backgroundColor: '#999',
+      opacity: 1,
+      transition: theme.transitions.create(['background-color', 'border']),
+    },
+    checked: {},
+    focusVisible: {},
+  }))(({activeStep, steps, classes, ...props }) => {
+    return (
+      <Switch
+        focusVisibleClassName={classes.focusVisible}
+        disableRipple
+        classes={{
+          root: classes.root,
+          switchBase: classes.switchBase,
+          thumb: classes.thumb,
+          track: classes.track,
+          checked: classes.checked,
+        }}
+        {...props}
+      />
+    );
+  });
   
   return (
-    <div className={classes.root}>
+    <div className={classes.root, 'top-header'}>
       
       <AppBar position="fixed" className={classes.pageHeader}>
       <Container maxWidth="lg">
@@ -139,6 +204,10 @@ export default function Header() {
           </Typography>
 
           <Box>
+            <FormControlLabel
+              control={<IOSSwitch checked={mode} onChange={toggleDarkMode} name="darkMode" />}
+              label={modelabel}  
+            />
             <Hidden xsDown>
               <ContactModal />
             </Hidden>

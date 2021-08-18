@@ -5,10 +5,22 @@
   .dark{
     filter: invert(1);
   }
+  .dark .MuiCardMedia-root img{
+    filter: invert(0);
+  }
+
   .dark img{
     filter: invert(1);
   }
 
+  .dark video{
+    filter: invert(1);
+  }
+
   .dark #starImage{
+    filter: invert(1);
+  }
+
+  .dark .MuiCardMedia-root{
     filter: invert(1);
   }

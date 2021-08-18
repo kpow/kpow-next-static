@@ -46,6 +46,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const paperPadding = matches ? 4 : 0;
+  const [pageMode, setPageMode] = React.useState('light');
 
   return (
     <>
@@ -70,18 +71,18 @@ export default function Layout({ children, pageTitle, description, ...props }) {
       <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8FH7QS" height="0" width="0" style={{display:'none', visibility:'hidden'}}></iframe>
       </noscript>
-      <div  style={{
+      <div style={{
 
-          // backgroundColor: '#fafafa',
-          // backgroundImage:  'repeating-radial-gradient( circle at 0 0, transparent 0, #fafafa 40px ), repeating-linear-gradient( #e1e1e155, #e1e1e1 )'
-          // // backgroundColor: '#fafafa',
-          // backgroundImage:  'linear-gradient(30deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(150deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(30deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(150deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(60deg, #ebebeb77 25%, transparent 25.5%, transparent 75%, #ebebeb77 75%, #ebebeb77), linear-gradient(60deg, #ebebeb77 25%, transparent 25.5%, transparent 75%, #ebebeb77 75%, #ebebeb77)',
-          // backgroundSize: '38px 67px',
-          // backgroundPosition: '0 0, 0 0, 19px 33px, 19px 33px, 0 0, 19px 33px'
+          backgroundColor: '#fafafa',
+          backgroundImage:  'repeating-radial-gradient( circle at 0 0, transparent 0, #fafafa 40px ), repeating-linear-gradient( #e1e1e155, #e1e1e1 )',
+          backgroundImage:  'linear-gradient(30deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(150deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(30deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(150deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(60deg, #ebebeb77 25%, transparent 25.5%, transparent 75%, #ebebeb77 75%, #ebebeb77), linear-gradient(60deg, #ebebeb77 25%, transparent 25.5%, transparent 75%, #ebebeb77 75%, #ebebeb77)',
+          backgroundSize: '38px 67px',
+          backgroundPosition: '0 0, 0 0, 19px 33px, 19px 33px, 0 0, 19px 33px',
 
-        }}>
-        <CssBaseline />
-        <Header />
+        }} className={pageMode}>
+       
+        <Header setPageMode={setPageMode} pageMode={pageMode}/>
+        <div>
         <Paper className={classes.mainFeaturedPost} style={{ marginTop:'40px', backgroundImage: `url(https://source.unsplash.com/1200x300/?space,nasa)` }}>
           <div className={classes.overlay} />
         </Paper>
@@ -95,6 +96,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <Paper className={classes.mainFeaturedPost} style={{ marginTop:'40px', backgroundImage: `url(https://source.unsplash.com/1200x300/?space,nasa)` }}>
           <div className={classes.overlay} />
         </Paper>
+        </div>
         <BigFooter /> 
 
       </div>      
