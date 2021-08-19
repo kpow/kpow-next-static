@@ -15,11 +15,11 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Title({ props }) {
+export default function Title({ children }) {
   const classes = useStyles();
   return (
     <Typography component="h2" variant="h4" className={classes.title}>
-      {props.children}
+      { children }
     </Typography>
   );
 }
