@@ -51,8 +51,9 @@ function ListHeader({
                     size="small"
                     variant="outlined"
                     endIcon={<NavigateNextIcon />}
-                  />
-                  see more
+                  >
+                    see more
+                  </Button>
                 </Link>
               </Box>
             </Box>

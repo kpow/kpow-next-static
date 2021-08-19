@@ -65,9 +65,9 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
         
         <div className="back">
           ←{' '}
-          <Link href="/">
+          {/* <Link href="/">
             <a>Back to home</a>
-          </Link>
+          </Link> */}
         </div>
         </Paper>
       </Layout>

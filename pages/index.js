@@ -1,5 +1,5 @@
 
-import {useState, useEffect} from 'react';
+import {React, useState, useEffect} from 'react';
 import Layout from '@components/Layout';
 import Link from 'next/link';
 import Grid from '@material-ui/core/Grid';
@@ -31,13 +31,11 @@ const shuffle = array =>
     .map((...args) => Math.floor(Math.random() * (args[1] + 1)))
     .reduce( (a, rv, i) => ([a[i], a[rv]] = [a[rv], a[i]]) && a, array);
 
-const ProjectCard = ({data}) => {
-  return (
-  <Link href={{ pathname: `/projects/${data?.slug}` }}>    
-      <img style={{width:'100%'}} alt="kitty" src={data?.frontmatter?.thumb_image} />    
+const ProjectCard = ({ data }) => (
+  <Link href={{ pathname: `/projects/${data?.slug}` }}>
+    <img style={{ width: '100%' }} alt="kitty" src={data?.frontmatter?.thumb_image} />
   </Link>
-)
-};
+);
 
 const Index = ({ projects, title, description, ...props }) => {
   const theme = useTheme();

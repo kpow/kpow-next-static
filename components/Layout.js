@@ -1,16 +1,12 @@
-import Head from 'next/head'
-import { Box, Container } from '@material-ui/core';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Paper from '@material-ui/core/Paper';
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import Head from 'next/head';
+import { Box, Container, Paper } from '@material-ui/core';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import BigFooter from '@components/BigFooter';
-
-import Header from './Header'
-
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Header from './Header';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
   },
@@ -31,17 +27,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'rgba(0,0,0,.3)',
   },
   bg: {
-    backgroundColor: "#fafafa",
+    backgroundColor: '#fafafa',
     opacity: 0.1,
     backgroundImage:
-      "linear-gradient(135deg, #7c7c7c 25%, transparent 25%), linear-gradient(225deg, #7c7c7c 25%, transparent 25%), linear-gradient(45deg, #7c7c7c 25%, transparent 25%), linear-gradient(315deg, #7c7c7c 25%, #fafafa 25%)",
-    backgroundPosition: "19px 0, 19px 0, 0 0, 0 0",
-    backgroundSize: "19px 19px",
-    backgroundRepeat: "repeat"
-  }
+      'linear-gradient(135deg, #7c7c7c 25%, transparent 25%), linear-gradient(225deg, #7c7c7c 25%, transparent 25%), linear-gradient(45deg, #7c7c7c 25%, transparent 25%), linear-gradient(315deg, #7c7c7c 25%, #fafafa 25%)',
+    backgroundPosition: '19px 0, 19px 0, 0 0, 0 0',
+    backgroundSize: '19px 19px',
+    backgroundRepeat: 'repeat',
+  },
 }));
 
-export default function Layout({ children, pageTitle, description, ...props }) {
+export default function Layout({ children, pageTitle, description }) {
   const classes = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
@@ -50,14 +46,15 @@ export default function Layout({ children, pageTitle, description, ...props }) {
 
   return (
     <>
-      <Head  >
+      <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <meta name="Description" content={description}></meta>
-        <link rel="icon" href="../static/icon.png"></link>
+        <meta name="Description" content={description} />
+        <link rel="icon" href="../static/icon.png" />
         <title>{pageTitle}</title>
-        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <script src="https://apps.elfsight.com/p/platform.js" defer />
         <script
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: `
                   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -65,42 +62,37 @@ export default function Layout({ children, pageTitle, description, ...props }) {
                   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                   })(window,document,'script','dataLayer','GTM-T8FH7QS');
-                    `}}
+                    ` }}
         />
       </Head>
       <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8FH7QS" height="0" width="0" style={{display:'none', visibility:'hidden'}}></iframe>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8FH7QS" height="0" width="0" title="gtm" style={{ display: 'none', visibility: 'hidden' }} />
       </noscript>
       <Header pageMode={pageMode} setPageMode={setPageMode} />
-      <div style={{
-
+      <div
+        style={{
           backgroundColor: '#fafafa',
-          backgroundImage:  'repeating-radial-gradient( circle at 0 0, transparent 0, #fafafa 40px ), repeating-linear-gradient( #e1e1e155, #e1e1e1 )',
-          backgroundImage:  'linear-gradient(30deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(150deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(30deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(150deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(60deg, #ebebeb77 25%, transparent 25.5%, transparent 75%, #ebebeb77 75%, #ebebeb77), linear-gradient(60deg, #ebebeb77 25%, transparent 25.5%, transparent 75%, #ebebeb77 75%, #ebebeb77)',
+          backgroundImage: 'linear-gradient(30deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(150deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(30deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(150deg, #ebebeb 12%, transparent 12.5%, transparent 87%, #ebebeb 87.5%, #ebebeb), linear-gradient(60deg, #ebebeb77 25%, transparent 25.5%, transparent 75%, #ebebeb77 75%, #ebebeb77), linear-gradient(60deg, #ebebeb77 25%, transparent 25.5%, transparent 75%, #ebebeb77 75%, #ebebeb77)',
           backgroundSize: '38px 67px',
           backgroundPosition: '0 0, 0 0, 19px 33px, 19px 33px, 0 0, 19px 33px',
-
-        }} className={pageMode}>
-       
-        
+        }}
+        className={pageMode}
+      >
         <div>
-        <Paper className={classes.mainFeaturedPost} style={{ marginTop:'40px', backgroundImage: `url(https://source.unsplash.com/1200x300/?space,nasa)` }}>
-          <div className={classes.overlay} />
-        </Paper>
-        <Container maxWidth="lg" className={classes.mainContent}>
-
-          <Box component="main" mx={paperPadding}>
-            {children}
-          </Box>
-         
-        </Container>
-        <Paper className={classes.mainFeaturedPost} style={{ marginTop:'40px', backgroundImage: `url(https://source.unsplash.com/1200x300/?space,nasa)` }}>
-          <div className={classes.overlay} />
-        </Paper>
+          <Paper className={classes.mainFeaturedPost} style={{ marginTop: '40px', backgroundImage: 'url(https://source.unsplash.com/1200x300/?space,nasa)' }}>
+            <div className={classes.overlay} />
+          </Paper>
+          <Container maxWidth="lg" className={classes.mainContent}>
+            <Box component="main" mx={paperPadding}>
+              {children}
+            </Box>
+          </Container>
+          <Paper className={classes.mainFeaturedPost} style={{ marginTop: '40px', backgroundImage: 'url(https://source.unsplash.com/1200x300/?space,nasa)' }}>
+            <div className={classes.overlay} />
+          </Paper>
         </div>
-        <BigFooter /> 
-
-      </div>      
+        <BigFooter />
+      </div>
     </>
-  )
+  );
 }
