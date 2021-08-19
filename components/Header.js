@@ -119,16 +119,12 @@ export default function Header(props) {
   const [open, setOpen] = React.useState(false);
   const [mode, setMode] = React.useState(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
+  const toggleDrawer = () => {
+    setOpen(!open);
   };
 
   const toggleDarkMode = () => {
-    setMode(mode === false ? true : false);
+    setMode(!mode);
     setPageMode(mode === false ? 'dark' : 'light');
   }
 
@@ -168,7 +164,7 @@ export default function Header(props) {
     },
     checked: {},
     focusVisible: {},
-  }))(({activeStep, steps, classes, ...props }) => {
+  }))(({classes, ...props }) => {
     return (
       <Switch
         focusVisibleClassName={classes.focusVisible}
@@ -205,7 +201,11 @@ export default function Header(props) {
 
           <Box>
             <FormControlLabel
-              control={<IOSSwitch checked={mode} onChange={toggleDarkMode} name="darkMode" />}
+              control={<IOSSwitch 
+                        checked={mode} 
+                        onChange={toggleDarkMode} 
+                        name="darkMode" 
+                      />}
               label={modelabel}  
             />
             <Hidden xsDown>
@@ -215,7 +215,7 @@ export default function Header(props) {
               color="inherit"
               aria-label="open drawer"
               edge="end"
-              onClick={handleDrawerOpen}
+              onClick={toggleDrawer}
               className={clsx(open && classes.hide)}
             >
               <MenuIcon />
@@ -235,7 +235,7 @@ export default function Header(props) {
         }}
       >
         <div className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton onClick={toggleDrawer}>
             {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
           <Box m={0}>

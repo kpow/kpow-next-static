@@ -71,6 +71,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
       <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8FH7QS" height="0" width="0" style={{display:'none', visibility:'hidden'}}></iframe>
       </noscript>
+      <Header pageMode={pageMode} setPageMode={setPageMode} />
       <div style={{
 
           backgroundColor: '#fafafa',
@@ -81,7 +82,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
 
         }} className={pageMode}>
        
-        <Header setPageMode={setPageMode} pageMode={pageMode}/>
+        
         <div>
         <Paper className={classes.mainFeaturedPost} style={{ marginTop:'40px', backgroundImage: `url(https://source.unsplash.com/1200x300/?space,nasa)` }}>
           <div className={classes.overlay} />

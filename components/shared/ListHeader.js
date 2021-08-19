@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -11,16 +11,8 @@ import Title from '@components/shared/Title';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useRouter } from 'next/router'
 
-function ListHeader({howMany, 
-                     resolvedData, 
-                     latestData, 
-                     isFetching, 
-                     page, 
-                     setPage, 
-                     seeMore, 
-                     title, 
-                     heroContent, 
-                     totalItemsLabel }) {
+function ListHeader({ howMany, resolvedData, latestData, isFetching, page, setPage, seeMore, title,
+  heroContent, totalItemsLabel}) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const flexDirect = matches ? 'row' : 'column';
@@ -30,7 +22,7 @@ function ListHeader({howMany,
   return (
     <>
       <Box>
-        { path == '/' ? 
+        { path === '/' ?
             <Box 
               style={{display:'flex', alignItems:'center', justifyContent:'space-between'}} 
               flexDirection={flexDirect}
