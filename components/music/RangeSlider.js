@@ -19,6 +19,7 @@ function valuetext(value) {
 export default function RangeSlider({ setIndex, index, maxPages }) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  console.log(value);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
