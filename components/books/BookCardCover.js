@@ -1,3 +1,4 @@
+/* eslint-disable prefer-template */
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -16,18 +17,18 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: '300px',
     minHeight: '250px',
-    width:'100%',
+    width: '100%',
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    backgroundSize:'contain', 
-    backgroundRepeat: 'no-repeat'
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
   },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
-    backgroundColor: '#999'
+    backgroundColor: '#999',
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -43,15 +44,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#999',
     border: '3px solid #666',
   },
-  fullContent:{
-    '& img':{
-      maxWidth:'100%'
-    }
-
-  }
+  fullContent: {
+    '& img': {
+      maxWidth: '100%',
+    },
+  },
 }));
 
-export default function BookCard(props) {
+export default function BookCard({ article }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
   // const publishedDate = parseISO(props.article?.published)
@@ -63,50 +63,50 @@ export default function BookCard(props) {
 
   return (
     <Grid container item xs={6} sm={6} md={2}>
-    <Card className={classes.root} style={{backgroundImage: "url(" + props.article.book.image_url._text + ")"}}>
-      <div>
-       
-        <CardContent>
-          <Typography gutterBottom variant="h5">
-            {/* {props.article?.title} */}
-          </Typography>
-          
-          <Typography variant="body2" color="textSecondary" component="p">
-            {/* {props.article?.summary} */}
-          </Typography>
-        </CardContent>
-      </div> 
-      <CardActions disableSpacing>
-        <Button 
-          size="small" 
-          variant="contained" 
-          target="_blank" 
-          // href={props.article.url}
-          endIcon={<OpenInNewIcon />}
-          children="gr"
-        />
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-          children={<ExpandMoreIcon />}
-        />
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Full Text:</Typography>
-          <Typography 
-            paragraph 
-            className={classes.fullContent} 
-            color="textSecondary" 
-            dangerouslySetInnerHTML={{ __html: props.article.book.description._text }}
-          />
-        </CardContent>
-      </Collapse>
-    </Card>
+      <Card className={classes.root} style={{ backgroundImage: 'url(' + article.book.image_url._text + ')' }}>
+        <div>
+          <CardContent>
+            <Typography gutterBottom variant="h5">
+              {/* {props.article?.title} */}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {/* {props.article?.summary} */}
+            </Typography>
+          </CardContent>
+        </div>
+        <CardActions disableSpacing>
+          <Button
+            size="small"
+            variant="contained"
+            target="_blank"
+            // href={props.article.url}
+            endIcon={<OpenInNewIcon />}
+          >
+            gr
+          </Button>
+          <IconButton
+            className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            })}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+        </CardActions>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography paragraph>Full Text:</Typography>
+            <Typography
+              paragraph
+              className={classes.fullContent}
+              color="textSecondary"
+              dangerouslySetInnerHTML={{ __html: article.book.description._text }}
+            />
+          </CardContent>
+        </Collapse>
+      </Card>
     </Grid>
   );
 }
