@@ -4,8 +4,6 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
@@ -31,23 +29,21 @@ export default function ImageGridList({ projects }) {
   const matchesSmall = useMediaQuery(theme.breakpoints.up('sm'));
   const colCount = matchesSmall ? 4 : 1;
   const cellHeight = matchesSmall ? 150 : 225;
-  const displayProjects = matchesSmall ? projects : projects.slice(0, 5)
+  const displayProjects = matchesSmall ? projects : projects.slice(0, 5);
 
   return (
     <div className={classes.root}>
       <GridList cellHeight={cellHeight} className={classes.gridList} cols={colCount}>
         {displayProjects.map((item) => (
-             
+
+          // eslint-disable-next-line max-len
           <GridListTile key={item.frontmatter.title} cols={item.frontmatter.col || 1} rows={item.frontmatter.row || 1}>
             <img src={item.frontmatter.thumb_image} alt={item.frontmatter.title} />
-            <Link href={{ pathname: `/projects/${item.slug}` }}>    
-            <GridListTileBar
-              title={item.frontmatter.title}
-            />
+            <Link href={{ pathname: `/projects/${item.slug}` }}>
+              <GridListTileBar title={item.frontmatter.title} />
             </Link>
           </GridListTile>
-          
-          
+
         ))}
       </GridList>
     </div>
