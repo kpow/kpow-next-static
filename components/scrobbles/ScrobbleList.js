@@ -99,7 +99,6 @@ function ScrobbleList({ howMany }) {
                       )}
                   />
                 </GridListTile>
-                // <ScrobbleCardBig key={article.id} article={article} />
               ))}
 
         </GridList>
