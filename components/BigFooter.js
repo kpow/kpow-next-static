@@ -44,13 +44,13 @@ const BigFooter = React.memo(function BigFooter() {
   const classes = useStyles();
 
   return (
-    <Box bgcolor="#000" width="100%" height="100%" px={{ xs: 2, sm: 3, lg: 4 }}>
+    <Box className="big-footer" bgcolor="#000" height="100%" px={{ xs: 2, sm: 3, lg: 4 }}>
       <Container maxWidth="lg">
         <div className={classes.root}>
           <Grid container spacing={3} justify="space-between">
             <Grid item lg={4} md={6} sm={12}>
               <Paper className={classes.paper}>
-                <Box>
+                <Box className="kpow-image">
                   <Avatar alt="kpow" src="../static/headshot.png" className={classes.large} />
                 </Box>
                 <div>

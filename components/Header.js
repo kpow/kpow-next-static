@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import clsx from 'clsx';
 import React from 'react';
-
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
-
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -36,6 +34,9 @@ const drawerWidth = 300;
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  },
+  mode: {
+    flexGrow: 40,
   },
   pageHeader: {
     backgroundColor: '#000',
@@ -179,7 +180,7 @@ export default function Header({ pageMode, setPageMode }) {
 
   return (
     // eslint-disable-next-line no-sequences
-    <div className={classes.root, 'top-header'}>
+    <div className={classes.root}>
       <AppBar position="fixed" className={classes.pageHeader}>
         <Container maxWidth="lg">
           <Toolbar>
@@ -194,12 +195,12 @@ export default function Header({ pageMode, setPageMode }) {
             <Typography variant="h5" className={classes.title}>
               kpow-next
             </Typography>
-
+            <FormControlLabel
+              className={classes.mode}
+              control={<IOSSwitch checked={mode} onChange={toggleDarkMode} name="darkMode" />}
+              label={modelabel}
+            />
             <Box>
-              <FormControlLabel
-                control={<IOSSwitch checked={mode} onChange={toggleDarkMode} name="darkMode" />}
-                label={modelabel}
-              />
               <Hidden xsDown>
                 <ContactModal />
               </Hidden>

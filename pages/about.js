@@ -107,13 +107,13 @@ const About = ({ title, description }) => {
               <br />
               Voracious Reader and Dad.
               <br />
-              I&apos;m into travel, ukes, pugs, live music, and pixels.
+              I&#39;m into travel, ukes, pugs, live music, and pixels.
             </Typography>
           </Paper>
 
           <Box className={classes.bioText}>
             <Title>
-              what&apso;s up?
+              what&#39;s up?
             </Title>
 
             <div className={classes.demo}>

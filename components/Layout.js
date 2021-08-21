@@ -69,6 +69,9 @@ export default function Layout({ children, pageTitle, description }) {
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8FH7QS" height="0" width="0" title="gtm" style={{ display: 'none', visibility: 'hidden' }} />
       </noscript>
       <Header pageMode={pageMode} setPageMode={setPageMode} />
+      <Paper className={classes.mainFeaturedPost} style={{ marginTop: '40px', backgroundImage: 'url(https://source.unsplash.com/1200x300/?space,nasa)' }}>
+        <div className={classes.overlay} />
+      </Paper>
       <div
         style={{
           backgroundColor: '#fafafa',
@@ -79,17 +82,16 @@ export default function Layout({ children, pageTitle, description }) {
         className={pageMode}
       >
         <div>
-          <Paper className={classes.mainFeaturedPost} style={{ marginTop: '40px', backgroundImage: 'url(https://source.unsplash.com/1200x300/?space,nasa)' }}>
-            <div className={classes.overlay} />
-          </Paper>
           <Container maxWidth="lg" className={classes.mainContent}>
             <Box component="main" mx={paperPadding}>
               {children}
             </Box>
           </Container>
-          <Paper className={classes.mainFeaturedPost} style={{ marginTop: '40px', backgroundImage: 'url(https://source.unsplash.com/1200x300/?space,nasa)' }}>
-            <div className={classes.overlay} />
-          </Paper>
+          <div className="footer-image">
+            <Paper className={classes.mainFeaturedPost} style={{ marginTop: '40px', backgroundImage: 'url(https://source.unsplash.com/1200x300/?space,nasa)' }}>
+              <div className={classes.overlay} />
+            </Paper>
+          </div>
         </div>
         <BigFooter />
       </div>
