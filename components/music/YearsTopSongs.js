@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+/* eslint-disable no-plusplus */
+import React from 'react';
 import YearCollapse from './yearcollapse';
 
-const YearsTopSongs = (props) => {
-    const [years, setYears]= useState(props.years)
+const YearsTopSongs = ({ years }) => {
+  const yearsBoxes = [];
+  for (let index = 0; index < years.length; index++) {
+    const year = years[index];
+    yearsBoxes.push(<YearCollapse year={year} key={`${year.key}-full`} />);
+  }
 
-    let yearsBoxes = [];
-    for (let index = 0; index < years.length; index++) {
-        const year = years[index];
-        yearsBoxes.push(<YearCollapse year={year} key={year.key + "-full"} />);
-    }
-
-    return (yearsBoxes);
-}
+  return (yearsBoxes);
+};
 
 export default YearsTopSongs;

@@ -30,13 +30,14 @@
     "match-sorter": "^2.3.0",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.21",
-    "next": "^10.0.0",
+    "netlify": "^8.0.0",
+    "next": "^11.0.1",
     "numeral": "^2.0.6",
     "raw-loader": "^4.0.1",
-    "react": "^17.0.1",
+    "react": "^17.0.2",
     "react-calendar-heatmap": "^1.7.0",
     "react-chartjs": "^1.2.0",
-    "react-dom": "^17.0.1",
+    "react-dom": "^17.0.2",
     "react-file-reader": "^1.1.4",
     "react-heatmap-grid": "^0.5.0",
     "react-images": "^1.1.7",
@@ -55,5 +56,14 @@
     "react-youtube": "^7.12.0",
     "xml-js": "^1.6.11",
     "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "^11.1.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

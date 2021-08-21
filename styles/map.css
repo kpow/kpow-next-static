@@ -1,4 +1,41 @@
+body{
+  margin: 0;
+}
 .leaflet-container {
     width: 100%;
     height: 50vh;
+  }
+  .dark{
+    filter: invert(1);
+  }
+  .dark .MuiCardMedia-root img{
+    filter: invert(0);
+  }
+
+  .dark .big-footer{
+    filter: invert(1);
+  }
+
+  .dark .footer-image{
+    filter: invert(1);
+  }
+
+  .dark .kpow-image{
+    filter: invert(1);
+  }
+
+  .dark img{
+    filter: invert(1);
+  }
+
+  .dark video{
+    filter: invert(1);
+  }
+
+  .dark #starImage{
+    filter: invert(1);
+  }
+
+  .dark .MuiCardMedia-root{
+    filter: invert(1);
   }

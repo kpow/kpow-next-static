@@ -1,5 +1,5 @@
 import React from 'react';
-import { format, parseISO} from 'date-fns'
+import { format, parseISO } from 'date-fns';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -22,12 +22,12 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
-    backgroundColor: '#999'
+    backgroundColor: '#999',
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -43,19 +43,18 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#999',
     border: '3px solid #666',
   },
-  fullContent:{
-    '& img':{
-      maxWidth:'100%'
-    }
-
-  }
+  fullContent: {
+    '& img': {
+      maxWidth: '100%',
+    },
+  },
 }));
 
-export default function StarCardBig({article}) {
+export default function StarCardBig({ article }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-  const publishedDate = parseISO(article?.published)
-  const formatDate = format(publishedDate, "M.d.yyyy" )
+  const publishedDate = parseISO(article?.published);
+  const formatDate = format(publishedDate, 'M.d.yyyy');
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -63,63 +62,67 @@ export default function StarCardBig({article}) {
 
   return (
     <Grid container item xs={12} sm={6} md={4}>
-    <Card className={classes.root}>
-      <div>
-        <CardHeader
-          avatar={
-            <Avatar className={classes.avatar}>
-              <img src={`https://api.faviconkit.com/${article?.site_url}/35`} />
-            </Avatar>
+      <Card className={classes.root}>
+        <div>
+          <CardHeader
+            avatar={
+              (
+                <Avatar className={classes.avatar}>
+                  <img alt="favicon" src={`https://api.faviconkit.com/${article?.site_url}/35`} />
+                </Avatar>
+              )
           }
-          title={article?.site_url}
-          subheader={formatDate}
-        />
-        <CardMedia
-          className={classes.media}
-          image={article?.lead_image_url}
-          title={article?.title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5">
-            {article?.title}
-          </Typography>
-          
-          <Typography variant="body2" color="textSecondary" component="p">
-            {article?.summary}
-          </Typography>
-        </CardContent>
-      </div> 
-      <CardActions disableSpacing>
-        <Button 
-          size="small" 
-          variant="contained" 
-          target="_blank" 
-          href={article.url}
-          endIcon={<OpenInNewIcon />}
-          children="go to article"
-        />
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-          children={<ExpandMoreIcon />}
-        />
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Full Text:</Typography>
-          <Typography 
-            paragraph 
-            className={classes.fullContent} 
-            color="textSecondary" 
-            dangerouslySetInnerHTML={{ __html: article.content }}
+            title={article?.site_url}
+            subheader={formatDate}
           />
-        </CardContent>
-      </Collapse>
-    </Card>
+          <CardMedia
+            className={classes.media}
+            id="starImage"
+            image={article?.lead_image_url}
+            title={article?.title}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5">
+              {article?.title}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {article?.summary}
+            </Typography>
+          </CardContent>
+        </div>
+        <CardActions disableSpacing>
+          <Button
+            size="small"
+            variant="contained"
+            target="_blank"
+            href={article.url}
+            endIcon={<OpenInNewIcon />}
+          >
+            go to article
+          </Button>
+          <IconButton
+            className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            })}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+        </CardActions>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography paragraph>Full Text:</Typography>
+            <Typography
+              paragraph
+              className={classes.fullContent}
+              color="textSecondary"
+              dangerouslySetInnerHTML={{ __html: article.content }}
+            />
+          </CardContent>
+        </Collapse>
+      </Card>
     </Grid>
   );
 }

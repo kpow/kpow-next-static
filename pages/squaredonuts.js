@@ -1,11 +1,11 @@
-import Layout from '@components/Layout'
-import { Container, Grid, Button, Paper } from '@material-ui/core';
-import dynamic from "next/dynamic";
+import React from 'react';
+import Layout from '@components/Layout';
+import { Container } from '@material-ui/core';
+import dynamic from 'next/dynamic';
 
-const Donuts = ({ title, description, ...props }) => {
-
-  const MapWithNoSSR = dynamic(() => import("../components/DonutMap"), {
-    ssr: false
+const Donuts = ({ title, description }) => {
+  const MapWithNoSSR = dynamic(() => import('../components/DonutMap'), {
+    ssr: false,
   });
 
   return (
@@ -15,21 +15,19 @@ const Donuts = ({ title, description, ...props }) => {
         <MapWithNoSSR />
 
       </Container>
-    </Layout> 
+    </Layout>
   );
-}
+};
 
-export default Donuts
+export default Donuts;
 
 export async function getStaticProps() {
-  const configData = await import(`../siteconfig.json`)
+  const configData = await import('../siteconfig.json');
 
   return {
     props: {
       title: configData.default.title,
       description: configData.default.description,
     },
-  }
+  };
 }
-
-
