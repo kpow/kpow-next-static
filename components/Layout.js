@@ -44,6 +44,15 @@ export default function Layout({ children, pageTitle, description }) {
   const paperPadding = matches ? 4 : 0;
   const [pageMode, setPageMode] = React.useState('light');
 
+  const handleMode = (mode) => {
+    setPageMode(mode);
+    localStorage.setItem('pageMode', mode);
+  };
+
+  React.useEffect(() => {
+    setPageMode(localStorage.getItem('pageMode'));
+  }, []);
+
   return (
     <>
       <Head>
@@ -68,7 +77,7 @@ export default function Layout({ children, pageTitle, description }) {
       <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8FH7QS" height="0" width="0" title="gtm" style={{ display: 'none', visibility: 'hidden' }} />
       </noscript>
-      <Header pageMode={pageMode} setPageMode={setPageMode} />
+      <Header pageMode={pageMode} handleMode={handleMode} />
       <Paper className={classes.mainFeaturedPost} style={{ marginTop: '40px', backgroundImage: 'url(https://source.unsplash.com/1200x300/?space,nasa)' }}>
         <div className={classes.overlay} />
       </Paper>

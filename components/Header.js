@@ -108,7 +108,7 @@ const iconz = (index) => {
   }
 };
 
-export default function Header({ pageMode, setPageMode }) {
+export default function Header({ pageMode, handleMode }) {
   const classes = useStyles();
   const theme = useTheme();
   const modelabel = pageMode;
@@ -121,8 +121,16 @@ export default function Header({ pageMode, setPageMode }) {
 
   const toggleDarkMode = () => {
     setMode(!mode);
-    setPageMode(mode === false ? 'dark' : 'light');
+    handleMode(mode === false ? 'dark' : 'light');
   };
+
+  React.useEffect(() => {
+    // thise set default for the ios switch
+    const storedPageMode = localStorage.getItem('pageMode');
+    // eslint-disable-next-line no-unneeded-ternary
+    const storedMode = storedPageMode === 'dark' ? true : false;
+    setMode(storedMode);
+  }, []);
 
   const IOSSwitch = withStyles(() => ({
     root: {
@@ -144,7 +152,6 @@ export default function Header({ pageMode, setPageMode }) {
       },
       '&$focusVisible $thumb': {
         color: '#52d869',
-        border: '6px solid #fff',
       },
     },
     thumb: {
@@ -153,7 +160,6 @@ export default function Header({ pageMode, setPageMode }) {
     },
     track: {
       borderRadius: 26 / 2,
-      border: `1px solid ${theme.palette.grey[400]}`,
       backgroundColor: '#999',
       opacity: 1,
       transition: theme.transitions.create(['background-color', 'border']),
@@ -174,6 +180,7 @@ export default function Header({ pageMode, setPageMode }) {
           checked: classes.checked,
         }}
         {...props}
+        checked={mode}
       />
     );
   });
