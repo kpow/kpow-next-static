@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable max-len */
-/* eslint-disable-next-line no-param-reassign */
 import { React, useState, useEffect } from 'react';
 import Layout from '@components/Layout';
 import Link from 'next/link';
@@ -76,7 +75,7 @@ const Index = ({ projects, title, description }) => {
             severity="info"
             style={{ textAlign: 'left', marginTop: theme.spacing(7) }}
           >
-            Hi! this my site :) You&apos;ll find my digital collections, coding experiments and my public info. Hopefully, it&apos;s working and have fun poking around.
+            Hi! this my site :) You&#36;ll find my digital collections, coding experiments and my public info. Hopefully, it&apos;s working and have fun poking around.
           </Alert>
         </Snackbar>
         <Grid container spacing={5}>

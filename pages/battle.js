@@ -21,7 +21,7 @@ import heros from '../src/superheros-prod';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: '100%',
-    marginTop: '20px',
+    marginTop: '0',
     display: 'flex',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heroContent: {
     padding: theme.spacing(0, 0, 0),
-    marginTop: '10px;',
+    marginTop: '0',
   },
   mainContent: {
     width: '100%',

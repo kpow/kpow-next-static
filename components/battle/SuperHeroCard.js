@@ -159,7 +159,7 @@ const SuperHeroCard = ({ winner, playerData }) => {
         <Typography className={classes.heroTitle} gutterBottom variant="h5" component="h2">
           {heroData?.name}
         </Typography>
-        <img alt="looser" src="../static/loser.png" style={{ display: winStatus, position: 'absolute', width: '100%' }} />
+        <img id="loser-mark" alt="looser" src="../static/loser.png" style={{ display: winStatus, position: 'absolute', width: '100%' }} />
         <CardMedia
           className={classes.heroImage}
           component="img"
