@@ -125,6 +125,7 @@ export default function Header({ pageMode, handleMode }) {
   };
 
   React.useEffect(() => {
+    // thise set default for the ios switch
     const storedPageMode = localStorage.getItem('pageMode');
     // eslint-disable-next-line no-unneeded-ternary
     const storedMode = storedPageMode === 'dark' ? true : false;

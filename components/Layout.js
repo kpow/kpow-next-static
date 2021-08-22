@@ -50,9 +50,7 @@ export default function Layout({ children, pageTitle, description }) {
   };
 
   React.useEffect(() => {
-    const storedPageMode = localStorage.getItem('pageMode');
-    setPageMode(storedPageMode);
-    console.log(storedPageMode);
+    setPageMode(localStorage.getItem('pageMode'));
   }, []);
 
   return (
