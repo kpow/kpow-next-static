@@ -56,7 +56,8 @@ const Index = ({ projects, title, description }) => {
   useEffect(() => {
     const snackBarStatus = localStorage.getItem('closedSnackbar');
     setOpen(!snackBarStatus);
-  });
+    console.log(snackBarStatus);
+  }, []);
 
   shuffle(projects);
 
