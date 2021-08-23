@@ -186,7 +186,7 @@ const Index = ({ projects, title, description }) => {
           instagram
         </Title>
         <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-          I love live music (when we had live music)
+          I love live music!
         </Typography>
         <div className="elfsight-app-aa9b91b7-7757-4793-aae3-67df059446a2" />
 

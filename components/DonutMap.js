@@ -70,7 +70,7 @@ export default function DonutMap() {
 
   return (
     <>
-      <Divider style={{ marginTop: '20px' }} />
+      <Divider style={{ marginTop: '0' }} />
       <Title>
         donuts
         {' '}

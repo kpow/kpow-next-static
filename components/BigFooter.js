@@ -58,7 +58,7 @@ const BigFooter = React.memo(function BigFooter() {
                     About Kpow
                   </Typography>
                   <Typography paragraph className={classes.text}>
-                    Digital Architect - Leader - Developer - Pixel Farmer - Voracious Reader and Dad. I@apos;m into travel, ukes, pugs, live music, and pixels
+                    Digital Architect - Leader - Developer - Pixel Farmer - Voracious Reader and Dad. I&#39;m into travel, ukes, pugs, live music, and pixels
                   </Typography>
                 </div>
               </Paper>
@@ -70,7 +70,7 @@ const BigFooter = React.memo(function BigFooter() {
                     Site
                   </Typography>
                   <Typography paragraph className={classes.text}>
-                    This is a JAMstack site built with Next.js, React.js, Material-UI, React-Query, and some content in Markdown. Using Instagram, GoodReads, Feedbin, Unsplash, faviconkit and whatever other API@apos;s I@apos;m playing with :)
+                    This is a JAMstack site built with Next.js, React.js, Material-UI, React-Query, and some content in Markdown. Using Instagram, GoodReads, Feedbin, Unsplash, faviconkit and whatever other API&apos;s I&apos;m playing with :)
                   </Typography>
                 </div>
               </Paper>
