@@ -4,10 +4,6 @@ import { React, useState, useEffect } from 'react';
 import Layout from '@components/Layout';
 import Link from 'next/link';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import NavigateNextIcon from '@material-ui/icons/NavigateNextOutlined';
 import Divider from '@material-ui/core/Divider';
 import MuiAlert from '@material-ui/lab/Alert';
 import Snackbar from '@material-ui/core/Snackbar';
@@ -21,6 +17,7 @@ import BookList from '@components/books/BookList';
 import getPosts from '@utils/getPosts';
 import { Masonry } from 'masonic';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import IndexCard from '@components/shared/IndexCard';
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -36,33 +33,6 @@ const ProjectCard = ({ data }) => (
   <Link href={{ pathname: `/projects/${data?.slug}` }}>
     <img style={{ width: '100%' }} alt="kitty" src={data?.frontmatter?.thumb_image} />
   </Link>
-);
-
-const HomeCard = ({ title, link, image, button }) => (
-  <Grid item xs={12} sm={6} md={4} style={{ margin: '0 auto' }}>
-    <Divider style={{ marginTop: '10px' }} />
-    <Box style={{ display: 'flex' }}>
-      <Title>
-        {title}
-      </Title>
-      <Link href={link}>
-        <Button
-          style={{ marginTop: '15px' }}
-          size="small"
-          variant="outlined"
-          endIcon={<NavigateNextIcon />}
-        >
-          {button}
-        </Button>
-      </Link>
-    </Box>
-    <Divider style={{ marginTop: '10px' }} />
-    <Link href={link}>
-      <Paper elevation={4} style={{ marginTop: '20px', marginBottom: '20px' }}>
-        <img alt="battle" style={{ width: '100%' }} src={image} />
-      </Paper>
-    </Link>
-  </Grid>
 );
 
 const Index = ({ projects, title, description }) => {
@@ -105,9 +75,9 @@ const Index = ({ projects, title, description }) => {
         </Snackbar>
 
         <Grid container spacing={5}>
-          <HomeCard title="battle" button="play" link="/battle" image="/static/battle_thumb.jpg" />
-          <HomeCard title="tunes" button="listen" link="/youtube" image="/static/tunes_thumb.jpg" />
-          <HomeCard title="pmonk" button="checkit" link="/pmonk" image="/static/pmonk_thumb.jpg" />
+          <IndexCard title="battle" button="play" link="/battle" image="/static/battle_thumb.jpg" />
+          <IndexCard title="tunes" button="listen" link="/youtube" image="/static/tunes_thumb.jpg" />
+          <IndexCard title="pmonk" button="checkit" link="/pmonk" image="/static/pmonk_thumb.jpg" />
         </Grid>
 
         <Divider style={{ marginTop: '40px' }} />
