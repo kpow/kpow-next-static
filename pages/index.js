@@ -57,7 +57,7 @@ const HomeCard = ({ title, link, image, button }) => (
       </Link>
     </Box>
     <Divider style={{ marginTop: '10px' }} />
-    <Link href="/battle">
+    <Link href={link}>
       <Paper elevation={4} style={{ marginTop: '20px', marginBottom: '20px' }}>
         <img alt="battle" style={{ width: '100%' }} src={image} />
       </Paper>
