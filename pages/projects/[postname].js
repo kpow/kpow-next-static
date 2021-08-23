@@ -31,7 +31,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
 
   return (
     <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
-      <Paper style={{ marginTop: 30 }}>
+      <Paper style={{ marginTop: 0 }}>
         <Box marginX={3}>
           <Title>
             {frontmatter.title}

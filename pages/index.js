@@ -38,6 +38,33 @@ const ProjectCard = ({ data }) => (
   </Link>
 );
 
+const HomeCard = ({ title, link, image, button }) => (
+  <Grid item xs={12} sm={6} md={4} style={{ margin: '0 auto' }}>
+    <Divider style={{ marginTop: '10px' }} />
+    <Box style={{ display: 'flex' }}>
+      <Title>
+        {title}
+      </Title>
+      <Link href={link}>
+        <Button
+          style={{ marginTop: '15px' }}
+          size="small"
+          variant="outlined"
+          endIcon={<NavigateNextIcon />}
+        >
+          {button}
+        </Button>
+      </Link>
+    </Box>
+    <Divider style={{ marginTop: '10px' }} />
+    <Link href="/battle">
+      <Paper elevation={4} style={{ marginTop: '20px', marginBottom: '20px' }}>
+        <img alt="battle" style={{ width: '100%' }} src={image} />
+      </Paper>
+    </Link>
+  </Grid>
+);
+
 const Index = ({ projects, title, description }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
@@ -55,13 +82,11 @@ const Index = ({ projects, title, description }) => {
   useEffect(() => {
     const snackBarStatus = localStorage.getItem('closedSnackbar');
     setOpen(!snackBarStatus);
-    console.log(snackBarStatus);
   }, []);
 
   shuffle(projects);
 
   return (
-
     <Layout pageTitle={title} description={description}>
       <div style={{ backgroundColor: '#fafafa', padding: '15px' }}>
         <Snackbar
@@ -78,81 +103,11 @@ const Index = ({ projects, title, description }) => {
             Hi! this my site :) You&#36;ll find my digital collections, coding experiments and my public info. Hopefully, it&apos;s working and have fun poking around.
           </Alert>
         </Snackbar>
+
         <Grid container spacing={5}>
-          <Grid item xs={12} sm={6} md={4} style={{ margin: '0 auto' }}>
-            <Divider style={{ marginTop: '10px' }} />
-            <Box style={{ display: 'flex' }}>
-              <Title>
-                battle
-              </Title>
-              <Link href="/battle">
-                <Button
-                  style={{ marginTop: '15px' }}
-                  size="small"
-                  variant="outlined"
-                  endIcon={<NavigateNextIcon />}
-                >
-                  play
-                </Button>
-              </Link>
-            </Box>
-            <Divider style={{ marginTop: '10px' }} />
-            <Link href="/battle">
-              <Paper elevation={4} style={{ marginTop: '20px', marginBottom: '20px' }}>
-                <img alt="battle" style={{ width: '100%' }} src="/static/battle_thumb.jpg" />
-              </Paper>
-            </Link>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} style={{ margin: '0 auto' }}>
-            <Divider style={{ marginTop: '10px' }} />
-            <Box style={{ display: 'flex' }}>
-              <Title>
-                tunes
-              </Title>
-              <Link href="/youtube">
-                <Button
-                  style={{ marginTop: '15px' }}
-                  size="small"
-                  variant="outlined"
-                  endIcon={<NavigateNextIcon />}
-                >
-                  listen
-                </Button>
-              </Link>
-            </Box>
-            <Divider style={{ marginTop: '10px' }} />
-            <Link href="/youtube">
-              <Paper elevation={4} style={{ marginTop: '20px', marginBottom: '20px' }}>
-                <img alt="tunes" style={{ width: '100%' }} src="/static/tunes_thumb.jpg" />
-              </Paper>
-            </Link>
-          </Grid>
-
-          <Grid item xs={12} sm={12} md={4} style={{ margin: '0 auto' }}>
-            <Divider style={{ marginTop: '10px' }} />
-            <Box style={{ display: 'flex' }}>
-              <Title>
-                pmonk
-              </Title>
-
-              <Link href="/pmonk">
-                <Button
-                  style={{ marginTop: '15px' }}
-                  size="small"
-                  variant="outlined"
-                  endIcon={<NavigateNextIcon />}
-                >
-                  checkit
-                </Button>
-              </Link>
-            </Box>
-            <Divider style={{ marginTop: '10px' }} />
-            <Link href="/pmonk">
-              <Paper elevation={4} style={{ marginTop: '20px', marginBottom: '20px' }}>
-                <img alt="pmonk" style={{ width: '100%' }} src="/static/pmonk_thumb.jpg" />
-              </Paper>
-            </Link>
-          </Grid>
+          <HomeCard title="battle" button="play" link="/battle" image="/static/battle_thumb.jpg" />
+          <HomeCard title="tunes" button="listen" link="/youtube" image="/static/tunes_thumb.jpg" />
+          <HomeCard title="pmonk" button="checkit" link="/pmonk" image="/static/pmonk_thumb.jpg" />
         </Grid>
 
         <Divider style={{ marginTop: '40px' }} />

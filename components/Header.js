@@ -200,7 +200,7 @@ export default function Header({ pageMode, handleMode }) {
               />
             </Link>
             <Typography variant="h5" className={classes.title}>
-              kpow-next
+              kpow
             </Typography>
             <FormControlLabel
               className={classes.mode}
