@@ -32,12 +32,12 @@ function ContactModal() {
         <div style={{ width: '400px' }}>
           <DialogTitle id="form-dialog-title">
             <Title>
-              What@apos;s Up :)
+              What&#39;s Up :)
             </Title>
           </DialogTitle>
           <DialogContent>
             <DialogContentText>
-              Send me a anything, but spam :(
+              Send me anything, but spam :(
             </DialogContentText>
             <form name="contact" method="POST" action="/?success=true" netlify-honeypot="bot-field" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />
