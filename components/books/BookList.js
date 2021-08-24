@@ -52,11 +52,8 @@ function BookList({ howMany }) {
       initalLoaded = true;
       setPage(Number(p));
       history.pushState(null, '', '?p=' + (page));
-    } else {
-      // eslint-disable-next-line no-lonely-if
-      if (path !== '/') {
-        history.pushState(null, '', '?p=' + (page + 1));
-      }
+    } else if (path !== '/') {
+      history.pushState(null, '', '?p=' + (page + 1));
     }
 
     if (latestData?.hasMore) {

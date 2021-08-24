@@ -7,14 +7,11 @@ import Title from '@components/shared/Title';
 import { Masonry } from 'masonic';
 import pmonks from '../src/pmonk';
 
-// eslint-disable-next-line arrow-body-style
-const ImageCard = ({ data: { id, src } }) => {
-  return (
-    <div key={id} style={{ display: 'flex', flexDirection: 'column', width: '100%', transition: 'transform 100ms ease-in-out' }}>
-      <img alt="pmonk" style={{ width: '100%', display: 'block' }} src={src.src} />
-    </div>
-  );
-};
+const ImageCard = ({ data: { id, src } }) => (
+  <div key={id} style={{ display: 'flex', flexDirection: 'column', width: '100%', transition: 'transform 100ms ease-in-out' }}>
+    <img alt="pmonk" style={{ width: '100%', display: 'block' }} src={src.src} />
+  </div>
+);
 
 const shuffle = (array) =>
   // eslint-disable-next-line implicit-arrow-linebreak

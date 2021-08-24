@@ -150,9 +150,6 @@ export default function Header({ pageMode, handleMode }) {
           border: 'none',
         },
       },
-      '&$focusVisible $thumb': {
-        color: '#52d869',
-      },
     },
     thumb: {
       width: 24,
@@ -165,12 +162,10 @@ export default function Header({ pageMode, handleMode }) {
       transition: theme.transitions.create(['background-color', 'border']),
     },
     checked: {},
-    focusVisible: {},
   // eslint-disable-next-line arrow-body-style
   }))(({ ...props }) => {
     return (
       <Switch
-        focusVisibleClassName={classes.focusVisible}
         disableRipple
         classes={{
           root: classes.root,
@@ -186,7 +181,6 @@ export default function Header({ pageMode, handleMode }) {
   });
 
   return (
-    // eslint-disable-next-line no-sequences
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.pageHeader}>
         <Container maxWidth="lg">

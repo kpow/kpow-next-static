@@ -33,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
   heroTitle: {
     marginTop: '10px',
     marginLeft: '20px',
-    // display: 'none',
     [theme.breakpoints.down('sm')]: {
       marginTop: '5px',
       marginLeft: '5px',

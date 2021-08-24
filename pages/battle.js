@@ -84,10 +84,6 @@ const IOSSwitch = withStyles((theme) => ({
         border: 'none',
       },
     },
-    '&$focusVisible $thumb': {
-      color: '#52d869',
-      border: '6px solid #fff',
-    },
   },
   thumb: {
     width: 24,
@@ -101,12 +97,10 @@ const IOSSwitch = withStyles((theme) => ({
     transition: theme.transitions.create(['background-color', 'border']),
   },
   checked: {},
-  focusVisible: {},
 // eslint-disable-next-line arrow-body-style
 }))(({ activeStep, steps, classes, ...props }) => {
   return (
     <Switch
-      focusVisibleClassName={classes.focusVisible}
       disableRipple
       classes={{
         root: classes.root,

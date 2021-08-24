@@ -40,8 +40,7 @@ function PlayerDialog(props) {
       <Box className={classes.videoContainer}>
         <embed
           className={classes.responsiveIframe}
-          // eslint-disable-next-line prefer-template
-          src={'https://www.youtube.com/embed/' + selectedValue.id}
+          src={`https://www.youtube.com/embed/${selectedValue.id}`}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
