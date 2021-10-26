@@ -119,7 +119,7 @@ const About = ({ title, description }) => {
             <div className={classes.demo}>
               <List dense={false}>
                 {skillz.map((article, index) => (
-                  <ListItem>
+                  <ListItem key={article}>
                     <ListItemIcon>
                       {iconz(index)}
                     </ListItemIcon>
