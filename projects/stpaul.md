@@ -1,7 +1,6 @@
 ---
 title: 'Saint Pauls Cathedral Trust in America'
 author: 'kpow'
-date: '2020-04-27'
 hero_image: '../static/stpaul.png'
 thumb_image: '../static/stpaul-thumb.jpg'
 hero_color: '#51443b'

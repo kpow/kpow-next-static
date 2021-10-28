@@ -3,7 +3,6 @@ title: adodsons.com
 col: 2
 excerpt: A real brick to clicks story, and what I like about ecommerce
 author: kpow
-date: 2020-04-27
 hero_image: ../static/adodsons.png
 thumb_image: ../static/adodsons-thumb.jpg
 row: 1

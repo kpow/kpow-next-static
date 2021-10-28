@@ -4,7 +4,6 @@ col: 1
 excerpt: "A campaign site where users took a quiz that resulted in generating a
   room of their dreams. "
 author: kpow
-date: 2020-04-27
 hero_image: ../static/dbwm.png
 thumb_image: ../static/dbwm-thumb.jpg
 row: 1

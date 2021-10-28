@@ -1,7 +1,6 @@
 ---
 title: 'Walmart Packager'
 author: 'kpow'
-date: '2020-04-27'
 hero_image: '../static/wm-packager.png'
 thumb_image: '../static/wm-packager-thumb.jpg'
 col: 1

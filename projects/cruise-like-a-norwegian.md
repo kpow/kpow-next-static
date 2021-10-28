@@ -4,7 +4,6 @@ col: 1
 excerpt: Teach Lead for this cinemagraph driven landing page for a Norwegian
   Cruise Line campaign.
 author: kpow
-date: 2020-04-27
 hero_image: ../static/ncl.png
 thumb_image: ../static/ncl-thumb.jpg
 row: 1
