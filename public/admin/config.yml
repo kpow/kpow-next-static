@@ -17,6 +17,6 @@ collections:
       - {label: "Thumbnail Image", name: "thumb_image", widget: "image"}
       - {label: "thumb columns", name: "col", widget: "number"}
       - {label: "thumb rows", name: "row", widget: "number"}
-      - {label: "hero color", name: "hero_color", widget: "number"}
+      - {label: "hero color", name: "hero_color", widget: "color"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Exceprt", name: "excerpt", widget: "markdown"}
