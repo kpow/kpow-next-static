@@ -1,5 +1,5 @@
 import Layout from '@components/Layout';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Grid, Paper } from '@material-ui/core';
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
@@ -121,20 +121,20 @@ const Battle = ({ title, description }) => {
   const gridSpacing = matches ? 2 : 0;
 
   const [randomPlay, setRandomPlay] = useState(true);
-  const [winnerPick, setWinnerPick] = React.useState('');
-  const [wager, setWager] = React.useState(20);
-  const [stash, setStash] = React.useState(0);
+  const [winnerPick, setWinnerPick] = useState('');
+  const [wager, setWager] = useState(20);
+  const [stash, setStash] = useState(0);
   // eslint-disable-next-line no-unused-vars
-  const [wagerError, setWagerError] = React.useState(false);
+  const [wagerError, setWagerError] = useState(false);
 
   const [player1Data, setPlayer1Data] = useState(false);
   const [player2Data, setPlayer2Data] = useState(false);
   const [winner, setWinner] = useState(false);
-  const [activeStep, setActiveStep] = React.useState(-1);
+  const [activeStep, setActiveStep] = useState(-1);
   const steps = ['Data', 'AI', 'FIGHT!'];
   const rInt = (max = 1, min = 0) => Math.floor(Math.random() * (max + 1 - min)) + min;
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (randomPlay) {
       const localStash = localStorage.getItem('heroStash');
       // eslint-disable-next-line no-unused-expressions

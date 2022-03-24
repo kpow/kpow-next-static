@@ -1,4 +1,4 @@
-//useFetch.js
+// useFetch.js
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -8,29 +8,28 @@ function useFetch(url, post) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-      setLoading('loading...')
-      setData(null);
-      setError(null);
-      const source = axios.CancelToken.source();
-      axios.post(url, {post:post, cancelToken: source.token})
-      .then(res => {
-          setLoading(false);
-          //checking for multiple responses for more flexibility 
-          //with the url we send in.
-          //console.log(res)
-          res.data.data.businesses && setData(res.data.data.businesses);
-         
+    setLoading('loading...');
+    setData(null);
+    setError(null);
+    const source = axios.CancelToken.source();
+    axios.post(url, { post, cancelToken: source.token })
+      .then((res) => {
+        setLoading(false);
+        // checking for multiple responses for more flexibility
+        // with the url we send in.
+        // console.log(res)
+        res.data.data.businesses && setData(res.data.data.businesses);
       })
-      .catch(err => {
-          setLoading(false)
-          setError('An error occurred. Awkward..')
-      })
-      return () => {
-          source.cancel();
-      }
-  }, [url])
+      .catch((err) => {
+        setLoading(false);
+        setError('An error occurred. Awkward..');
+      });
+    return () => {
+      source.cancel();
+    };
+  }, [url]);
 
-  return { data, loading, error }
+  return { data, loading, error };
 }
 
 export default useFetch;

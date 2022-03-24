@@ -1,11 +1,10 @@
-import axios from 'axios'
+import axios from 'axios';
 import extractHostname from '@utils/extractHostname';
 
 const fetchStars = async (key, page = 0, howMany = 9) => {
-  
-  const { data } = await axios.post('/.netlify/functions/stars',{page:(page+1), howMany:howMany})
+  const { data } = await axios.post('/.netlify/functions/stars', { page: (page + 1), howMany });
 
-  for(let i=0;i<data.length;i++ ){
+  for (let i = 0; i < data.length; i++) {
     const siteUrl = extractHostname(data[i].url);
     data[i].site_url = siteUrl;
     try {
@@ -14,15 +13,15 @@ const fetchStars = async (key, page = 0, howMany = 9) => {
     } catch (error) {
       console.error(error);
     }
-  } 
-  const stars = await axios.get("/.netlify/functions/totalStars")
+  }
+  const stars = await axios.get('/.netlify/functions/totalStars');
   const totalItems = stars.data.data.length;
-  const totalPages = totalItems/howMany
-  const hasMore = totalPages > page ? true : false;
+  const totalPages = totalItems / howMany;
+  const hasMore = totalPages > page;
 
-  data.reverse()
-  const fullData = {data,totalItems,hasMore}
-  return fullData
-}
+  data.reverse();
+  const fullData = { data, totalItems, hasMore };
+  return fullData;
+};
 
-export default fetchStars
+export default fetchStars;

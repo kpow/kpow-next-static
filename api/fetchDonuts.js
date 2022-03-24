@@ -1,18 +1,18 @@
-import axios from 'axios'
+import axios from 'axios';
 
 const fetchDonuts = async (location) => {
-  console.log(location)
-  const { data } = await axios.post('/.netlify/functions/donuts',{location:location})
+  console.log(location);
+  const { data } = await axios.post('/.netlify/functions/donuts', { location });
 
-  const totalItems = 100
-  const totalPages = 2
-  const hasMore = true
-  
-  const bizData =  data.data.businesses
+  const totalItems = 100;
+  const totalPages = 2;
+  const hasMore = true;
 
-  const fullData = {bizData,totalItems,hasMore}
-  console.log(fullData)
-  return fullData
-}
+  const bizData = data.data.businesses;
 
-export default fetchDonuts
+  const fullData = { bizData, totalItems, hasMore };
+  console.log(fullData);
+  return fullData;
+};
+
+export default fetchDonuts;
